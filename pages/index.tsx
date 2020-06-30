@@ -9,7 +9,7 @@ export default function Home() {
       <PageHead/>
       <main>
         <Container>
-          <Header as='h1'>
+          <Header style={{marginTop: "calc(2rem - .14285714em)"}} size="huge">
             <Header.Content>Serhiy Barhamon</Header.Content>
             <Header.Subheader>software writer, motorcycle rider, fish catcher, nature lover</Header.Subheader>
           </Header>
