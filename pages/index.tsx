@@ -1,5 +1,6 @@
-import { Post } from "../components/post";
+import React from "react";
 import { Container, Header, Item } from "semantic-ui-react";
+import { Post } from "../components/post";
 import { PageHead } from "../components/page_head";
 
 export default function Home() {
