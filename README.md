@@ -1,4 +1,4 @@
-This is my nth attempt to write a blog. 
+This is my nth attempt to write a [blog](https://barhamon.com/). 
 
 Built with:
 * [next.js](https://nextjs.org/)
