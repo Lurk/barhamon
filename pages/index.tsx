@@ -11,7 +11,7 @@ export default function Home() {
         <Container>
           <Header style={{marginTop: "calc(2rem - .14285714em)"}} size="huge">
             <Header.Content>Serhiy Barhamon</Header.Content>
-            <Header.Subheader>software writer, motorcycle rider, fish catcher, nature lover</Header.Subheader>
+            <Header.Subheader>software developer, motorcycle rider, fish catcher, nature lover</Header.Subheader>
           </Header>
           <Item.Group divided>
             <Post header='New Hope ;)' time={1593538782006}>
