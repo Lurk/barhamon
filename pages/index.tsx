@@ -17,7 +17,7 @@ export default function Home() {
             <Post header='New Hope ;)' time={1593538782006}>
               <p>I want to write a blog as long as blogs exist. And now I'm doing it (hopefully).</p>
               <p>Let start from the beginning.</p>
-              <p>My name Serhiy and I am a developer.</p>
+              <p>My name Serhiy and I am a software developer.</p>
             </Post>
           </Item.Group>
         </Container>
