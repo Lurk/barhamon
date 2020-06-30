@@ -9,7 +9,10 @@ export default function Home() {
       <PageHead/>
       <main>
         <Container>
-          <Header as='h1'/>
+          <Header as='h1'>
+            <Header.Content>Serhiy Barhamon</Header.Content>
+            <Header.Subheader>software writer, motorcycle rider, fish catcher, nature lover</Header.Subheader>
+          </Header>
           <Item.Group divided>
             <Post header='New Hope ;)' time={1593538782006}>
               <p>I want to write a blog as long as blogs exist. And now I'm doing it (hopefully).</p>
