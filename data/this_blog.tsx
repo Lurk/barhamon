@@ -24,8 +24,9 @@ export const ThisBlogFull: React.FC = () => {
       <ThisBlogPreview/>
       <p>Roadmap:</p>
       <List ordered>
-        <List.Item>Tags page</List.Item>
+        <List.Item><s>Tags page</s></List.Item>
         <List.Item>Code formatting in posts</List.Item>
+        <List.Item>"Rad more" button in posts with preview</List.Item>
         <List.Item>Pagination</List.Item>
         <List.Item>Pages (bio, contacts, etc)</List.Item>
         <List.Item>Comments</List.Item>
