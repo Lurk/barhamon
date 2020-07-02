@@ -31,6 +31,7 @@ export const ThisBlogFull: React.FC = () => {
         <List.Item>Pages (bio, contacts, etc)</List.Item>
         <List.Item>Comments</List.Item>
         <List.Item>RSS feed</List.Item>
+        <List.Item>Music</List.Item>
       </List>
     </>
   )
