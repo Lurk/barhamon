@@ -25,7 +25,6 @@ const PostPage: React.FC<{ tag: string }> = ({ tag }) => {
 export default PostPage
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  console.log(Object.values(posts).map((p) => p.tags.map((tag) => ({ params: { tag } }))).flat())
   return {
     paths: Object.values(posts).map((p) => p.tags.map((tag) => ({ params: { tag } }))).flat(),
     fallback: false
