@@ -9,6 +9,7 @@ export const ThisBlogPreview: React.FC = () => {
         <List.Item><a href="https://nextjs.org/">next.js</a></List.Item>
         <List.Item><a href="https://react.semantic-ui.com/">Semantic UI React</a></List.Item>
         <List.Item><a href="https://date-fns.org/">date-fns</a></List.Item>
+        <List.Item><a href="https://prismjs.com/index.html">Prism JS</a></List.Item>
       </List>
       <p>Deployed on <a href="https://vercel.com/">Vercel</a>.</p>
       <p>You can find source code on <a href="https://github.com/Lurk/barhamon">GitHub repo</a>. If you find a bug, or
@@ -25,7 +26,7 @@ export const ThisBlogFull: React.FC = () => {
       <p>Roadmap:</p>
       <List ordered>
         <List.Item><s>Tags page</s></List.Item>
-        <List.Item>Code formatting in posts</List.Item>
+        <List.Item><s>Code formatting in posts</s></List.Item>
         <List.Item>"Rad more" button in posts with preview</List.Item>
         <List.Item>Pagination</List.Item>
         <List.Item>Pages (bio, contacts, etc)</List.Item>

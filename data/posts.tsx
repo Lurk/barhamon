@@ -2,6 +2,7 @@ import React, { ReactNode } from "react";
 import { NewHopePreview } from "./new_hope";
 import { ThisBlogFull, ThisBlogPreview } from "./this_blog";
 import { WhyFull, WhyPreview } from "./why";
+import { TheCodeFull, TheCodePreview } from "./the_code";
 
 export interface PostInterface {
   pid: string,
@@ -19,6 +20,16 @@ type Dict<T> = {
 }
 
 export const posts: Dict<PostInterface> = {
+  'Typescript_Nextjs_Prismjs': {
+    pid: "Typescript_Nextjs_Prismjs",
+    header: "Typescript + Nextjs + Prismjs or the tale about code highlighting",
+    time: 1593767695933,
+    image: '/img/the_code.jpg',
+    tags: ['blog', 'nextjs', 'prismjs', 'typescript'],
+    preview: <TheCodePreview/>,
+    full: <TheCodeFull/>,
+    readTime: 5
+  },
   why: {
     pid: "why",
     header: "Why?",
