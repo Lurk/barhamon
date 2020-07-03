@@ -111,7 +111,7 @@ export const TheCodeFull: React.FC = () => {
       <p>Step 1:</p>
       <Code language="bash">
         {`yarn add prismjs
-yarn add @ types / prismjs -D`}
+yarn add @types/prismjs -D`}
       </Code>
       <p>Step # 2:</p>
       <p>in pages / _app.tsx add</p>
