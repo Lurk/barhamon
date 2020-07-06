@@ -1,5 +1,6 @@
 import React, { useEffect, ReactNode, useState } from "react";
 import Prism, { Token } from "prismjs";
+import style from './code.module.css';
 
 export interface CodeProps {
   language: 'js' | 'css' | 'json' | 'jsx' | 'typescript' | 'yml' | 'Rust' | 'bash',
@@ -30,7 +31,7 @@ export const Code: React.FC<CodeProps> = ({ language, children }) => {
   });
 
   return (
-    <pre className={`language-${language}`}>
+    <pre className={`language-${language} ${style.code}`}>
       {data.tokens.length ? data.tokens.map(tokenToReactNode) : children}
     </pre>
   );

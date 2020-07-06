@@ -27,7 +27,9 @@ export const Code: React.FC<CodeProps> = ({ language, children }) => {
   useEffect(() => {
     if (data.code !== children) {
       import(\`prismjs/components/prism-\${language}\`).then(() => {
-        const tokens: Array<string | Token> = Prism.languages[ language ] ? Prism.tokenize(children, Prism.languages[ language ]) : [];
+        const tokens: Array<string | Token> = Prism.languages[ language ]
+          ? Prism.tokenize(children, Prism.languages[ language ])
+          : [];
         replaceToken({ tokens, code: children })
       })
     }
@@ -75,7 +77,9 @@ export const Code: React.FC<CodeProps> = ({ language, children }) => {
       //I did not find a better way, like the one below, if you know - please write an issue.
       import(\`prismjs/components/prism-\${language}\`).then(() => {
         //If language still not available skip tokenize part
-        const tokens: Array<string | Token> = Prism.languages[ language ] ? Prism.tokenize(children, Prism.languages[ language ]) : [];
+        const tokens: Array<string | Token> = Prism.languages[ language ]
+          ? Prism.tokenize(children, Prism.languages[ language ])
+          : [];
         //Save the result to the state.
         replaceToken({ tokens, code: children })
       })
