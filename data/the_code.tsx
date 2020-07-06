@@ -31,7 +31,7 @@ export const Code: React.FC<CodeProps> = ({ language, children }) => {
           : [];
         replaceToken(tokens)
       })
-  });
+  }, [children]);
 
   return (
     <pre className={\`language-\${language}\`}>
@@ -78,7 +78,7 @@ export const Code: React.FC<CodeProps> = ({ language, children }) => {
           : [];
         //Save the result to the state.
         replaceToken( tokens )
-      })
+      }, [children])
   });
   //If the array with tokens is empty, print the code from props, otherwise render our beauty.
   return (
