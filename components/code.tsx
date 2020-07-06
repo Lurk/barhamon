@@ -20,19 +20,17 @@ function tokenToReactNode(token: Token | string, i: number): ReactNode {
 }
 
 export const Code: React.FC<CodeProps> = ({ language, children }) => {
-  const [data, replaceToken] = useState<{ tokens: Array<string | Token>, code: string }>({ tokens: [], code: '' })
+  const [data, replaceToken] = useState<Array<string | Token>>([])
   useEffect(() => {
-    if (data.code !== children) {
-      import(`prismjs/components/prism-${language}`).then(() => {
-        const tokens: Array<string | Token> = Prism.languages[ language ] ? Prism.tokenize(children, Prism.languages[ language ]) : [];
-        replaceToken({ tokens, code: children })
-      })
-    }
-  });
+    import(`prismjs/components/prism-${language}`).then(() => {
+      const tokens: Array<string | Token> = Prism.languages[ language ] ? Prism.tokenize(children, Prism.languages[ language ]) : [];
+      replaceToken(tokens)
+    })
+  }, [children]);
 
   return (
     <pre className={`language-${language} ${style.code}`}>
-      {data.tokens.length ? data.tokens.map(tokenToReactNode) : children}
+      {data.length ? data.map(tokenToReactNode) : children}
     </pre>
   );
 }
