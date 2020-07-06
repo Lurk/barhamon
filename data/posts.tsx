@@ -3,6 +3,10 @@ import { NewHopePreview } from "./new_hope";
 import { ThisBlogFull, ThisBlogPreview } from "./this_blog";
 import { WhyFull, WhyPreview } from "./why";
 import { TheCodeFull, TheCodePreview } from "./the_code";
+import {
+  TheRainTheRiverAndTheSunsetFull,
+  TheRainTheRiverAndTheSunsetPreview
+} from "./the_rain_the_river_and_the_sunset";
 
 export interface PostInterface {
   pid: string,
@@ -10,7 +14,7 @@ export interface PostInterface {
   time: number,
   preview: ReactNode
   full: ReactNode
-  image?: string,
+  image: string,
   readTime?: number,
   tags?: string[]
 }
@@ -20,6 +24,16 @@ type Dict<T> = {
 }
 
 export const posts: Dict<PostInterface> = {
+  'the_rain_the_river_and_the_sunset': {
+    pid: "the_rain_the_river_and_the_sunset",
+    header: "The rain, the river and the sunset",
+    time: 1594022460268,
+    image: '/img/the_rain_the_river_and_the_sunset.jpg',
+    tags: ['camping'],
+    preview: <TheRainTheRiverAndTheSunsetPreview/>,
+    full: <TheRainTheRiverAndTheSunsetFull/>,
+    readTime: 1
+  },
   'Typescript_Nextjs_Prismjs': {
     pid: "Typescript_Nextjs_Prismjs",
     header: "Typescript + Nextjs + Prismjs or the tale about code highlighting",

@@ -22,12 +22,12 @@ interface TagProps {
   tag: string
 }
 
-const Tag: React.FC<TagProps> = ({ id, tag }) => {
+export const Tag: React.FC<TagProps> = ({ id, tag }) => {
   const router = useRouter();
   const active = router.asPath === `/tag/${tag}`;
 
   return (
-    <Label key={id}>
+    <Label key={id} color="teal">
       <Icon name="tag"/>
       {active ? tag : <Link href={`/tag/${tag}`}><a>{tag}</a></Link>}
     </Label>

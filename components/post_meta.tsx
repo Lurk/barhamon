@@ -10,6 +10,10 @@ export interface PostMeta {
 export const PostMeta: React.FC<PostMeta> = ({ time, readTime }) => {
 
   return (
-    <Item.Meta>{formatDistance(new Date(time), new Date())} ago{readTime ? ` · ${readTime} min read` : ''} </Item.Meta>
+    <Item.Meta>{getPostMeta(time, readTime)}</Item.Meta>
   )
+}
+
+export function getPostMeta(time: number, readTime?: number) {
+  return `${formatDistance(new Date(time), new Date())} ago${readTime ? ` · ${readTime} min read` : ''}`;
 }
