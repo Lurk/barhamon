@@ -33,6 +33,7 @@ export const ThisBlogFull: React.FC = () => {
         <List.Item>Comments</List.Item>
         <List.Item>RSS feed</List.Item>
         <List.Item>Music</List.Item>
+        <List.Item>Meta tags</List.Item>
       </List>
     </>
   )

@@ -3,9 +3,14 @@ import Head from "next/head";
 
 export interface PageHeadProps {
   title?: string
+  description?: string
+  keywords?: string[]
 }
 
-export const PageHead: React.FC<PageHeadProps> = ({ title }) => {
+const tags: string[] = ["software development", "motorcycles", "fishing", "camping"]
+export const PageHead: React.FC<PageHeadProps> = ({ title, description, keywords }) => {
+
+  const u: string[] = keywords ? [...keywords, ...tags] : tags;
   return (
     <Head>
       <title>{title ? `${title} - BarHamon` : 'BarHamon'}</title>
@@ -16,6 +21,10 @@ export const PageHead: React.FC<PageHeadProps> = ({ title }) => {
       <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#8e8e8e"/>
       <meta name="msapplication-TileColor" content="#da532c"/>
       <meta name="theme-color" content="#ffffff"/>
+      <meta name="author" content="Serhiy Barhamon"/>
+      <meta name="charset" content="UTF-8"/>
+      <meta name="description" content={description ? description : "Serhiy Barhamon personal blog"}/>
+      <meta name="keywords" content={u.join(', ')}/>
     </Head>
   )
 }
