@@ -6,17 +6,21 @@
   height: 500px;
   display: flex;
   flex-direction: column;
-  border-radius: 5px ;
+  border-radius: 0.5rem ;
   justify-content: space-between;
   overflow: hidden;
 }
 
 .header_tags, .header_text{
-  padding: 20px;
+  padding: 1rem 1rem 1rem 1rem;
   background: rgba(65, 65, 65, .5);
   text-align: center;
 }
 
 .header_text{
 
+}
+
+.tag{
+  margin:0.2rem!important;
 }

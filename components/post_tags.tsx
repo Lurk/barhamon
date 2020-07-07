@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 export interface PostTags {
-  tags?: string[]
+  tags?: string[],
 }
 
 export const PostTags: React.FC<PostTags> = ({ tags }) => {
@@ -19,15 +19,16 @@ export const PostTags: React.FC<PostTags> = ({ tags }) => {
 
 interface TagProps {
   id: number,
-  tag: string
+  tag: string,
+  className?: string
 }
 
-export const Tag: React.FC<TagProps> = ({ id, tag }) => {
+export const Tag: React.FC<TagProps> = ({ id, tag, className }) => {
   const router = useRouter();
   const active = router.asPath === `/tag/${tag}`;
 
   return (
-    <Label key={id} color="teal">
+    <Label key={id} color="teal" className={className}>
       <Icon name="tag"/>
       {active ? tag : <Link href={`/tag/${tag}`}><a>{tag}</a></Link>}
     </Label>

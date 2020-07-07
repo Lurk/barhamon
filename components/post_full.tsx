@@ -1,8 +1,8 @@
 import React from "react";
-import { Item, Image, Card, Header } from "semantic-ui-react";
+import { Item, Header } from "semantic-ui-react";
 import { PostInterface } from "../data/posts";
-import { getPostMeta, PostMeta } from "./post_meta";
-import { PostTags, Tag } from "./post_tags";
+import { getPostMeta } from "./post_meta";
+import { Tag } from "./post_tags";
 import styles from './post_full.module.css';
 
 export const PostFull: React.FC<PostInterface> = (props) => {
@@ -17,7 +17,7 @@ export const PostFull: React.FC<PostInterface> = (props) => {
             </Header>
           </div>
           <div className={styles.header_tags}>
-            {props.tags.map((tag, id) => <Tag tag={tag} id={id} key={id}/>)}
+            {props.tags.map((tag, id) => <Tag tag={tag} id={id} key={id} className={styles.tag}/>)}
           </div>
         </div>
         <Item.Description>
