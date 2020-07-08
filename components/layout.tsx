@@ -2,18 +2,14 @@ import { Container, Header } from "semantic-ui-react";
 import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { PageHead } from "./page_head";
+import { PageHead, PageHeadProps } from "./page_head";
 
-export interface LayoutProps {
-  title?: string
-}
-
-export const Layout: React.FC<LayoutProps> = (props) => {
+export const Layout: React.FC<PageHeadProps> = (props) => {
   const router = useRouter();
   const isIndex = router.asPath === '/';
   return (
     <>
-      <PageHead title={props.title}/>
+      <PageHead {...props}/>
       <main>
         <Container className="main">
           <Header style={{ marginTop: "calc(2rem - .14285714em)" }} size="huge">

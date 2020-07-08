@@ -11,7 +11,7 @@ const PostPage: React.FC<{ pid: string }> = ({ pid }) => {
   const post = posts[ pid ]
   if (post) {
     return (
-      <Layout title={post.header}>
+      <Layout title={post.header} image={post.image} keywords={post.tags} description={post.description}>
         <Item.Group>
           <PostFull {...post}/>
         </Item.Group>

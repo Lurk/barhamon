@@ -15,9 +15,9 @@ Roadmap:
 1. ~~Tags page~~
 1. ~~Code formatting in posts~~
 1. ~~"Read more" button in posts with preview~~
+1. ~~Meta tags~~
 1. Pagination
 1. Pages (bio, contacts, etc)
 1. Comments
 1. RSS feed
 1. Music
-1. Meta tags

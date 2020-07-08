@@ -12,6 +12,7 @@ export interface PostInterface {
   pid: string,
   header: string,
   time: number,
+  description: string,
   Preview: React.FC
   Full: React.FC
   image: string,
@@ -30,6 +31,7 @@ export const posts: Dict<PostInterface> = {
     time: 1594022460268,
     image: '/img/the_rain_the_river_and_the_sunset.jpg',
     tags: ['camping'],
+    description:"one night on the river shore",
     Preview: TheRainTheRiverAndTheSunsetPreview,
     Full: TheRainTheRiverAndTheSunsetFull,
     readTime: 1
@@ -40,6 +42,7 @@ export const posts: Dict<PostInterface> = {
     time: 1593767695933,
     image: '/img/the_code.jpg',
     tags: ['blog', 'nextjs', 'prismjs', 'typescript'],
+    description:"How to make Prism JS work with typescript and NextJs",
     Preview: TheCodePreview,
     Full: TheCodeFull,
     readTime: 5
@@ -50,6 +53,7 @@ export const posts: Dict<PostInterface> = {
     time: 1593701715703,
     image: '/img/why.jpg',
     tags: ['blog'],
+    description:"",
     Preview: WhyPreview,
     Full: WhyFull
   },
@@ -59,6 +63,7 @@ export const posts: Dict<PostInterface> = {
     time: 1593599633253,
     image: "/img/this_blog.jpg",
     tags: ['blog', 'development', 'roadmap'],
+    description:"",
     Preview: ThisBlogPreview,
     Full: ThisBlogFull
   },
@@ -67,6 +72,7 @@ export const posts: Dict<PostInterface> = {
     header: 'New Hope ;)',
     time: 1593538782006,
     image: "/img/avatar.jpg",
+    description:"",
     tags: ['bio'],
     Preview: NewHopePreview,
     Full: NewHopePreview
