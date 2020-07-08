@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import { NewHopePreview } from "./new_hope";
 import { ThisBlogFull, ThisBlogPreview } from "./this_blog";
 import { WhyFull, WhyPreview } from "./why";
@@ -12,8 +12,8 @@ export interface PostInterface {
   pid: string,
   header: string,
   time: number,
-  preview: ReactNode
-  full: ReactNode
+  Preview: React.FC
+  Full: React.FC
   image: string,
   readTime?: number,
   tags?: string[]
@@ -30,8 +30,8 @@ export const posts: Dict<PostInterface> = {
     time: 1594022460268,
     image: '/img/the_rain_the_river_and_the_sunset.jpg',
     tags: ['camping'],
-    preview: <TheRainTheRiverAndTheSunsetPreview/>,
-    full: <TheRainTheRiverAndTheSunsetFull/>,
+    Preview: TheRainTheRiverAndTheSunsetPreview,
+    Full: TheRainTheRiverAndTheSunsetFull,
     readTime: 1
   },
   'Typescript_Nextjs_Prismjs': {
@@ -40,8 +40,8 @@ export const posts: Dict<PostInterface> = {
     time: 1593767695933,
     image: '/img/the_code.jpg',
     tags: ['blog', 'nextjs', 'prismjs', 'typescript'],
-    preview: <TheCodePreview/>,
-    full: <TheCodeFull/>,
+    Preview: TheCodePreview,
+    Full: TheCodeFull,
     readTime: 5
   },
   why: {
@@ -50,8 +50,8 @@ export const posts: Dict<PostInterface> = {
     time: 1593701715703,
     image: '/img/why.jpg',
     tags: ['blog'],
-    preview: <WhyPreview/>,
-    full: <WhyFull/>
+    Preview: WhyPreview,
+    Full: WhyFull
   },
   this_blog: {
     pid: "this_blog",
@@ -59,8 +59,8 @@ export const posts: Dict<PostInterface> = {
     time: 1593599633253,
     image: "/img/this_blog.jpg",
     tags: ['blog', 'development', 'roadmap'],
-    preview: <ThisBlogPreview/>,
-    full: <ThisBlogFull/>
+    Preview: ThisBlogPreview,
+    Full: ThisBlogFull
   },
   new_hope: {
     pid: "new_hope",
@@ -68,7 +68,7 @@ export const posts: Dict<PostInterface> = {
     time: 1593538782006,
     image: "/img/avatar.jpg",
     tags: ['bio'],
-    preview: <NewHopePreview/>,
-    full: <NewHopePreview/>
+    Preview: NewHopePreview,
+    Full: NewHopePreview
   }
 }

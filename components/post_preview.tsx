@@ -5,20 +5,21 @@ import { PostInterface } from "../data/posts";
 import { PostMeta } from "./post_meta";
 import { PostTags } from "./post_tags";
 
-export const PostPreview: React.FC<PostInterface> = (props) => {
+export const PostPreview: React.FC<PostInterface> = ({Preview, Full, ...rest}) => {
 
   return (
     <Item>
-      {props.image && <Item.Image src={props.image} size="small"/>}
+      {rest.image && <Item.Image src={rest.image} size="small"/>}
       <Item.Content>
         <Item.Header>
-          <Link as={`/post/${props.pid}`} href={`/post/[pid]`}><a>{props.header}</a></Link>
+          <Link as={`/post/${rest.pid}`} href={`/post/[pid]`}><a>{rest.header}</a></Link>
         </Item.Header>
-        <PostMeta readTime={props.readTime} time={props.time}/>
+        <PostMeta readTime={rest.readTime} time={rest.time}/>
         <Item.Description>
-          {props.preview}
+          <Preview/>
+          {Full !== Preview && <p><Link as={`/post/${rest.pid}`} href={`/post/[pid]`}><a>Read more...</a></Link></p>}
         </Item.Description>
-        <PostTags tags={props.tags}/>
+        <PostTags tags={rest.tags}/>
       </Item.Content>
     </Item>
   )

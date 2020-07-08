@@ -5,23 +5,23 @@ import { getPostMeta } from "./post_meta";
 import { Tag } from "./post_tags";
 import styles from './post_full.module.css';
 
-export const PostFull: React.FC<PostInterface> = (props) => {
+export const PostFull: React.FC<PostInterface> = ({ Full, ...rest }) => {
   return (
     <Item>
       <Item.Content>
-        <div style={{ backgroundImage: `url(${props.image})` }} className={styles.header_container}>
+        <div style={{ backgroundImage: `url(${rest.image})` }} className={styles.header_container}>
           <div className={styles.header_text}>
             <Header inverted size="large">
-              <Header.Content>{props.header}</Header.Content>
-              <Header.Subheader>{getPostMeta(props.time, props.readTime)}</Header.Subheader>
+              <Header.Content>{rest.header}</Header.Content>
+              <Header.Subheader>{getPostMeta(rest.time, rest.readTime)}</Header.Subheader>
             </Header>
           </div>
           <div className={styles.header_tags}>
-            {props.tags.map((tag, id) => <Tag tag={tag} id={id} key={id} className={styles.tag}/>)}
+            {rest.tags.map((tag, id) => <Tag tag={tag} id={id} key={id} className={styles.tag}/>)}
           </div>
         </div>
         <Item.Description>
-          {props.full}
+          <Full/>
         </Item.Description>
       </Item.Content>
     </Item>
