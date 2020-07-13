@@ -35,7 +35,7 @@ export const ThisYearIChangedTheMotorcycleClassFull: React.FC = () => {
           </Grid.Column>
         </Grid.Row>
       </Grid>
-      <p>It is already 30 years old, and I had to go after him 600 km, one way and halfway back on it (thanks to Igor,
+      <p>It is already 30 years old, and I had to go after it 600 km, one way and halfway back on it (thanks to Igor,
         Denis, and Vlad for the adventure). But I am satisfied a little more than completely because I drove into such
         places on it that I could not have at X11. But, from some, I could not get out on my own.
       </p>
