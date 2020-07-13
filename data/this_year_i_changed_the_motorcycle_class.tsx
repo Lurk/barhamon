@@ -15,7 +15,15 @@ export const ThisYearIChangedTheMotorcycleClassFull: React.FC = () => {
     <>
       <ThisYearIChangedTheMotorcycleClassPreview/>
       <Grid>
-        <Grid.Row columns={3}>
+        <Grid.Row columns={2} only="mobile">
+          <Grid.Column width="8">
+            <Image src='/img/x11.jpg'/>
+          </Grid.Column>
+          <Grid.Column width="8">
+            <Image src='/img/at.jpg'/>
+          </Grid.Column>
+        </Grid.Row>
+        <Grid.Row columns={3} only="computer">
           <Grid.Column width="7">
             <Popup
               flowing
