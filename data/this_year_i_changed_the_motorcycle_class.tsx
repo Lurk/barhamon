@@ -40,7 +40,7 @@ export const ThisYearIChangedTheMotorcycleClassFull: React.FC = () => {
         places on it that I could not have at X11. But, from some, I could not get out on my own.
       </p>
       <Image src='/img/at_adventure.jpg'/>
-      <p>And if I had a time machine, I would drive to the past and persuade the younger myself to take some kind of
+      <p>And if I had a time machine, I would send me to the past and persuade the younger myself to take some kind of
         dirt bike instead of a street bike.</p>
     </>
   )
