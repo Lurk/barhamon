@@ -8,6 +8,10 @@ import {
   TheRainTheRiverAndTheSunsetPreview
 } from "./the_rain_the_river_and_the_sunset";
 import { SitemapFull, SitemapPreview } from "./sitemap";
+import {
+  ThisYearIChangedTheMotorcycleClassFull,
+  ThisYearIChangedTheMotorcycleClassPreview
+} from "./this_year_i_changed_the_motorcycle_class";
 
 export interface PostInterface {
   pid: string,
@@ -26,6 +30,17 @@ type Dict<T> = {
 }
 
 export const posts: Dict<PostInterface> = {
+  'this_year_i_changed_the_motorcycle_class': {
+    pid: "this_year_i_changed_the_motorcycle_class",
+    header: "This year I changed the motorcycle class.",
+    time: 1594637841514,
+    image: '/img/this_year_i_changed_the_motorcycle_class.jpg',
+    tags: ['motorcycle', 'X11', 'Africa Twin'],
+    description: "I used to drive a Honda X11. And this is a great bike that I still love. But I want to ride not only on asphalt. And so I took an even more ancient but no less legendary Africa Twin RD04 motorcycle.",
+    Preview: ThisYearIChangedTheMotorcycleClassPreview,
+    Full: ThisYearIChangedTheMotorcycleClassFull,
+    readTime: 1
+  },
   'How_to_serve_sitemap_xml_with_Next_JS': {
     pid: "How_to_serve_sitemap_xml_with_Next_JS",
     header: "How to serve sitemap.xml with Next.JS",
