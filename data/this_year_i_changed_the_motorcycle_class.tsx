@@ -5,7 +5,7 @@ export const ThisYearIChangedTheMotorcycleClassPreview: React.FC = () => {
   return (
     <>
       <p>I used to drive a Honda X11. And this is a great bike that I still love. But I want to ride not only on
-        asphalt. And so I bought an even more ancient but no less legendary Africa Twin RD04 motorcycle.</p>
+        asphalt. So I bought an even more ancient but no less legendary Africa Twin RD04 motorcycle.</p>
     </>
   )
 }
