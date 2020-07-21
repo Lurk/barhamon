@@ -47,7 +47,7 @@ export const posts: Dict<PostInterface> = {
     time: 1594293850344,
     image: '/img/sitemap.jpg',
     tags: ['blog', 'nextjs', 'SEO', 'typescript'],
-    description: "To not only increase entropy but also be useful, this blog should be indexed by search engines. And to make it easier for search engines to index, they came up with robots.txt and sitemap",
+    description: "Quick guide with code and explanation on sitemap.xml with Next.JS",
     Preview: SitemapPreview,
     Full: SitemapFull,
     readTime: 1
