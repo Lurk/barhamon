@@ -1,6 +1,6 @@
 import React from "react";
 
-export const NewHopePreview: React.FC = () => {
+const NewHopePreview: React.FC = () => {
   return (
     <>
       <p>I want to write a blog as long as blogs exist. Now I'm doing it (hopefully).</p>
@@ -9,4 +9,15 @@ export const NewHopePreview: React.FC = () => {
     </>
   )
 }
+
+export const new_hope = {
+  pid: "new_hope",
+  header: 'New Hope ;)',
+  time: 1593538782006,
+  image: "/img/avatar.jpg",
+  description: "",
+  tags: ['bio'],
+  Preview: NewHopePreview,
+  Full: NewHopePreview
+};
 

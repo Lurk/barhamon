@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid, Icon, Image, Popup } from "semantic-ui-react";
 
-export const ThisYearIChangedTheMotorcycleClassPreview: React.FC = () => {
+const ThisYearIChangedTheMotorcycleClassPreview: React.FC = () => {
   return (
     <>
       <p>I used to drive a Honda X11. And this is a great bike that I still love. But I want to ride not only on
@@ -10,7 +10,7 @@ export const ThisYearIChangedTheMotorcycleClassPreview: React.FC = () => {
   )
 }
 
-export const ThisYearIChangedTheMotorcycleClassFull: React.FC = () => {
+const ThisYearIChangedTheMotorcycleClassFull: React.FC = () => {
   return (
     <>
       <ThisYearIChangedTheMotorcycleClassPreview/>
@@ -53,3 +53,15 @@ export const ThisYearIChangedTheMotorcycleClassFull: React.FC = () => {
     </>
   )
 }
+
+export const this_year_i_changed_the_motorcycle_class =  {
+  pid: "this_year_i_changed_the_motorcycle_class",
+  header: "This year I changed the motorcycle class.",
+  time: 1594637841514,
+  image: '/img/this_year_i_changed_the_motorcycle_class.jpg',
+  tags: ['motorcycle', 'X11', 'Africa Twin'],
+  description: "I used to drive a Honda X11. And this is a great bike that I still love. But I want to ride not only on asphalt. And so I took an even more ancient but no less legendary Africa Twin RD04 motorcycle.",
+  Preview: ThisYearIChangedTheMotorcycleClassPreview,
+  Full: ThisYearIChangedTheMotorcycleClassFull,
+  readTime: 1
+};

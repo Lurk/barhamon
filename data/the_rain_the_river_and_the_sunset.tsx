@@ -1,7 +1,7 @@
 import React from "react";
 import { Image } from "semantic-ui-react";
 
-export const TheRainTheRiverAndTheSunsetPreview: React.FC = () => {
+const TheRainTheRiverAndTheSunsetPreview: React.FC = () => {
   return (
     <>
       <p>At the weekend we spent the night on the shore in a tent. The first time in a long time I went to the river
@@ -10,7 +10,7 @@ export const TheRainTheRiverAndTheSunsetPreview: React.FC = () => {
   )
 }
 
-export const TheRainTheRiverAndTheSunsetFull: React.FC = () => {
+const TheRainTheRiverAndTheSunsetFull: React.FC = () => {
   return (
     <>
       <TheRainTheRiverAndTheSunsetPreview/>
@@ -24,3 +24,16 @@ export const TheRainTheRiverAndTheSunsetFull: React.FC = () => {
     </>
   )
 }
+
+
+export const the_rain_the_river_and_the_sunset = {
+  pid: "the_rain_the_river_and_the_sunset",
+  header: "The rain, the river and the sunset",
+  time: 1594022460268,
+  image: '/img/the_rain_the_river_and_the_sunset.jpg',
+  tags: ['camping'],
+  description: "one night on the river shore",
+  Preview: TheRainTheRiverAndTheSunsetPreview,
+  Full: TheRainTheRiverAndTheSunsetFull,
+  readTime: 1
+};

@@ -1,7 +1,7 @@
 import React from "react";
 import { Item } from "semantic-ui-react";
 import Link from "next/link";
-import { PostInterface } from "../data/posts";
+import type { PostInterface } from "../models/posts";
 import { PostMeta } from "./post_meta";
 import { PostTags } from "./post_tags";
 

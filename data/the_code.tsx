@@ -40,6 +40,7 @@ export const Code: React.FC<CodeProps> = ({ language, children }) => {
   );
 }
 `;
+
 const codeWithComments = `import React, { useEffect, ReactNode, useState } from "react";
 import Prism, { Token } from "prismjs";
 
@@ -89,7 +90,7 @@ export const Code: React.FC<CodeProps> = ({ language, children }) => {
 }
 `;
 
-export const TheCodePreview: React.FC = () => {
+const TheCodePreview: React.FC = () => {
   return (
     <>
       <p>I needed to add code highlighting to posts (no one likes ugly code :).</p>
@@ -98,7 +99,7 @@ export const TheCodePreview: React.FC = () => {
   )
 }
 
-export const TheCodeFull: React.FC = () => {
+const TheCodeFull: React.FC = () => {
   return (
     <>
       <TheCodePreview/>
@@ -137,3 +138,15 @@ yarn add @types/prismjs -D`}
     </>
   )
 }
+
+export const Typescript_Nextjs_Prismjs = {
+  pid: "Typescript_Nextjs_Prismjs",
+  header: "Typescript + Nextjs + Prismjs or the tale about code highlighting",
+  time: 1593767695933,
+  image: '/img/the_code.jpg',
+  tags: ['blog', 'nextjs', 'prismjs', 'typescript'],
+  description: "How to make Prism JS work with typescript and NextJs",
+  Preview: TheCodePreview,
+  Full: TheCodeFull,
+  readTime: 5
+};

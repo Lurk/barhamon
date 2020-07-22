@@ -1,6 +1,6 @@
 import React from "react";
 import { Item, Header } from "semantic-ui-react";
-import { PostInterface } from "../data/posts";
+import { PostInterface } from "../models/posts";
 import { getPostMeta } from "./post_meta";
 import { Tag } from "./post_tags";
 import styles from './post_full.module.css';

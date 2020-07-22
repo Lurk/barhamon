@@ -1,5 +1,6 @@
-import { PostInterface, posts } from "../data/posts";
 import React from "react";
+import { posts } from "../data";
+import type { PostInterface } from "../models/posts";
 
 //Change this to your site url.
 const POST_URL_PREFIX = 'https://barhamon.com/post/';

@@ -48,7 +48,8 @@ export const SitemapFull: React.FC = () => {
     <>
       <SitemapPreview/>
       <Segment secondary>
-        <p>sitemap.xml - a list of pages that can be downloaded. Optionally you can specify how often the page is refreshed
+        <p>sitemap.xml - a list of pages that can be downloaded. Optionally you can specify how often the page is
+          refreshed
           and when was the last time, but as far as I know, the optional parameters are ignored. More details can be
           found <a href="https://www.sitemaps.org/">here</a>.</p>
         <p>robots.txt - instructions for robots. In our case, we simply indicate the path from where to get the sitemap.
@@ -70,3 +71,15 @@ Sitemap: https://barhamon.com/sitemap.xml
     </>
   )
 }
+
+export const How_to_serve_sitemap_xml_with_Next_JS = {
+  pid: "How_to_serve_sitemap_xml_with_Next_JS",
+  header: "How to serve sitemap.xml with Next.JS",
+  time: 1594293850344,
+  image: '/img/sitemap.jpg',
+  tags: ['blog', 'nextjs', 'SEO', 'typescript'],
+  description: "Quick guide with code and explanation on sitemap.xml with Next.JS",
+  Preview: SitemapPreview,
+  Full: SitemapFull,
+  readTime: 1
+};

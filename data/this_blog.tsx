@@ -1,7 +1,7 @@
 import React from "react";
 import { List } from "semantic-ui-react";
 
-export const ThisBlogPreview: React.FC = () => {
+const ThisBlogPreview: React.FC = () => {
   return (
     <>
       <p>This blog built with:</p>
@@ -19,7 +19,7 @@ export const ThisBlogPreview: React.FC = () => {
   )
 }
 
-export const ThisBlogFull: React.FC = () => {
+const ThisBlogFull: React.FC = () => {
   return (
     <>
       <ThisBlogPreview/>
@@ -38,3 +38,14 @@ export const ThisBlogFull: React.FC = () => {
     </>
   )
 }
+
+export const this_blog = {
+  pid: "this_blog",
+  header: 'This blog',
+  time: 1593599633253,
+  image: "/img/this_blog.jpg",
+  tags: ['blog', 'roadmap'],
+  description: "",
+  Preview: ThisBlogPreview,
+  Full: ThisBlogFull
+};

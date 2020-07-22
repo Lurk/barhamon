@@ -2,13 +2,13 @@ import React from "react";
 import { Header, Item } from 'semantic-ui-react';
 import { GetStaticPaths, GetStaticProps } from "next";
 import { Layout } from "../../components/layout";
-import { posts } from "../../data/posts";
+import { posts } from "../../data";
 import Error from "next/error";
 import { PostPreview } from "../../components/post_preview";
 
 
 const PostPage: React.FC<{ tag: string }> = ({ tag }) => {
-  const filtered = Object.values(posts).filter((p) => p.tags.includes(tag))
+  const filtered = posts.getAll().filter((p) => p.tags.includes(tag))
   if (filtered) {
     return (
       <Layout title={tag}>
@@ -26,7 +26,7 @@ export default PostPage
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
-    paths: Object.values(posts).map((p) => p.tags.map((tag) => ({ params: { tag } }))).flat(),
+    paths: posts.getAll().map((p) => p.tags.map((tag) => ({ params: { tag } }))).flat(),
     fallback: false
   }
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { List } from "semantic-ui-react";
 
-export const WhyPreview: React.FC = () => {
+const WhyPreview: React.FC = () => {
   return (
     <>
       <p>Since English is not my native language, it’s hard for me to express my thoughts on it. I hope that writing
@@ -13,7 +13,7 @@ export const WhyPreview: React.FC = () => {
   )
 }
 
-export const WhyFull: React.FC = () => {
+const WhyFull: React.FC = () => {
   return (
     <>
       <WhyPreview/>
@@ -28,4 +28,15 @@ export const WhyFull: React.FC = () => {
         links to listen.</p>
     </>
   )
+}
+
+export const why = {
+  pid: "why",
+  header: "Why?",
+  time: 1593701715703,
+  image: '/img/why.jpg',
+  tags: ['blog'],
+  description: "",
+  Preview: WhyPreview,
+  Full: WhyFull
 }
