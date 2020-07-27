@@ -14,7 +14,7 @@ function createSitemap(posts: PostInterface[]) {
 
 export async function getServerSideProps({ res }) {
   res.setHeader('Content-Type', 'text/xml');
-  res.write(createSitemap(Object.values(posts)));
+  res.write(createSitemap(posts.getAll()));
   res.end();
 
   //Don't forget this line, even if it seems useless.

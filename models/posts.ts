@@ -24,6 +24,8 @@ interface PageResult {
   limit: number,
   offset: number,
   total: number,
+  totalPages: number,
+  currentPage: number,
   posts: PostInterface[]
 }
 
@@ -56,11 +58,13 @@ export class Posts {
       limit: opt.limit,
       offset: opt.offset,
       total: res.length,
+      totalPages: Math.ceil(res.length / opt.limit),
+      currentPage: opt.offset === 0 ? 1 : Math.ceil(res.length / opt.offset),
       posts: res.sort(((a, b) => b.time - a.time)).slice(opt.offset, opt.offset + opt.limit)
     };
   }
 
-  getAll(){
+  getAll() {
     return Object.values(this.posts).sort(((a, b) => b.time - a.time));
   }
 }
