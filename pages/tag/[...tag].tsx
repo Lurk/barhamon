@@ -10,7 +10,6 @@ import { Pagination } from "../../components/pagination";
 const limit = 10;
 const PostPage: React.FC<{ tag: string, page: number }> = ({ tag, page }) => {
   const filtered = posts.getPage({ limit, offset: (page - 1) * limit, tag })
-  console.log(filtered);
   if (filtered) {
     return (
       <Layout title={tag}>

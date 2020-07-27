@@ -29,7 +29,7 @@ const ThisBlogFull: React.FC = () => {
         <List.Item><s>Code formatting in posts</s></List.Item>
         <List.Item><s>"Rad more" button in posts with preview</s></List.Item>
         <List.Item><s>Meta tags</s></List.Item>
-        <List.Item>Pagination</List.Item>
+        <List.Item><s>Pagination</s></List.Item>
         <List.Item>Pages (bio, contacts, etc)</List.Item>
         <List.Item>Comments</List.Item>
         <List.Item>RSS feed</List.Item>

@@ -54,12 +54,13 @@ export class Posts {
     } else {
       res = Object.values(this.posts);
     }
+
     return {
       limit: opt.limit,
       offset: opt.offset,
       total: res.length,
       totalPages: Math.ceil(res.length / opt.limit),
-      currentPage: opt.offset === 0 ? 1 : Math.ceil(res.length / opt.offset),
+      currentPage: opt.offset === 0 ? 1 : Math.ceil(opt.offset / opt.limit) + 1,
       posts: res.sort(((a, b) => b.time - a.time)).slice(opt.offset, opt.offset + opt.limit)
     };
   }
