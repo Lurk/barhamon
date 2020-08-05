@@ -11,12 +11,16 @@ export const Layout: React.FC<PageHeadProps> = (props) => {
     <>
       <PageHead {...props}/>
       <Container className="main">
-        <Header style={{ marginTop: "calc(2rem - .14285714em)" }} size="huge">
-          <Header.Content>{isIndex ? 'Serhiy Barhamon' :
-            <Link href="/"><a>Serhiy Barhamon</a></Link>}</Header.Content>
-          <Header.Subheader>software developer, motorcycle rider, fish catcher, nature lover</Header.Subheader>
-        </Header>
-        {props.children}
+        <Segment basic textAlign="center">
+          <Header style={{ marginTop: "calc(2rem - .14285714em)" }} size="huge">
+            <Header.Content>{isIndex ? 'Serhiy Barhamon' :
+              <Link href="/"><a>Serhiy Barhamon</a></Link>}</Header.Content>
+            <Header.Subheader>software developer, motorcycle rider, fish catcher, nature lover</Header.Subheader>
+          </Header>
+        </Segment>
+        <Segment basic size="big">
+          {props.children}
+        </Segment>
       </Container>
 
       <Segment style={{ padding: '20px', marginTop: '20px', borderRadius: 0 }} inverted>
