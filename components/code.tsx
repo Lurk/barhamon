@@ -3,7 +3,7 @@ import Prism, { Token } from "prismjs";
 import style from './code.module.css';
 
 export interface CodeProps {
-  language: 'js' | 'css' | 'json' | 'jsx' | 'typescript' | 'yml' | 'Rust' | 'bash',
+  language: 'js' | 'css' | 'json' | 'jsx' | 'typescript' | 'yml' | 'rust' | 'bash',
   children: string
 }
 
