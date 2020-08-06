@@ -6,6 +6,12 @@ import { Code } from "../components/code";
 const forloop = `for z in (0..100).rev(){
   println!("{:?}", z);
 }`
+
+const concatenateVectors = `let mut a = vec![1, 2, 3];
+let mut b = vec![4, 5, 6];
+a.append(&mut b);`;
+
+
 const RustCheatSheetPreview: React.FC = () => {
   return (
     <>
@@ -30,18 +36,45 @@ const RustCheatSheetFull: React.FC = () => {
           index={0}
           onClick={handleClick}
         >
-          <Icon name='dropdown' />
+          <Icon name='dropdown'/>
           how to loop backwards with for loop
         </Accordion.Title>
-        <Accordion.Content active={active===0}>
+        <Accordion.Content active={active === 0}>
           <Code language="rust">
             {forloop}
+          </Code>
+        </Accordion.Content>
+        <Accordion.Title
+          active={active === 1}
+          index={1}
+          onClick={handleClick}
+        >
+          <Icon name='dropdown'/>
+          is even
+        </Accordion.Title>
+        <Accordion.Content active={active === 1}>
+          <Code language="rust">
+            {`x & 1 == 1;`}
+          </Code>
+        </Accordion.Content>
+        <Accordion.Title
+          active={active === 2}
+          index={2}
+          onClick={handleClick}
+        >
+          <Icon name='dropdown'/>
+          concatenate vectors
+        </Accordion.Title>
+        <Accordion.Content active={active === 2}>
+          <Code language="rust">
+            {concatenateVectors}
           </Code>
         </Accordion.Content>
       </Accordion>
     </>
   )
 }
+
 
 export const rust_cheatsheet = {
   pid: "rust_cheatsheet",
