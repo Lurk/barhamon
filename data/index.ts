@@ -7,9 +7,11 @@ import { this_blog } from "./this_blog";
 import { this_year_i_changed_the_motorcycle_class } from "./this_year_i_changed_the_motorcycle_class";
 import { why } from "./why";
 import { rust_cheatsheet } from "./rust_cheatsheet";
+import { the_plan } from "./the_plan";
 
 export const posts = new Posts();
 
+posts.addPost(the_plan);
 posts.addPost(rust_cheatsheet);
 posts.addPost(this_year_i_changed_the_motorcycle_class);
 posts.addPost(How_to_serve_sitemap_xml_with_Next_JS);
