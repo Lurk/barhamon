@@ -4,7 +4,7 @@ import { Image } from "semantic-ui-react";
 const ThePlanPreview: React.FC = () => {
   return (
     <>
-      <p>One week left before my trip to the mountains by motorcycle. The whole route is +/- 1400 km.</p>
+      <p>One week left before my trip to the mountains on a motorcycle. The whole route is +/- 1400 km.</p>
       <p>There are plans to visit the abandoned Pamir radar station in the Carpathian mountains and ride around.</p>
       <p>I have three days for everything. Here is a rough plan.</p>
     </>
