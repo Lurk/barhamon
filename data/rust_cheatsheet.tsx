@@ -2,6 +2,33 @@ import React, { useState } from "react";
 import { Accordion, Icon } from "semantic-ui-react";
 import { Code } from "../components/code";
 
+interface AccProps {
+  index: number
+  active: boolean,
+  handleClick: (e, titleProps) => void
+  title: string,
+  code: string
+}
+
+const Acc: React.FC<AccProps> = ({ active, handleClick, code, title, index }) => {
+  return (
+    <>
+      <Accordion.Title
+        active={active}
+        index={index}
+        onClick={handleClick}
+      >
+        <Icon name='dropdown'/>
+        {title}
+      </Accordion.Title>
+      <Accordion.Content active={active}>
+        <Code language="rust">
+          {code}
+        </Code>
+      </Accordion.Content>
+    </>
+  )
+}
 
 const forloop = `for z in (0..100).rev(){
   println!("{:?}", z);
@@ -10,6 +37,11 @@ const forloop = `for z in (0..100).rev(){
 const concatenateVectors = `let mut a = vec![1, 2, 3];
 let mut b = vec![4, 5, 6];
 a.append(&mut b);`;
+
+const removeAllDuplicatesFromVector = `let mut v = vec![1,3,10,2,5,3,6,1,8]
+//sort is the key
+v.sort();
+v.dedup(); //[1,2,3,5,6,8,10] `;
 
 
 const RustCheatSheetPreview: React.FC = () => {
@@ -31,49 +63,39 @@ const RustCheatSheetFull: React.FC = () => {
     <>
       <RustCheatSheetPreview/>
       <Accordion styled>
-        <Accordion.Title
+        <Acc
           active={active === 0}
+          code={forloop}
+          title="how to loop backwards with for loop"
+          handleClick={handleClick}
           index={0}
-          onClick={handleClick}
-        >
-          <Icon name='dropdown'/>
-          how to loop backwards with for loop
-        </Accordion.Title>
-        <Accordion.Content active={active === 0}>
-          <Code language="rust">
-            {forloop}
-          </Code>
-        </Accordion.Content>
-        <Accordion.Title
+        />
+        <Acc
           active={active === 1}
+          code={`x & 1 == 1;`}
+          title="is even"
+          handleClick={handleClick}
           index={1}
-          onClick={handleClick}
-        >
-          <Icon name='dropdown'/>
-          is even
-        </Accordion.Title>
-        <Accordion.Content active={active === 1}>
-          <Code language="rust">
-            {`x & 1 == 1;`}
-          </Code>
-        </Accordion.Content>
-        <Accordion.Title
+        />
+        <Acc
           active={active === 2}
+          code={concatenateVectors}
+          title="concatenate vectors"
+          handleClick={handleClick}
           index={2}
-          onClick={handleClick}
-        >
-          <Icon name='dropdown'/>
-          concatenate vectors
-        </Accordion.Title>
-        <Accordion.Content active={active === 2}>
-          <Code language="rust">
-            {concatenateVectors}
-          </Code>
-        </Accordion.Content>
+        />
+        <Acc
+          active={active === 3}
+          code={removeAllDuplicatesFromVector}
+          title="remove all duplicates from vector"
+          handleClick={handleClick}
+          index={3}
+        />
       </Accordion>
     </>
   )
 }
+
 
 
 export const rust_cheatsheet = {
