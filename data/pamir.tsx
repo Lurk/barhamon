@@ -94,9 +94,8 @@ const PamirFull: React.FC = () => {
         adventure.</p>
       <Divider/>
       <h3>Here is the video I promised:</h3>
-      <iframe width="700" height="315" src="https://www.youtube.com/embed/9KvGQ8raiac" frameBorder="0"
+      <iframe style={{width:"100%", height:"300px"}} src="https://www.youtube.com/embed/9KvGQ8raiac" frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen/>
-
     </>
   )
 }
