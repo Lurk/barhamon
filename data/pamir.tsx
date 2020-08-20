@@ -104,7 +104,7 @@ const PamirFull: React.FC = () => {
 export const pamir = {
   pid: "rls_pamir",
   header: "A 3-day motorcycle adventure in the Carpathian mountains",
-  time: 1597937984474,
+  time: 1597939694799,
   image: '/img/rls_pamir/header.jpg',
   tags: ['motorcycle', 'adventure', 'mountains'],
   description: "A trip from Kyiv to abandoned military radar station 'Pamir' and back on two old Africa Twin motorcycles",

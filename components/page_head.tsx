@@ -18,8 +18,10 @@ export const PageHead: React.FC<PageHeadProps> = ({ title, description, keywords
     <Head>
       <title>{t}</title>
       <meta property="og:title" content={t}/>
+      <meta property="og:type" content="website"/>
       <meta property="og:url" content={`https://barhamon.com${router.asPath}`}/>
       {image && <meta property="og:image" content={`https://barhamon.com${image}`}/>}
+      {description && <meta property="og:description" content={description}/>}
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
