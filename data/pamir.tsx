@@ -56,7 +56,7 @@ const PamirFull: React.FC = () => {
         motorcycle, I went to the service.</p>
       <p>I hope it won't come in handy, but the tire service is in Selyatyn village (<a
         href="https://goo.gl/maps/3H41rM2UzVBY9PQ59">here's a point on the map</a>). The owner is not very fond of
-        bikers. But luckily he is a fisherman, like me, so we find a common language with him.</p>
+        bikers. But luckily he is a fisherman, like me, so we find a common language.</p>
       <p>It was not possible to seal the tube because the drill tore it up a lot. But luckily I had a spare with me. So
         we quickly changed it, pumped it up, strapped the wheel back to the bike, and I go back to Gleb. When we put
         back his bike together and pack our luggage, we rushed on.</p>
