@@ -107,7 +107,7 @@ export const pamir = {
   time: 1597937984474,
   image: '/img/rls_pamir/header.jpg',
   tags: ['motorcycle', 'adventure', 'mountains'],
-  description: "",
+  description: "A trip from Kyiv to abandoned military radar station 'Pamir' and back on two old Africa Twin motorcycles",
   Preview: PamirPreview,
   Full: PamirFull
 }
