@@ -11,7 +11,13 @@ const PostPage: React.FC<{ pid: string }> = ({ pid }) => {
   const post = posts.getPost(pid);
   if (post) {
     return (
-      <Layout title={post.header} image={post.image} keywords={post.tags} description={post.description}>
+      <Layout
+        title={post.header}
+        image={post.image}
+        keywords={post.tags}
+        description={post.description}
+        canonical={`/post/${post.pid}`}
+      >
         <Item.Group>
           <PostFull {...post}/>
         </Item.Group>

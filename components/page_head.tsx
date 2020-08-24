@@ -7,10 +7,11 @@ export interface PageHeadProps {
   description?: string
   keywords?: string[]
   image?: string;
+  canonical?: string;
 }
 
 const tags: string[] = ["software development", "motorcycles", "fishing", "camping"]
-export const PageHead: React.FC<PageHeadProps> = ({ title, description, keywords, image }) => {
+export const PageHead: React.FC<PageHeadProps> = ({ title, description, keywords, image, canonical }) => {
   const router = useRouter();
   const t = title ? `${title} - BarHamon` : 'BarHamon';
   const u: string[] = keywords ? Array.from(new Set<string>([...keywords, ...tags]).values()) : tags;
@@ -19,9 +20,10 @@ export const PageHead: React.FC<PageHeadProps> = ({ title, description, keywords
       <title>{t}</title>
       <meta property="og:title" content={t}/>
       <meta property="og:type" content="website"/>
-      <meta property="og:url" content={`https://barhamon.com${router.asPath}`}/>
+      {canonical && <meta property="og:url" content={`https://barhamon.com${canonical}`}/>}
       {image && <meta property="og:image" content={`https://barhamon.com${image}`}/>}
       {description && <meta property="og:description" content={description}/>}
+      {canonical && <link rel="canonical" href={`https://barhamon.com${canonical}`}/>}
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
@@ -33,6 +35,7 @@ export const PageHead: React.FC<PageHeadProps> = ({ title, description, keywords
       <meta name="charset" content="UTF-8"/>
       <meta name="description" content={description ? description : "Serhiy Barhamon personal blog"}/>
       <meta name="keywords" content={u.join(', ')}/>
+
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171846183-1"/>
       <script
         dangerouslySetInnerHTML={{
