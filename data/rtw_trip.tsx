@@ -98,7 +98,7 @@ const RtwFull: React.FC = () => {
           <ImageGallery items={thirdSlider}/>
         </li>
         <li><a href="https://www.longwayround.com/">Ewan McGregor and Charley Boorman</a> whos journey inspired a lot of
-          people, included me. Also, they do a new show right now - "Long way up."
+          people, included me. Also, they do a new show right now - <a href="https://www.youtube.com/watch?v=611fw81BN98&ab_channel=AppleTV">"Long way up"</a>
           <ImageGallery items={fourthSlider}/>
         </li>
         <li><a href="https://www.youtube.com/channel/UCYf4z6G9EqeJeOHnBu7l-mQ">Sjaak Lucassen</a> - 2001 until 2006 on a
