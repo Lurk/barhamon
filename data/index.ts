@@ -9,9 +9,11 @@ import { why } from "./why";
 import { rust_cheatsheet } from "./rust_cheatsheet";
 import { the_plan } from "./the_plan";
 import { pamir } from "./pamir";
+import { rtw_trip } from "./rtw_trip";
 
 export const posts = new Posts();
 
+posts.addPost(rtw_trip);
 posts.addPost(pamir);
 posts.addPost(the_plan);
 posts.addPost(rust_cheatsheet);
