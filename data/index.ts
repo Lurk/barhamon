@@ -10,9 +10,11 @@ import { rust_cheatsheet } from "./rust_cheatsheet";
 import { the_plan } from "./the_plan";
 import { pamir } from "./pamir";
 import { rtw_trip } from "./rtw_trip";
+import { central_ukraine } from "./central_ukraine";
 
 export const posts = new Posts();
 
+posts.addPost(central_ukraine)
 posts.addPost(rtw_trip);
 posts.addPost(pamir);
 posts.addPost(the_plan);
