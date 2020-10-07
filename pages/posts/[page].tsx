@@ -35,7 +35,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     paths: new Array(f.totalPages)
       .fill(0)
       .reduce(
-        (acc: { params: Params }[], p) => [...acc, { params: { page: String(p + 1) } }],
+        (acc: { params: Params }[], p, k) => [...acc, { params: { page: String(k + 1) } }],
         []
       ),
     fallback: false
