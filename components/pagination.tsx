@@ -24,7 +24,7 @@ export const Pagination: React.FC<PaginationProps> = ({ activePage, totalPages, 
         size="small"
         onPageChange={
           (event, data) => {
-            router.push(router.pathname, url(data.activePage.toString()));
+            router.push(router.pathname === '/' ? '/posts/[page]' : router.pathname, url(data.activePage.toString()));
           }
         }
       />
