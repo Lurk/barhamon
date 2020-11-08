@@ -11,10 +11,12 @@ import { the_plan } from "./the_plan";
 import { pamir } from "./pamir";
 import { rtw_trip } from "./rtw_trip";
 import { central_ukraine } from "./central_ukraine";
+import { burned_out } from "./burned_out";
 
 export const posts = new Posts();
 
-posts.addPost(central_ukraine)
+posts.addPost(burned_out);
+posts.addPost(central_ukraine);
 posts.addPost(rtw_trip);
 posts.addPost(pamir);
 posts.addPost(the_plan);
