@@ -3,7 +3,7 @@ import { posts } from "../data";
 import type { PostInterface } from "../models/posts";
 
 //Change this to your site url.
-const POST_URL_PREFIX = 'https://barhamon.com/post/';
+const POST_URL_PREFIX = `${process.env.NEXT_PUBLIC_HOST}/post/`;
 
 function createSitemap(posts: PostInterface[]) {
   return `<?xml version="1.0" encoding="UTF-8"?>

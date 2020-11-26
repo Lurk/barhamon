@@ -4,6 +4,7 @@ import { PostInterface } from "../models/posts";
 import { getPostMeta } from "./post_meta";
 import { Tag } from "./post_tags";
 import styles from './post_full.module.css';
+import { Comments } from "./comments";
 
 export const PostFull: React.FC<PostInterface> = ({ Full, ...rest }) => {
   return (
@@ -23,6 +24,9 @@ export const PostFull: React.FC<PostInterface> = ({ Full, ...rest }) => {
         <Item.Description>
           <Full/>
         </Item.Description>
+        <Item.Extra>
+          <Comments slug={rest.pid} id={rest.pid} title={rest.header}/>
+        </Item.Extra>
       </Item.Content>
     </Item>
   )
