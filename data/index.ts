@@ -12,9 +12,11 @@ import { pamir } from "./pamir";
 import { rtw_trip } from "./rtw_trip";
 import { central_ukraine } from "./central_ukraine";
 import { burned_out } from "./burned_out";
+import { comments } from "./comments";
 
 export const posts = new Posts();
 
+posts.addPost(comments);
 posts.addPost(burned_out);
 posts.addPost(central_ukraine);
 posts.addPost(rtw_trip);

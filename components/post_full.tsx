@@ -1,5 +1,5 @@
 import React from "react";
-import { Item, Header } from "semantic-ui-react";
+import { Item, Header, Divider } from "semantic-ui-react";
 import { PostInterface } from "../models/posts";
 import { getPostMeta } from "./post_meta";
 import { Tag } from "./post_tags";
@@ -24,6 +24,7 @@ export const PostFull: React.FC<PostInterface> = ({ Full, ...rest }) => {
         <Item.Description>
           <Full/>
         </Item.Description>
+        <Divider/>
         <Item.Extra>
           <Comments slug={rest.pid} id={rest.pid} title={rest.header}/>
         </Item.Extra>
