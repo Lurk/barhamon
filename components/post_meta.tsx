@@ -1,6 +1,6 @@
 import React from "react";
 import { format, formatDistance } from "date-fns"
-import { Item } from "semantic-ui-react";
+import { Card } from "semantic-ui-react";
 
 export interface PostMeta {
   time: number,
@@ -10,7 +10,7 @@ export interface PostMeta {
 export const PostMeta: React.FC<PostMeta> = ({ time, readTime }) => {
 
   return (
-    <Item.Meta>{getPostMeta(time, readTime)}</Item.Meta>
+    <Card.Meta>{getPostMeta(time, readTime)}</Card.Meta>
   )
 }
 

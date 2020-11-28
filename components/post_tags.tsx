@@ -1,5 +1,5 @@
 import React from "react";
-import { Icon, Item, Label } from "semantic-ui-react";
+import { Icon, Card, Label } from "semantic-ui-react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -9,11 +9,11 @@ export interface PostTags {
 
 export const PostTags: React.FC<PostTags> = ({ tags }) => {
   return (
-    <Item.Extra>
+    <Card.Content extra>
       {
         tags && tags.map((t, i) => <Tag key={i} id={i} tag={t}/>)
       }
-    </Item.Extra>
+    </Card.Content>
   )
 }
 

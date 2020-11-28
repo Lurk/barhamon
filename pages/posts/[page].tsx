@@ -1,22 +1,17 @@
 import React from "react";
-import { Item } from 'semantic-ui-react';
 import { GetStaticPaths, GetStaticProps } from "next";
 import Error from "next/error";
 import { Layout } from "../../components/layout";
 import { posts } from "../../data";
-import { PostPreview } from "../../components/post_preview";
-import { Pagination } from "../../components/pagination";
+import { PostList } from "../../components/post_list";
 
-const limit = 10;
+const limit = parseInt(process.env.NEXT_PUBLIC_POSTS_PER_PAGE);
 const PostPage: React.FC<{ page: number }> = ({ page }) => {
   const filtered = posts.getPage({ limit, offset: (page - 1) * limit })
   if (filtered) {
     return (
       <Layout>
-        <Item.Group>
-          {filtered.posts.map((p) => <PostPreview {...p} key={p.pid}/>)}
-        </Item.Group>
-        <Pagination totalPages={filtered.totalPages} activePage={filtered.currentPage} url={p => `/posts/${p}`}/>
+        <PostList page={filtered} url={p => `/posts/${p}`}/>
       </Layout>
     );
   }

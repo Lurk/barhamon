@@ -1,7 +1,3 @@
-.ui.container.main, .item .content {
-  max-width: 700px !important;
-}
-
 .ui.container.main {
   min-height: calc(100% - 178px);
   box-sizing: border-box;
