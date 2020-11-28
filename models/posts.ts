@@ -31,12 +31,14 @@ interface PageResult {
 
 export class Posts {
   private posts: Dict<PostInterface> = {};
+  private l: number = 0;
 
   addPost(post: PostInterface) {
     if (this.posts[ post.pid ]) {
       throw new Error(`post with id: ${post.pid} already exists`);
     }
     this.posts[ post.pid ] = post;
+    this.l += 1;
   }
 
   getPost(pid: string): PostInterface | false {
@@ -44,7 +46,7 @@ export class Posts {
   }
 
   length() {
-    return Object.keys(this.posts).length;
+    return this.l;
   }
 
   getPage(opt: PageOptions = { offset: 0, limit: 10 }): PageResult {
