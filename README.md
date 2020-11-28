@@ -10,14 +10,3 @@ Deployed on [Vercel](https://vercel.com/).
 
 If you find a bug, or typo, or error, or you know ways to do things better - please submit an issue.
 
-Roadmap:
-
-1. ~~Tags page~~
-1. ~~Code formatting in posts~~
-1. ~~"Read more" button in posts with preview~~
-1. ~~Meta tags~~
-1. ~~Pagination~~
-1. Pages (bio, contacts, etc)
-1. Comments
-1. RSS feed
-1. Music
