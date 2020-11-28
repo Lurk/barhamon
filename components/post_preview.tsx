@@ -11,7 +11,7 @@ export const PostPreview: React.FC<PostInterface> = ({ Preview, Full, ...rest })
     <Card>
       {rest.image &&
       <Link as={`/post/${rest.pid}`} href={`/post/[pid]`}>
-        <Image src={rest.image} wrapped ui={false} className={styles.header_image} />
+        <Image src={rest.image} wrapped ui={false} className={styles.header_image} href={`/post/${rest.pid}`}/>
       </Link>
       }
       <Card.Content>

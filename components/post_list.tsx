@@ -8,7 +8,7 @@ import { Pagination } from "./pagination";
 export const PostList: React.FC<{ page: PageResult, url: (activePage: string) => string }> = ({ page, url }) => {
   return (
     <>
-      <Card.Group centered>
+      <Card.Group>
         {page.posts.map((p) => <PostPreview {...p} key={p.pid}/>)}
       </Card.Group>
       <Container textAlign="center" style={{marginTop:'50px'}}>
