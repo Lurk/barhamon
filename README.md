@@ -5,6 +5,7 @@ Built with:
 * [Semantic UI React](https://react.semantic-ui.com/)
 * [date-fns](https://date-fns.org/) 
 * [Prism JS](https://prismjs.com/index.html)
+* [Disqus](https://disqus.com/)
 
 Deployed on [Vercel](https://vercel.com/).
 
