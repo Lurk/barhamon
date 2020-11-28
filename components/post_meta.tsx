@@ -1,5 +1,5 @@
 import React from "react";
-import { formatDistance } from "date-fns"
+import { format, formatDistance } from "date-fns"
 import { Item } from "semantic-ui-react";
 
 export interface PostMeta {
@@ -15,5 +15,12 @@ export const PostMeta: React.FC<PostMeta> = ({ time, readTime }) => {
 }
 
 export function getPostMeta(time: number, readTime?: number) {
-  return `${formatDistance(new Date(time), new Date())} ago${readTime ? ` · ${readTime} min read` : ''}`;
+  let formattedTime;
+  if ((Date.now() - time) > 7 * 24 * 60 * 60 * 1000) {
+    formattedTime = format(time, 'MMMM d, yyyy')
+  } else {
+    formattedTime = `${formatDistance(new Date(time), new Date())} ago`;
+  }
+
+  return `${formattedTime}${readTime ? ` · ${readTime} min read` : ''}`;
 }
