@@ -18,7 +18,7 @@ const PostPage: React.FC<{ pid: string }> = ({ pid }) => {
         description={post.description}
         canonical={`/post/${post.pid}`}
       >
-        <Item.Group>
+        <Item.Group unstackable>
           <PostFull {...post}/>
         </Item.Group>
       </Layout>
