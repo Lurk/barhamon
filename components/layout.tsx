@@ -39,7 +39,7 @@ export const Layout: React.FC<PageHeadProps> = (props) => {
                 </Segment>
               </Sticky>
             </Grid.Column>
-            <Grid.Column mobile={13} computer={12} tablet={14} className={style.content}>
+            <Grid.Column mobile={13} computer={13} tablet={14} className={style.content}>
               <Segment basic size="big">
                 {props.children}
               </Segment>
