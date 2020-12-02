@@ -7,8 +7,7 @@ const PamirPreview: React.FC = () => {
   return (
     <>
       <p>In just three days, we covered 1.315 km, visited abandoned military radar station "Pamir" and camp at beautiful
-        sites. Considering all the adventures, I would like to have at least one more day because the last day was very
-        tough. But first things first.</p>
+        sites.</p>
     </>
   )
 }
@@ -29,7 +28,9 @@ const thirdSlider = new Array(9).fill(0).map((v, k) => ({
 const PamirFull: React.FC = () => {
   return (
     <>
-      <PamirPreview/>
+      <p>In just three days, we covered 1.315 km, visited abandoned military radar station "Pamir" and camp at beautiful
+        sites. Considering all the adventures, I would like to have at least one more day because the last day was very
+        tough. But first things first.</p>
       <Divider/>
       <h3>Day 1:</h3>
       <p>We met with my friend, Gleb, at 8 am and drove off after drinking coffee. About every 100 - 150 km, we made
@@ -87,14 +88,14 @@ const PamirFull: React.FC = () => {
       <p>We reached Kyiv after midnight.</p>
       <p><a href="https://scenicapp.space/viewRide.php?rid=fuaaewUz">Track for this day.</a></p>
       <ImageGallery items={thirdSlider}/>
-      <Divider />
+      <Divider/>
       <p>I'm happy we did it. Even though the last day was very tough, especially the last 100 km to home. I would
         repeat without hesitation)</p>
       <p>Halfway home, we already started discussing where we would go next, so I'm sure this was not our last
         adventure.</p>
       <Divider/>
       <h3>Here is the video I promised:</h3>
-      <iframe style={{width:"100%", height:"300px"}} src="https://www.youtube.com/embed/9KvGQ8raiac" frameBorder="0"
+      <iframe style={{ width: "100%", height: "300px" }} src="https://www.youtube.com/embed/9KvGQ8raiac" frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen/>
     </>
   )

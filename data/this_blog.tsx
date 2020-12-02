@@ -12,10 +12,6 @@ const ThisBlogPreview: React.FC = () => {
         <List.Item><a href="https://prismjs.com/index.html">Prism JS</a></List.Item>
         <List.Item><a href="https://disqus.com/">Disqus</a></List.Item>
       </List>
-      <p>Deployed on <a href="https://vercel.com/">Vercel</a>.</p>
-      <p>You can find source code on <a href="https://github.com/Lurk/barhamon">GitHub repo</a>. If you find a bug, or
-        typo, or error, or you know ways to do things better - please submit <a
-          href="https://github.com/Lurk/barhamon/issues">an issue</a>.</p>
     </>
   )
 }
@@ -24,6 +20,10 @@ const ThisBlogFull: React.FC = () => {
   return (
     <>
       <ThisBlogPreview/>
+      <p>Deployed on <a href="https://vercel.com/">Vercel</a>.</p>
+      <p>You can find source code on <a href="https://github.com/Lurk/barhamon">GitHub repo</a>. If you find a bug, or
+        typo, or error, or you know ways to do things better - please submit <a
+          href="https://github.com/Lurk/barhamon/issues">an issue</a>.</p>
       <p>Roadmap:</p>
       <List ordered>
         <List.Item><s>Tags page</s></List.Item>

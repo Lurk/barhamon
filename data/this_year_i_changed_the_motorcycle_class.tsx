@@ -4,8 +4,7 @@ import { Grid, Icon, Image, Popup } from "semantic-ui-react";
 const ThisYearIChangedTheMotorcycleClassPreview: React.FC = () => {
   return (
     <>
-      <p>I used to drive a Honda X11. And this is a great bike that I still love. But I want to ride not only on
-        asphalt. So I bought an even more ancient but no less legendary Africa Twin RD04 motorcycle.</p>
+      <p>I used to drive a Honda X11.</p>
     </>
   )
 }
@@ -13,7 +12,8 @@ const ThisYearIChangedTheMotorcycleClassPreview: React.FC = () => {
 const ThisYearIChangedTheMotorcycleClassFull: React.FC = () => {
   return (
     <>
-      <ThisYearIChangedTheMotorcycleClassPreview/>
+      <p>I used to drive a Honda X11. And this is a great bike that I still love. But I want to ride not only on
+        asphalt. So I bought an even more ancient but no less legendary Africa Twin RD04 motorcycle.</p>
       <Grid>
         <Grid.Row columns={2} only="mobile">
           <Grid.Column width="8">

@@ -94,7 +94,6 @@ const TheCodePreview: React.FC = () => {
   return (
     <>
       <p>I needed to add code highlighting to posts (no one likes ugly code :).</p>
-      <p>A quick googling showed that for my stack there is nothing ready. But everything revolves around Prismjs.</p>
     </>
   )
 }
@@ -103,6 +102,7 @@ const TheCodeFull: React.FC = () => {
   return (
     <>
       <TheCodePreview/>
+      <p>A quick googling showed that for my stack there is nothing ready. But everything revolves around Prismjs.</p>
       <Segment secondary>
         The guys from FormidableLabs with <a
         href="https://github.com/FormidableLabs/prism-react-renderer">prism-react-renderer</a> came closest to what I

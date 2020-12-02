@@ -6,9 +6,6 @@ const WhyPreview: React.FC = () => {
     <>
       <p>Since English is not my native language, it’s hard for me to express my thoughts on it. I hope that writing
         posts regularly (!important) will improve my speaking skills.</p>
-      <p>The second reason is education. Being a developer means that you are constantly learning, at least if you want
-        to progress. The best way to learn is to explain what you are learning. I'm not sure if this works with
-        everyone, but it works with me.</p>
     </>
   )
 }
@@ -17,6 +14,9 @@ const WhyFull: React.FC = () => {
   return (
     <>
       <WhyPreview/>
+      <p>The second reason is education. Being a developer means that you are constantly learning, at least if you want
+        to progress. The best way to learn is to explain what you are learning. I'm not sure if this works with
+        everyone, but it works with me.</p>
       <p>So, be ready to read about:</p>
       <List as="ul">
         <List.Item>Building software.</List.Item>

@@ -6,9 +6,7 @@ import { Divider } from "semantic-ui-react";
 const CentralUkrainePreview: React.FC = () => {
   return (
     <>
-      <p>I`ve made another short trip — two days of tarmac, gravel, and sand roads. I deliberately avoid highways, as
-        much as I can, because all the fun and beauty are on small and hidden trails. It always amazed me where people
-        can live. To some villages, the only path is through deep sand trails. </p>
+      <p>I`ve made another short trip — two days of tarmac, gravel, and sand roads.</p>
     </>
   )
 }
@@ -29,7 +27,9 @@ const thirdSlider = new Array(5).fill(0).map((v, k) => ({
 const CentralUkraineFull: React.FC = () => {
   return (
     <>
-      <CentralUkrainePreview/>
+      <p>I`ve made another short trip — two days of tarmac, gravel, and sand roads. I deliberately avoid highways, as
+        much as I can, because all the fun and beauty are on small and hidden trails. It always amazed me where people
+        can live. To some villages, the only path is through deep sand trails. </p>
       <Divider/>
       <ImageGallery items={firstSlider}/>
       <p>Here are tracks for the <a href="https://scenicapp.space/ride/UHlOhOsM">first</a> and <a

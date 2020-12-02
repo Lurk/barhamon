@@ -4,8 +4,7 @@ import { Image } from "semantic-ui-react";
 const TheRainTheRiverAndTheSunsetPreview: React.FC = () => {
   return (
     <>
-      <p>At the weekend we spent the night on the shore in a tent. The first time in a long time I went to the river
-        without fishing rods :)</p>
+      <p>At the weekend we spent the night on the shore in a tent.</p>
     </>
   )
 }
@@ -13,7 +12,8 @@ const TheRainTheRiverAndTheSunsetPreview: React.FC = () => {
 const TheRainTheRiverAndTheSunsetFull: React.FC = () => {
   return (
     <>
-      <TheRainTheRiverAndTheSunsetPreview/>
+      <p>At the weekend we spent the night on the shore in a tent. The first time in a long time I went to the river
+        without fishing rods :)</p>
       <p>Every time I return from a venture, I regret that I did not bring a camera with me. Because every time some
         kind of adventure happens. This time, the GPS led us through the forest, and at some point, we had to turn
         around and look for another road because the road in front of us turned into a swamp.</p>

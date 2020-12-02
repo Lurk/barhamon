@@ -5,8 +5,7 @@ import { Segment } from "semantic-ui-react";
 export const SitemapPreview: React.FC = () => {
   return (
     <>
-      <p>To not only increase entropy but also be useful, this blog should be indexed by search engines. And to make it
-        easier for search engines to index, they came up with robots.txt and sitemap.</p>
+      <p>To not only increase entropy but also be useful, this blog should be indexed by search engines.</p>
     </>
   )
 }
@@ -46,7 +45,8 @@ export default Sitemap;
 export const SitemapFull: React.FC = () => {
   return (
     <>
-      <SitemapPreview/>
+      <p>To not only increase entropy but also be useful, this blog should be indexed by search engines. And to make it
+        easier for search engines to index, they came up with robots.txt and sitemap.</p>
       <Segment secondary>
         <p>sitemap.xml - a list of pages that can be downloaded. Optionally you can specify how often the page is
           refreshed

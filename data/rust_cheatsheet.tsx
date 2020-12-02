@@ -48,7 +48,6 @@ const RustCheatSheetPreview: React.FC = () => {
   return (
     <>
       <p>I start to learn Rust programming language. This is a post where I collect tips and tricks about Rust</p>
-      <p>This post will be updated(I hope often :)</p>
     </>
   )
 }
@@ -62,6 +61,7 @@ const RustCheatSheetFull: React.FC = () => {
   return (
     <>
       <RustCheatSheetPreview/>
+      <p>This post will be updated(I hope often :)</p>
       <Accordion styled>
         <Acc
           active={active === 0}
