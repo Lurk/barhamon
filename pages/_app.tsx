@@ -2,7 +2,7 @@ import React from 'react';
 import App from 'next/app';
 import 'semantic-ui-css/semantic.min.css';
 import 'prismjs/themes/prism-tomorrow.css';
-import '../components/layout.css'
+// import '../components/layout.css'
 import 'react-image-gallery/styles/css/image-gallery.css';
 
 class MyApp extends App {

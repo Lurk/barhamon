@@ -1,34 +1,58 @@
-import { Container, Grid, Header, Icon, Segment } from "semantic-ui-react";
-import React from "react";
+import { Container, Grid, Header, Icon, Image, Ref, Segment, Sticky } from "semantic-ui-react";
+import React, { createRef } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { PageHead, PageHeadProps } from "./page_head";
+import style from "./layout.module.css";
 
 export const Layout: React.FC<PageHeadProps> = (props) => {
-  const router = useRouter();
-  const isIndex = router.asPath === '/';
+  const contextRef = createRef<HTMLElement>()
   return (
     <>
       <PageHead {...props}/>
-      <Container className="main">
-        <Segment basic textAlign="center">
-          <Header style={{ marginTop: "calc(2rem - .14285714em)" }} size="huge">
-            <Header.Content>{isIndex ? 'Serhiy Barhamon' :
-              <Link href="/"><a>Serhiy Barhamon</a></Link>}</Header.Content>
-            <Header.Subheader>software developer, motorcycle rider, fish catcher, nature lover</Header.Subheader>
-          </Header>
-        </Segment>
-        <Segment basic size="big">
-          {props.children}
-        </Segment>
-      </Container>
-
+      <Ref innerRef={contextRef}>
+        <Grid className={style.main}>
+          <Grid.Row>
+            <Grid.Column className={style.menu} computer={3} only="computer">
+              <Sticky context={contextRef}>
+                <Segment basic size="big">
+                  <Header size="huge" style={{ marginTop: "calc(2rem - .14285714em)" }}>
+                    <Header.Subheader>
+                      Hi!<br/>
+                      My name is <br/>
+                    </Header.Subheader>
+                    <Header.Content>
+                      <Link href="/"><a>Serhiy Barhamon</a></Link>
+                    </Header.Content>
+                    <Header.Subheader>
+                      And I am a software engineer
+                    </Header.Subheader>
+                  </Header>
+                </Segment>
+              </Sticky>
+            </Grid.Column  >
+            <Grid.Column only="mobile tablet" mobile={3} tablet={2} className={style.menu}>
+              <Sticky context={contextRef}>
+                <Segment basic textAlign="center" className={style.menu_header}>
+                  <Link href="/">
+                    <a><Image avatar src="/android-chrome-192x192.png"/></a>
+                  </Link>
+                </Segment>
+              </Sticky>
+            </Grid.Column>
+            <Grid.Column mobile={13} computer={12} tablet={14} className={style.content}>
+              <Segment basic size="big">
+                {props.children}
+              </Segment>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </Ref>
       <Segment style={{ padding: '20px', marginTop: '20px', borderRadius: 0 }} inverted>
         <Container className="main">
           <Grid inverted>
             <Grid.Row columns={3} only="computer tablet">
               <Grid.Column>
-                This is footer
+                This is a footer
               </Grid.Column>
               <Grid.Column>
                 <p>You can find me at:</p>

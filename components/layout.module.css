@@ -1,0 +1,30 @@
+.main {
+  min-height: calc(100% - 178px);
+  box-sizing: border-box;
+  display: flow-root;
+  margin: 0!important;
+}
+
+/*body, html, #__next {*/
+/*  box-sizing: border-box;*/
+/*  height: 100% !important;*/
+/*  margin: 0;*/
+/*  padding: 0;*/
+/*}*/
+
+
+.menu {
+  margin: 0!important;
+  padding: 0!important;
+}
+.menu_header {
+  margin: 0!important;
+  padding-left: 0!important;
+  padding-right: 0!important;
+  display: flex;
+  justify-content: center;
+}
+
+.content{
+  padding-left: 0!important;
+}

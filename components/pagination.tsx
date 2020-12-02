@@ -20,7 +20,6 @@ export const Pagination: React.FC<PaginationProps> = ({ activePage, totalPages, 
         lastItem={null}
         siblingRange={1}
         totalPages={totalPages}
-        floated='right'
         size="small"
         onPageChange={
           (event, data) => {

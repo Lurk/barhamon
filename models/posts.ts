@@ -20,7 +20,7 @@ interface PageOptions {
   tag?: string
 }
 
-interface PageResult {
+export interface PageResult {
   limit: number,
   offset: number,
   total: number,

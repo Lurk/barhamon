@@ -9,7 +9,7 @@ import { Comments } from "./comments";
 export const PostFull: React.FC<PostInterface> = ({ Full, ...rest }) => {
   return (
     <Item>
-      <Item.Content>
+      <Item.Content className={styles.content}>
         <div style={{ backgroundImage: `url(${rest.image})` }} className={styles.header_container}>
           <div className={styles.header_text}>
             <Header inverted size="large">

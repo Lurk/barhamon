@@ -1,18 +1,15 @@
 import React from "react";
-import { Item } from "semantic-ui-react";
-import { PostPreview } from "../components/post_preview";
 import { posts } from "../data";
 import { Layout } from "../components/layout";
-import { Pagination } from "../components/pagination";
+import { PostList } from "../components/post_list";
+
+const limit = parseInt(process.env.NEXT_PUBLIC_POSTS_PER_PAGE);
 
 export default function Home() {
-  const filtered = posts.getPage({ limit: 10, offset: 0 })
+  const filtered = posts.getPage({ limit, offset: 0 })
   return (
     <Layout>
-      <Item.Group>
-        {filtered.posts.map((p) => <PostPreview {...p} key={p.pid}/>)}
-      </Item.Group>
-      <Pagination totalPages={filtered.totalPages} activePage={filtered.currentPage} url={p => `/posts/${p}`}/>
+      <PostList page={filtered} url={p => `/posts/${p}`}/>
     </Layout>
   )
 }

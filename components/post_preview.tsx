@@ -1,26 +1,29 @@
 import React from "react";
-import { Item } from "semantic-ui-react";
+import { Card, Image } from "semantic-ui-react";
 import Link from "next/link";
 import type { PostInterface } from "../models/posts";
 import { PostMeta } from "./post_meta";
-import { PostTags } from "./post_tags";
+import styles from './post_preview.module.css'
 
-export const PostPreview: React.FC<PostInterface> = ({Preview, Full, ...rest}) => {
+export const PostPreview: React.FC<PostInterface> = ({ Preview, Full, ...rest }) => {
 
   return (
-    <Item>
-      {rest.image && <Item.Image src={rest.image} size="small"/>}
-      <Item.Content>
-        <Item.Header>
-          <Link as={`/post/${rest.pid}`} href={`/post/[pid]`}><a>{rest.header}</a></Link>
-        </Item.Header>
+    <Card>
+      {rest.image &&
+      <Link as={`/post/${rest.pid}`} href={`/post/[pid]`}>
+        <Image src={rest.image} wrapped ui={false} className={styles.header_image} href={`/post/${rest.pid}`}/>
+      </Link>
+      }
+      <Card.Content>
+        <Card.Header>
+          <Link as={`/post/${rest.pid}`} href={`/post/[pid]`}><a className={styles.header_link}>{rest.header}</a></Link>
+        </Card.Header>
         <PostMeta readTime={rest.readTime} time={rest.time}/>
-        <Item.Description>
+        <Card.Description>
           <Preview/>
-          {Full !== Preview && <p><Link as={`/post/${rest.pid}`} href={`/post/[pid]`}><a>Read more...</a></Link></p>}
-        </Item.Description>
-        <PostTags tags={rest.tags}/>
-      </Item.Content>
-    </Item>
+          {Full !== Preview && <p><Link as={`/post/${rest.pid}`} href={`/post/[pid]`}><a>Read more</a></Link></p>}
+        </Card.Description>
+      </Card.Content>
+    </Card>
   )
 }
