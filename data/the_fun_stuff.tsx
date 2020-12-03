@@ -81,7 +81,7 @@ const TheFunStuffFull: React.FC = () => {
     <>
       <TheFunStuffPreview/>
       <p>I wrote already about my <Link as={`/post/central_ukraine`} href={`/post/[pid]`}><a>two-day motorcycle trip</a></Link>.
-        Also, I`ve made many short one-day trips about which I did not write. They are still fun and exciting.The thing
+        Also, I`ve made many short one-day trips about which I did not write. They are still fun and exciting. The thing
         I like the most about adventure motorcycling is the freedom to choose the way. You can go wherever you want,
         even if there are no roads. Time is the only constraint, but you can go pretty far and see a lot on a
         motorcycle.</p>
@@ -89,7 +89,7 @@ const TheFunStuffFull: React.FC = () => {
       <ImageGallery items={firstSlider}/>
       <Divider/>
       <p>I also went fishing with my friends. We lived almost a week in tents on a border between Ukraine and Belarus.
-        It was terrific. It was a small island between Dnepr and Starik rivers, with nobody around. We caught enough
+        It was terrific. Our home was a small island between Dnepr and Starik rivers, with nobody around. We caught enough
         fish to cook it every day, and mushrooms grew just behind our tents.</p>
       <p>We are very fortunate with the weather. Have no rain, and some days were so sunny, I even think of swimming,
         but the river was icy. And that was the end of October.</p>
