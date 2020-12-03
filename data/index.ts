@@ -13,9 +13,11 @@ import { rtw_trip } from "./rtw_trip";
 import { central_ukraine } from "./central_ukraine";
 import { burned_out } from "./burned_out";
 import { comments } from "./comments";
+import { the_fun_stuff } from "./the_fun_stuff";
 
 export const posts = new Posts();
 
+posts.addPost(the_fun_stuff);
 posts.addPost(comments);
 posts.addPost(burned_out);
 posts.addPost(central_ukraine);

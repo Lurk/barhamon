@@ -18,7 +18,8 @@
     "react-image-gallery": "^1.0.8",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.0.1",
-    "disqus-react": "^1.0.10"
+    "disqus-react": "^1.0.10",
+    "cloudinary-react": "^1.6.8"
   },
   "devDependencies": {
     "@types/node": "^14.14.10",
