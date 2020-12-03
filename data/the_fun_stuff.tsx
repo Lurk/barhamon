@@ -80,15 +80,16 @@ const TheFunStuffFull: React.FC = () => {
   return (
     <>
       <TheFunStuffPreview/>
-      <p>I wrote already about my <Link as={`/post/central_ukraine`} href={`/post/[pid]`}><a>two-day motorcycle trip</a></Link> and
-        made many one day trips. The thing I like the most about
-        adventure motorcycling is the freedom to choose the way. You can go wherever you want, even if there are no
-        roads. Time is the only constraint, but you can go pretty far and see a lot on a motorcycle.</p>
-      <p>Here some pictures I took during my adventures.</p>
+      <p>I wrote already about my <Link as={`/post/central_ukraine`} href={`/post/[pid]`}><a>two-day motorcycle trip</a></Link>.
+        Also, I`ve made many short one-day trips about which I did not write. They are still fun and exciting.The thing
+        I like the most about adventure motorcycling is the freedom to choose the way. You can go wherever you want,
+        even if there are no roads. Time is the only constraint, but you can go pretty far and see a lot on a
+        motorcycle.</p>
+      <p>Here some pictures I took during those one-day trips:</p>
       <ImageGallery items={firstSlider}/>
       <Divider/>
-      <p>I also went fishing with my friends. We lived almost a week in tents on a border between Ukraine and Belarus,
-        and it was terrific. It was a small island between Dnepr and Starik rivers, with nobody around. We caught enough
+      <p>I also went fishing with my friends. We lived almost a week in tents on a border between Ukraine and Belarus.
+        It was terrific. It was a small island between Dnepr and Starik rivers, with nobody around. We caught enough
         fish to cook it every day, and mushrooms grew just behind our tents.</p>
       <p>We are very fortunate with the weather. Have no rain, and some days were so sunny, I even think of swimming,
         but the river was icy. And that was the end of October.</p>
@@ -103,7 +104,7 @@ const TheFunStuffFull: React.FC = () => {
 
       <p>My wife Mari and I spend ten days in the Carpathian mountains. Almost every day we go on a hike. Drank water
         from mountain streams, cooked food on our small gas stove. Even found a new friend, a little doggo with no name,
-        but we call it Palkan (common name for a big dog). </p>
+        but we call it Palkan. </p>
       <p>And here some foto as well: </p>
       <ImageGallery items={thirdSlider}/>
       <Divider/>
