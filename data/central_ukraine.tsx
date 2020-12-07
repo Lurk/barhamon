@@ -31,16 +31,16 @@ const CentralUkraineFull: React.FC = () => {
         much as I can, because all the fun and beauty are on small and hidden trails. It always amazed me where people
         can live. To some villages, the only path is through deep sand trails. </p>
       <Divider/>
-      <ImageGallery items={firstSlider}/>
+      <ImageGallery items={firstSlider} lazyLoad={false} />
       <p>Here are tracks for the <a href="https://scenicapp.space/ride/UHlOhOsM">first</a> and <a
         href="https://scenicapp.space/ride/nurKKyQl">second</a> days.</p>
       <p>I did not bring a tent with this time but got a hammock and slept with a terrific view <a
         href="https://www.google.com/maps/@49.36566,32.7349795,149m/data=!3m1!1e3">in the middle of
         nowhere</a>.</p>
-      <ImageGallery items={secondSlider}/>
+      <ImageGallery items={secondSlider}  lazyLoad={true}/>
       <p>On the way back, I found a gem - Trakhtemyrivsʹkyy Pivostriv. It is near Kyiv (100 km), and I will come back
         there to explore.</p>
-      <ImageGallery items={thirdSlider}/>
+      <ImageGallery items={thirdSlider}  lazyLoad={true}/>
       <p>Recorded almost six hours of video, then condense it to 13 minutes, and here it is: </p>
       <iframe style={{ width: "100%", height: "300px" }} src="https://www.youtube.com/embed/FAYoL7WzHaE" frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen/>

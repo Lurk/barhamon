@@ -86,7 +86,7 @@ const TheFunStuffFull: React.FC = () => {
         even if there are no roads. Time is the only constraint, but you can go pretty far and see a lot on a
         motorcycle.</p>
       <p>Here some pictures I took during those one-day trips:</p>
-      <ImageGallery items={firstSlider}/>
+      <ImageGallery items={firstSlider} lazyLoad={true}/>
       <Divider/>
       <p>I also went fishing with my friends. We lived almost a week in tents on a border between Ukraine and Belarus.
         It was terrific. Our home was a small island between Dnepr and Starik rivers, with nobody around. We caught enough
@@ -97,7 +97,7 @@ const TheFunStuffFull: React.FC = () => {
         trees in the light of flashlights, the shadows, sounds of birds and animals, found some plants that glowed in
         the dark. Unfortunately, no photo can convey what it was. So you have to take my word for it.</p>
       <p>Here some photos from that week:</p>
-      <ImageGallery items={secondSlider}/>
+      <ImageGallery items={secondSlider} lazyLoad={true}/>
       <Divider/>
       <p>Also, for the first time in my life, I hiked to the mountain summit. It was not something like Everest, only
         1500 height. But that was awesome, and I think I got a new hobby :)</p>
@@ -106,7 +106,7 @@ const TheFunStuffFull: React.FC = () => {
         from mountain streams, cooked food on our small gas stove. Even found a new friend, a little doggo with no name,
         but we call it Palkan. </p>
       <p>And here some foto as well: </p>
-      <ImageGallery items={thirdSlider}/>
+      <ImageGallery items={thirdSlider} lazyLoad={true}/>
       <Divider/>
       <p>We even shot a short clip on the way home because what can be better than mountains?</p>
       <p>Plug your headphones, make it 4k and fullscreen</p>

@@ -14,9 +14,11 @@ import { central_ukraine } from "./central_ukraine";
 import { burned_out } from "./burned_out";
 import { comments } from "./comments";
 import { the_fun_stuff } from "./the_fun_stuff";
+import { HowNotToRewriteEverythingEverytime } from "./how_not_to_rewrite_everything_everytime";
 
 export const posts = new Posts();
 
+posts.addPost(HowNotToRewriteEverythingEverytime);
 posts.addPost(the_fun_stuff);
 posts.addPost(comments);
 posts.addPost(burned_out);
