@@ -54,7 +54,7 @@ const HowNotToRewriteEverythingEverytimeFull: React.FC = () => {
       <p>So what I need is to somehow add links to templates by Webpack. And HtmlWebpackPlugin, with the help of
         raw-loader, can do that.</p>
       <Divider/>
-      <p>First of all, make sure that HtmlWebpackPlugin and raw-loader are installed in your project.</p>
+      <p>First of all, make sure that HtmlWebpackPlugin and raw-loader are installed in the project.</p>
       <Code language="bash">
         {`npm install html-webpack-plugin raw-loader --save-dev`}
       </Code>
