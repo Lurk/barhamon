@@ -70,7 +70,7 @@ const HowNotToRewriteEverythingEverytimeFull: React.FC = () => {
 export const HowNotToRewriteEverythingEverytime = {
   pid: "HowNotToRewriteEverythingEverytime",
   header: "How not to rewrite everything everytime :)",
-  time: 1593767695933,
+  time: 1607367668704,
   image: '/img/how_not_to_rewrite_everything_everytime.png',
   tags: ['webpack', 'ejs', 'HtmlWebpackPlugin', 'raw-loader'],
   description: "Did you know that webpack can inject assets to your Ejs template without touching the template part?",
