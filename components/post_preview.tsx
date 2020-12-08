@@ -14,7 +14,7 @@ export const PostPreview: React.FC<PostInterface> = ({ Preview, Full, ...rest })
         <div
           style={{ backgroundImage: `url(${rest.image})`}}
           className={styles.header_image}
-          onClick={()=>router.push(`/post/[pid]`, `/post/${rest.pid}`)}
+          onClick={()=>router.push(`/post/[pid]`, `/post/${rest.pid}`).then(() => window.scrollTo(0, 0))}
         />
       }
       <Card.Content>
