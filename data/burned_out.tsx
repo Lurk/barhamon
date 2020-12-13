@@ -35,7 +35,7 @@ export const burned_out = {
   header: "I quit my job (burning out story)",
   time: 1604828490367,
   image: '/img/burned_out.jpg',
-  tags: ['blog'],
+  tags: ['personal'],
   description: "Story of me burned out",
   Preview: BurnedOutPreview,
   Full: BurnedOutFull,

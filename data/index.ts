@@ -15,9 +15,11 @@ import { burned_out } from "./burned_out";
 import { comments } from "./comments";
 import { the_fun_stuff } from "./the_fun_stuff";
 import { HowNotToRewriteEverythingEverytime } from "./how_not_to_rewrite_everything_everytime";
+import { cloudinary } from "./cloudinary";
 
 export const posts = new Posts();
 
+posts.addPost(cloudinary);
 posts.addPost(HowNotToRewriteEverythingEverytime);
 posts.addPost(the_fun_stuff);
 posts.addPost(comments);
