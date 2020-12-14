@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Grid, Message, Placeholder } from "semantic-ui-react";
 import ImageGallery from 'react-image-gallery';
+import styles from "./cloudinary.module.css";
 
 export interface CloudinaryGalProps {
   username: string
@@ -48,6 +49,23 @@ const Loader: React.FC = () => (
   </Grid>
 );
 
+interface RenderItemProps{
+  original:string,
+  srcSet:string,
+  sizes:string
+}
+
+const RenderItem: React.FC<RenderItemProps> = (props)=>(
+  <div className={styles.wrapper}>
+    <img
+      src={props.original}
+      srcSet={props.srcSet}
+      sizes={props.sizes}
+      className={styles.img}
+    />
+  </div>
+)
+
 export const CloudinaryGal: React.FC<CloudinaryGalProps> = ({ username, tag }) => {
   const [isLoading, setLoading] = useState(true);
   const [isError, setError] = useState(false);
@@ -58,23 +76,30 @@ export const CloudinaryGal: React.FC<CloudinaryGalProps> = ({ username, tag }) =
       .then((data) => {
         setData(data.resources.map((res) => {
           const file = `${res.public_id}.${res.format}`;
+
           return {
             original: url({ username, version: res.version, file }),
             thumbnail: url({ file, username, version: res.version, size: 150 }),
             srcSet: `${url({ file, username, version: res.version, size: 1000 })}  1000w,${url({ file, username, version: res.version, size: 600 })}  600w,${url({ file, username, version: res.version, size: 150 })}  150w`,
-            sizes: "(min-width: 1000px) calc(50.8vw - 92px), (min-width: 780px) calc(87.5vw - 100px), (min-width: 340px) calc(81.43vw - 101px), calc(-100vw + 480px)"
+            sizes: "(min-width: 1000px) calc(50.8vw - 92px), (min-width: 780px) calc(87.5vw - 100px), (min-width: 340px) calc(81.43vw - 101px), calc(-100vw + 480px)",
+            renderItem: RenderItem
           }
         }));
         setLoading(false);
-      }).catch(e => {
-      console.error(e);
-      setError(true)
-    });
+      })
+      .catch(e => {
+        console.error(e);
+        setError(true)
+      });
   }, [])
 
   let res = (<Loader/>);
   if (!isLoading && !isError) {
-    res = (<ImageGallery items={data} lazyLoad={true}/>)
+    res = (<ImageGallery
+      items={data}
+      lazyLoad={true}
+      additionalClass=""
+    />)
   } else if (isError) {
     res = (
       <Message

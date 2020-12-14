@@ -1,0 +1,15 @@
+.img{
+  height: 460px;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.wrapper{
+  width: 100%
+}
+
+:global .fullscreen :local .img {
+  height: 83vh;
+}
