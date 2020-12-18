@@ -2,6 +2,30 @@
   color: #292929;
 }
 
+/* Portrait */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
+  .card{
+    width: 340px!important;
+  }
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+  .card{
+    width: 306px!important;
+  }
+}
+
+
+
 .header_image{
   cursor: pointer;
   background-repeat: no-repeat;

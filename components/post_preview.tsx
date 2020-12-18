@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 export const PostPreview: React.FC<PostInterface> = ({ Preview, Full, ...rest }) => {
   const router = useRouter();
   return (
-    <Card>
+    <Card className={styles.card}>
       {rest.image &&
         <div
           style={{ backgroundImage: `url(${rest.image})`}}
