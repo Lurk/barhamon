@@ -18,13 +18,14 @@
   padding: 0!important;
 }
 .menu_header {
-  margin: 0!important;
-  padding-left: 0!important;
-  padding-right: 0!important;
-  display: flex;
-  justify-content: center;
+  background-color: #F1EFDF!important;
 }
 
-.content{
-  padding-left: 0!important;
+.stick{
+  box-shadow: 0 3px 3px 0 #d4d4d5, 0 0 0 0 #d4d4d5!important;
+}
+
+.content {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }

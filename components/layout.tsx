@@ -1,11 +1,13 @@
-import { Container, Grid, Header, Icon, Image, Ref, Segment, Sticky } from "semantic-ui-react";
-import React, { createRef } from "react";
+import { Container, Grid, Header, Icon, Ref, Segment, Sticky } from "semantic-ui-react";
+import React, { createRef, useState } from "react";
 import Link from "next/link";
 import { PageHead, PageHeadProps } from "./page_head";
+import cx from 'classnames'
 import style from "./layout.module.css";
 
 export const Layout: React.FC<PageHeadProps> = (props) => {
   const contextRef = createRef<HTMLElement>()
+  const [isItStick, setStick] = useState(false);
   return (
     <>
       <PageHead {...props}/>
@@ -29,17 +31,17 @@ export const Layout: React.FC<PageHeadProps> = (props) => {
                   </Header>
                 </Segment>
               </Sticky>
-            </Grid.Column  >
-            <Grid.Column only="mobile tablet" mobile={3} tablet={2} className={style.menu}>
-              <Sticky context={contextRef}>
-                <Segment basic textAlign="center" className={style.menu_header}>
-                  <Link href="/">
-                    <a><Image avatar src="/android-chrome-192x192.png"/></a>
-                  </Link>
+            </Grid.Column>
+            <Grid.Column only="mobile tablet" mobile={16} tablet={16} className={style.menu}>
+              <Sticky context={contextRef} onStick={() => setStick(true)} onUnstick={() => setStick(false)}>
+                <Segment basic className={cx({ [ style.menu_header ]: true, [ style.stick ]: isItStick })}>
+                  <Header>
+                    <Link href="/"><a>Serhiy`s Barhamon</a></Link> blog
+                  </Header>
                 </Segment>
               </Sticky>
             </Grid.Column>
-            <Grid.Column mobile={13} computer={13} tablet={14} className={style.content}>
+            <Grid.Column mobile={16} computer={13} tablet={16} className={style.content}>
               <Segment basic size="big">
                 {props.children}
               </Segment>
