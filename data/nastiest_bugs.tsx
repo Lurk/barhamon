@@ -26,7 +26,7 @@ const NastiestBugsFull: React.FC = () => {
         first gets scaled up and then scaled down by the browser.</p>
       <p>The only reasonable solution was to hardcode scale. So I patched our version of Chrome to use the constant
         scale.</p>
-      <Header>The server is on fire, customers on fire, me, also on fire, TCP.LAST_AKK timeout 60 seconds.</Header>
+      <Header>The server is on fire, customers on fire, me, also on fire. TCP.LAST_AKK timeout 60 seconds.</Header>
       <p>One day one of our video delivery edges began to behave strangely. No significant load increase was detected,
         no new software was deployed, no CPU spikes, no memory leaks, no SDD were damaged. But service experienced a
         considerable downgrade.</p>
