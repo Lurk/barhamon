@@ -30,7 +30,7 @@ const NastiestBugsFull: React.FC = () => {
       <p>One day one of our video delivery edges began to behave strangely. No significant load increase was detected,
         no new software was deployed, no CPU spikes, no memory leaks, no SDD were damaged. But service experienced a
         considerable downgrade.</p>
-      <p>Only one thing was not normal - the count of connections in the LAST_AKK state was too high. And that were
+      <p>Only one thing was not normal - the count of connections in the LAST_AKK state was too high. That were
         connections to our access control service on localhost. Since the same service was deployed on other edges and
         everything was ok with them, I was like, WAT?</p>
       <Message size="mini" info>The patch, which enables control of LAST_AKK timeout by finwait2_timeout, sits in the
