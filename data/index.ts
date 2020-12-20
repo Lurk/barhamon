@@ -16,9 +16,11 @@ import { comments } from "./comments";
 import { the_fun_stuff } from "./the_fun_stuff";
 import { HowNotToRewriteEverythingEverytime } from "./how_not_to_rewrite_everything_everytime";
 import { cloudinary } from "./cloudinary";
+import { nastiest_bugs } from "./nastiest_bugs";
 
 export const posts = new Posts();
 
+posts.addPost(nastiest_bugs);
 posts.addPost(cloudinary);
 posts.addPost(HowNotToRewriteEverythingEverytime);
 posts.addPost(the_fun_stuff);
