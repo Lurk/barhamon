@@ -33,12 +33,12 @@ const NastiestBugsFull: React.FC = () => {
       <p>Only one thing was not normal - the count of connections in the LAST_AKK state was too high. That were
         connections to our access control service on localhost. Since the same service was deployed on other edges and
         everything was ok with them, I was like, WAT?</p>
-      <Message size="mini" info>The patch, which enables control of LAST_AKK timeout by finwait2_timeout, sits in the
+      <Message size="mini" warning>The patch, which enables control of LAST_AKK timeout by finwait2_timeout, sits in the
         FreeBSD tracker since
         2001.</Message>
       <p>I read everything I can about TCP, connection states, timeouts, how it was implemented in FreeBSD, how to tune
         FreeBSD network, and so on. Spend two or three weeks on this.</p>
-      <Message size="mini" info>If you are running a FreeBSD server, this is the <a
+      <Message size="mini" warning>If you are running a FreeBSD server, this is the <a
         href="https://calomel.org/freebsd_network_tuning.html">best article about performance tuning</a> I ever read.
       </Message>
       <p>Honestly, I still don't know why exactly it has happened. But the fix and the lesson was - do not use HTTP for
