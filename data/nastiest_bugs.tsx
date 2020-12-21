@@ -28,7 +28,7 @@ const NastiestBugsFull: React.FC = () => {
         scale.</p>
       <Header>The server is on fire, customers on fire, me, also on fire. TCP.LAST_AKK timeout 60 seconds.</Header>
       <p>One day one of our video delivery edges began to behave strangely. No significant load increase was detected,
-        no new software was deployed, no CPU spikes, no memory leaks, no SDD were damaged. But service experienced a
+        no new software was deployed, no CPU spikes, no memory leaks, no SSD were damaged. But service experienced a
         considerable downgrade.</p>
       <p>Only one thing was not normal - the count of connections in the LAST_AKK state was too high. That were
         connections to our access control service on localhost. Since the same service was deployed on other edges and
