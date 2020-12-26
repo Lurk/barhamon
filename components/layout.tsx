@@ -60,11 +60,11 @@ export const Layout: React.FC<PageHeadProps> = (props) => {
                 <p>You can find me at:</p>
                 <p><a href="https://twitter.com/SergeyBargamon"><Icon className="twitter"/> Twitter</a></p>
                 <p><a href="https://www.facebook.com/bargamon"><Icon className="facebook"/> Facebook</a></p>
-                <p><a href="https://www.instagram.com/fedorpupkin/"><Icon className="instagram"/> instagramm</a></p>
+                <p><a href="https://www.instagram.com/fedorpupkin/"><Icon className="instagram"/> Instagram</a></p>
               </Grid.Column>
               <Grid.Column>
                 <p>Source code of this blog:</p>
-                <p><a href="https://github.com/Lurk/barhamon"><Icon className="github"/> github</a></p>
+                <p><a href="https://github.com/Lurk/barhamon"><Icon className="github"/> GitHub</a></p>
               </Grid.Column>
             </Grid.Row>
             <Grid.Row columns={1} only="mobile">
@@ -77,13 +77,13 @@ export const Layout: React.FC<PageHeadProps> = (props) => {
                 <p>You can find me at:</p>
                 <p><a href="https://twitter.com/SergeyBargamon"><Icon className="twitter"/> Twitter</a></p>
                 <p><a href="https://www.facebook.com/bargamon"><Icon className="facebook"/> Facebook</a></p>
-                <p><a href="https://www.instagram.com/fedorpupkin/"><Icon className="instagram"/> instagramm</a></p>
+                <p><a href="https://www.instagram.com/fedorpupkin/"><Icon className="instagram"/> Instagram</a></p>
               </Grid.Column>
             </Grid.Row>
             <Grid.Row columns={1} only="mobile">
               <Grid.Column>
                 <p>Source code of this blog:</p>
-                <p><a href="https://github.com/Lurk/barhamon"><Icon className="github"/> github</a></p>
+                <p><a href="https://github.com/Lurk/barhamon"><Icon className="github"/> GitHub</a></p>
               </Grid.Column>
             </Grid.Row>
           </Grid>
