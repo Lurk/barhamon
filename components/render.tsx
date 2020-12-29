@@ -72,7 +72,6 @@ const Render: React.FC<{ data: Elements }> = ({ data }) => {
       return <b>{data.value}</b>
     default:
       // @ts-ignore
-      debugger
       return <p>Unknown data type {data.type} look at render.tsx</p>
   }
 }
