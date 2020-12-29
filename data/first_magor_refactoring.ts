@@ -13,7 +13,7 @@ export const first_major_refactoring: PostInterface = {
   preview: [preview],
   full: [
     preview,
-    p(["Today I done is the first step in this direction. Pull request ", a({
+    p(["Today I did the first step in this direction. Pull request ", a({
       url: "https://github.com/Lurk/barhamon/pull/92",
       text: "#92"
     })]),
