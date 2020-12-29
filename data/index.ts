@@ -18,9 +18,11 @@ import { HowNotToRewriteEverythingEverytime } from "./how_not_to_rewrite_everyth
 import { cloudinary } from "./cloudinary";
 import { nastiest_bugs } from "./nastiest_bugs";
 import { elevator_pitch } from "./elevator_pitch";
+import { first_major_refactoring } from "./first_magor_refactoring";
 
 export const posts = new Posts();
 
+posts.addPost(first_major_refactoring);
 posts.addPost(elevator_pitch);
 posts.addPost(nastiest_bugs);
 posts.addPost(cloudinary);
