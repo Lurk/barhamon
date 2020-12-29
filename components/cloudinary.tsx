@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Grid, Message, Placeholder } from "semantic-ui-react";
-import ImageGallery from 'react-image-gallery';
-import styles from "./cloudinary.module.css";
+import { ImageGallery } from './image_gallery';
 
 export interface CloudinaryGalProps {
   username: string
@@ -49,23 +48,6 @@ const Loader: React.FC = () => (
   </Grid>
 );
 
-interface RenderItemProps{
-  original:string,
-  srcSet:string,
-  sizes:string
-}
-
-const RenderItem: React.FC<RenderItemProps> = (props)=>(
-  <div className={styles.wrapper}>
-    <img
-      src={props.original}
-      srcSet={props.srcSet}
-      sizes={props.sizes}
-      className={styles.img}
-    />
-  </div>
-)
-
 export const CloudinaryGal: React.FC<CloudinaryGalProps> = ({ username, tag }) => {
   const [isLoading, setLoading] = useState(true);
   const [isError, setError] = useState(false);
@@ -80,9 +62,13 @@ export const CloudinaryGal: React.FC<CloudinaryGalProps> = ({ username, tag }) =
           return {
             original: url({ username, version: res.version, file }),
             thumbnail: url({ file, username, version: res.version, size: 150 }),
-            srcSet: `${url({ file, username, version: res.version, size: 1000 })}  1000w,${url({ file, username, version: res.version, size: 600 })}  600w,${url({ file, username, version: res.version, size: 150 })}  150w`,
+            srcSet: `${url({ file, username, version: res.version, size: 1000 })}  1000w,${url({
+              file,
+              username,
+              version: res.version,
+              size: 600
+            })}  600w,${url({ file, username, version: res.version, size: 150 })}  150w`,
             sizes: "(min-width: 1000px) calc(50.8vw - 92px), (min-width: 780px) calc(87.5vw - 100px), (min-width: 340px) calc(81.43vw - 101px), calc(-100vw + 480px)",
-            renderItem: RenderItem
           }
         }));
         setLoading(false);
@@ -95,11 +81,7 @@ export const CloudinaryGal: React.FC<CloudinaryGalProps> = ({ username, tag }) =
 
   let res = (<Loader/>);
   if (!isLoading && !isError) {
-    res = (<ImageGallery
-      items={data}
-      lazyLoad={true}
-      additionalClass=""
-    />)
+    res = (<ImageGallery items={data} />)
   } else if (isError) {
     res = (
       <Message

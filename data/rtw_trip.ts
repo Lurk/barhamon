@@ -93,6 +93,7 @@ export const rtw_trip: PostInterface = {
     p("I do not have a team to manage visas and other boring stuff. So it will be at least a half-year journey. Thus I still don't know how to do it because of family, work, etc."),
     p("But I read a lot about it, so here is a couple of examples for inspiration:"),
     ul({
+      type: "dot",
       content: [
         li([
           "The first woman who did solo round the world trip was ",

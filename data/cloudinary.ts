@@ -29,7 +29,10 @@ export const cloudinary: PostInterface = {
     p("After some googling, I choose Cloudinary because it has some nice features and a decent free plan - 25000 transformations or 25 GB storage or 25 GB bandwidth monthly."),
     createMessage(
       {
-        content: p("I will receive more free services for every registered user. So if you like my photos, go on, click on this message, and register."),
+        content: p([
+          "I will receive more free services for every registered user. So if you like my photos, go on, click on that link, and register. ",
+          a({url:"https://cloudinary.com/invites/lpov9zyyucivvxsnalc5/hqd3swadmblfw3ivxjmv", text:"That link" })
+        ]),
         header: "More free stuff for me",
         icon: "linkify"
       },

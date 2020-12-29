@@ -46,9 +46,9 @@ export const this_blog: PostInterface = {
         li(s("Meta tags")),
         li(s("Pagination")),
         li(s("Comments")),
-        li(s("Pages (bio, contacts, etc)")),
-        li(s("RSS feed")),
-        li(s("Music")),
+        li("Pages (bio, contacts, etc)"),
+        li("RSS feed"),
+        li("Music"),
       ]
     })
 

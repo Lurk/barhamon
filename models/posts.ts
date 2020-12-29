@@ -1,3 +1,5 @@
+import { PostFull } from "../components/post_full";
+
 export enum Types {
   PARAGRAPH = "PARAGRAPH",
   DIVIDER = "DIVIDER",
@@ -13,6 +15,7 @@ export enum Types {
   HEADER = 'HEADER',
   BOLD = "BOLD",
   ACCORDION = "ACCORDION",
+  ACCORDION_TAB = "ACCORDION_TAB",
   LINE_THROUGH = "LINE_THROUGH"
 }
 
@@ -76,7 +79,7 @@ export interface Message {
 export interface Code {
   type: Types.CODE,
   value: {
-    lang: string,
+    lang: 'js' | 'css' | 'json' | 'jsx' | 'typescript' | 'yml' | 'rust' | 'bash',
     content: string
   }
 }
@@ -112,13 +115,18 @@ export interface YoutubeVideo {
 
 export interface Accordion {
   type: Types.ACCORDION,
-  value: {
-    header: string,
-    text: Paragraph
-  }[]
+  value: AccordionTab[]
 }
 
-export type PostPreview = Paragraph | Link | List;
+export interface AccordionTab {
+  type: Types.ACCORDION_TAB,
+  value: {
+    header: string,
+    content: PostFull
+  }
+}
+
+export type PostPreview = Paragraph | Link | List | LineTrough;
 
 export type PostFull =
   PostPreview
@@ -132,6 +140,12 @@ export type PostFull =
   | Header
   | Bold
   | Accordion
+  ;
+
+export type Elements =
+  PostFull
+  | ListItem
+  | AccordionTab
   ;
 
 export function p(value: ParagraphContent | ParagraphContent[]): Paragraph {
@@ -169,7 +183,7 @@ export function a(value: { url: string, as?: string, text?: string }): Link {
   }
 }
 
-export function code(value: { content: string, lang: string }): Code {
+export function code(value: { content: string, lang: 'js' | 'css' | 'json' | 'jsx' | 'typescript' | 'yml' | 'rust' | 'bash' }): Code {
   return {
     type: Types.CODE,
     value
@@ -221,10 +235,17 @@ export function li(value: ParagraphContent | ParagraphContent[]): ListItem {
 }
 
 
-export function createAccordion(value: { header: string, text: Paragraph }[]): Accordion {
+export function createAccordion(value: AccordionTab[]): Accordion {
   return {
     type: Types.ACCORDION,
     value
+  }
+}
+
+export function createAccordionTab(value: { header: string, content: PostFull }): AccordionTab {
+  return {
+    type: Types.ACCORDION_TAB,
+    value,
   }
 }
 

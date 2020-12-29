@@ -1,4 +1,4 @@
-import { code, createAccordion, p, PostInterface } from "../models/posts";
+import { code, createAccordion, createAccordionTab, p, PostInterface } from "../models/posts";
 
 const forloop = `for z in (0..100).rev(){
   println!("{:?}", z);
@@ -27,13 +27,22 @@ export const rust_cheatsheet: PostInterface = {
     preview,
     p("This post will be updated (I hope often :)"),
     createAccordion([
-      { header: "how to loop backwards with for loop", text: p([code({ content: forloop, lang: "rust" })]) },
-      { header: "is even", text: p([code({ content: `x & 1 == 1;`, lang: "rust" })]) },
-      { header: "concatenate vectors", text: p([code({ content: concatenateVectors, lang: "rust" })]) },
-      {
+      createAccordionTab({
+        header: "how to loop backwards with for loop",
+        content: code({ content: forloop, lang: "rust" })
+      }),
+      createAccordionTab({
+        header: "is even",
+        content: code({ content: `x & 1 == 1;`, lang: "rust" })
+      }),
+      createAccordionTab({
+        header: "concatenate vectors",
+        content: code({ content: concatenateVectors, lang: "rust" })
+      }),
+      createAccordionTab({
         header: "remove all duplicates from vector",
-        text: p([code({ content: removeAllDuplicatesFromVector, lang: "rust" })])
-      },
+        content: code({ content: removeAllDuplicatesFromVector, lang: "rust" })
+      }),
     ])
   ]
 };
