@@ -5,8 +5,9 @@ import { getPostMeta } from "./post_meta";
 import { Tag } from "./post_tags";
 import styles from './post_full.module.css';
 import { Comments } from "./comments";
+import { RenderPost } from "./render";
 
-export const PostFull: React.FC<PostInterface> = ({ Full, ...rest }) => {
+export const PostFull: React.FC<PostInterface> = ({ full, ...rest }) => {
   return (
     <Grid>
       <Grid.Row>
@@ -25,7 +26,7 @@ export const PostFull: React.FC<PostInterface> = ({ Full, ...rest }) => {
                 </div>
               </div>
               <Item.Description className={styles.pad}>
-                <Full/>
+                <RenderPost data={full}/>
               </Item.Description>
               <Divider/>
               <Item.Extra className={styles.pad}>
