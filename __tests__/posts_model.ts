@@ -9,11 +9,11 @@ function createDumbPost(
     description = 'test description',
     pid = String(Math.random()),
     time = Date.now(),
-    Preview = () => null,
-    Full = () => null
+    preview = [],
+    full = []
   }
 ): PostInterface {
-  return { header, pid, Full, Preview, description, readTime, image, tags, time };
+  return { header, pid, full, preview, description, readTime, image, tags, time };
 }
 
 test('length', () => {

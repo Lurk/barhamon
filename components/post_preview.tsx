@@ -6,7 +6,7 @@ import { PostMeta } from "./post_meta";
 import styles from './post_preview.module.css'
 import { useRouter } from "next/router";
 
-export const PostPreview: React.FC<PostInterface> = ({ Preview, Full, ...rest }) => {
+export const PostPreview: React.FC<PostInterface> = ({ preview, full, ...rest }) => {
   const router = useRouter();
   return (
     <Card className={styles.card}>
@@ -24,7 +24,7 @@ export const PostPreview: React.FC<PostInterface> = ({ Preview, Full, ...rest })
         <PostMeta readTime={rest.readTime} time={rest.time}/>
         <Card.Description>
           <Preview/>
-          {Full !== Preview && <p><Link as={`/post/${rest.pid}`} href={`/post/[pid]`}><a>Read more</a></Link></p>}
+          {full !== preview && <p><Link as={`/post/${rest.pid}`} href={`/post/[pid]`}><a>Read more</a></Link></p>}
         </Card.Description>
       </Card.Content>
     </Card>

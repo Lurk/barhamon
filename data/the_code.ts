@@ -1,8 +1,6 @@
-import React from "react";
-import { Header, Segment } from "semantic-ui-react";
-import { Code } from "../components/code";
+import { a, code, createMessage, h3, p, PostInterface } from "../models/posts";
 
-const code = `import React, { useEffect, ReactNode, useState } from "react";
+const c = `import React, { useEffect, ReactNode, useState } from "react";
 import Prism, { Token } from "prismjs";
 
 export interface CodeProps {
@@ -90,63 +88,40 @@ export const Code: React.FC<CodeProps> = ({ language, children }) => {
 }
 `;
 
-const TheCodePreview: React.FC = () => {
-  return (
-    <>
-      <p>I needed to add code highlighting to posts (no one likes ugly code :).</p>
-    </>
-  )
-}
+const preview = p("I needed to add code highlighting to posts (no one likes ugly code :).")
 
-const TheCodeFull: React.FC = () => {
-  return (
-    <>
-      <TheCodePreview/>
-      <p>A quick googling showed that for my stack there is nothing ready. But everything revolves around Prismjs.</p>
-      <Segment secondary>
-        The guys from FormidableLabs with <a
-        href="https://github.com/FormidableLabs/prism-react-renderer">prism-react-renderer</a> came closest to what I
-        need. But I want to figure it out myself.
-      </Segment>
-      <Header as="h4">If you didn’t come here for details:</Header>
-      <br/>
-      <p>Step 1:</p>
-      <Code language="bash">
-        {`yarn add prismjs
-yarn add @types/prismjs -D`}
-      </Code>
-      <p>Step # 2:</p>
-      <p>in pages / _app.tsx add</p>
-      <Code language="typescript">
-        {`import 'prismjs/themes/prism-tomorrow.css';`}
-      </Code>
-      <p>step # 3:</p>
-      <p>Сreate the Code component</p>
-      <Code language="typescript">
-        {code}
-      </Code>
-      <Header as="h4">And now the details:</Header>
-      <p>In the first step, we add the prismjs library and types to it in the project.</p>
-      <p>In the second step, we add a theme. The prismjs library already has several themes and we use one of them. You
-        can
-        choose which one you like here: node_modules/prismjs/themes. Also, on the library website, you can choose from
-        about a million more.</p>
-      <p>In the third step, we create the component itself, this time with comments.</p>
-      <Code language="typescript">{codeWithComments}</Code>
-      <p>I hope you found here what you were looking for.</p>
-      <p>As always you can find all source code on the <a href="https://github.com/Lurk/barhamon">GitHub repo</a></p>
-    </>
-  )
-}
-
-export const Typescript_Nextjs_Prismjs = {
+export const Typescript_Nextjs_Prismjs: PostInterface = {
   pid: "Typescript_Nextjs_Prismjs",
   header: "Typescript + Nextjs + Prismjs or the tale about code highlighting",
   time: 1593767695933,
   image: '/img/the_code.jpg',
   tags: ['blog', 'nextjs', 'prismjs', 'typescript'],
   description: "How to make Prism JS work with typescript and NextJs",
-  Preview: TheCodePreview,
-  Full: TheCodeFull,
+  preview: [preview],
+  full: [
+    preview,
+    p("A quick googling showed that for my stack there is nothing ready. But everything revolves around Prismjs."),
+    createMessage({
+      content: [p([
+        "The guys from FormidableLabs with ",
+        a({ url: "https://github.com/FormidableLabs/prism-react-renderer", text: "prism-react-renderer" }),
+        " came closest to what I need. But I want to figure it out myself."
+      ])]
+    }),
+    h3("If you didn’t come here for details:"),
+    p("Step 1:"),
+    code({ content: "yarn add prismjs\nyarn add @types/prismjs -D", lang: "bash" }),
+    p("Step # 2:"),
+    p("in pages / _app.tsx add"),
+    code({ content: "import 'prismjs/themes/prism-tomorrow.css';", lang: "typescript" }),
+    p("step # 3:"),
+    p("Create the Code component"),
+    code({ content: c, lang: "jsx" }),
+    h3("And now the details:"),
+    p("In the first step, we add the prismjs library and types to it in the project."),
+    p("In the second step, we add a theme. The prismjs library already has several themes and we use one of them. You can choose which one you like here: node_modules/prismjs/themes. Also, on the library website, you can choose from about a million more."),
+    p("In the third step, we create the component itself, this time with comments."),
+    code({ content: codeWithComments, lang: "jsx" })
+  ],
   readTime: 5
 };

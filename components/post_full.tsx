@@ -6,7 +6,7 @@ import { Tag } from "./post_tags";
 import styles from './post_full.module.css';
 import { Comments } from "./comments";
 
-export const PostFull: React.FC<PostInterface> = ({ Full, ...rest }) => {
+export const PostFull: React.FC<PostInterface> = ({ full, ...rest }) => {
   return (
     <Grid>
       <Grid.Row>
