@@ -1,5 +1,5 @@
 import React from "react";
-import { Link as ILink} from "../models/posts";
+import { Link as ILink} from "../models/tree";
 import L from "next/link";
 
 export const Link: React.FC<{ data: ILink }> = ({ data }) => {

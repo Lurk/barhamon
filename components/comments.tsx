@@ -1,5 +1,5 @@
-import { DiscussionEmbed } from "disqus-react"
 import React from "react";
+import { DiscussionEmbed } from "disqus-react"
 
 interface CommentsProps {
   slug: string,

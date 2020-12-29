@@ -1,5 +1,5 @@
 import React from "react";
-import { Message as IMessage } from "../models/posts";
+import { Message as IMessage } from "../models/tree";
 import { Icon, Message as M, SemanticICONS } from "semantic-ui-react";
 
 export const Message: React.FC<{ data: IMessage }> = ({ data, children }) => {
