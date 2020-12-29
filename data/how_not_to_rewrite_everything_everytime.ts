@@ -1,4 +1,5 @@
-import { code, createDivider, p, PostInterface } from "../models/posts";
+import { code, createDivider, p } from "../models/tree";
+import { PostInterface } from "../models/posts";
 
 const webpackConfig = `module.exports = {
   entry: {

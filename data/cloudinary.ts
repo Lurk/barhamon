@@ -1,4 +1,5 @@
-import { b, code, a, createMessage, p, PostInterface } from "../models/posts";
+import { b, code, a, createMessage, p } from "../models/tree";
+import { PostInterface } from "../models/posts";
 
 const c = `interface CloudinaryTagResponse {
   resources: Array<{
@@ -40,12 +41,13 @@ export const cloudinary: PostInterface = {
     p("Cloudinary has a react library, but I did not find any image gallery. So here is how I did it."),
     p("After uploading images to Cloudinary servers, I tag them. After that, I fetch the list of photos by this URL:"),
     code({ content: "`https://res.cloudinary.com/${your_username}/image/list/${tag}.json`", lang: "typescript" }),
+    p("response type:"),
     code({ content: c, lang: "typescript" }),
     p(
       [
         "Here is source code ",
         a({ url: "https://github.com/Lurk/barhamon/blob/master/components/cloudinary.tsx", text: "cloudinary.tsx" }),
-        "how I use it with ",
+        " how I use it with ",
         a({ url: "https://github.com/xiaolin/react-image-gallery", text: "React Carousel Image Gallery" })
       ]
     ),
@@ -54,7 +56,7 @@ export const cloudinary: PostInterface = {
       b('srcSet'),
       ' and ',
       b('sizes'),
-      "field. You may ask how I calculate those params? I did not :)"
+      " field. You may ask how I calculate those params? I did not :)"
     ]),
     p([
       "I used the excellent ",

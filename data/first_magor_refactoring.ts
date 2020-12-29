@@ -1,4 +1,5 @@
-import { a, p, PostInterface } from "../models/posts";
+import { a, p } from "../models/tree";
+import { PostInterface } from "../models/posts";
 
 
 const preview = p("Initially, I wanted to separate the \"engine\" from the data.")

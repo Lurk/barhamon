@@ -1,4 +1,5 @@
-import { a, createDivider, createImageGallery, img, li, p, PostInterface, ul } from "../models/posts";
+import { a, createDivider, createImageGallery, img, li, p, ul } from "../models/tree";
+import { PostInterface } from "../models/posts";
 
 const firstSlider = [
   img({

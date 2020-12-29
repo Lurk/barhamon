@@ -1,4 +1,6 @@
-import { a, code, createMessage, h3, p, PostInterface } from "../models/posts";
+import { a, code, createMessage, h3, p } from "../models/tree";
+import { PostInterface } from "../models/posts";
+
 
 const c = `import React, { useEffect, ReactNode, useState } from "react";
 import Prism, { Token } from "prismjs";

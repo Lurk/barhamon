@@ -1,4 +1,5 @@
-import { img, p, PostInterface } from "../models/posts";
+import { img, p } from "../models/tree";
+import { PostInterface } from "../models/posts";
 
 const preview = p("One week left before my trip to the mountains on a motorcycle. The whole route is +/- 1400 km.")
 

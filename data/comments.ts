@@ -1,4 +1,5 @@
-import { a, code, p, PostInterface } from "../models/posts";
+import { a, code, p } from "../models/tree";
+import { PostInterface } from "../models/posts";
 
 const c = `import { DiscussionEmbed } from "disqus-react"
 

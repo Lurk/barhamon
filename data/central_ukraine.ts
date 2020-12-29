@@ -1,4 +1,5 @@
-import { a, createDivider, createImageGallery, createYoutubeVideo, img, p, PostInterface } from "../models/posts";
+import { a, createDivider, createImageGallery, createYoutubeVideo, img, p } from "../models/tree";
+import { PostInterface } from "../models/posts";
 
 const firstSlider = new Array(8).fill(0).map((v, k) => img({
   src: `/img/central_ukraine/1/${k + 1}.jpg`,

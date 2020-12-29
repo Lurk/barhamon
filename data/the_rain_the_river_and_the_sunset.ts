@@ -1,4 +1,5 @@
-import { img, p, PostInterface } from "../models/posts";
+import { img, p } from "../models/tree";
+import { PostInterface } from "../models/posts";
 
 export const the_rain_the_river_and_the_sunset: PostInterface = {
   pid: "the_rain_the_river_and_the_sunset",

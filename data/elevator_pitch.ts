@@ -1,5 +1,5 @@
 import type { PostInterface } from "../models/posts";
-import { p } from "../models/posts";
+import { p } from "../models/tree";
 
 
 const preview = p("Here is a short version of the upcoming \"About me\" book :)");

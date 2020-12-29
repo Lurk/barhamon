@@ -1,4 +1,5 @@
-import { code, createAccordion, createAccordionTab, p, PostInterface } from "../models/posts";
+import { code, createAccordion, createAccordionTab, p } from "../models/tree";
+import { PostInterface } from "../models/posts";
 
 const forloop = `for z in (0..100).rev(){
   println!("{:?}", z);

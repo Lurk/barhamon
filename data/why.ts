@@ -1,4 +1,5 @@
-import { li, p, PostInterface, ul } from "../models/posts";
+import { li, p, ul } from "../models/tree";
+import { PostInterface } from "../models/posts";
 
 const preview = p("Since English is not my native language, it’s hard for me to express my thoughts on it. I hope that writing posts regularly (!important) will improve my speaking skills.");
 

@@ -1,4 +1,5 @@
-import { a, createCloudinaryGallery, createDivider, createYoutubeVideo, p, PostInterface } from "../models/posts";
+import { a, createCloudinaryGallery, createDivider, createYoutubeVideo, p } from "../models/tree";
+import { PostInterface } from "../models/posts";
 
 
 const preview = p("This post is about the good stuff I have done during my sabbatical.");

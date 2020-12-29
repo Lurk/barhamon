@@ -1,6 +1,6 @@
 import React from "react";
 import { Divider, Image, List } from "semantic-ui-react";
-import { AccordionTab as IAccordionTab, Elements, PostFull, Types } from "../models/posts";
+import { AccordionTab as IAccordionTab, Elements, PostFull, Types } from "../models/tree";
 import { CloudinaryGal } from "./cloudinary";
 import { Code } from "./code";
 import { ImageGallery } from "./image_gallery";

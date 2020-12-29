@@ -1,4 +1,5 @@
-import { h3, a, createMessage, p, PostInterface } from "../models/posts";
+import { h3, a, createMessage, p } from "../models/tree";
+import { PostInterface } from "../models/posts";
 
 const preview = p("One of the questions I usually get on an interview - Tell me about a time that you had to deal with a tricky bug.")
 

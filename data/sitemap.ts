@@ -1,4 +1,6 @@
-import { a, createMessage, p, code, PostInterface } from "../models/posts";
+import { a, createMessage, p, code } from "../models/tree";
+import { PostInterface } from "../models/posts";
+
 
 const c = `// /pages/sitemap.xml.tsx
 import { PostInterface, posts } from "../data/posts";

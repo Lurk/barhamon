@@ -1,4 +1,5 @@
-import { p, PostInterface } from "../models/posts";
+import { p } from "../models/tree";
+import { PostInterface } from "../models/posts";
 
 const preview = [
   p("I want to write a blog as long as blogs exist. Now I'm doing it (hopefully)."),

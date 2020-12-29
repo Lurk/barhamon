@@ -1,4 +1,5 @@
-import { a, li, p, PostInterface, s, ul } from "../models/posts";
+import { a, li, p, s, ul } from "../models/tree";
+import { PostInterface } from "../models/posts";
 
 
 const preview = [

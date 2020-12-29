@@ -1,4 +1,5 @@
-import { a, createDivider, createImageGallery, createYoutubeVideo, h3, img, p, PostInterface } from "../models/posts";
+import { a, createDivider, createImageGallery, createYoutubeVideo, h3, img, p } from "../models/tree";
+import { PostInterface } from "../models/posts";
 
 
 const firstSlider = new Array(18).fill(0).map((v, k) => img({

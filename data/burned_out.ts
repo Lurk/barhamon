@@ -1,4 +1,5 @@
-import { a, p, PostInterface } from "../models/posts";
+import { a, p } from "../models/tree";
+import { PostInterface } from "../models/posts";
 
 export const burned_out: PostInterface = {
   pid: "burned_out",
