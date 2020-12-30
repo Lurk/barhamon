@@ -1,14 +1,14 @@
 import React from "react";
 import { Item } from 'semantic-ui-react';
 import { GetStaticPaths, GetStaticProps } from "next";
+import Error from "next/error";
 import { Layout } from "../../components/layout";
 import { posts } from "../../data";
-import Error from "next/error";
 import { PostFull } from "../../components/post_full";
+import { PostInterface } from "../../models/posts";
 
 
-const PostPage: React.FC<{ pid: string }> = ({ pid }) => {
-  const post = posts.getPost(pid);
+const PostPage: React.FC<{ post: PostInterface | false }> = ({ post }) => {
   if (post) {
     return (
       <Layout
@@ -36,8 +36,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
 }
 
-export const getStaticProps: GetStaticProps<{ pid: string }, { pid: string }> = async ({ params }) => {
+export const getStaticProps: GetStaticProps<{ post: PostInterface | false }, { pid: string }> = async ({ params }) => {
   return {
-    props: { pid: params.pid }
+    props: {
+      post: posts.getPost(params.pid)
+    }
   }
 }

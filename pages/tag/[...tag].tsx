@@ -5,15 +5,16 @@ import Error from "next/error";
 import { Layout } from "../../components/layout";
 import { posts } from "../../data";
 import { PostList } from "../../components/post_list";
+import { PageResult } from "../../models/posts";
 
 const limit = parseInt(process.env.NEXT_PUBLIC_POSTS_PER_PAGE);
-const PostPage: React.FC<{ tag: string, page: number }> = ({ tag, page }) => {
-  const filtered = posts.getPage({ limit, offset: (page - 1) * limit, tag })
-  if (filtered) {
+
+const PostPage: React.FC<{ tag: string, page?: PageResult }> = ({ tag, page }) => {
+  if (page) {
     return (
       <Layout title={tag}>
         <Header>Posts filtered by tag: {tag.toUpperCase()}</Header>
-        <PostList page={filtered} url={p => `/tag/${tag}/${p}`}/>
+        <PostList page={page} url={p => `/tag/${tag}/${p}`}/>
       </Layout>
     );
   }
@@ -34,7 +35,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
           const p = posts.getPage({ limit, tag, offset: 0 });
           return new Array(p.totalPages)
             .fill(0)
-            .map((v, i) => ([{ params: { tag: [tag, `${i + 1}`] } },{ params: { tag: [tag] } } ]))
+            .map((v, i) => ([{ params: { tag: [tag, `${i + 1}`] } }, { params: { tag: [tag] } }]))
             .flat()
         }).flat()],
       []
@@ -44,8 +45,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 
-export const getStaticProps: GetStaticProps<{ tag: string, page: number }, Tag> = async ({ params }) => {
+export const getStaticProps: GetStaticProps<{ tag: string, page: PageResult }, Tag> = async ({ params }) => {
+  const page = params.tag[ 1 ] ? parseInt(params.tag[ 1 ]) : 1;
+  const tag = params.tag[ 0 ];
   return {
-    props: { tag: params.tag[ 0 ], page: params.tag[ 1 ] ? parseInt(params.tag[ 1 ]) : 1 }
+    props: {
+      tag,
+      page: posts.getPage({ limit, offset: (page - 1) * limit, tag })
+    }
   }
 }

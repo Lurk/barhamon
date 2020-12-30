@@ -4,14 +4,16 @@ import Error from "next/error";
 import { Layout } from "../../components/layout";
 import { posts } from "../../data";
 import { PostList } from "../../components/post_list";
+import { NextPage } from 'next'
+import { PageResult } from "../../models/posts";
 
 const limit = parseInt(process.env.NEXT_PUBLIC_POSTS_PER_PAGE);
-const PostPage: React.FC<{ page: number }> = ({ page }) => {
-  const filtered = posts.getPage({ limit, offset: (page - 1) * limit })
-  if (filtered) {
+
+const PostPage: NextPage<{ page?: PageResult }> = ({ page }) => {
+  if (page) {
     return (
       <Layout>
-        <PostList page={filtered} url={p => `/posts/${p}`}/>
+        <PostList page={page} url={p => `/posts/${p}`}/>
       </Layout>
     );
   }
@@ -38,8 +40,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 
-export const getStaticProps: GetStaticProps<{ page: number }, Params> = async ({ params }) => {
+export const getStaticProps: GetStaticProps<{ page: PageResult }, Params> = async ({ params }) => {
+  const page = params.page ? parseInt(params.page) : 1;
   return {
-    props: { page: params.page ? parseInt(params.page) : 1 }
+    props: {
+      page: posts.getPage({ limit, offset: (page - 1) * limit })
+    }
   }
 }
