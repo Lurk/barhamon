@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Card } from "semantic-ui-react";
 import Link from "next/link";
 import type { PostInterface } from "../models/posts";
@@ -7,7 +7,7 @@ import styles from './post_preview.module.css'
 import { useRouter } from "next/router";
 import { RenderPost } from "./render";
 
-export const PostPreview: React.FC<PostInterface> = ({ preview, full, ...rest }) => {
+export const PostPreview: React.FC<PostInterface> = memo(({ preview, full, ...rest }) => {
   const router = useRouter();
   return (
     <Card className={styles.card}>
@@ -30,4 +30,4 @@ export const PostPreview: React.FC<PostInterface> = ({ preview, full, ...rest })
       </Card.Content>
     </Card>
   )
-}
+});

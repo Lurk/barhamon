@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Item, Header, Divider, Grid } from "semantic-ui-react";
 import { PostInterface } from "../models/posts";
 import { getPostMeta } from "./post_meta";
@@ -7,7 +7,7 @@ import styles from './post_full.module.css';
 import { Comments } from "./comments";
 import { RenderPost } from "./render";
 
-export const PostFull: React.FC<PostInterface> = ({ full, ...rest }) => {
+export const PostFull: React.FC<PostInterface> = memo(({ full, ...rest }) => {
   return (
     <Grid>
       <Grid.Row>
@@ -38,4 +38,4 @@ export const PostFull: React.FC<PostInterface> = ({ full, ...rest }) => {
       </Grid.Row>
     </Grid>
   )
-}
+});
