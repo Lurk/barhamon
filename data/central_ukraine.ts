@@ -21,7 +21,7 @@ export const central_ukraine: PostInterface = {
   pid: "central_ukraine",
   header: "800 km along the roads of central Ukraine in 2 days",
   time: 1601794437385,
-  image: '/img/central_ukraine/header.jpg',
+  image: 'https://res.cloudinary.com/barhamon/image/upload/c_scale,q_auto,w_600/v1609664480/header/header_utwb5w.jpg',
   tags: ['motorcycle', 'adventure'],
   description: "Solo road trip on a old Africa Twin motorcycle",
   preview: [p("I`ve made another short trip — two days of tarmac, gravel, and sand roads.")],

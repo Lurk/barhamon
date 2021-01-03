@@ -8,7 +8,7 @@ export const elevator_pitch: PostInterface = {
   pid: "elevator_pitch",
   header: "Elevator pitch",
   time: 1608824901070,
-  image: '/img/elevator_pitch.jpeg',
+  image: 'https://res.cloudinary.com/barhamon/image/upload/c_scale,q_auto,w_600/v1609664603/header/elevator_pitch_jocnck.jpg',
   tags: ['interview', 'me'],
   description: "A short version of the upcoming \"About me\" book :)",
   preview: [preview],

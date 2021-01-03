@@ -8,7 +8,7 @@ export const the_fun_stuff: PostInterface = {
   pid: "the_fun_stuff",
   header: "The fun stuff",
   time: 1607029309563,
-  image: '/img/the_fun_stuff.jpeg',
+  image: 'https://res.cloudinary.com/barhamon/image/upload/c_scale,f_auto,q_auto,w_600/v1609663926/header/the_fun_stuff_dpfgic.jpg',
   tags: ['personal', 'adventure', 'mountains'],
   description: "You can do all sorts of things while unemployed. Here is a list of what I`ve done",
   preview: [preview],

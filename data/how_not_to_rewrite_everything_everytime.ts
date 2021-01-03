@@ -39,7 +39,7 @@ export const HowNotToRewriteEverythingEverytime: PostInterface = {
   pid: "HowNotToRewriteEverythingEverytime",
   header: "How not to rewrite everything everytime :)",
   time: 1607367668704,
-  image: '/img/how_not_to_rewrite_everything_everytime.png',
+  image: 'https://res.cloudinary.com/barhamon/image/upload/c_scale,q_auto,w_600/v1609664695/header/how_not_to_rewrite_everything_everytime_fevxnv.png',
   tags: ['webpack', 'ejs', 'HtmlWebpackPlugin', 'raw-loader'],
   description: "Did you know that webpack can inject assets to your Ejs template without touching the template part?",
   preview: [preview],

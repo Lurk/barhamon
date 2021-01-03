@@ -19,7 +19,7 @@ export const comments: PostInterface = {
   pid: "comments",
   header: "Disqus and Next.js",
   time: 1606511156981,
-  image: '/img/comments.jpg',
+  image: 'https://res.cloudinary.com/barhamon/image/upload/c_scale,q_auto,w_600/v1609664771/header/comments_ertdr5.jpg',
   tags: ['blog', 'nextjs', 'comments', 'disqus'],
   description: "You will learn how to add comments to your Next.js project. And it is easy with Disqus.",
   preview: [preview],

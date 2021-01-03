@@ -5,7 +5,7 @@ export const burned_out: PostInterface = {
   pid: "burned_out",
   header: "I quit my job (burning out story)",
   time: 1604828490367,
-  image: '/img/burned_out.jpg',
+  image: 'https://res.cloudinary.com/barhamon/image/upload/c_scale,q_auto,w_600/v1609664954/header/burned_out_iwicib.jpg',
   tags: ['personal'],
   description: "Story of me burned out",
   preview: [p("For five years, I've been working as a system architect in a startup.")],
