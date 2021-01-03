@@ -1,3 +1,21 @@
 {
-  "presets": ["next/babel"]
+  "presets": [
+    "next/babel"
+  ],
+  "plugins": [
+    [
+      "prismjs",
+      {
+        "languages": [
+          "javascript",
+          "typescript",
+          "rust",
+          "bash",
+          "jsx"
+        ],
+        "theme": "tomorrow",
+        "css": true
+      }
+    ]
+  ]
 }
