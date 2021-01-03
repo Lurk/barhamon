@@ -11,10 +11,13 @@
           "typescript",
           "rust",
           "bash",
-          "jsx"
+          "jsx",
+          "css",
+          "json",
+          "yml"
         ],
         "theme": "tomorrow",
-        "css": true
+        "css": false
       }
     ]
   ]
