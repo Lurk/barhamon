@@ -110,6 +110,15 @@ export const Typescript_Nextjs_Prismjs: PostInterface = {
         " came closest to what I need. But I want to figure it out myself."
       ])]
     }),
+    createMessage({
+      header: "update #1", content: [
+        p(['to reduce js bundle size you can use ', a({
+          url: "https://github.com/mAAdhaTTah/babel-plugin-prismjs",
+          text: "babel-plugin-prismjs"
+        }), '. With this babel plugin you can bundle only languages you need.']),
+        p(["You can find usage example ", a({url:"https://github.com/Lurk/barhamon/blob/f0cb751604c5fc90b2dd679a6b1f96705b1a2bc3/.babelrc", text: "here"})])
+      ]
+    }),
     h3("If you didn’t come here for details:"),
     p("Step 1:"),
     code({ content: "yarn add prismjs\nyarn add @types/prismjs -D", lang: "bash" }),
