@@ -6,6 +6,7 @@ const Subscribe: React.FC = () => (
   <>
     <p>Subscribe by: </p>
     <p><a href="/feed.json"><img src="/jsonfeed.png" className={style.icon} alt="json feed v1.1"/> JsonFeed</a></p>
+    <p><a href="/feed.xml"><Icon className="rss"/> RSS</a></p>
   </>
 )
 

@@ -2,10 +2,11 @@ import React from "react";
 import formatRFC3339 from 'date-fns/formatRFC3339'
 import { posts } from "../data";
 import type { PostInterface } from "../models/posts";
+import { memoize } from "../utils";
 
 const POST_URL_PREFIX = `${process.env.NEXT_PUBLIC_HOST}/post/`;
 
-function createJsonFeed(posts: PostInterface[]) {
+const createJsonFeed = memoize((posts: PostInterface[]) => {
   return JSON.stringify({
     "version": "https://jsonfeed.org/version/1.1",
     "title": process.env.NEXT_PUBLIC_NAME,
@@ -27,7 +28,7 @@ function createJsonFeed(posts: PostInterface[]) {
     ))
   })
 
-}
+});
 
 export async function getServerSideProps({ res }) {
   res.setHeader('Content-Type', 'application/feed+json');
