@@ -1,9 +1,10 @@
-import { Container, Grid, Header, Icon, Ref, Segment, Sticky } from "semantic-ui-react";
+import { Grid, Header, Ref, Segment, Sticky } from "semantic-ui-react";
 import React, { createRef, useState } from "react";
 import Link from "next/link";
 import { PageHead, PageHeadProps } from "./page_head";
 import cx from 'classnames'
 import style from "./layout.module.css";
+import { Footer } from "./footer";
 
 export const Layout: React.FC<PageHeadProps> = (props) => {
   const contextRef = createRef<HTMLElement>()
@@ -34,7 +35,8 @@ export const Layout: React.FC<PageHeadProps> = (props) => {
             </Grid.Column>
             <Grid.Column only="mobile tablet" mobile={16} tablet={16} className={style.menu}>
               <Sticky context={contextRef} onStick={() => setStick(true)} onUnstick={() => setStick(false)}>
-                <Segment basic textAlign="center" className={cx({ [ style.menu_header ]: true, [ style.stick ]: isItStick })}>
+                <Segment basic textAlign="center"
+                         className={cx({ [ style.menu_header ]: true, [ style.stick ]: isItStick })}>
                   <Header>
                     <Link href="/"><a>Serhiy`s Barhamon</a></Link> blog
                   </Header>
@@ -49,46 +51,8 @@ export const Layout: React.FC<PageHeadProps> = (props) => {
           </Grid.Row>
         </Grid>
       </Ref>
-      <Segment style={{ padding: '20px', marginTop: '20px', borderRadius: 0 }} inverted>
-        <Container className="main">
-          <Grid inverted>
-            <Grid.Row columns={3} only="computer tablet">
-              <Grid.Column>
-                This is a footer
-              </Grid.Column>
-              <Grid.Column>
-                <p>You can find me at:</p>
-                <p><a href="https://twitter.com/SergeyBargamon"><Icon className="twitter"/> Twitter</a></p>
-                <p><a href="https://www.facebook.com/bargamon"><Icon className="facebook"/> Facebook</a></p>
-                <p><a href="https://www.instagram.com/fedorpupkin/"><Icon className="instagram"/> Instagram</a></p>
-              </Grid.Column>
-              <Grid.Column>
-                <p>Source code of this blog:</p>
-                <p><a href="https://github.com/Lurk/barhamon"><Icon className="github"/> GitHub</a></p>
-              </Grid.Column>
-            </Grid.Row>
-            <Grid.Row columns={1} only="mobile">
-              <Grid.Column>
-                This is footer
-              </Grid.Column>
-            </Grid.Row>
-            <Grid.Row columns={1} only="mobile">
-              <Grid.Column>
-                <p>You can find me at:</p>
-                <p><a href="https://twitter.com/SergeyBargamon"><Icon className="twitter"/> Twitter</a></p>
-                <p><a href="https://www.facebook.com/bargamon"><Icon className="facebook"/> Facebook</a></p>
-                <p><a href="https://www.instagram.com/fedorpupkin/"><Icon className="instagram"/> Instagram</a></p>
-              </Grid.Column>
-            </Grid.Row>
-            <Grid.Row columns={1} only="mobile">
-              <Grid.Column>
-                <p>Source code of this blog:</p>
-                <p><a href="https://github.com/Lurk/barhamon"><Icon className="github"/> GitHub</a></p>
-              </Grid.Column>
-            </Grid.Row>
-          </Grid>
-        </Container>
-      </Segment>
+      <Footer/>
     </>
   )
 }
+
