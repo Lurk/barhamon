@@ -45,7 +45,7 @@ export const rss_and_json_feeds_for_next_js_site: PostInterface = {
       "One significant difference is memoization. Since posts are immutable, we can remember the result of feed generation. I wrote a simple helper function for that. It is not a general-purpose memoization function because it will only work with a one-argument function and make only shallow comparisons. This is intentional and done for simplicity's sake. You can find the source code here ",
       a({
         text: "utils/index.ts",
-        url: "https://github.com/Lurk/barhamon/blob/67ef55743382bdc152a901211434fe0895b6cff0/__tests__/memo.ts"
+        url: "https://github.com/Lurk/barhamon/blob/67ef55743382bdc152a901211434fe0895b6cff0/utils/index.ts"
       }),
       "."
     ]),
