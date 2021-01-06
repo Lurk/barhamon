@@ -2,7 +2,7 @@ import { a, li, p, ul } from "../models/tree";
 import { PostInterface } from "../models/posts";
 
 
-const preview = p("Hey, you can now subscribe to this blog :)")
+const preview = [p("Hey!"),p("You can now subscribe to this blog :)")]
 
 export const rss_and_json_feeds_for_next_js_site: PostInterface = {
   pid: "RSS_and_JSON_feeds_for_Next_JS_site",
@@ -11,9 +11,9 @@ export const rss_and_json_feeds_for_next_js_site: PostInterface = {
   image: "https://res.cloudinary.com/barhamon/image/upload/c_scale,q_auto,w_650/v1609947024/header/RSS_and_JSON_feeds_for_Next_JS_site_d4a1jo.jpg",
   tags: ['blog'],
   description: "How to add RSS and JSON feeds to your Next.JS site.",
-  preview: [preview],
+  preview: preview,
   full: [
-    preview,
+    ...preview,
     p([
       "Yeah, I planned to add this feature a long time ago, and finally, today, I got a couple of hours to do it. After some googling, I found ",
       a({
@@ -49,7 +49,6 @@ export const rss_and_json_feeds_for_next_js_site: PostInterface = {
       }),
       "."
     ]),
-    p("It means that today is the birthday of the Bar part of barhamon.com :)"),
     p("Here are the links for your feed reader:"),
     ul({
       content: [
