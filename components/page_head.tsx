@@ -13,13 +13,14 @@ const tags: string[] = ["software development", "motorcycles", "fishing", "campi
 export const PageHead: React.FC<PageHeadProps> = ({ title, description, keywords, image, canonical }) => {
   const t = title ? `${title} - ${process.env.NEXT_PUBLIC_TITLE}` : process.env.NEXT_PUBLIC_TITLE;
   const u: string[] = keywords ? Array.from(new Set<string>([...keywords, ...tags]).values()) : tags;
+  const imgUrl  = image && image.startsWith("https://") ? image : `${process.env.NEXT_PUBLIC_HOST}${image}`;
   return (
     <Head>
       <title>{t}</title>
       <meta property="og:title" content={t}/>
       <meta property="og:type" content="website"/>
       {canonical && <meta property="og:url" content={`${process.env.NEXT_PUBLIC_HOST}${canonical}`}/>}
-      {image && <meta property="og:image" content={`${process.env.NEXT_PUBLIC_HOST}${image}`}/>}
+      {image && <meta property="og:image" content={imgUrl}/>}
       {description && <meta property="og:description" content={description}/>}
       {canonical && <link rel="canonical" href={`${process.env.NEXT_PUBLIC_HOST}${canonical}`}/>}
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
