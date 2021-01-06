@@ -16,7 +16,7 @@ function renderPost(post: PostInterface) {
 
 
 export async function getServerSideProps({ res }) {
-  res.setHeader('Content-Type', 'application/feed+json');
+  res.setHeader('Content-Type', 'application/rss+xml');
   res.write(createJsonFeed(posts.getAll()));
   res.end();
   return { props: {} };
