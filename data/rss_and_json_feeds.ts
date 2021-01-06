@@ -7,7 +7,7 @@ const preview = [p("Hey!"),p("You can now subscribe to this blog :)")]
 export const rss_and_json_feeds_for_next_js_site: PostInterface = {
   pid: "RSS_and_JSON_feeds_for_Next_JS_site",
   header: 'RSS and JSON feeds for Next.JS site',
-  time: 1609268054600,
+  time: 1609948460248,
   image: "https://res.cloudinary.com/barhamon/image/upload/c_scale,q_auto,w_650/v1609947024/header/RSS_and_JSON_feeds_for_Next_JS_site_d4a1jo.jpg",
   tags: ['blog'],
   description: "How to add RSS and JSON feeds to your Next.JS site.",
