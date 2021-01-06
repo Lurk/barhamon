@@ -1,6 +1,5 @@
 import React from "react";
 import Head from "next/head";
-import { useRouter } from "next/router";
 
 export interface PageHeadProps {
   title?: string
@@ -12,23 +11,24 @@ export interface PageHeadProps {
 
 const tags: string[] = ["software development", "motorcycles", "fishing", "camping"]
 export const PageHead: React.FC<PageHeadProps> = ({ title, description, keywords, image, canonical }) => {
-  const router = useRouter();
-  const t = title ? `${title} - BarHamon` : 'BarHamon';
+  const t = title ? `${title} - ${process.env.NEXT_PUBLIC_TITLE}` : process.env.NEXT_PUBLIC_TITLE;
   const u: string[] = keywords ? Array.from(new Set<string>([...keywords, ...tags]).values()) : tags;
   return (
     <Head>
       <title>{t}</title>
       <meta property="og:title" content={t}/>
       <meta property="og:type" content="website"/>
-      {canonical && <meta property="og:url" content={`https://barhamon.com${canonical}`}/>}
-      {image && <meta property="og:image" content={`https://barhamon.com${image}`}/>}
+      {canonical && <meta property="og:url" content={`${process.env.NEXT_PUBLIC_HOST}${canonical}`}/>}
+      {image && <meta property="og:image" content={`${process.env.NEXT_PUBLIC_HOST}${image}`}/>}
       {description && <meta property="og:description" content={description}/>}
-      {canonical && <link rel="canonical" href={`https://barhamon.com${canonical}`}/>}
+      {canonical && <link rel="canonical" href={`${process.env.NEXT_PUBLIC_HOST}${canonical}`}/>}
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
       <link rel="manifest" href="/site.webmanifest"/>
       <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#8e8e8e"/>
+      <link rel="alternate"  type="application/feed+json" title="JSON Feed" href={`${process.env.NEXT_PUBLIC_HOST}/feed.json`}/>
+      <link rel="alternate"  type="application/rss+xml" title="RSS" href={`${process.env.NEXT_PUBLIC_HOST}/feed.xml`}/>
       <meta name="msapplication-TileColor" content="#da532c"/>
       <meta name="theme-color" content="#ffffff"/>
       <meta name="author" content="Serhiy Barhamon"/>
