@@ -19,9 +19,11 @@ import { cloudinary } from "./cloudinary";
 import { nastiest_bugs } from "./nastiest_bugs";
 import { elevator_pitch } from "./elevator_pitch";
 import { first_major_refactoring } from "./first_magor_refactoring";
+import { rss_and_json_feeds_for_next_js_site } from "./rss_and_json_feeds";
 
 export const posts = new Posts();
 
+posts.addPost(rss_and_json_feeds_for_next_js_site);
 posts.addPost(first_major_refactoring);
 posts.addPost(elevator_pitch);
 posts.addPost(nastiest_bugs);
