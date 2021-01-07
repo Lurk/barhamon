@@ -35,6 +35,7 @@ export interface PageResult {
 export class Posts {
   private posts: Dict<PostInterface> = {};
   private l: number = 0;
+  private cache = [];
 
   addPost(post: PostInterface) {
     if (this.posts[ post.pid ]) {
@@ -55,9 +56,9 @@ export class Posts {
   getPage(opt: PageOptions = { offset: 0, limit: 10 }): PageResult {
     let res: PostInterface[];
     if (opt.tag) {
-      res = Object.values(this.posts).filter((p) => p.tags.includes(opt.tag))
+      res = this.getAll().filter((p) => p.tags.includes(opt.tag))
     } else {
-      res = Object.values(this.posts);
+      res = this.getAll();
     }
 
     return {
@@ -66,12 +67,15 @@ export class Posts {
       total: res.length,
       totalPages: Math.ceil(res.length / opt.limit),
       currentPage: opt.offset === 0 ? 1 : Math.ceil(opt.offset / opt.limit) + 1,
-      posts: res.sort(((a, b) => b.time - a.time)).slice(opt.offset, opt.offset + opt.limit)
+      posts: res.slice(opt.offset, opt.offset + opt.limit)
     };
   }
 
   getAll() {
-    return Object.values(this.posts).sort(((a, b) => b.time - a.time));
+    if(this.cache.length === 0){
+      this.cache = Object.values(this.posts).sort(((a, b) => b.time - a.time))
+    }
+    return this.cache;
   }
 }
 
