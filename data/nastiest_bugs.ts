@@ -24,7 +24,7 @@ export const nastiest_bugs: PostInterface = {
     p("One day one of our video delivery edges began to behave strangely. No significant load increase was detected, no new software was deployed, no CPU spikes, no memory leaks, no SSD were damaged. But service experienced a considerable downgrade."),
     p("Only one thing was not normal - the count of connections in the LAST_AKK state was too high. That were connections to our access control service on localhost. Since the same service was deployed on other edges and everything was ok with them, I was like, WAT?"),
     createMessage(
-      { content: p("The patch, which enables control of LAST_AKK timeout by finwait2_timeout, sits in the FreeBSD tracker since 2001") }
+      { content: p("The patch, which enables control of LAST_AKK timeout by finwait2_timeout option, sits in the FreeBSD tracker since 2001") }
     ),
     p("I read everything I can about TCP, connection states, timeouts, how it was implemented in FreeBSD, how to tune FreeBSD network, and so on. Spend two or three weeks on this."),
     createMessage({
