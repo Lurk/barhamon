@@ -28,7 +28,7 @@ const Source: React.FC = () => (
 
 export const Footer: React.FC = () => {
   return (
-    <Segment className={style.main} inverted>
+    <Segment className={style.main} inverted basic>
       <Container className="main">
         <Grid inverted>
           <Grid.Row columns={3} only="computer tablet">

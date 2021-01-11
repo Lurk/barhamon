@@ -1,5 +1,5 @@
 .main {
-  min-height: calc(100vh - 178px);
+  min-height: calc(100vh - 160px);
   box-sizing: border-box;
   display: flow-root;
   margin: 0!important;
