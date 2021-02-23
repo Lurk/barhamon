@@ -4195,10 +4195,10 @@ react-fast-compare@^3.0.1:
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-3.2.0.tgz#641a9da81b6a6320f270e89724fb45a0b39e43bb"
   integrity sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==
 
-react-image-gallery@^1.0.8:
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/react-image-gallery/-/react-image-gallery-1.0.8.tgz#a628d2500b9a0a97854b02f21588f3d14febcda2"
-  integrity sha512-kxS+fUCdq8HerN9JvWnzzg8YdPouwbSgVzXxCzxI7ZcAcvDCr/XKxGjqSQ5Ue8DeUEglsAcNJDOdoLygyNgOwA==
+react-image-gallery@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/react-image-gallery/-/react-image-gallery-1.0.9.tgz#0bd14356913c04a7b24b0a69b06e211b33684d40"
+  integrity sha512-JXTlEBv2c/N5vGl0Pfu774JFOuMRnG9TMSwIURMSBDkl70blASJYGBuHCc//8jRZTojUvpBG5A/QT9Gs3Rv4Bw==
   dependencies:
     clsx "^1.0.4"
     lodash.debounce "^4.0.8"
