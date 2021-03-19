@@ -21,9 +21,11 @@ import { elevator_pitch } from "./elevator_pitch";
 import { first_major_refactoring } from "./first_magor_refactoring";
 import { rss_and_json_feeds_for_next_js_site } from "./rss_and_json_feeds";
 import { clink } from "./clink";
+import { relocation } from "./relocation";
 
 export const posts = new Posts();
 
+posts.addPost(relocation);
 posts.addPost(clink);
 posts.addPost(rss_and_json_feeds_for_next_js_site);
 posts.addPost(first_major_refactoring);
