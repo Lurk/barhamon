@@ -11,7 +11,7 @@ export const clink: PostInterface = {
   header: "Clink",
   time: 1613305995389,
   image: "https://res.cloudinary.com/barhamon/image/upload/c_scale,q_auto,w_650/v1613307615/header/clink_buqa5t.png",
-  tags: ["rust"],
+  tags: ["rust", "software"],
   description: "My first rust app",
   preview: preview,
   full: [
