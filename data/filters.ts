@@ -16,7 +16,7 @@ export const filters: PostInterface = {
   full: [
     p([
       preview,
-      " For example, I am building a CMS with a lot of data visualization (like tables and charts). Good data visualization should have a filtering ability. So users can filter the shit out of it and then send a link to the results.",
+      " I need to have a generic way to manipulate data filtering options and pass them around. For example, I am building a CMS with a lot of data visualization (like tables and charts). Good data visualization should have a filtering ability. So users can filter the shit out of it and then send a link to the results.",
     ]),
     p(
       "I kind of tired of doing the same thing every time and want to do yarn add. And from today (yesterday, to be honest, but I did not have time to write this post), I can. And you can do it too."
