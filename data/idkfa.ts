@@ -1,7 +1,7 @@
 import { a, p, h3, ul, li, createMessage} from "../models/tree";
 import { PostInterface } from "../models/posts";
 
-const preview = "A couple of times in a year, I got asked something like";
+const preview = "A couple of times in a year, I got asked something like:";
 
 export const idkfa: PostInterface = {
   pid: "idkfa",
