@@ -55,7 +55,7 @@ export const idkfa: PostInterface = {
       "I will choose GraphQL over REST because I never saw REST API, which was working as intended. And because of that, documentation is often missing or outdated. Swagger kind of slowed this issue, but for me, it is a half-assed solution. Because your OpenAPI specification does not depend on actual code, you need to describe APIs twice. While using libraries like type-graphql - documentation and playground reflect your current code. So you write your code and get documentation and playground for your API for free."
     ),
     p("If you came here with questions like questions in the first paragraph, I hope this post will somehow help you."),
-    createMessage({content: p("ID, Keys, Firearms, Armor (cheat in the game Doom game)"), header:"IDKFA", icon: "lightbulb"})
+    createMessage({content: p("ID, Keys, Firearms, Armor (cheat in the Doom game)"), header:"IDKFA", icon: "lightbulb"})
   ],
 
 };
