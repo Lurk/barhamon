@@ -34,7 +34,7 @@ export const rust_cheatsheet: PostInterface = {
   image: "/img/rust-programming-language-logo.png",
   description:
     "I start to learn Rust programming language. This is a post where I collect tips and tricks about Rust",
-  tags: ["rust", "cheatsheet"],
+  tags: ["rust"],
   preview: [preview],
   full: [
     preview,

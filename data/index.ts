@@ -23,9 +23,11 @@ import { rss_and_json_feeds_for_next_js_site } from "./rss_and_json_feeds";
 import { clink } from "./clink";
 import { relocation } from "./relocation";
 import { filters } from "./filters";
+import { idkfa } from "./idkfa";
 
 export const posts = new Posts();
 
+posts.addPost(idkfa);
 posts.addPost(filters);
 posts.addPost(relocation);
 posts.addPost(clink);
