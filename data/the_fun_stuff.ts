@@ -17,7 +17,7 @@ export const the_fun_stuff: PostInterface = {
     p([
       "I wrote already about my ",
       a({url: '/post/[pid]', as: '/post/central_ukraine', text:"two-day motorcycle trip"}),
-      ". Also, I`ve made many short one-day trips about which I did not write. They are still fun and exciting. The thing I like the most about adventure motorcycling is the freedom to choose the way. You can go wherever you want, even if there are no roads. Time is the only constraint, but you can go pretty far and see a lot on a motorcycle."
+      ". Also, I`ve made many short one-day trips, they are still fun and exciting. The thing I like the most about adventure motorcycling is the freedom to choose the way. You can go wherever you want, even if there are no roads. Time is the only constraint, but you can go pretty far and see a lot on a motorcycle."
     ]),
     p("Here some pictures I took during those one-day trips:"),
     createCloudinaryGallery("barhamon", "sma_20202"),
