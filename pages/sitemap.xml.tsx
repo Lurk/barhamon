@@ -7,11 +7,13 @@ import { memoize } from "../utils";
 const POST_URL_PREFIX = `${process.env.NEXT_PUBLIC_HOST}/post/`;
 
 const createSitemap = memoize((posts: PostInterface[]) => {
-  return `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${posts.map(({ pid }) => `<url><loc>${POST_URL_PREFIX}${pid}</loc></url>`).join('')}</urlset>`;
+  return `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${posts
+    .map(({ pid }) => `<url><loc>${POST_URL_PREFIX}${pid}</loc></url>`)
+    .join("")}</urlset>`;
 });
 
 export async function getServerSideProps({ res }) {
-  res.setHeader('Content-Type', 'text/xml');
+  res.setHeader("Content-Type", "text/xml");
   res.write(createSitemap(posts.getAll()));
   res.end();
 
@@ -21,6 +23,6 @@ export async function getServerSideProps({ res }) {
   return { props: {} };
 }
 
-const Sitemap: React.FC = () => (<></>)
+const Sitemap: React.FC = () => <></>;
 
 export default Sitemap;

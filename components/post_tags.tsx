@@ -4,23 +4,21 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 export interface PostTags {
-  tags?: string[],
+  tags?: string[];
 }
 
 export const PostTags: React.FC<PostTags> = ({ tags }) => {
   return (
     <Card.Content extra>
-      {
-        tags && tags.map((t, i) => <Tag key={i} id={i} tag={t}/>)
-      }
+      {tags && tags.map((t, i) => <Tag key={i} id={i} tag={t} />)}
     </Card.Content>
-  )
-}
+  );
+};
 
 interface TagProps {
-  id: number,
-  tag: string,
-  className?: string
+  id: number;
+  tag: string;
+  className?: string;
 }
 
 export const Tag: React.FC<TagProps> = ({ id, tag, className }) => {
@@ -29,8 +27,14 @@ export const Tag: React.FC<TagProps> = ({ id, tag, className }) => {
 
   return (
     <Label key={id} color="teal" className={className}>
-      <Icon name="tag"/>
-      {active ? tag : <Link href={`/tag/${tag}`}><a>{tag}</a></Link>}
+      <Icon name="tag" />
+      {active ? (
+        tag
+      ) : (
+        <Link href={`/tag/${tag}`}>
+          <a>{tag}</a>
+        </Link>
+      )}
     </Label>
-  )
-}
+  );
+};

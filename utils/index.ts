@@ -11,5 +11,5 @@ export function memoize<T, R>(f: (data: T) => R): (data: T) => R {
       cache.set(data, res);
     }
     return res;
-  }
+  };
 }

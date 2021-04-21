@@ -1,12 +1,12 @@
 import React from "react";
-import IG from 'react-image-gallery';
+import IG from "react-image-gallery";
 import styles from "./image_gallery.module.css";
 
 interface RenderItemProps {
-  original: string,
-  srcSet: string,
-  sizes: string,
-  alt: string
+  original: string;
+  srcSet: string;
+  sizes: string;
+  alt: string;
 }
 
 export const RenderItem: React.FC<RenderItemProps> = (props) => (
@@ -19,18 +19,21 @@ export const RenderItem: React.FC<RenderItemProps> = (props) => (
       className={styles.img}
     />
   </div>
-)
+);
 
 interface ImageGalleryProps extends RenderItemProps {
-  thumbnail: string
+  thumbnail: string;
 }
 
-
-export const ImageGallery: React.FC<{ items: ImageGalleryProps[] }> = ({ items }) => {
-  return (<IG
-    items={items}
-    lazyLoad={true}
-    additionalClass=""
-    renderItem={RenderItem}
-  />);
-}
+export const ImageGallery: React.FC<{ items: ImageGalleryProps[] }> = ({
+  items,
+}) => {
+  return (
+    <IG
+      items={items}
+      lazyLoad={true}
+      additionalClass=""
+      renderItem={RenderItem}
+    />
+  );
+};

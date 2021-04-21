@@ -52,4 +52,3 @@ posts.addPost(Typescript_Nextjs_Prismjs);
 posts.addPost(why);
 posts.addPost(this_blog);
 posts.addPost(new_hope);
-

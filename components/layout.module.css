@@ -2,18 +2,18 @@
   min-height: calc(100vh - 160px);
   box-sizing: border-box;
   display: flow-root;
-  margin: 0!important;
+  margin: 0 !important;
 }
 .menu {
-  margin: 0!important;
-  padding: 0!important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 .menu_header {
-  background-color: #f5f4f3!important;
+  background-color: #f5f4f3 !important;
 }
 
-.stick{
-  box-shadow: 0 3px 3px 0 #d4d4d5, 0 0 0 0 #d4d4d5!important;
+.stick {
+  box-shadow: 0 3px 3px 0 #d4d4d5, 0 0 0 0 #d4d4d5 !important;
 }
 
 .content {

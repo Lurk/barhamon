@@ -2,7 +2,7 @@ name: test
 on:
   push:
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
   workflow_dispatch:
 
@@ -10,12 +10,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2        
+      - uses: actions/checkout@v2
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.2
       - name: Install modules
         run: npm install
       - name: Run tests
         run: npm run test:ci
-      
-      

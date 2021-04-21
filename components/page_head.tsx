@@ -57,7 +57,10 @@ export const PageHead: React.FC<PageHeadProps> = ({
         />
       )}
       <meta property="og:image" content={imgUrl} />
-      <meta property="og:description" content={description || "This is the Blog :)"} />
+      <meta
+        property="og:description"
+        content={description || "This is the Blog :)"}
+      />
       {canonical && (
         <link
           rel="canonical"

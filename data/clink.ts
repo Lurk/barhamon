@@ -3,14 +3,15 @@ import { PostInterface } from "../models/posts";
 
 const preview = [
   p("My first rust app that works and does something useful."),
-  p("What does it do?")
+  p("What does it do?"),
 ];
 
 export const clink: PostInterface = {
   pid: "clink",
   header: "Clink",
   time: 1613305995389,
-  image: "https://res.cloudinary.com/barhamon/image/upload/c_scale,q_auto,w_650/v1613307615/header/clink_buqa5t.png",
+  image:
+    "https://res.cloudinary.com/barhamon/image/upload/c_scale,q_auto,w_650/v1613307615/header/clink_buqa5t.png",
   tags: ["rust", "software"],
   description: "My first rust app",
   preview: preview,
@@ -45,7 +46,9 @@ export const clink: PostInterface = {
         lang: "bash",
       }),
     ]),
-    p("I learned a few things along the way and some things I want to learn in the near future. Like is it ok to thread::sleep, or there is a better way. Or how to automatically build deb and dmg? And so on."),
+    p(
+      "I learned a few things along the way and some things I want to learn in the near future. Like is it ok to thread::sleep, or there is a better way. Or how to automatically build deb and dmg? And so on."
+    ),
     p("So yeah, stay tuned to more Rust content :)"),
   ],
 };

@@ -1,5 +1,5 @@
-import React from 'react'
-import Document, { Head, Html, Main, NextScript } from 'next/document'
+import React from "react";
+import Document, { Head, Html, Main, NextScript } from "next/document";
 
 export default class BarDocument extends Document {
   render() {
@@ -7,10 +7,10 @@ export default class BarDocument extends Document {
       <Html lang="en">
         <Head />
         <body>
-        <Main />
-        <NextScript />
+          <Main />
+          <NextScript />
         </body>
       </Html>
-    )
+    );
   }
 }

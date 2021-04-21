@@ -1,12 +1,11 @@
 import React from "react";
-import { Item } from 'semantic-ui-react';
+import { Item } from "semantic-ui-react";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Error from "next/error";
 import { Layout } from "../../components/layout";
 import { posts } from "../../data";
 import { PostFull } from "../../components/post_full";
 import { PostInterface } from "../../models/posts";
-
 
 const PostPage: React.FC<{ post: PostInterface | false }> = ({ post }) => {
   if (post) {
@@ -19,27 +18,30 @@ const PostPage: React.FC<{ post: PostInterface | false }> = ({ post }) => {
         canonical={`/post/${post.pid}`}
       >
         <Item.Group unstackable>
-          <PostFull {...post}/>
+          <PostFull {...post} />
         </Item.Group>
       </Layout>
     );
   }
-  return (<Error statusCode={404}/>);
-}
+  return <Error statusCode={404} />;
+};
 
-export default PostPage
+export default PostPage;
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: posts.getAll().map((p) => ({ params: { pid: p.pid } })),
-    fallback: false
-  }
-}
+    fallback: false,
+  };
+};
 
-export const getStaticProps: GetStaticProps<{ post: PostInterface | false }, { pid: string }> = async ({ params }) => {
+export const getStaticProps: GetStaticProps<
+  { post: PostInterface | false },
+  { pid: string }
+> = async ({ params }) => {
   return {
     props: {
-      post: posts.getPost(params.pid)
-    }
-  }
-}
+      post: posts.getPost(params.pid),
+    },
+  };
+};
