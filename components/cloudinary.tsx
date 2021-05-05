@@ -1,22 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Grid, Message, Placeholder } from "semantic-ui-react";
+import { prepareImgProps } from "../utils";
 import { ImageGallery } from "./image_gallery";
 
 export interface CloudinaryGalProps {
   username: string;
   tag: string;
 }
-
-export interface CloudinaryImageUrl {
-  username: string;
-  version: number;
-  file: string;
-  size?: number;
-}
-
-const scale = (s?: number) => (s ? `c_scale,w_${s}/` : "");
-const url = ({ username, version, file, size }: CloudinaryImageUrl) =>
-  `https://res.cloudinary.com/${username}/${scale(size)}v${version}/${file}`;
 
 const Loader: React.FC = () => (
   <Grid columns={2} stackable>
@@ -62,33 +52,7 @@ export const CloudinaryGal: React.FC<CloudinaryGalProps> = ({
           data.resources.map((res) => {
             const file = `${res.public_id}.${res.format}`;
 
-            return {
-              original: url({ username, version: res.version, file }),
-              thumbnail: url({
-                file,
-                username,
-                version: res.version,
-                size: 150,
-              }),
-              srcSet: `${url({
-                file,
-                username,
-                version: res.version,
-                size: 1000,
-              })}  1000w,${url({
-                file,
-                username,
-                version: res.version,
-                size: 600,
-              })}  600w,${url({
-                file,
-                username,
-                version: res.version,
-                size: 150,
-              })}  150w`,
-              sizes:
-                "(min-width: 1000px) calc(50.8vw - 92px), (min-width: 780px) calc(87.5vw - 100px), (min-width: 340px) calc(81.43vw - 101px), calc(-100vw + 480px)",
-            };
+            return prepareImgProps({ file, version: res.version, username });
           })
         );
         setLoading(false);

@@ -13,6 +13,8 @@ import { Accordion, AccordionTab } from "./accordion";
 import { Message } from "./message";
 import { Link } from "./link";
 
+import styles from "./render.module.css";
+
 export const RenderPost: React.FC<{ data: PostFull[] }> = ({ data }) => {
   return (
     <>
@@ -65,6 +67,7 @@ const Render: React.FC<{ data: Elements }> = ({ data }) => {
     case Types.IMAGE:
       return (
         <Image
+          className={styles.image}
           src={data.value.src}
           alt={data.value.alt}
           srcSet={data.value.srcSet}
