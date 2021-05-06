@@ -1,14 +1,12 @@
 .img {
-  height: 460px;
-  width: auto;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.wrapper {
-  width: 100%;
+  height: 520px;
 }
 
 :global .fullscreen :local .img {
   height: 83vh;
+}
+
+.gal {
+  margin: 0 -25px 0 -25px;
+  width: calc(100% + 50px);
 }
