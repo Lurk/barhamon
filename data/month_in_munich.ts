@@ -59,7 +59,7 @@ export const month_in_munich: PostInterface = {
     p([
       "To get a tax ID, you should register yourself in KVR. Since it is corona time, you can do it remotely. To do that, you need to send an email to this address: ",
       b("buergerbuero.kvr@muenchen.de"),
-      '. In attachments should be a filled PDF form "',
+      '. In attachments should be a filled by you PDF form "',
       a({
         text: "Anmeldeformular und Vollmacht",
         url:
