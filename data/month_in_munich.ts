@@ -44,7 +44,7 @@ export const month_in_munich: PostInterface = {
       "While I was at home, I tried to get a phone contract but failed because to get a proper one, you should have a bank account, and to have a bank account, you need to have a tax id. I heard that I could open an account in N26 bank, but they rejected my passport. So I ended up with a prepaid number by Aldi Talk. I ordered it online, but by the time the actual sim card arrived, my self-isolation was over, and I could buy it at any Lidl shop."
     ),
     p(
-      "You have two options - how to end self-isolation. One is to wait five days, make a corona test, and if it is negative, you are free. Second, wait ten days, and you are free. I chose the first option, and on the morning of 10 April, I was tested negative and free to move around. After 10 km walking, I went to the grocery store,  bought charcoal, sausages, and beer. And in the evening I had a BBQ party on the balcony."
+      "How to end self-isolation? You have two options. One is to wait five days, make a corona test, and if it is negative, you are free. Second, wait ten days, and you are free. I chose the first option, and on the morning of 10 April, I was tested negative and free to move around. After 10 km walking, I went to the grocery store,  bought charcoal, sausages, and beer. And in the evening I had a BBQ party on the balcony."
     ),
     img({
       ...prepareImgProps({
