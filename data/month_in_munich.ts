@@ -89,12 +89,12 @@ export const month_in_munich: PostInterface = {
       header: "registration",
       content: [
         p(
-          "hi, my name is Serhiy Barhamon. I just moved to Munich and want to register myself. In the attachment to this letter you will find:"
+          "Hi, my name is Serhiy Barhamon. I just moved to Munich and want to register myself. In the attachment to this letter you will find:"
         ),
         p(" - Anmeldeformular und Vollmacht"),
         p(" - Wohnungsgeberbestätigung"),
         p(" - My passport"),
-        p(" - my visa"),
+        p(" - My visa"),
         p(
           "In case you have any questions, please contact me by phone ...  or email ...."
         ),
