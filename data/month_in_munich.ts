@@ -118,6 +118,6 @@ export const month_in_munich: PostInterface = {
         "https://res.cloudinary.com/barhamon/image/upload/v1620252813/month_in_munich/bike.jpg",
       alt: "my first BBQ in Munich",
     }),
-    p("I hope, if you are reading this, somehow it will help you. See ya"),
+    p("I hope, if you are reading this, somehow it will help you"),
   ],
 };
