@@ -31,8 +31,7 @@ export const month_in_munich: PostInterface = {
         username: "barhamon",
         version: 1620243822,
       }),
-      src:
-        "https://res.cloudinary.com/barhamon/image/upload/v1620243822/month_in_munich/friend.jpg",
+      src: "https://res.cloudinary.com/barhamon/image/upload/v1620243822/month_in_munich/friend.jpg",
       alt: "my first friend in Munich",
     }),
     p([
@@ -52,8 +51,7 @@ export const month_in_munich: PostInterface = {
         username: "barhamon",
         version: 1620249895,
       }),
-      src:
-        "https://res.cloudinary.com/barhamon/image/upload/v1620249895/month_in_munich/bbq.jpg",
+      src: "https://res.cloudinary.com/barhamon/image/upload/v1620249895/month_in_munich/bbq.jpg",
       alt: "my first BBQ in Munich",
     }),
     p([
@@ -62,14 +60,12 @@ export const month_in_munich: PostInterface = {
       '. In attachments should be a filled by you PDF form "',
       a({
         text: "Anmeldeformular und Vollmacht",
-        url:
-          "https://www.muenchen.de/rathaus/dms/Home/Stadtverwaltung/Kreisverwaltungsreferat/fachspezifisch/HA-II/Buergerbuero/Dokumente/anmeldung_meldebehoerde.pdf",
+        url: "https://www.muenchen.de/rathaus/dms/Home/Stadtverwaltung/Kreisverwaltungsreferat/fachspezifisch/HA-II/Buergerbuero/Dokumente/anmeldung_meldebehoerde.pdf",
       }),
       '", another PDF form "',
       a({
         text: "Wohnungsgeberbestätigung",
-        url:
-          "https://www.muenchen.de/rathaus/dms/Home/Stadtverwaltung/Kreisverwaltungsreferat/fachspezifisch/HA-II/Buergerbuero/Dokumente/Wohnungsgeberbest-tigung_Internet.pdf",
+        url: "https://www.muenchen.de/rathaus/dms/Home/Stadtverwaltung/Kreisverwaltungsreferat/fachspezifisch/HA-II/Buergerbuero/Dokumente/Wohnungsgeberbest-tigung_Internet.pdf",
       }),
       '" supplied by your landlord, your passport, and your visa.',
     ]),
@@ -114,8 +110,7 @@ export const month_in_munich: PostInterface = {
         username: "barhamon",
         version: 1620252813,
       }),
-      src:
-        "https://res.cloudinary.com/barhamon/image/upload/v1620252813/month_in_munich/bike.jpg",
+      src: "https://res.cloudinary.com/barhamon/image/upload/v1620252813/month_in_munich/bike.jpg",
       alt: "my first BBQ in Munich",
     }),
     p("I hope, if you are reading this, somehow it will help you"),

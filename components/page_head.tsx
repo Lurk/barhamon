@@ -38,9 +38,7 @@ export const PageHead: React.FC<PageHeadProps> = ({
     : process.env.NEXT_PUBLIC_TITLE;
 
   const u: string[] = keywords
-    ? Array.from(
-        new Set<string>([...keywords, ...tags]).values()
-      )
+    ? Array.from(new Set<string>([...keywords, ...tags]).values())
     : tags;
 
   const imgUrl = getImageUrl(image);

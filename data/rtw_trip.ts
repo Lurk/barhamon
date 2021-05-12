@@ -147,8 +147,7 @@ export const rtw_trip: PostInterface = {
           }),
           " whos journey inspired a lot of people, included me. Also, they do a new show right now - ",
           a({
-            url:
-              "https://www.youtube.com/watch?v=611fw81BN98&ab_channel=AppleTV",
+            url: "https://www.youtube.com/watch?v=611fw81BN98&ab_channel=AppleTV",
             text: "Long way up",
           }),
           createImageGallery(fourthSlider),

@@ -132,8 +132,7 @@ export const Typescript_Nextjs_Prismjs: PostInterface = {
         p([
           "You can find usage example ",
           a({
-            url:
-              "https://github.com/Lurk/barhamon/blob/f0cb751604c5fc90b2dd679a6b1f96705b1a2bc3/.babelrc",
+            url: "https://github.com/Lurk/barhamon/blob/f0cb751604c5fc90b2dd679a6b1f96705b1a2bc3/.babelrc",
             text: "here",
           }),
         ]),

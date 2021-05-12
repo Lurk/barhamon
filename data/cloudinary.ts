@@ -36,8 +36,7 @@ export const cloudinary: PostInterface = {
       content: p([
         "I will receive more free services for every registered user. So if you like my photos, go on, click on that link, and register. ",
         a({
-          url:
-            "https://cloudinary.com/invites/lpov9zyyucivvxsnalc5/hqd3swadmblfw3ivxjmv",
+          url: "https://cloudinary.com/invites/lpov9zyyucivvxsnalc5/hqd3swadmblfw3ivxjmv",
           text: "That link",
         }),
       ]),
@@ -60,8 +59,7 @@ export const cloudinary: PostInterface = {
     p([
       "Here is source code ",
       a({
-        url:
-          "https://github.com/Lurk/barhamon/blob/master/components/cloudinary.tsx",
+        url: "https://github.com/Lurk/barhamon/blob/master/components/cloudinary.tsx",
         text: "cloudinary.tsx",
       }),
       " how I use it with ",

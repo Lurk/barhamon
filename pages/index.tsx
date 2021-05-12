@@ -16,13 +16,11 @@ export default function Home({ page }) {
   );
 }
 
-export const getStaticProps: GetStaticProps<
-  { page: PageResult },
-  Params
-> = async () => {
-  return {
-    props: {
-      page: posts.getPage({ limit, offset: 0 }),
-    },
+export const getStaticProps: GetStaticProps<{ page: PageResult }, Params> =
+  async () => {
+    return {
+      props: {
+        page: posts.getPage({ limit, offset: 0 }),
+      },
+    };
   };
-};

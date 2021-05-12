@@ -53,8 +53,7 @@ export const comments: PostInterface = {
     p([
       "You can find a usage example here: ",
       a({
-        url:
-          "https://github.com/Lurk/barhamon/blob/master/components/comments.tsx",
+        url: "https://github.com/Lurk/barhamon/blob/master/components/comments.tsx",
         text: "comments.tsx",
       }),
     ]),

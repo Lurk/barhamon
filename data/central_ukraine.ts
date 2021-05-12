@@ -59,8 +59,7 @@ export const central_ukraine: PostInterface = {
     p([
       "I did not bring a tent with this time but got a hammock and slept with a terrific view ",
       a({
-        url:
-          "https://www.google.com/maps/@49.36566,32.7349795,149m/data=!3m1!1e3",
+        url: "https://www.google.com/maps/@49.36566,32.7349795,149m/data=!3m1!1e3",
         text: "in the middle of nowhere",
       }),
       ".",

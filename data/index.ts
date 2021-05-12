@@ -25,9 +25,11 @@ import { relocation } from "./relocation";
 import { filters } from "./filters";
 import { idkfa } from "./idkfa";
 import { month_in_munich } from "./month_in_munich";
+import { month_in_check24 } from "./month_in_check24";
 
 export const posts = new Posts();
 
+posts.addPost(month_in_check24);
 posts.addPost(month_in_munich);
 posts.addPost(idkfa);
 posts.addPost(filters);
