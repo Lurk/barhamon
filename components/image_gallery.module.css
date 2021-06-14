@@ -24,7 +24,7 @@
   }
 }
 
-:global .fullscreen :local .img {
+:global .fullscreen :local .img_wrapper {
   height: 83vh;
 }
 
