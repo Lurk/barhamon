@@ -10,13 +10,15 @@ interface RenderItemProps {
 }
 
 export const RenderItem: React.FC<RenderItemProps> = (props) => (
-  <img
-    alt={props.alt}
-    src={props.original}
-    srcSet={props.srcSet}
-    sizes={props.sizes}
-    className={styles.img}
-  />
+  <div className={styles.img_wrapper}>
+    <img
+      alt={props.alt}
+      src={props.original}
+      srcSet={props.srcSet}
+      sizes={props.sizes}
+      className={styles.img}
+    />
+  </div>
 );
 
 interface ImageGalleryProps extends RenderItemProps {
