@@ -27,9 +27,11 @@ import { idkfa } from "./idkfa";
 import { month_in_munich } from "./month_in_munich";
 import { month_in_check24 } from "./month_in_check24";
 import { redux_is_not_bad } from "./redux_is_not_bad";
+import { clink_2 } from "./clink_2";
 
 export const posts = new Posts();
 
+posts.addPost(clink_2);
 posts.addPost(redux_is_not_bad);
 posts.addPost(month_in_check24);
 posts.addPost(month_in_munich);
