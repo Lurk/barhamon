@@ -36,7 +36,14 @@ export const clink_2: PostInterface = {
         li(
           "There is something that I don't know about how memory allocation works on Mac OS"
         ),
-        li("I am using a clipboard@0.5.0 crate, and the leak is there."),
+        li([
+          "I am using the ",
+          a({
+            text: "clipboard@0.5.0",
+            url: "https://crates.io/crates/clipboard/0.5.0",
+          }),
+          " crate, and the leak is there.",
+        ]),
       ],
     }),
     p(
