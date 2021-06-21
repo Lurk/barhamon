@@ -1,17 +1,7 @@
 {
   "extends": "next",
   "plugins": ["@typescript-eslint"],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaVersion": 2020,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "project": ["./tsconfig.json"]
-  },
   "rules": {
-    // note you must disable the base rule as it can report incorrect errors
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": ["error"],
     "no-unused-vars": "off",
