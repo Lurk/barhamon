@@ -22,7 +22,7 @@ export const clink_2: PostInterface = {
       " page.",
     ]),
     p(
-      "But most important thing that I noticed is a memory leak. To be completely honest, I am not sure if there is a memory leak, but it looks there is. So yeah, I noticed that after couple of weeks clink process consumes more than 600mb of ram. I found it wrong because this is a small app, and my expectation is that it should be less than a megabyte."
+      "But most important thing that I noticed is a memory leak. To be completely honest, I am not sure if there is a memory leak, but it looks there is. So yeah, I noticed that after couple of weeks clink process consumes more than 600mb of RAM. I found it wrong because this is a small app, and my expectation is that it should be less than a megabyte."
     ),
     p(
       "I still did not find the time to do a proper analysis what is going on. So far, I have a couple of theories :"
@@ -50,7 +50,7 @@ export const clink_2: PostInterface = {
       "I read a couple of blog post about how to approach tasks like that, and it feels like takes couple of days😔"
     ),
     p(
-      "And one more thing™ - when I packed my stuff, I noticed that I am running low on T-shirts. And guess what? Now I have the clink T-Shirt. At first, I did not liked it. I mean printing quality was nit that impressive, but the longer I have it, more I like it. Maybe, when I will have time or inspiration there will be 1.1 version of it. Right now I do not know why you will want one, but if you do - drop me a message."
+      "And one more thing™ - when I packed my stuff, I noticed that I am running low on T-shirts. And guess what? Now I have the clink T-Shirt. At first, I did not liked it. I mean printing quality was not that impressive, but the longer I have it, more I like it. Maybe, when I will have time or inspiration there will be 1.1 version of it. Right now I do not know why you will want one, but if you do - drop me a message."
     ),
     createCloudinaryGallery("barhamon", "clink_tshirt"),
   ],
