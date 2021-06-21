@@ -14,10 +14,9 @@ const Subscribe: React.FC = () => (
             src="/jsonfeed.png"
             width={12}
             height={12}
-            className={style.icon}
             alt="json feed v1.1"
           />{" "}
-          JSON Feed
+          <span className={style.jsonFeed}>JSON Feed</span>
         </a>
       </Link>
     </p>
