@@ -46,3 +46,5 @@ export const PostFull: React.FC<PostInterface> = memo(({ full, ...rest }) => {
     </Grid>
   );
 });
+
+PostFull.displayName = "PostFull";

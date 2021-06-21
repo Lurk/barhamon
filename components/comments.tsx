@@ -11,7 +11,7 @@ export const Comments: React.FC<CommentsProps> = ({ slug, title, id }) => {
   const config = {
     url: `${process.env.NEXT_PUBLIC_HOST}/post/${slug}`,
     identifier: id,
-    title: title,
+    title,
   };
   return (
     <div>

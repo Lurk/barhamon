@@ -1,9 +1,12 @@
 import React, { useContext, useState } from "react";
 import { Accordion as Acc, Icon } from "semantic-ui-react";
 
-const AccordionContext = React.createContext({
+const AccordionContext = React.createContext<{
+  active: number;
+  handleClick: (e, titleProps) => void;
+}>({
   active: 0,
-  handleClick: (e, titleProps) => {},
+  handleClick: () => {},
 });
 
 export const Accordion: React.FC = ({ children }) => {

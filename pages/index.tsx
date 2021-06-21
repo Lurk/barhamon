@@ -6,7 +6,7 @@ import { GetStaticProps } from "next";
 import { PageResult } from "../models/posts";
 import { Params } from "next/dist/next-server/server/router";
 
-const limit = parseInt(process.env.NEXT_PUBLIC_POSTS_PER_PAGE);
+const limit = parseInt(process.env.NEXT_PUBLIC_POSTS_PER_PAGE, 10);
 
 export default function Home({ page }) {
   return (

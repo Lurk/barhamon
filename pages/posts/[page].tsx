@@ -7,7 +7,7 @@ import { PostList } from "../../components/post_list";
 import { NextPage } from "next";
 import { PageResult } from "../../models/posts";
 
-const limit = parseInt(process.env.NEXT_PUBLIC_POSTS_PER_PAGE);
+const limit = parseInt(process.env.NEXT_PUBLIC_POSTS_PER_PAGE, 10);
 
 const PostPage: NextPage<{ page?: PageResult }> = ({ page }) => {
   if (page) {
@@ -44,7 +44,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps<{ page: PageResult }, Params> =
   async ({ params }) => {
-    const page = params.page ? parseInt(params.page) : 1;
+    const page = params.page ? parseInt(params.page, 10) : 1;
     return {
       props: {
         page: posts.getPage({ limit, offset: (page - 1) * limit }),

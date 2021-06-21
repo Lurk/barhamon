@@ -8,7 +8,8 @@
     "start": "next start",
     "test": "jest --watch",
     "test:ci": "jest --ci",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint": "next lint"
   },
   "dependencies": {
     "classnames": "2.3.1",
@@ -28,8 +29,12 @@
     "@types/node": "15.12.4",
     "@types/prismjs": "1.16.5",
     "@types/react": "17.0.11",
+    "@typescript-eslint/eslint-plugin": "4.28.0",
+    "@typescript-eslint/parser": "4.28.0",
     "babel-jest": "27.0.2",
     "babel-plugin-prismjs": "2.0.1",
+    "eslint": "^7.29.0",
+    "eslint-config-next": "^11.0.0",
     "husky": "6.0.0",
     "identity-obj-proxy": "3.0.0",
     "jest": "27.0.4",

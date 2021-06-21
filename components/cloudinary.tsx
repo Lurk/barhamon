@@ -61,7 +61,7 @@ export const CloudinaryGal: React.FC<CloudinaryGalProps> = ({
         console.error(e);
         setError(true);
       });
-  }, []);
+  }, [tag, username]);
 
   let res = <Loader />;
   if (!isLoading && !isError) {

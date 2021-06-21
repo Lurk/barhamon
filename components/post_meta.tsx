@@ -2,14 +2,10 @@ import React from "react";
 import { format, formatDistance } from "date-fns";
 import { Card } from "semantic-ui-react";
 
-export interface PostMeta {
+export interface PostMetaInterface {
   time: number;
   readTime?: number;
 }
-
-export const PostMeta: React.FC<PostMeta> = ({ time, readTime }) => {
-  return <Card.Meta>{getPostMeta(time, readTime)}</Card.Meta>;
-};
 
 export function getPostMeta(time: number, readTime?: number) {
   let formattedTime;
@@ -21,3 +17,7 @@ export function getPostMeta(time: number, readTime?: number) {
 
   return `${formattedTime}${readTime ? ` · ${readTime} min read` : ""}`;
 }
+
+export const PostMeta: React.FC<PostMetaInterface> = ({ time, readTime }) => {
+  return <Card.Meta>{getPostMeta(time, readTime)}</Card.Meta>;
+};

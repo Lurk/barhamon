@@ -9,7 +9,6 @@ export const Link: React.FC<{ data: ILink }> = ({ data }) => {
         <a>{data.value.text || data.value.url}</a>
       </L>
     );
-  } else {
-    return <a href={data.value.url}>{data.value.text || data.value.url}</a>;
   }
+  return <a href={data.value.url}>{data.value.text || data.value.url}</a>;
 };

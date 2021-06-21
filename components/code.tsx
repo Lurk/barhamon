@@ -30,13 +30,12 @@ function tokenToReactNode(token: Token | string, i: number): ReactNode {
         {token.content.map(tokenToReactNode)}
       </span>
     );
-  } else {
-    return (
-      <span key={i} className={`token ${token.type}`}>
-        {tokenToReactNode(token.content, 0)}
-      </span>
-    );
   }
+  return (
+    <span key={i} className={`token ${token.type}`}>
+      {tokenToReactNode(token.content, 0)}
+    </span>
+  );
 }
 
 export const Code: React.FC<CodeProps> = ({ language, children }) => {
@@ -48,7 +47,7 @@ export const Code: React.FC<CodeProps> = ({ language, children }) => {
         : [];
       replaceToken(tokens);
     });
-  }, [children]);
+  }, [children, language]);
 
   return (
     <pre className={`language-${language} ${style.code}`}>

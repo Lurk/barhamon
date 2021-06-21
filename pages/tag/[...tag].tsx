@@ -7,7 +7,7 @@ import { posts } from "../../data";
 import { PostList } from "../../components/post_list";
 import { PageResult } from "../../models/posts";
 
-const limit = parseInt(process.env.NEXT_PUBLIC_POSTS_PER_PAGE);
+const limit = parseInt(process.env.NEXT_PUBLIC_POSTS_PER_PAGE, 10);
 
 const PostPage: React.FC<{ tag: string; page?: PageResult }> = ({
   tag,
@@ -58,7 +58,7 @@ export const getStaticProps: GetStaticProps<
   { tag: string; page: PageResult },
   Tag
 > = async ({ params }) => {
-  const page = params.tag[1] ? parseInt(params.tag[1]) : 1;
+  const page = params.tag[1] ? parseInt(params.tag[1], 10) : 1;
   const tag = params.tag[0];
   return {
     props: {

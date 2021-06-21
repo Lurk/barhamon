@@ -3,18 +3,6 @@ import { Icon, Card, Label } from "semantic-ui-react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-export interface PostTags {
-  tags?: string[];
-}
-
-export const PostTags: React.FC<PostTags> = ({ tags }) => {
-  return (
-    <Card.Content extra>
-      {tags && tags.map((t, i) => <Tag key={i} id={i} tag={t} />)}
-    </Card.Content>
-  );
-};
-
 interface TagProps {
   id: number;
   tag: string;
@@ -36,5 +24,17 @@ export const Tag: React.FC<TagProps> = ({ id, tag, className }) => {
         </Link>
       )}
     </Label>
+  );
+};
+
+export interface PostTagsInterface {
+  tags?: string[];
+}
+
+export const PostTags: React.FC<PostTagsInterface> = ({ tags }) => {
+  return (
+    <Card.Content extra>
+      {tags && tags.map((t, i) => <Tag key={i} id={i} tag={t} />)}
+    </Card.Content>
   );
 };

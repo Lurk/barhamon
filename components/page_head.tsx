@@ -21,9 +21,8 @@ function getImageUrl(image?: string): string {
     return image.startsWith("https://")
       ? image
       : `${process.env.NEXT_PUBLIC_HOST}${image}`;
-  } else {
-    return "https://res.cloudinary.com/barhamon/image/upload/c_scale,f_auto,q_auto,w_600/v1609663926/header/the_fun_stuff_dpfgic.jpg";
   }
+  return "https://res.cloudinary.com/barhamon/image/upload/c_scale,f_auto,q_auto,w_600/v1609663926/header/the_fun_stuff_dpfgic.jpg";
 }
 
 export const PageHead: React.FC<PageHeadProps> = ({

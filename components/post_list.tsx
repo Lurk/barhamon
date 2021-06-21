@@ -4,10 +4,12 @@ import { PostPreview } from "./post_preview";
 import { PageResult } from "../models/posts";
 import { Pagination } from "./pagination";
 
-export const PostList: React.FC<{
+interface PostListProps {
   page: PageResult;
   url: (activePage: string) => string;
-}> = ({ page, url }) => {
+}
+
+export const PostList: React.FC<PostListProps> = ({ page, url }) => {
   return (
     <>
       <Card.Group centered>

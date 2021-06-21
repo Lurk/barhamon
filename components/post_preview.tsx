@@ -18,14 +18,14 @@ export const PostPreview: React.FC<PostInterface> = memo(
             className={styles.header_image}
             onClick={() =>
               router
-                .push(`/post/[pid]`, `/post/${rest.pid}`)
+                .push("/post/[pid]", `/post/${rest.pid}`)
                 .then(() => window.scrollTo(0, 0))
             }
           />
         )}
         <Card.Content>
           <Card.Header>
-            <Link as={`/post/${rest.pid}`} href={`/post/[pid]`}>
+            <Link as={`/post/${rest.pid}`} href={"/post/[pid]"}>
               <a className={styles.header_link}>{rest.header}</a>
             </Link>
           </Card.Header>
@@ -34,7 +34,7 @@ export const PostPreview: React.FC<PostInterface> = memo(
             <RenderPost data={preview} />
             {full !== preview && (
               <p>
-                <Link as={`/post/${rest.pid}`} href={`/post/[pid]`}>
+                <Link as={`/post/${rest.pid}`} href={"/post/[pid]"}>
                   <a>Read more</a>
                 </Link>
               </p>
@@ -45,3 +45,5 @@ export const PostPreview: React.FC<PostInterface> = memo(
     );
   }
 );
+
+PostPreview.displayName = "PostPreview";

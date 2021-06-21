@@ -15,14 +15,31 @@ import { Link } from "./link";
 
 import styles from "./render.module.css";
 
-export const RenderPost: React.FC<{ data: PostFull[] }> = ({ data }) => {
-  return (
-    <>
-      {data.map((line, i) => (
-        <Render data={line} key={i} />
-      ))}
-    </>
-  );
+function isAccordionTabValue(obj: any): obj is IAccordionTab["value"] {
+  return Object.prototype.hasOwnProperty.call(obj, "content");
+}
+
+//TODO there should be a better way than "T extends any"
+const getVal = <T extends any>(value: T, i?: number) => {
+  let val;
+  if (typeof value === "string") {
+    val = value;
+  } else if (Array.isArray(value)) {
+    val = value.map(getVal);
+  } else if (value && Object.prototype.hasOwnProperty.call(value, "type")) {
+    // eslint-disable-next-line
+    val = <Render data={value as PostFull} key={i} />;
+  } else if (isAccordionTabValue(value)) {
+    val = getVal(value.content);
+  } else {
+    val = `Unknown value type in getVal\n\t data is: \n ${JSON.stringify(
+      value,
+      null,
+      2
+    )}`;
+    console.error(val);
+  }
+  return val;
 };
 
 const Render: React.FC<{ data: Elements }> = ({ data }) => {
@@ -107,28 +124,12 @@ const Render: React.FC<{ data: Elements }> = ({ data }) => {
   }
 };
 
-function isAccordionTabValue(obj: any): obj is IAccordionTab["value"] {
-  return obj.hasOwnProperty("content");
-}
-
-//TODO there should be a better way than "T extends any"
-const getVal = <T extends any>(value: T, i?: number) => {
-  let val;
-  if (typeof value === "string") {
-    val = value;
-  } else if (Array.isArray(value)) {
-    val = value.map(getVal);
-  } else if (value && value.hasOwnProperty("type")) {
-    val = <Render data={value as PostFull} key={i} />;
-  } else if (isAccordionTabValue(value)) {
-    val = getVal(value.content);
-  } else {
-    val = `Unknown value type in getVal\n\t data is: \n ${JSON.stringify(
-      value,
-      null,
-      2
-    )}`;
-    console.error(val);
-  }
-  return val;
+export const RenderPost: React.FC<{ data: PostFull[] }> = ({ data }) => {
+  return (
+    <>
+      {data.map((line, i) => (
+        <Render data={line} key={i} />
+      ))}
+    </>
+  );
 };
