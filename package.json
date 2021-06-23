@@ -34,7 +34,7 @@
     "babel-jest": "27.0.2",
     "babel-plugin-prismjs": "2.0.1",
     "eslint": "^7.29.0",
-    "eslint-config-next": "^11.0.0",
+    "eslint-config-next": "^11.0.1",
     "husky": "6.0.0",
     "identity-obj-proxy": "3.0.0",
     "jest": "27.0.4",
