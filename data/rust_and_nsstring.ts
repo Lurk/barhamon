@@ -166,7 +166,7 @@ export const rust_and_nsstring: PostInterface = {
     ),
     code({
       lang: "rust",
-      content: "extern_c_code",
+      content: extern_c_code,
     }),
     p(
       "Now we got our NSString, convert it to Rust string, and send the release to NSString after."
