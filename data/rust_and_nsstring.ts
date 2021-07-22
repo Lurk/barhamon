@@ -19,7 +19,8 @@ fn main() {
 }
 `;
 
-const extern_c_code = `extern "C" {
+const extern_c_code = `#[link(name = "AppKit", kind = "framework")]
+extern "C" {
   pub static NSPasteboardTypeString: Sel;
 }`;
 
