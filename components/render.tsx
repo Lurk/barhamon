@@ -22,6 +22,9 @@ function isAccordionTabValue(obj: any): obj is IAccordionTab["value"] {
 //TODO there should be a better way than "T extends any"
 const getVal = <T extends any>(value: T, i?: number) => {
   let val;
+  if (value === null) {
+    return null;
+  }
   if (typeof value === "string") {
     val = value;
   } else if (Array.isArray(value)) {
