@@ -29,7 +29,7 @@
     "@types/node": "16.4.13",
     "@types/prismjs": "1.16.6",
     "@types/react": "17.0.16",
-    "@typescript-eslint/eslint-plugin": "4.29.0",
+    "@typescript-eslint/eslint-plugin": "4.29.1",
     "@typescript-eslint/parser": "4.28.5",
     "babel-jest": "27.0.5",
     "babel-plugin-prismjs": "2.1.0",
