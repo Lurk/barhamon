@@ -44,7 +44,7 @@ export const good_news_everyone: PostInterface = {
       " in objc-foundation repo. Now just waiting for the maintainer.",
     ]),
     p(
-      "And in the meantime I did a lot of hikes. Munich offers a lot of you are like hiking. I am thinking to start doing hike reports, but I will not promise it yet. But here are some nice pictures I took during my hikes."
+      "And in the meantime I did a lot of hikes. Munich offers a lot of you are like hiking. I am thinking to start doing hike reports, but I will not promise it yet. Here are some nice pictures I took during my hikes."
     ),
     createCloudinaryGallery("barhamon", "first_hikes"),
     p(""),
