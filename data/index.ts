@@ -29,9 +29,11 @@ import { month_in_check24 } from "./month_in_check24";
 import { redux_is_not_bad } from "./redux_is_not_bad";
 import { clink_2 } from "./clink_2";
 import { rust_and_nsstring } from "./rust_and_nsstring";
+import { good_news_everyone } from "./good_news_everyone";
 
 export const posts = new Posts();
 
+posts.addPost(good_news_everyone);
 posts.addPost(rust_and_nsstring);
 posts.addPost(clink_2);
 posts.addPost(redux_is_not_bad);
