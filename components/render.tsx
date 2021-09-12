@@ -87,7 +87,7 @@ const Render: React.FC<{ data: Elements }> = ({ data }) => {
     case Types.IMAGE:
       return (
         <Image
-          className={styles.image}
+          className={styles.embed}
           src={data.value.src}
           alt={data.value.alt}
           srcSet={data.value.srcSet}
@@ -122,6 +122,10 @@ const Render: React.FC<{ data: Elements }> = ({ data }) => {
       return <p>{getVal(data.value)}</p>;
     case Types.BOLD:
       return <b>{data.value}</b>;
+    case Types.EMBED:
+      return (
+        <iframe className={styles.embed} height="500px" src={data.value} />
+      );
     default:
       return <p>Unknown data type {data.type} look at render.tsx</p>;
   }

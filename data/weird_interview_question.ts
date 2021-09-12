@@ -1,4 +1,4 @@
-import { createCloudinaryGallery, img, p, a, b } from "../models/tree";
+import { img, p, b, embed } from "../models/tree";
 import { PostInterface } from "../models/posts";
 import { prepareImgProps } from "../utils";
 
@@ -9,7 +9,7 @@ const preview = p(
 export const weird_interview_question: PostInterface = {
   pid: "weird_interview_question",
   header: "Weird interview question",
-  time: 1631381169124,
+  time: 1631433960195,
   image:
     "https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v1631429564/header/weird_interview_question_lsyt0s.png",
   tags: ["interview", "rust"],
@@ -18,12 +18,12 @@ export const weird_interview_question: PostInterface = {
   full: [
     preview,
     p(
-      "Wtf was my initial reaction. Who in the right mind would ask a question like this? But then I needed an excuse why I don't do dishes and here we go. "
+      "Wtf was my initial reaction. Who in the right mind would ask a question like this? But then I needed an excuse for not doing the dishes, and here we go."
     ),
     p([
       "My first association with Pi number is the circle area formula ",
-      b("Pi*R^2"),
-      ". How can we relate our random numbers to a circle? Let say the distance between min and max is our radius. You can picture it like this:",
+      b("Pi*r^2"),
+      ". How can we relate our random numbers to a circle? Let say the distance between min(0) and max(1) is our radius. You can picture it like this:",
     ]),
     img({
       ...prepareImgProps({
@@ -35,28 +35,68 @@ export const weird_interview_question: PostInterface = {
       alt: "look at this beautiful circle",
     }),
     p([
-      "If you wondered what is going on with that memory leak, I am trying to fix. I did a ",
-      a({
-        text: "repo",
-        url: "https://github.com/Lurk/nsstring_leak",
-      }),
-      " with tests and benchmarks, filed an ",
-      a({
-        text: "issue",
-        url: "https://github.com/SSheldon/rust-objc-foundation/issues/15",
-      }),
-      " in objc-foundation repo. Now just waiting for the maintainer.",
+      "The next question is how to plot our random number on 2d plane? We will call it twice. One for ",
+      b("X"),
+      " and second for ",
+      b("Y"),
+      ". ",
     ]),
+    img({
+      ...prepareImgProps({
+        file: "random_dots/dots_ghjllu.png",
+        username: "barhamon",
+        version: 1626984426,
+      }),
+      src: "https://res.cloudinary.com/barhamon/image/upload/v1631391738/random_dots/dots_ghjllu.png",
+      alt: "look at those beautiful dots",
+    }),
     p(
-      "And in the meantime I did a lot of hikes. Munich offers a lot of you are like hiking. I am thinking to start doing hike reports, but I will not promise it yet. Here are some nice pictures I took during my hikes."
+      "If we repeat this enough times we get a square with a side length that equals 1"
     ),
-    createCloudinaryGallery("barhamon", "first_hikes"),
-    p(""),
+    img({
+      ...prepareImgProps({
+        file: "random_dots/square_tpmwws.png",
+        username: "barhamon",
+        version: 1626984426,
+      }),
+      src: "https://res.cloudinary.com/barhamon/image/upload/v1631391738/random_dots/square_tpmwws.png",
+      alt: "look at this beautiful square",
+    }),
+    p("Now we need to combine our circle and square."),
     p(
-      "What I definitely will do is a book's reviews. Lately, I am back to the book reading business. And will try my best to give you a summary of what I read."
+      "Looking on it, Pi should be the difference between the area of a square and the area of a quarter of a circle."
+    ),
+    p("It is time to dust off or math skills."),
+    p(["Area of a circle - ", b("Pi*r^2")]),
+    p(["Area of a quarter of a circle (QC) - ", b("(Pi*r^2)/4")]),
+    p(["four quarters equals full circle (obviously) - ", b("4*QC = Pi*r^2")]),
+    p(["then - ", b("Pi = (4*QC)/r^2")]),
+    p(["What is ", b("r^2"), "? It is area of a square (AS) "]),
+    p(["then - ", b("Pi = (4*QC)/AS")]),
+    p(
+      "In English, that would be Pi equals area of e circle divided by the area of a square where the radius of a circle equals side of the square."
     ),
     p(
-      "But before that, I need to fix my old and trustworthy MBP, the screen of which went dead after eight years of service. Luckily for me, my friend has a spare one with some dead pixels. So maybe by the end of the week, I will have my laptop back."
+      "Now, how can we know the area of the square? Remember when we draw a square with our random dots? So count of those dots will be our area."
     ),
+    p([
+      "And the area of our quarter of a circle would be a count of dots with distance from the 0 less or equal 1. The distance formula is ",
+      b("d = sqrt((x2-x1)^2+(y2-y1)^2)"),
+      ".",
+    ]),
+    p([
+      "But since we want distance from 0,0 we can simplify that to ",
+      b("d = sqrt(x^2+y^2)"),
+      ".",
+    ]),
+    p("Where x and y are the coordinates of our random dot."),
+    p("It is time to write some code."),
+    embed(
+      "https://replit.com/@SergeyBar/rustrandom?lite=icon_title_nologo&theme=replitLight"
+    ),
+    p(
+      "I would not recommend using this method to calculate Pi for something serious. First. How to say it lightly. The accuracy of this method is not the best on the market. And second, to get stable accuracy to the second digit, you need 10 000 000 dots. So yeah, performance-wise, it is not the best method either. But it was fun."
+    ),
+    p("Now I don't have any excuses left."),
   ],
 };
