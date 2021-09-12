@@ -67,7 +67,7 @@ export const weird_interview_question: PostInterface = {
     p(
       "Looking on it, Pi should be the difference between the area of a square and the area of a quarter of a circle."
     ),
-    p("It is time to dust off or math skills."),
+    p("It is time to dust off my math skills."),
     p(["Area of a circle - ", b("Pi*r^2")]),
     p(["Area of a quarter of a circle (QC) - ", b("(Pi*r^2)/4")]),
     p(["four quarters equals full circle (obviously) - ", b("4*QC = Pi*r^2")]),
