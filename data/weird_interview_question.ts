@@ -1,34 +1,38 @@
-import { createCloudinaryGallery, img, p, a } from "../models/tree";
+import { createCloudinaryGallery, img, p, a, b } from "../models/tree";
 import { PostInterface } from "../models/posts";
 import { prepareImgProps } from "../utils";
 
-const preview = p("Good news, everyone.");
+const preview = p(
+  "Some time ago, I saw interview question: given a function that produces uniformly distributed random numbers between zero and one. Calculate the Pi."
+);
 
-export const good_news_everyone: PostInterface = {
-  pid: "good_news_everyone",
-  header: "Status update",
-  time: 1631381161324,
+export const weird_interview_question: PostInterface = {
+  pid: "weird_interview_question",
+  header: "Weird interview question",
+  time: 1631381169124,
   image:
-    "https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v1631384183/header/not_so_good_for_my_laptop.jpg",
-  tags: ["blog", "relocation"],
-  description: "Life updates",
+    "https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v1631429564/header/weird_interview_question_lsyt0s.png",
+  tags: ["interview", "rust"],
+  description: "Weird technical question on interview",
   preview: [preview],
   full: [
     preview,
     p(
-      "Mari finally got a visa, so we are packing our stuff in Kyiv. And I got my residence permit. So soon, we will be deep into the integration process. Learning the language, revising driver's license, searching for a new flat, getting bicycles, etc."
+      "Wtf was my initial reaction. Who in the right mind would ask a question like this? But then I needed an excuse why I don't do dishes and here we go. "
     ),
-    p(
-      "And since I will be in Kyiv soon, I will visit my barber. This gorgeous beard and mustache that grew while I waited for Mari will be gone. Not completely, of course."
-    ),
+    p([
+      "My first association with Pi number is the circle area formula ",
+      b("Pi*R^2"),
+      ". How can we relate our random numbers to a circle? Let say the distance between min and max is our radius. You can picture it like this:",
+    ]),
     img({
       ...prepareImgProps({
-        file: "header/good_news_everyone.jpg",
+        file: "random_dots/circle_nbe72s.png",
         username: "barhamon",
         version: 1626984426,
       }),
-      src: "https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v1631382491/header/good_news_everyone.jpg",
-      alt: "gorgeous beard and mustache",
+      src: "https://res.cloudinary.com/barhamon/image/upload/v1631391738/random_dots/circle_nbe72s.png",
+      alt: "look at this beautiful circle",
     }),
     p([
       "If you wondered what is going on with that memory leak, I am trying to fix. I did a ",
