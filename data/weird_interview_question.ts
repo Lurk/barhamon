@@ -13,7 +13,8 @@ export const weird_interview_question: PostInterface = {
   image:
     "https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v1631429564/header/weird_interview_question_lsyt0s.png",
   tags: ["interview", "rust"],
-  description: "Weird technical question on interview",
+  description:
+    "Given a function that produces uniformly distributed random numbers between zero and one. Calculate the Pi.",
   preview: [preview],
   full: [
     preview,
