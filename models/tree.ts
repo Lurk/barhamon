@@ -15,6 +15,12 @@ export enum Types {
   ACCORDION = "ACCORDION",
   ACCORDION_TAB = "ACCORDION_TAB",
   LINE_THROUGH = "LINE_THROUGH",
+  EMBED = "EMBED",
+}
+
+export interface Embed {
+  type: Types.EMBED;
+  value: string;
 }
 
 type ParagraphContent =
@@ -152,7 +158,8 @@ export type PostFull =
   | Message
   | Header
   | Bold
-  | Accordion;
+  | Accordion
+  | Embed;
 
 export type Elements = PostFull | ListItem | AccordionTab;
 
@@ -290,6 +297,13 @@ export function img(value: {
 export function createImageGallery(value: Image[]): ImageGallery {
   return {
     type: Types.IMAGE_GALLERY,
+    value,
+  };
+}
+
+export function embed(value: string): Embed {
+  return {
+    type: Types.EMBED,
     value,
   };
 }

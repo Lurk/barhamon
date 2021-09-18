@@ -1,6 +1,7 @@
-.image {
+.embed {
   margin: 0 -25px 25px -25px;
   width: calc(100% + 50px) !important;
   max-width: calc(100% + 50px) !important;
   box-shadow: 0 3px 3px 0 #d4d4d5, 0 0 0 0 #d4d4d5;
+  border: none;
 }

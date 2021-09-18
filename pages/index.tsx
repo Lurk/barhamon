@@ -4,7 +4,6 @@ import { Layout } from "../components/layout";
 import { PostList } from "../components/post_list";
 import { GetStaticProps } from "next";
 import { PageResult } from "../models/posts";
-import { Params } from "next/dist/next-server/server/router";
 
 const limit = parseInt(process.env.NEXT_PUBLIC_POSTS_PER_PAGE, 10);
 
@@ -16,7 +15,7 @@ export default function Home({ page }) {
   );
 }
 
-export const getStaticProps: GetStaticProps<{ page: PageResult }, Params> =
+export const getStaticProps: GetStaticProps<{ page: PageResult }> =
   async () => {
     return {
       props: {
