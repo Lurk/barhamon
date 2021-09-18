@@ -6,9 +6,9 @@ const preview = p("The most useful book you can read.");
 export const thinking_fast_and_slow: PostInterface = {
   pid: "thinking_fast_and_slow",
   header: "Thinking, Fast and Slow",
-  time: 1628104897257,
+  time: 1631967114351,
   image:
-    "https://res.cloudinary.com/barhamon/image/upload/c_scale,q_auto,w_650/v1617114422/header/filters_xuuptx.png",
+    "https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v1631968045/header/thinking_fast_and_slow.jpg",
   tags: ["book"],
   description: "Thinking, Fast and Slow - the most useful book you can read.",
   preview: [preview],
