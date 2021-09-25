@@ -10,29 +10,10 @@ import { Link } from "./link";
 
 import styles from "./render.module.css";
 
-//TODO there should be a better way than "T extends any"
-const getVal = <T extends any>(value: T, i?: number) => {
-  let val;
-  if (value === null) {
-    return null;
+const Render: React.FC<{ data: Elements | string }> = ({ data }) => {
+  if (typeof data === "string") {
+    return <>{data}</>;
   }
-  if (typeof value === "string") {
-    val = value;
-  } else if (value && Object.prototype.hasOwnProperty.call(value, "type")) {
-    // eslint-disable-next-line
-    val = <Render data={value as PostFull} key={i} />;
-  } else {
-    val = `Unknown value type in getVal\n\t data is: \n ${JSON.stringify(
-      value,
-      null,
-      2
-    )}`;
-    console.error(val);
-  }
-  return val;
-};
-
-const Render: React.FC<{ data: Elements }> = ({ data }) => {
   switch (data.type) {
     case Types.LINE_THROUGH:
       return <s>{data.value}</s>;
@@ -47,7 +28,13 @@ const Render: React.FC<{ data: Elements }> = ({ data }) => {
         </Accordion>
       );
     case Types.LIST_ITEM:
-      return <List.Item>{data.value.map(getVal)}</List.Item>;
+      return (
+        <List.Item>
+          {data.value.map((data, i) => (
+            <Render data={data} key={i} />
+          ))}
+        </List.Item>
+      );
     case Types.LIST:
       return (
         <List
@@ -84,9 +71,21 @@ const Render: React.FC<{ data: Elements }> = ({ data }) => {
     case Types.CODE:
       return <Code language={data.value.lang}>{data.value.content}</Code>;
     case Types.MESSAGE:
-      return <Message data={data}>{data.value.content.map(getVal)}</Message>;
+      return (
+        <Message data={data}>
+          {data.value.content.map((data, i) => (
+            <Render data={data} key={i} />
+          ))}
+        </Message>
+      );
     case Types.HEADER:
-      return <h3>{data.value.map(getVal)}</h3>;
+      return (
+        <h3>
+          {data.value.map((data, i) => (
+            <Render data={data} key={i} />
+          ))}
+        </h3>
+      );
     case Types.CLOUDINARY_GALLERY:
       return (
         <CloudinaryGal username={data.value.username} tag={data.value.tag} />
@@ -106,7 +105,13 @@ const Render: React.FC<{ data: Elements }> = ({ data }) => {
     case Types.DIVIDER:
       return <Divider />;
     case Types.PARAGRAPH:
-      return <p>{data.value.map(getVal)}</p>;
+      return (
+        <p>
+          {data.value.map((data, i) => (
+            <Render data={data} key={i} />
+          ))}
+        </p>
+      );
     case Types.BOLD:
       return <b>{data.value}</b>;
     case Types.EMBED:
