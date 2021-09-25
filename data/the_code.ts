@@ -89,9 +89,9 @@ export const Code: React.FC<CodeProps> = ({ language, children }) => {
 }
 `;
 
-const preview = p(
-  "I needed to add code highlighting to posts (no one likes ugly code :)."
-);
+const preview = p([
+  "I needed to add code highlighting to posts (no one likes ugly code :).",
+]);
 
 export const Typescript_Nextjs_Prismjs: PostInterface = {
   pid: "Typescript_Nextjs_Prismjs",
@@ -103,9 +103,9 @@ export const Typescript_Nextjs_Prismjs: PostInterface = {
   preview: [preview],
   full: [
     preview,
-    p(
-      "A quick googling showed that for my stack there is nothing ready. But everything revolves around Prismjs."
-    ),
+    p([
+      "A quick googling showed that for my stack there is nothing ready. But everything revolves around Prismjs.",
+    ]),
     createMessage({
       content: [
         p([
@@ -138,31 +138,31 @@ export const Typescript_Nextjs_Prismjs: PostInterface = {
         ]),
       ],
     }),
-    h3("If you didn’t come here for details:"),
-    p("Step 1:"),
+    h3(["If you didn’t come here for details:"]),
+    p(["Step 1:"]),
     code({
       content: "yarn add prismjs\nyarn add @types/prismjs -D",
       lang: "bash",
     }),
-    p("Step # 2:"),
-    p("in pages / _app.tsx add"),
+    p(["Step # 2:"]),
+    p(["in pages / _app.tsx add"]),
     code({
       content: "import 'prismjs/themes/prism-tomorrow.css';",
       lang: "typescript",
     }),
-    p("step # 3:"),
-    p("Create the Code component"),
+    p(["step # 3:"]),
+    p(["Create the Code component"]),
     code({ content: c, lang: "jsx" }),
-    h3("And now the details:"),
-    p(
-      "In the first step, we add the prismjs library and types to it in the project."
-    ),
-    p(
-      "In the second step, we add a theme. The prismjs library already has several themes and we use one of them. You can choose which one you like here: node_modules/prismjs/themes. Also, on the library website, you can choose from about a million more."
-    ),
-    p(
-      "In the third step, we create the component itself, this time with comments."
-    ),
+    h3(["And now the details:"]),
+    p([
+      "In the first step, we add the prismjs library and types to it in the project.",
+    ]),
+    p([
+      "In the second step, we add a theme. The prismjs library already has several themes and we use one of them. You can choose which one you like here: node_modules/prismjs/themes. Also, on the library website, you can choose from about a million more.",
+    ]),
+    p([
+      "In the third step, we create the component itself, this time with comments.",
+    ]),
     code({ content: codeWithComments, lang: "jsx" }),
   ],
   readTime: 5,

@@ -2,8 +2,8 @@ import { a, p, code } from "../models/tree";
 import { PostInterface } from "../models/posts";
 
 const preview = [
-  p("My first rust app that works and does something useful."),
-  p("What does it do?"),
+  p(["My first rust app that works and does something useful."]),
+  p(["What does it do?"]),
 ];
 
 export const clink: PostInterface = {
@@ -17,9 +17,9 @@ export const clink: PostInterface = {
   preview: preview,
   full: [
     ...preview,
-    p(
-      "Have you ever pasted a link in messenger and deleted all those fbclid, utm_source, utm_campaign, utm_medium GET params by hands? Clink does that for you. It sits quietly in the background, and if you copy a link to the clipboard, Clink automatically removes those params for you."
-    ),
+    p([
+      "Have you ever pasted a link in messenger and deleted all those fbclid, utm_source, utm_campaign, utm_medium GET params by hands? Clink does that for you. It sits quietly in the background, and if you copy a link to the clipboard, Clink automatically removes those params for you.",
+    ]),
     p([
       "Inspiration for this project was this ",
       a({
@@ -46,9 +46,9 @@ export const clink: PostInterface = {
         lang: "bash",
       }),
     ]),
-    p(
-      "I learned a few things along the way and some things I want to learn in the near future. Like is it ok to thread::sleep, or there is a better way. Or how to automatically build deb and dmg? And so on."
-    ),
-    p("So yeah, stay tuned to more Rust content :)"),
+    p([
+      "I learned a few things along the way and some things I want to learn in the near future. Like is it ok to thread::sleep, or there is a better way. Or how to automatically build deb and dmg? And so on.",
+    ]),
+    p(["So yeah, stay tuned to more Rust content :)"]),
   ],
 };

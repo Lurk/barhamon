@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { Container, Grid, Icon, Segment } from "semantic-ui-react";
 import style from "./footer.module.css";
 
@@ -10,7 +9,7 @@ const Subscribe: React.FC = () => (
     <p>
       <Link href="/feed.json">
         <a>
-          <Image
+          <img
             src="/jsonfeed.png"
             width={12}
             height={12}

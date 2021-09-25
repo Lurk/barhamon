@@ -1,9 +1,9 @@
 import { b, img, p, a } from "../models/tree";
 import { PostInterface } from "../models/posts";
 
-const preview = p(
-  "My friend asked me if I am writing somewhere about my relocation. So here I am."
-);
+const preview = p([
+  "My friend asked me if I am writing somewhere about my relocation. So here I am.",
+]);
 
 export const relocation: PostInterface = {
   pid: "relocation",
@@ -27,9 +27,9 @@ export const relocation: PostInterface = {
       b("The plan."),
       ' I am going to Munich first to do a "registration at the Citizens office."  Then Mary, through the family reunion program, joins me with our cat. We have anecdotal evidence that it takes two or three months. And we are kind of okay with that because we have the cat problem. To get our cat with us, she should have a laboratory report that she does not have rabies. And after that, she should be quarantined for 90 days. To get this report, Amidala, the cat, should have a particular type of passport. And some disaster happened two months ago. Nobody in Ukraine can issue such kinds of documents anymore. And it seems like nobody knows when somebody will. So we are actively looking for workarounds.',
     ]),
-    p(
-      'Sometimes I woke up in a morning with a thought, "Shit. We are doing it". Then I got overwhelmed with the count of things I should do. To deal with that, I open my to-do list. And after a while, I am thinking, "Shit. We are doing it". But with a smile. Highly recommend.'
-    ),
+    p([
+      'Sometimes I woke up in a morning with a thought, "Shit. We are doing it". Then I got overwhelmed with the count of things I should do. To deal with that, I open my to-do list. And after a while, I am thinking, "Shit. We are doing it". But with a smile. Highly recommend.',
+    ]),
     p([
       b("Also"),
       ", we are selling our car and motorcycle. So if you need a good bike or/and car in Ukraine - drop me a message.",

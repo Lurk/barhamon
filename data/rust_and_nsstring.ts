@@ -42,9 +42,9 @@ const nsstring_to_rust_string = `fn nsstring_to_rust_string(nsstring: *mut NSStr
   }
 }`;
 
-const preview = p(
-  "So yeah. You want to learn Rust and have a small project in mind. Like one hour adventure. In and out."
-);
+const preview = p([
+  "So yeah. You want to learn Rust and have a small project in mind. Like one hour adventure. In and out.",
+]);
 
 export const rust_and_nsstring: PostInterface = {
   pid: "rust_and_nsstring",
@@ -81,7 +81,7 @@ export const rust_and_nsstring: PostInterface = {
       src: "https://res.cloudinary.com/barhamon/image/upload/v1626984426/rust_and_nsstring/activity_monitor.jpg",
       alt: "Activity Monitor",
     }),
-    p("That is when real adventure starts."),
+    p(["That is when real adventure starts."]),
     p([
       "Usually, you write software for mac using Objective C or Swift. Sometimes you are crazy enough to do it in C, and the Objective C runtime exposes the C interface for you. But sometimes, for no particular reason, you want to learn Rust. And for that occasion, ",
       a({ text: "Steven Sheldon", url: "http://sasheldon.com/" }),
@@ -97,32 +97,32 @@ export const rust_and_nsstring: PostInterface = {
       }),
       " to his blog post where he explains what and why is going on.",
     ]),
-    p(
-      "How do you approach tasks like finding and fixing a memory leak in a program written in a language you barely know, which calls API you don't know? Good question."
-    ),
-    p(
-      "First things first - tools. After some googling, I found that nowadays everything is easy."
-    ),
-    p("installation is easy:"),
+    p([
+      "How do you approach tasks like finding and fixing a memory leak in a program written in a language you barely know, which calls API you don't know? Good question.",
+    ]),
+    p([
+      "First things first - tools. After some googling, I found that nowadays everything is easy.",
+    ]),
+    p(["installation is easy:"]),
     code({
       lang: "bash",
       content: installation,
     }),
-    p("usage also easy:"),
+    p(["usage also easy:"]),
     code({
       lang: "bash",
       content: "cargo instruments -t Allocations",
     }),
-    p(
-      "And I get nothing. After some thinking, I figured out that Clink is never stopping, and that's why I do not get any traces. So I come up with this:"
-    ),
+    p([
+      "And I get nothing. After some thinking, I figured out that Clink is never stopping, and that's why I do not get any traces. So I come up with this:",
+    ]),
     code({
       lang: "rust",
       content: pasteboard_main,
     }),
-    p(
-      "The idea is simple - get 20 000 times the value from the clipboard and, to be sure that there is something, print the count of chars. I know that I should count graphemes, but in this case, it does not matter. Here is what I got:"
-    ),
+    p([
+      "The idea is simple - get 20 000 times the value from the clipboard and, to be sure that there is something, print the count of chars. I know that I should count graphemes, but in this case, it does not matter. Here is what I got:",
+    ]),
     img({
       ...prepareImgProps({
         file: "rust_and_nsstring/full_glory.jpg",
@@ -132,9 +132,9 @@ export const rust_and_nsstring: PostInterface = {
       src: "https://res.cloudinary.com/barhamon/image/upload/v1626986443/rust_and_nsstring/full_glory.jpg",
       alt: "full glory",
     }),
-    p(
-      "Yeah. It produces a nice graph (there are no values on the axis, but the last value is 2.67 GB). But how to find what is actually leaking? I did not come up with a better idea than check all repeating allocations if there is corresponding free. Here is how good allocation looks like:"
-    ),
+    p([
+      "Yeah. It produces a nice graph (there are no values on the axis, but the last value is 2.67 GB). But how to find what is actually leaking? I did not come up with a better idea than check all repeating allocations if there is corresponding free. Here is how good allocation looks like:",
+    ]),
     img({
       ...prepareImgProps({
         file: "rust_and_nsstring/good_allocation.jpg",
@@ -144,7 +144,7 @@ export const rust_and_nsstring: PostInterface = {
       src: "https://res.cloudinary.com/barhamon/image/upload/v1626986602/rust_and_nsstring/good_allocation.jpg",
       alt: "good allocation",
     }),
-    p("And this is bad allocation:"),
+    p(["And this is bad allocation:"]),
     img({
       ...prepareImgProps({
         file: "rust_and_nsstring/bad_allocation.jpg",
@@ -162,16 +162,16 @@ export const rust_and_nsstring: PostInterface = {
       }),
       " and leaks :( ",
     ]),
-    p(
-      "So my first step was to simplify the code a little bit. Since the get_contents method from the ClipboardProvider trait returns a String, we can use NSPasteboard.stringForType, which produces NSString, and this is as close to the Rust String as it can get. For calling this method, and by calling method, I mean sending the message, we need to pass an enum value NSPasteboardTypeString as a param. I spent at least a couple of evenings trying to figure out where I can get this enum value. As always, everything is simple when you know it:"
-    ),
+    p([
+      "So my first step was to simplify the code a little bit. Since the get_contents method from the ClipboardProvider trait returns a String, we can use NSPasteboard.stringForType, which produces NSString, and this is as close to the Rust String as it can get. For calling this method, and by calling method, I mean sending the message, we need to pass an enum value NSPasteboardTypeString as a param. I spent at least a couple of evenings trying to figure out where I can get this enum value. As always, everything is simple when you know it:",
+    ]),
     code({
       lang: "rust",
       content: extern_c_code,
     }),
-    p(
-      "Now we got our NSString, convert it to Rust string, and send the release to NSString after."
-    ),
+    p([
+      "Now we got our NSString, convert it to Rust string, and send the release to NSString after.",
+    ]),
     img({
       ...prepareImgProps({
         file: "rust_and_nsstring/disappointment.jpg",
@@ -181,11 +181,11 @@ export const rust_and_nsstring: PostInterface = {
       src: "https://res.cloudinary.com/barhamon/image/upload/v1626987261/rust_and_nsstring/disappointment.jpg",
       alt: "disappointment",
     }),
-    p(
-      "This is how disappointment looks like. But if you look at this screenshot long enough, you will see that leak is more than three times lower. The first allocations dump showed more than two and a half gigs of RAM, but this one is only 775 megabytes. So this means two things:"
-    ),
-    p("First - this is a huge win."),
-    p("Second - there is at least one more leak."),
+    p([
+      "This is how disappointment looks like. But if you look at this screenshot long enough, you will see that leak is more than three times lower. The first allocations dump showed more than two and a half gigs of RAM, but this one is only 775 megabytes. So this means two things:",
+    ]),
+    p(["First - this is a huge win."]),
+    p(["Second - there is at least one more leak."]),
     p([
       "The next leak was found in the INSString.as_str() method. You may ask WTF is INSString, and this would be a trait from the ",
       a({
@@ -203,7 +203,7 @@ export const rust_and_nsstring: PostInterface = {
       lang: "rust",
       content: nsstring_to_rust_string,
     }),
-    p("What is going on:"),
+    p(["What is going on:"]),
     ul({
       type: "number",
       content: [
@@ -215,22 +215,22 @@ export const rust_and_nsstring: PostInterface = {
           }),
           " it equals 4",
         ]),
-        li(
-          "We are allocating memory of a size we got on a first step plus one. Plus one is needed because getCString returns a null-terminated string"
-        ),
-        li(
-          "By calling getCString, we ask to write a null-terminated string in UTF8 encoding to memory we allocated on step two"
-        ),
-        li("If the third step was successful"),
-        li("We creating a C string from a pointer we got on a second step"),
-        li("Free memory we allocated on a second step"),
-        li("Convert C string to Rust string and return it"),
-        li("If the third step was unsuccessful"),
-        li("Free memory we allocated on a second step"),
-        li("Return error"),
+        li([
+          "We are allocating memory of a size we got on a first step plus one. Plus one is needed because getCString returns a null-terminated string",
+        ]),
+        li([
+          "By calling getCString, we ask to write a null-terminated string in UTF8 encoding to memory we allocated on step two",
+        ]),
+        li(["If the third step was successful"]),
+        li(["We creating a C string from a pointer we got on a second step"]),
+        li(["Free memory we allocated on a second step"]),
+        li(["Convert C string to Rust string and return it"]),
+        li(["If the third step was unsuccessful"]),
+        li(["Free memory we allocated on a second step"]),
+        li(["Return error"]),
       ],
     }),
-    p("And here is the result:"),
+    p(["And here is the result:"]),
     img({
       ...prepareImgProps({
         file: "rust_and_nsstring/final_result.jpg",
@@ -240,8 +240,8 @@ export const rust_and_nsstring: PostInterface = {
       src: "https://res.cloudinary.com/barhamon/image/upload/v1626988109/rust_and_nsstring/final_result.jpg",
       alt: "final result",
     }),
-    p(
-      "Now, this is how the win looks like. And Clink, after running a couple of days, still uses one MB of ram. If you are using Clink on a mac, which is very unlikely, update to version 0.6.1. I hope it is finally fixed :)"
-    ),
+    p([
+      "Now, this is how the win looks like. And Clink, after running a couple of days, still uses one MB of ram. If you are using Clink on a mac, which is very unlikely, update to version 0.6.1. I hope it is finally fixed :)",
+    ]),
   ],
 };

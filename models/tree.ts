@@ -34,7 +34,7 @@ type ParagraphContent =
 
 export interface Paragraph {
   type: Types.PARAGRAPH;
-  value: ParagraphContent | ParagraphContent[];
+  value: ParagraphContent[];
 }
 
 export interface LineTrough {
@@ -44,7 +44,7 @@ export interface LineTrough {
 
 export interface ListItem {
   type: Types.LIST_ITEM;
-  value: ParagraphContent | ParagraphContent[];
+  value: ParagraphContent[];
 }
 
 export interface Bold {
@@ -54,7 +54,7 @@ export interface Bold {
 
 export interface Header {
   type: Types.HEADER;
-  value: (string | Link) | (string | Link)[];
+  value: (string | Link)[];
 }
 
 export interface Link {
@@ -83,7 +83,7 @@ export interface Message {
   value: {
     header?: string;
     icon?: string;
-    content: Paragraph[] | Paragraph;
+    content: Paragraph[];
   };
 }
 
@@ -163,14 +163,14 @@ export type PostFull =
 
 export type Elements = PostFull | ListItem | AccordionTab;
 
-export function p(value: ParagraphContent | ParagraphContent[]): Paragraph {
+export function p(value: ParagraphContent[]): Paragraph {
   return {
     type: Types.PARAGRAPH,
     value,
   };
 }
 
-export function h3(value: (string | Link) | (string | Link)[]): Header {
+export function h3(value: (string | Link)[]): Header {
   return {
     type: Types.HEADER,
     value,
@@ -187,7 +187,7 @@ export function s(
 }
 
 export function createMessage(value: {
-  content: Paragraph[] | Paragraph;
+  content: Paragraph[];
   header?: string;
   icon?: string;
 }): Message {
@@ -257,7 +257,7 @@ export function ul(value: {
   };
 }
 
-export function li(value: ParagraphContent | ParagraphContent[]): ListItem {
+export function li(value: ParagraphContent[]): ListItem {
   return {
     type: Types.LIST_ITEM,
     value,

@@ -39,14 +39,14 @@ export const central_ukraine: PostInterface = {
   tags: ["motorcycle", "adventure"],
   description: "Solo road trip on a old Africa Twin motorcycle",
   preview: [
-    p(
-      "I`ve made another short trip — two days of tarmac, gravel, and sand roads."
-    ),
+    p([
+      "I`ve made another short trip — two days of tarmac, gravel, and sand roads.",
+    ]),
   ],
   full: [
-    p(
-      "I`ve made another short trip — two days of tarmac, gravel, and sand roads. I deliberately avoid highways, as much as I can, because all the fun and beauty are on small and hidden trails. It always amazed me where people can live. To some villages, the only path is through deep sand trails."
-    ),
+    p([
+      "I`ve made another short trip — two days of tarmac, gravel, and sand roads. I deliberately avoid highways, as much as I can, because all the fun and beauty are on small and hidden trails. It always amazed me where people can live. To some villages, the only path is through deep sand trails.",
+    ]),
     createDivider(),
     createImageGallery(firstSlider),
     p([
@@ -65,16 +65,16 @@ export const central_ukraine: PostInterface = {
       ".",
     ]),
     createImageGallery(secondSlider),
-    p(
-      "On the way back, I found a gem - Trakhtemyrivsʹkyy Pivostriv. It is near Kyiv (100 km), and I will come back there to explore."
-    ),
+    p([
+      "On the way back, I found a gem - Trakhtemyrivsʹkyy Pivostriv. It is near Kyiv (100 km), and I will come back there to explore.",
+    ]),
     createImageGallery(thirdSlider),
-    p(
-      "Recorded almost six hours of video, then condense it to 13 minutes, and here it is: "
-    ),
+    p([
+      "Recorded almost six hours of video, then condense it to 13 minutes, and here it is: ",
+    ]),
     createYoutubeVideo("FAYoL7WzHaE"),
-    p(
-      "A big one for me - it is possible to do 500 km in one day with offroad parts in it. But it is physically challenging. Next time I plan a trip should take this into account"
-    ),
+    p([
+      "A big one for me - it is possible to do 500 km in one day with offroad parts in it. But it is physically challenging. Next time I plan a trip should take this into account",
+    ]),
   ],
 };

@@ -23,9 +23,9 @@ path
   .unwrap()
 `;
 
-const preview = p(
-  "I start to learn Rust programming language. This is a post where I collect tips and tricks about Rust"
-);
+const preview = p([
+  "I start to learn Rust programming language. This is a post where I collect tips and tricks about Rust",
+]);
 
 export const rust_cheatsheet: PostInterface = {
   pid: "rust_cheatsheet",
@@ -38,7 +38,7 @@ export const rust_cheatsheet: PostInterface = {
   preview: [preview],
   full: [
     preview,
-    p("This post will be updated (I hope often :)"),
+    p(["This post will be updated (I hope often :)"]),
     createAccordion([
       createAccordionTab({
         header: "how to loop backwards with for loop",

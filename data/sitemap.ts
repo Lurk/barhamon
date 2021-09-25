@@ -40,14 +40,14 @@ export const How_to_serve_sitemap_xml_with_Next_JS: PostInterface = {
   description:
     "Quick guide with code and explanation on sitemap.xml with Next.JS",
   preview: [
-    p(
-      "To not only increase entropy but also be useful, this blog should be indexed by search engines."
-    ),
+    p([
+      "To not only increase entropy but also be useful, this blog should be indexed by search engines.",
+    ]),
   ],
   full: [
-    p(
-      "To not only increase entropy but also be useful, this blog should be indexed by search engines. And to make it easier for search engines to index, they came up with robots.txt and sitemap."
-    ),
+    p([
+      "To not only increase entropy but also be useful, this blog should be indexed by search engines. And to make it easier for search engines to index, they came up with robots.txt and sitemap.",
+    ]),
     createMessage({
       content: [
         p([
@@ -62,11 +62,11 @@ export const How_to_serve_sitemap_xml_with_Next_JS: PostInterface = {
         ]),
       ],
     }),
-    p(
-      "For our site to produce sitemap.xml, create a sitemap.xml.tsx file in the pages folder:"
-    ),
+    p([
+      "For our site to produce sitemap.xml, create a sitemap.xml.tsx file in the pages folder:",
+    ]),
     code({ content: c, lang: "typescript" }),
-    p("In the public folder, create the robots.txt file:"),
+    p(["In the public folder, create the robots.txt file:"]),
     code({
       content: "User-agent: *\nSitemap: https://barhamon.com/sitemap.xml",
       lang: "bash",

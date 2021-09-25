@@ -13,9 +13,9 @@ const c = `import { DiscussionEmbed } from "disqus-react"
 />
 `;
 
-const preview = p(
-  "In this post, you will learn how to add comments to your Next.js project. And it is easy with Disqus."
-);
+const preview = p([
+  "In this post, you will learn how to add comments to your Next.js project. And it is easy with Disqus.",
+]);
 
 export const comments: PostInterface = {
   pid: "comments",
@@ -48,7 +48,7 @@ export const comments: PostInterface = {
       " package from npm. If you are a Typescript user, this package already has typings.",
     ]),
     code({ content: "npm install disqus-react", lang: "bash" }),
-    p("And use it like this:"),
+    p(["And use it like this:"]),
     code({ content: c, lang: "jsx" }),
     p([
       "You can find a usage example here: ",

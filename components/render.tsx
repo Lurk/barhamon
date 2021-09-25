@@ -1,11 +1,6 @@
 import React from "react";
 import { Divider, Image, List } from "semantic-ui-react";
-import {
-  AccordionTab as IAccordionTab,
-  Elements,
-  PostFull,
-  Types,
-} from "../models/tree";
+import { Elements, PostFull, Types } from "../models/tree";
 import { CloudinaryGal } from "./cloudinary";
 import { Code } from "./code";
 import { ImageGallery } from "./image_gallery";
@@ -15,10 +10,6 @@ import { Link } from "./link";
 
 import styles from "./render.module.css";
 
-function isAccordionTabValue(obj: any): obj is IAccordionTab["value"] {
-  return Object.prototype.hasOwnProperty.call(obj, "content");
-}
-
 //TODO there should be a better way than "T extends any"
 const getVal = <T extends any>(value: T, i?: number) => {
   let val;
@@ -27,13 +18,9 @@ const getVal = <T extends any>(value: T, i?: number) => {
   }
   if (typeof value === "string") {
     val = value;
-  } else if (Array.isArray(value)) {
-    val = value.map(getVal);
   } else if (value && Object.prototype.hasOwnProperty.call(value, "type")) {
     // eslint-disable-next-line
     val = <Render data={value as PostFull} key={i} />;
-  } else if (isAccordionTabValue(value)) {
-    val = getVal(value.content);
   } else {
     val = `Unknown value type in getVal\n\t data is: \n ${JSON.stringify(
       value,
@@ -54,13 +41,13 @@ const Render: React.FC<{ data: Elements }> = ({ data }) => {
         <Accordion>
           {data.value.map((a, i) => (
             <AccordionTab key={i} index={i} header={a.value.header}>
-              {getVal(a.value.content)}
+              <Render data={a.value.content} />
             </AccordionTab>
           ))}
         </Accordion>
       );
     case Types.LIST_ITEM:
-      return <List.Item>{getVal(data.value)}</List.Item>;
+      return <List.Item>{data.value.map(getVal)}</List.Item>;
     case Types.LIST:
       return (
         <List
@@ -97,9 +84,9 @@ const Render: React.FC<{ data: Elements }> = ({ data }) => {
     case Types.CODE:
       return <Code language={data.value.lang}>{data.value.content}</Code>;
     case Types.MESSAGE:
-      return <Message data={data}>{getVal(data.value.content)}</Message>;
+      return <Message data={data}>{data.value.content.map(getVal)}</Message>;
     case Types.HEADER:
-      return <h3>{getVal(data.value)}</h3>;
+      return <h3>{data.value.map(getVal)}</h3>;
     case Types.CLOUDINARY_GALLERY:
       return (
         <CloudinaryGal username={data.value.username} tag={data.value.tag} />
@@ -119,7 +106,7 @@ const Render: React.FC<{ data: Elements }> = ({ data }) => {
     case Types.DIVIDER:
       return <Divider />;
     case Types.PARAGRAPH:
-      return <p>{getVal(data.value)}</p>;
+      return <p>{data.value.map(getVal)}</p>;
     case Types.BOLD:
       return <b>{data.value}</b>;
     case Types.EMBED:

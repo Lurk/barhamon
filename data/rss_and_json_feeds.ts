@@ -1,7 +1,7 @@
 import { a, li, p, ul } from "../models/tree";
 import { PostInterface } from "../models/posts";
 
-const preview = [p("Hey!"), p("You can now subscribe to this blog :)")];
+const preview = [p(["Hey!"]), p(["You can now subscribe to this blog :)"])];
 
 export const rss_and_json_feeds_for_next_js_site: PostInterface = {
   pid: "RSS_and_JSON_feeds_for_Next_JS_site",
@@ -22,9 +22,9 @@ export const rss_and_json_feeds_for_next_js_site: PostInterface = {
       }),
       '. I do not want to start the "FINALLY! THE RSS KILLER" thread, but I am happy because I do not like XML. It is wordy and not readable for me.',
     ]),
-    p(
-      "Newerless RSS feeds are widely supported, so this blog should provide a new and shiny JSON feed and an old and dusty RSS."
-    ),
+    p([
+      "Newerless RSS feeds are widely supported, so this blog should provide a new and shiny JSON feed and an old and dusty RSS.",
+    ]),
     p([
       "If you read the ",
       a({
@@ -51,14 +51,14 @@ export const rss_and_json_feeds_for_next_js_site: PostInterface = {
       }),
       ".",
     ]),
-    p("Here are the links for your feed reader:"),
+    p(["Here are the links for your feed reader:"]),
     ul({
       content: [
-        li(a({ text: "JSON Feed", url: "https://barhamon.com/feed.json" })),
-        li(a({ text: "RSS Feed", url: "https://barhamon.com/feed.xml" })),
+        li([a({ text: "JSON Feed", url: "https://barhamon.com/feed.json" })]),
+        li([a({ text: "RSS Feed", url: "https://barhamon.com/feed.xml" })]),
       ],
       type: "dot",
     }),
-    p("Stay tuned!"),
+    p(["Stay tuned!"]),
   ],
 };
