@@ -35,7 +35,8 @@ export const How_to_serve_sitemap_xml_with_Next_JS: PostInterface = {
   pid: "How_to_serve_sitemap_xml_with_Next_JS",
   header: "How to serve sitemap.xml with Next.JS",
   time: 1594293850344,
-  image: "/img/sitemap.jpg",
+  image:
+    "https://res.cloudinary.com/barhamon/image/upload/v1632560197/header/the_code.jpg",
   tags: ["blog", "nextjs", "SEO", "ts", "react"],
   description:
     "Quick guide with code and explanation on sitemap.xml with Next.JS",
