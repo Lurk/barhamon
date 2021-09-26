@@ -104,21 +104,6 @@ export const PageHead: React.FC<PageHeadProps> = ({
         content={description ? description : "Serhiy Barhamon personal blog"}
       />
       <meta name="keywords" content={u.join(", ")} />
-
-      <script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=UA-171846183-1"
-      />
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-171846183-1');`,
-        }}
-      />
     </Head>
   );
 };
