@@ -10,7 +10,8 @@ export const a_philosophy_of_software_design: PostInterface = {
   image:
     "https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v1632772550/header/a_philosophy_of_software_design.jpg",
   tags: ["book"],
-  description: "Thinking, Fast and Slow - the most useful book you can read.",
+  description:
+    "A Philosophy of Software Design - the must-read for software engineers.",
   preview: [preview],
   full: [
     preview,
