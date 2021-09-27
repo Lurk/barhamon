@@ -32,9 +32,11 @@ import { rust_and_nsstring } from "./rust_and_nsstring";
 import { thinking_fast_and_slow } from "./thinking_fast_and_slow";
 import { good_news_everyone } from "./good_news_everyone";
 import { weird_interview_question } from "./weird_interview_question";
+import { a_philosophy_of_software_design } from "./a_philosophy_of_software_design";
 
 export const posts = new Posts();
 
+posts.addPost(a_philosophy_of_software_design);
 posts.addPost(thinking_fast_and_slow);
 posts.addPost(weird_interview_question);
 posts.addPost(good_news_everyone);
