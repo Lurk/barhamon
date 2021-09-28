@@ -39,7 +39,7 @@ export interface Paragraph {
 
 export interface LineTrough {
   type: Types.LINE_THROUGH;
-  value: (string | Link | Bold) | (string | Link | Bold)[];
+  value: (string | Link | Bold)[];
 }
 
 export interface ListItem {
@@ -177,9 +177,7 @@ export function h3(value: (string | Link)[]): Header {
   };
 }
 
-export function s(
-  value: (string | Link | Bold) | (string | Link | Bold)[]
-): LineTrough {
+export function s(value: (string | Link | Bold)[]): LineTrough {
   return {
     type: Types.LINE_THROUGH,
     value,

@@ -16,7 +16,13 @@ const Render: React.FC<{ data: Elements | string }> = ({ data }) => {
   }
   switch (data.type) {
     case Types.LINE_THROUGH:
-      return <s>{data.value}</s>;
+      return (
+        <s>
+          {data.value.map((data, i) => (
+            <Render data={data} key={i} />
+          ))}
+        </s>
+      );
     case Types.ACCORDION:
       return (
         <Accordion>
