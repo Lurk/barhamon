@@ -33,9 +33,11 @@ import { thinking_fast_and_slow } from "./thinking_fast_and_slow";
 import { good_news_everyone } from "./good_news_everyone";
 import { weird_interview_question } from "./weird_interview_question";
 import { a_philosophy_of_software_design } from "./a_philosophy_of_software_design";
+import { moving_our_stuff } from "./moving_our_stuff";
 
 export const posts = new Posts();
 
+posts.addPost(moving_our_stuff);
 posts.addPost(a_philosophy_of_software_design);
 posts.addPost(thinking_fast_and_slow);
 posts.addPost(weird_interview_question);
