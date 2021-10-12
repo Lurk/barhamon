@@ -97,7 +97,8 @@ export const Typescript_Nextjs_Prismjs: PostInterface = {
   pid: "Typescript_Nextjs_Prismjs",
   header: "Typescript + Nextjs + Prismjs or the tale about code highlighting",
   time: 1593767695933,
-  image: "/img/the_code.jpg",
+  image:
+    "https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v1632560197/header/the_code.jpg",
   tags: ["blog", "nextjs", "prismjs", "ts", "react"],
   description: "How to make Prism JS work with typescript and NextJs",
   preview: [preview],
