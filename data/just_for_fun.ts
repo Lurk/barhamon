@@ -11,7 +11,7 @@ export const just_for_fun: PostInterface = {
     "https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v1634063604/header/just_for_fun.jpg",
   tags: ["book"],
   description:
-    "A Philosophy of Software Design - the must-read for software engineers.",
+    "All my nerdy senses were pleased by this book. I highly recommend it",
   preview: [preview],
   full: [
     preview,
