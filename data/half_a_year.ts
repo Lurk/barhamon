@@ -68,7 +68,7 @@ export const half_a_year: PostInterface = {
       alt: "Real mountains",
     }),
     p([
-      "Also, six months have passed since I joined Check24 as a software engineer. My probation period ended on 1 October, and I got a promotion at the end of it. So, now I am a senior software engineer. The last time I had the senior prefix in the job title was in 2013. But you know, the list of things I do daily did not really change with the new title. I still do a lot of code reviews, technical discussions, interviews, and of course, do the code. But now it is in my job description.",
+      "Also, six months have passed since I joined Check24 as a software engineer. My probation period ended on 1 October, and I got a promotion at the end of it. So, now I am a senior software engineer. The last time I had the senior prefix in the job title was in 2013. But you know, the list of things I do daily did not really change with the title. I still do a lot of code reviews, technical discussions, interviews, and of course, do the code. But now it is in my job description.",
     ]),
     createMessage({
       content: [
