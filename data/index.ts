@@ -35,9 +35,11 @@ import { weird_interview_question } from "./weird_interview_question";
 import { a_philosophy_of_software_design } from "./a_philosophy_of_software_design";
 import { moving_our_stuff } from "./moving_our_stuff";
 import { just_for_fun } from "./just_for_fun";
+import { half_a_year } from "./half_a_year";
 
 export const posts = new Posts();
 
+posts.addPost(half_a_year);
 posts.addPost(just_for_fun);
 posts.addPost(moving_our_stuff);
 posts.addPost(a_philosophy_of_software_design);
