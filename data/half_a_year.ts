@@ -73,7 +73,7 @@ export const half_a_year: PostInterface = {
     createMessage({
       content: [
         p([
-          "I reread that last paragraph, and it looks like I am not excited. But I am :) It is always nice to know that only your mum thinks you are good at what you are doing.",
+          "I reread that last paragraph, and it looks like I am not excited. But I am :) It is always nice to know that not only your mum thinks you are good at what you are doing.",
         ]),
       ],
       icon: "smile",
