@@ -33,7 +33,7 @@
     "@types/babel__template": "7.4.1",
     "@types/babel__traverse": "7.14.2",
     "@types/istanbul-lib-report": "3.0.0",
-    "@types/node": "16.11.4",
+    "@types/node": "16.11.6",
     "@types/prismjs": "1.16.6",
     "@types/prop-types": "15.7.4",
     "@types/react": "17.0.32",
