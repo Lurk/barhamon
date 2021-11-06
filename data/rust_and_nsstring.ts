@@ -3,7 +3,7 @@ import { PostInterface } from "../models/posts";
 import { prepareImgProps } from "../utils";
 
 const installation = `xcode-select --install
-brew install cargo-instruments            
+brew install cargo-instruments
 `;
 
 const pasteboard_main = `use clipboard::{ClipboardContext, ClipboardProvider};
@@ -54,7 +54,7 @@ export const rust_and_nsstring: PostInterface = {
     "https://res.cloudinary.com/barhamon/image/upload/v1626989237/rust_and_nsstring/header.png",
   description:
     "How to find and fix memory leaks in programs written in Rust for Mac os",
-  tags: ["rust", "software"],
+  tags: ["rust", "software", "objc"],
   preview: [preview],
   full: [
     preview,
