@@ -37,9 +37,11 @@ import { moving_our_stuff } from "./moving_our_stuff";
 import { just_for_fun } from "./just_for_fun";
 import { half_a_year } from "./half_a_year";
 import { rust_and_nsstring_part_2 } from "./rust_and_nsstring_part_2";
+import { what_if } from "./what_if";
 
 export const posts = new Posts();
 
+posts.addPost(what_if);
 posts.addPost(rust_and_nsstring_part_2);
 posts.addPost(half_a_year);
 posts.addPost(just_for_fun);
