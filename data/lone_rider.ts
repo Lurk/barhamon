@@ -3,7 +3,7 @@ import { PostInterface } from "../models/posts";
 
 const preview = p(["by Elspeth Beard"]);
 
-export const just_for_fun: PostInterface = {
+export const lone_rider: PostInterface = {
   pid: "lone_rider",
   header: "Lone Rider",
   time: 1638029785631,
