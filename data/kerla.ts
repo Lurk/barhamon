@@ -11,7 +11,7 @@ export const kerla: PostInterface = {
   time: 1640116329881,
   image:
     "https://res.cloudinary.com/barhamon/image/upload/c_mpad,h_800/v1640116267/header/kerla.jpg",
-  description: "How NSString::UTF8String actually works",
+  description: "“Just for fun”™ Linux on Rust rewrite",
   tags: ["rust", "software", "linux"],
   preview: [p(preview)],
   full: [
