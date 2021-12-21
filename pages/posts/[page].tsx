@@ -42,12 +42,14 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps<{ page: PageResult }, Params> =
-  async ({ params }) => {
-    const page = params.page ? parseInt(params.page, 10) : 1;
-    return {
-      props: {
-        page: posts.getPage({ limit, offset: (page - 1) * limit }),
-      },
-    };
+export const getStaticProps: GetStaticProps<
+  { page: PageResult },
+  Params
+> = async ({ params }) => {
+  const page = params.page ? parseInt(params.page, 10) : 1;
+  return {
+    props: {
+      page: posts.getPage({ limit, offset: (page - 1) * limit }),
+    },
   };
+};

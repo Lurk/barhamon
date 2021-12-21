@@ -39,9 +39,11 @@ import { half_a_year } from "./half_a_year";
 import { rust_and_nsstring_part_2 } from "./rust_and_nsstring_part_2";
 import { what_if } from "./what_if";
 import { lone_rider } from "./lone_rider";
+import { kerla } from "./kerla";
 
 export const posts = new Posts();
 
+posts.addPost(kerla);
 posts.addPost(lone_rider);
 posts.addPost(what_if);
 posts.addPost(rust_and_nsstring_part_2);
