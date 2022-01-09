@@ -40,9 +40,11 @@ import { rust_and_nsstring_part_2 } from "./rust_and_nsstring_part_2";
 import { what_if } from "./what_if";
 import { lone_rider } from "./lone_rider";
 import { kerla } from "./kerla";
+import { the_managers_path } from "./the_managers_path";
 
 export const posts = new Posts();
 
+posts.addPost(the_managers_path);
 posts.addPost(kerla);
 posts.addPost(lone_rider);
 posts.addPost(what_if);

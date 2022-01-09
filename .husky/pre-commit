@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-yarn lint --fix && yarn prettier --write . && git add .
+npx lint -- --fix && npx prettier --write . && git add .
