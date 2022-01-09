@@ -24,7 +24,7 @@ export const the_managers_path: PostInterface = {
       type: "dot",
       content: [
         li([
-          "Now work I did in the past has a proper name. For example, once I managed three teams, but since our carrier ladder was awful, my position was - Systems architect. I was responsible for architecture because we had no tech lead, but what everybody wanted from me was those team productivity. Now I know that I was engineering manager, and Instead of making architectural decisions, I Now work I did in the past has a proper name. For example, once I managed three teams, but since our carrier ladder was awful, my position was - Systems architect. I was responsible for architecture because we had no tech lead, but what everybody wanted from me was those team productivity. Now I know that I was engineering manager, and Instead of making architectural decisions, I should have hired tech leads.",
+          "Now, the work I did in the past has a proper name. For example, once I managed three teams, but since our carrier ladder was awful, my position was - Systems architect. I was responsible for architecture because we had no tech lead, but what everybody wanted from me was those team productivity. Now I know that I was engineering manager, and Instead of making architectural decisions, I should have hired tech leads.",
         ]),
         li(["Mentors are important. Both having and being one."]),
         li(["1-1s are super important for everybody."]),
