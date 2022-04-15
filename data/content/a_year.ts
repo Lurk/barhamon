@@ -69,7 +69,7 @@ export const a_year: PostInterface = {
       icon: "meh",
     }),
     p([
-      "In January, I finally bought a bicycle. Since then, it has been my primary way of commuting. I feel like I am fitter and happier than before. One downside is I usually write my blog posts on the way to/from work, and you know, it is hard to write while you are cycling.",
+      "In January, finally I bought a bicycle. Since then, it has been my primary way of commuting. I feel like I am fitter and happier than before. One downside is I usually write my blog posts on the way to/from work, and you know, it is hard to write while you are cycling.",
     ]),
     img({
       ...prepareImgProps({
