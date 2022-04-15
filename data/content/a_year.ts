@@ -131,7 +131,7 @@ export const a_year: PostInterface = {
       alt: "cant believe i have to protest this shit",
     }),
     p([
-      "And a big part of life now is helping refugees to find a way to live everyday life and participating in anti-war/Russia protests. What amazes me the most is how many people care. Every day I meet a random person who does something good. I thought that there were more good people than bad people, but now I have proof.",
+      "And a big part of life now is helping refugees to find a way to live everyday life and participating in anti-war/Russia protests. What amazes me the most is how many people care. Every day I meet a random person who does something good. I thought that there were more good people than bad people, and now I have proof.",
     ]),
     createMessage({
       content: [
