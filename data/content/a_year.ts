@@ -17,7 +17,7 @@ export const a_year: PostInterface = {
   full: [
     p([
       preview,
-      "The first one was moving from Moscow to Kyiv in the winter of 2014. A lot of people said back then that we were crazy. And to be honest, I also had doubts at that time. It looked like we were abandoning rich Moscow for no reason. Then Russia annexed Crimea. Then tried to annex Donbas and Luhansk regions. And now 8, years later, it launched a full-scale assault against Ukraine.",
+      "The first one was moving from Moscow to Kyiv in December of 2013. A lot of people said back then that we were crazy. And to be honest, I also had doubts at that time. It looked like we were abandoning rich Moscow for no reason. Then Russia annexed Crimea. Then tried to annex Donbas and Luhansk regions. And now 8, years later, it launched a full-scale assault against Ukraine.",
     ]),
     img({
       ...prepareImgProps({
