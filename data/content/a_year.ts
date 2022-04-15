@@ -29,7 +29,7 @@ export const a_year: PostInterface = {
       alt: "My granddad is the best fishing partner",
     }),
     p([
-      "My mom and grandparents are still in Ukraine. Fortunately, there is nothing important in the area where they live, so there are no fights in the area. And I hope it will stay that way. Even though on every call, my mom says everything is okay, life in the war-torn country is still tough. But at least banks are working, so money is not a problem.",
+      "My mom and grandparents are still in Ukraine. Fortunately, there is nothing important in the area where they live, so there are no fights. And I hope it will stay that way. Even though on every call, my mom says everything is okay, life in the war-torn country is still tough. But at least banks are working, so money is not a problem.",
     ]),
     img({
       ...prepareImgProps({
@@ -107,7 +107,7 @@ export const a_year: PostInterface = {
     p([
       "We are living in the same flat. Maybe twice a month I check ",
       a({ text: "immoscout", url: "https://www.immobilienscout24.de/" }),
-      " for a new potential flat/house. But now, with the language courses so close to our current apartment, it is even harder to find a good enough substitute to justify the hustle of moving. Also, we spent a weekend in the mountain cabin. And now we want that instead apartment in the city, which is even harder to find in our budget. That will mean that we need a car, which is not possible for now because of the driver's license issue. So I think we will live in that flat for some foreseeable future. Ah. The “housemaster” finally replaced our paper doorbell tags with a proper ones. But they misspelled our surnames. I am not sure how big of an issue that is, but since there is no moving out, I think that we should do something about that.",
+      " for a new potential flat/house. But now, with the language courses so close to our current apartment, it is even harder to find a good enough substitute to justify the hustle of moving. Also, we spent a weekend in the mountain cabin. And now we want that instead apartment in the city, which is even harder to find in our budget. Living outside the city will mean that we need a car, which is not possible for now because of the driver's license issue. So I think we will live in that flat for some foreseeable future. Ah. The “housemaster” finally replaced our paper doorbell tags with a proper ones. But they misspelled our surnames. I am not sure how big of an issue that is, but since there is no moving out, I think that we should do something about that.",
     ]),
     img({
       ...prepareImgProps({
