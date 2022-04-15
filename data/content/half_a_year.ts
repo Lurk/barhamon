@@ -91,5 +91,22 @@ export const half_a_year: PostInterface = {
       alt: "Feels good here",
     }),
     p(["See you in the next annual post in half a year. "]),
+    createMessage({
+      content: [
+        p([
+          "The next big anniversary post you can find ",
+          a({ text: "here", as: "/post/a_year", url: "/post/[pid]" }),
+          ".",
+        ]),
+        p([
+          "The previous one you can read ",
+          a({ text: "here", as: "/post/month_in_munich", url: "/post/[pid]" }),
+          " and ",
+          a({ text: "here", as: "/post/month_in_check24", url: "/post/[pid]" }),
+          ".",
+        ]),
+      ],
+      icon: "birthday cake",
+    }),
   ],
 };

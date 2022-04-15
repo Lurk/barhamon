@@ -40,3 +40,4 @@ export { what_if } from "./what_if";
 export { lone_rider } from "./lone_rider";
 export { kerla } from "./kerla";
 export { the_managers_path } from "./the_managers_path";
+export { a_year } from "./a_year";
