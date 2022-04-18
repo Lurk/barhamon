@@ -7,6 +7,7 @@ export interface PageHeadProps {
   keywords?: string[];
   image?: string;
   canonical?: string;
+  children: React.ReactNode;
 }
 
 const tags: string[] = [

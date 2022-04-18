@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, ReactNode } from "react";
 import { Accordion as Acc, Icon } from "semantic-ui-react";
 
 const AccordionContext = React.createContext<{
@@ -9,7 +9,7 @@ const AccordionContext = React.createContext<{
   handleClick: () => {},
 });
 
-export const Accordion: React.FC = ({ children }) => {
+export const Accordion: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [active, updateActive] = useState(0);
 
   const handleClick = (e, titleProps) => {
@@ -25,11 +25,11 @@ export const Accordion: React.FC = ({ children }) => {
   );
 };
 
-export const AccordionTab: React.FC<{ header: string; index: number }> = ({
-  header,
-  index,
-  children,
-}) => {
+export const AccordionTab: React.FC<{
+  header: string;
+  index: number;
+  children: ReactNode;
+}> = ({ header, index, children }) => {
   const context = useContext(AccordionContext);
   return (
     <>
