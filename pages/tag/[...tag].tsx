@@ -1,3 +1,6 @@
+// until https://github.com/Semantic-Org/Semantic-UI-React/pull/4356 is merged
+// @ts-nocheck
+
 import React from "react";
 import { Header } from "semantic-ui-react";
 import { GetStaticPaths, GetStaticProps } from "next";

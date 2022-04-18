@@ -1,3 +1,6 @@
+// until https://github.com/Semantic-Org/Semantic-UI-React/pull/4356 is merged
+// @ts-nocheck
+
 import React from "react";
 import { Divider, Image, List } from "semantic-ui-react";
 import { Elements, PostFull, Types } from "../models/tree";

@@ -1,3 +1,6 @@
+// until https://github.com/Semantic-Org/Semantic-UI-React/pull/4356 is merged
+// @ts-nocheck
+
 import React from "react";
 import Link from "next/link";
 import { Container, Grid, Icon, Segment } from "semantic-ui-react";
@@ -63,6 +66,7 @@ const Source: React.FC = () => (
 
 export const Footer: React.FC = () => {
   return (
+    // @ts-ignore
     <Segment className={style.main} inverted basic>
       <Container className="main">
         <Grid inverted>

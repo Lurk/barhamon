@@ -1,3 +1,6 @@
+// until https://github.com/Semantic-Org/Semantic-UI-React/pull/4356 is merged
+// @ts-nocheck
+
 import React, { memo } from "react";
 import { Item, Header, Divider, Grid } from "semantic-ui-react";
 import { PostInterface } from "../models/posts";
@@ -9,6 +12,7 @@ import { RenderPost } from "./render";
 
 export const PostFull: React.FC<PostInterface> = memo(({ full, ...rest }) => {
   return (
+    // @ts-ignore
     <Grid>
       <Grid.Row>
         <Grid.Column computer={10} mobile={16}>

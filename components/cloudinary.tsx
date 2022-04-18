@@ -1,3 +1,5 @@
+// until https://github.com/Semantic-Org/Semantic-UI-React/pull/4356 is merged
+// @ts-nocheck
 import React, { useEffect, useState } from "react";
 import { Grid, Message, Placeholder } from "semantic-ui-react";
 import { prepareImgProps } from "../utils";
