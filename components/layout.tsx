@@ -1,6 +1,3 @@
-// until https://github.com/Semantic-Org/Semantic-UI-React/pull/4356 is merged
-// @ts-nocheck
-
 import { Grid, Header, Ref, Segment, Sticky } from "semantic-ui-react";
 import React, { createRef, useState } from "react";
 import Link from "next/link";
