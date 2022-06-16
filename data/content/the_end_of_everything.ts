@@ -10,8 +10,7 @@ export const the_end_of_everything: PostInterface = {
   image:
     "https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v1655379868/header/the_end_of_everything.jpeg",
   tags: ["book"],
-  description:
-    "A Philosophy of Software Design - the must-read for software engineers.",
+  description: "The End of Everything - nerdy jokes and ultimate death.",
   preview: [preview],
   full: [
     preview,
