@@ -19,7 +19,7 @@ export const e5_hike_preparations: PostInterface = {
   full: [
     preview,
     p([
-      "What is E5, you may ask? And that is a perfectly valid question because I did not know anything about this, or any other, route until this summer (thank you, Michele). So, E5 is one of the European long-distance hiking paths. It starts in Pointe du Raz, France, and ends in Venice, Italy. The length of the whole path is a whopping 3200 km. We will have only two weeks, and that is not enough to hike the entire route. That's why we will hike only the Austrian section, which is only 175 km.",
+      "What is E5, you may ask? And that is a perfectly valid question because I did not know anything about this, or any other, route until this summer (thank you, Michele). So, E5 is one of the European long-distance hiking paths. It starts in Pointe du Raz, France, and ends in Venice, Italy. The length of the whole path is a whopping 3200 km. We will have only two weeks, and that is not enough to hike the entire route. That's why we will hike just the Austrian section, which is only 175 km.",
     ]),
     img({
       ...prepareImgProps({
