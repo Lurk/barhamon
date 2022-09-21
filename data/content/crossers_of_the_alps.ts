@@ -164,7 +164,7 @@ export const crossers_of_the_alps: PostInterface = {
       "Because way up has a gentle angle, that was one of the easiest hikes on the trip. Despite the altitude gain and light rain, it was more like a walk in the park. The stunning one, with mountains covered with snow on both sides, waterfalls, and clouds that hug hills.",
     ]),
     p([
-      "On the way to Rifugio Similaun, you can have lunch in Martin-Busch hütte. We had apple strudel and warm tea. Some people we met on the way said that Rifugio Similaun is much better than this one. I can not confirm nor deny that claim because we spend there half an hour. But I can say that Similaun is excellent.",
+      "On the way to Rifugio Similaun, you can have lunch in Martin-Busch hütte. We had apple strudel and warm tea. Some people we met on the way said that Rifugio Similaun is much better than this one. I can not confirm nor deny that claim because we spend there half an hour. But I can say that Similaun is good.",
     ]),
     p([
       "First time on this trip, I had trouble sleeping. I woke up multiple times in the night with the feeling that there was not enough air in the room. Maybe that was the altitude effect, but we did not have the time to check this theory.",
