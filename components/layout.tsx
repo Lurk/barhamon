@@ -32,9 +32,7 @@ export const Layout: React.FC<PageHeadProps> = (props) => {
                         <a>Serhiy Barhamon</a>
                       </Link>
                     </Header.Content>
-                    <Header.Subheader>
-                      And I am a software engineer
-                    </Header.Subheader>
+                    <Header.Subheader>And I make cool things</Header.Subheader>
                   </Header>
                 </Segment>
               </Sticky>
