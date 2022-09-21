@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Grid, Message, Placeholder } from "semantic-ui-react";
 import { prepareImgProps } from "../utils";
 import { ImageGallery } from "./image_gallery";
+import naturalCompare from "natural-compare-lite";
 
 export interface CloudinaryGalProps {
   username: string;
@@ -49,11 +50,17 @@ export const CloudinaryGal: React.FC<CloudinaryGalProps> = ({
       .then((res) => res.json())
       .then((data) => {
         setData(
-          data.resources.map((res) => {
-            const file = `${res.public_id}.${res.format}`;
+          data.resources
+            .sort((a, b) => naturalCompare(a.public_id, b.public_id))
+            .map((image) => {
+              const file = `${image.public_id}.${image.format}`;
 
-            return prepareImgProps({ file, version: res.version, username });
-          })
+              return prepareImgProps({
+                file,
+                version: image.version,
+                username,
+              });
+            })
         );
         setLoading(false);
       })

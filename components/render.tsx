@@ -84,7 +84,23 @@ const Render: React.FC<{ data: Elements | string }> = ({ data }) => {
           ))}
         </Message>
       );
-    case Types.HEADER:
+    case Types.H1:
+      return (
+        <h1>
+          {data.value.map((data, i) => (
+            <Render data={data} key={i} />
+          ))}
+        </h1>
+      );
+    case Types.H2:
+      return (
+        <h2>
+          {data.value.map((data, i) => (
+            <Render data={data} key={i} />
+          ))}
+        </h2>
+      );
+    case Types.H3:
       return (
         <h3>
           {data.value.map((data, i) => (

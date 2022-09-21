@@ -1,4 +1,4 @@
-export enum Types {
+export const enum Types {
   PARAGRAPH = "PARAGRAPH",
   DIVIDER = "DIVIDER",
   MESSAGE = "MESSAGE",
@@ -10,7 +10,10 @@ export enum Types {
   LINK = "LINK",
   LIST = "LIST",
   LIST_ITEM = "LIST_ITEM",
-  HEADER = "HEADER",
+  H1 = "H1",
+  H2 = "H2",
+  H3 = "H3",
+  H4 = "H4",
   BOLD = "BOLD",
   ACCORDION = "ACCORDION",
   ACCORDION_TAB = "ACCORDION_TAB",
@@ -52,8 +55,23 @@ export interface Bold {
   value: string;
 }
 
-export interface Header {
-  type: Types.HEADER;
+export interface H1 {
+  type: Types.H1;
+  value: (string | Link)[];
+}
+
+export interface H2 {
+  type: Types.H2;
+  value: (string | Link)[];
+}
+
+export interface H3 {
+  type: Types.H3;
+  value: (string | Link)[];
+}
+
+export interface H4 {
+  type: Types.H4;
   value: (string | Link)[];
 }
 
@@ -156,7 +174,10 @@ export type PostFull =
   | CloudinaryGallery
   | Code
   | Message
-  | Header
+  | H1
+  | H2
+  | H3
+  | H4
   | Bold
   | Accordion
   | Embed;
@@ -170,9 +191,23 @@ export function p(value: ParagraphContent[]): Paragraph {
   };
 }
 
-export function h3(value: (string | Link)[]): Header {
+export function h2(value: (string | Link)[]): H2 {
   return {
-    type: Types.HEADER,
+    type: Types.H2,
+    value,
+  };
+}
+
+export function h3(value: (string | Link)[]): H3 {
+  return {
+    type: Types.H3,
+    value,
+  };
+}
+
+export function h4(value: (string | Link)[]): H3 {
+  return {
+    type: Types.H3,
     value,
   };
 }

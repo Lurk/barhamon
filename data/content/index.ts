@@ -44,3 +44,4 @@ export { a_year } from "./a_year";
 export { linux_kernel_development } from "./linux_kernel_development";
 export { the_end_of_everything } from "./the_end_of_everything";
 export { e5_hike_preparations } from "./e5_hike_preparations";
+export { crossers_of_the_alps } from "./crossers_of_the_alps";
