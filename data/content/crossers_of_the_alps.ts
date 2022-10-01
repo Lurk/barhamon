@@ -19,8 +19,7 @@ export const crossers_of_the_alps: PostInterface = {
   image:
     "https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v1663791551/e5/crossers_of_the_alps.jpg",
   tags: ["personal", "adventure", "mountains"],
-  description:
-    "Hike the Austrian section of the E5 with detours and fun.",
+  description: "Hike the Austrian section of the E5 with detours and fun.",
   preview: [p([preview])],
   full: [
     p([
