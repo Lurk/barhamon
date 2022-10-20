@@ -46,3 +46,4 @@ export { the_end_of_everything } from "./the_end_of_everything";
 export { e5_hike_preparations } from "./e5_hike_preparations";
 export { crossers_of_the_alps } from "./crossers_of_the_alps";
 export { rust_for_rustaceans } from "./rust_for_rustaceans";
+export { the_trolley_problem } from "./the_trolley_problem";
