@@ -21,6 +21,6 @@ export const the_trolley_problem: PostInterface = {
     p([
       "It has already happened. You can not change it. Want it or not, this jet did kill civilians. So you can choose to be sorry for dead Russians or be happy about live Ukrainians.",
     ]),
-    p(["If you can do both, tel me how."]),
+    p(["If you can do both, please tell me how."]),
   ],
 };
