@@ -28,9 +28,7 @@ export const Layout: React.FC<PageHeadProps> = (props) => {
                       My name is <br />
                     </Header.Subheader>
                     <Header.Content>
-                      <Link href="/">
-                        <a>Serhiy Barhamon</a>
-                      </Link>
+                      <Link href="/">Serhiy Barhamon</Link>
                     </Header.Content>
                     <Header.Subheader>And I make cool things</Header.Subheader>
                   </Header>
@@ -57,10 +55,7 @@ export const Layout: React.FC<PageHeadProps> = (props) => {
                   })}
                 >
                   <Header>
-                    <Link href="/">
-                      <a>Serhiy`s Barhamon</a>
-                    </Link>{" "}
-                    blog
+                    <Link href="/">Serhiy`s Barhamon</Link> blog
                   </Header>
                 </Segment>
               </Sticky>

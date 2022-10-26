@@ -16,13 +16,7 @@ export const Tag: React.FC<TagProps> = ({ id, tag, className }) => {
   return (
     <Label key={id} color="teal" className={className}>
       <Icon name="tag" />
-      {active ? (
-        tag
-      ) : (
-        <Link href={`/tag/${tag}`}>
-          <a>{tag}</a>
-        </Link>
-      )}
+      {active ? tag : <Link href={`/tag/${tag}`}>{tag}</Link>}
     </Label>
   );
 };

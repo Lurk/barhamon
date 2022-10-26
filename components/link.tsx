@@ -6,7 +6,7 @@ export const Link: React.FC<{ data: ILink }> = ({ data }) => {
   if (data.value.as) {
     return (
       <L as={data.value.as} href={data.value.url}>
-        <a>{data.value.text || data.value.url}</a>
+        {data.value.text || data.value.url}
       </L>
     );
   }

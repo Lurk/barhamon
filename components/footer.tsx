@@ -8,22 +8,13 @@ const Subscribe: React.FC = () => (
     <p>Subscribe by: </p>
     <p>
       <Link href="/feed.json">
-        <a>
-          <img
-            src="/jsonfeed.png"
-            width={12}
-            height={12}
-            alt="json feed v1.1"
-          />{" "}
-          <span className={style.jsonFeed}>JSON Feed</span>
-        </a>
+        <img src="/jsonfeed.png" width={12} height={12} alt="json feed v1.1" />{" "}
+        <span className={style.jsonFeed}>JSON Feed</span>
       </Link>
     </p>
     <p>
       <Link href="/feed.xml">
-        <a>
-          <Icon className="rss" /> RSS
-        </a>
+        <Icon className="rss" /> RSS
       </Link>
     </p>
   </>

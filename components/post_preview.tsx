@@ -25,8 +25,12 @@ export const PostPreview: React.FC<PostInterface> = memo(
         )}
         <Card.Content>
           <Card.Header>
-            <Link as={`/post/${rest.pid}`} href={"/post/[pid]"}>
-              <a className={styles.header_link}>{rest.header}</a>
+            <Link
+              as={`/post/${rest.pid}`}
+              href={"/post/[pid]"}
+              className={styles.header_link}
+            >
+              {rest.header}
             </Link>
           </Card.Header>
           <PostMeta readTime={rest.readTime} time={rest.time} />
@@ -35,7 +39,7 @@ export const PostPreview: React.FC<PostInterface> = memo(
             {full !== preview && (
               <p>
                 <Link as={`/post/${rest.pid}`} href={"/post/[pid]"}>
-                  <a>Read more</a>
+                  Read more
                 </Link>
               </p>
             )}
