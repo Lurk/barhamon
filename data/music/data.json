@@ -1,0 +1,171 @@
+{
+  "albums": [
+    {
+      "artist": ["Muqata'a"],
+      "name": "Boiler Room Palestine",
+      "description": "First will be Muqata’a. This live is on repeat whole December.",
+      "tags": ["Muqata'a"],
+      "date": 1546373292000,
+      "image": "http://res.cloudinary.com/barhamon/image/upload/v1667669349/music/Muqata%27aBoilerRoomPalestine.jpg",
+      "links": {
+        "Youtube (live)": "https://www.youtube.com/watch?v=u3dkjq_wdaE"
+      },
+      "ready": true
+    },
+    {
+      "artist": ["Adam Kvasnica"],
+      "name": "The Sound Of Africa",
+      "description": "Today will be a wonderful mix from Adam Kvasnitsa. And if you still did not subscribe, now is the time.",
+      "tags": ["Adam Kvasnica"],
+      "date": 1546426822000,
+      "image": "http://res.cloudinary.com/barhamon/image/upload/v1667669351/music/AdamKvasnicaTheSoundOfAfrica.jpg",
+      "links": {
+        "Mixcloud": "https://www.mixcloud.com/adamkvasnica3/the-sound-of-africa/"
+      },
+      "ready": true
+    },
+    {
+      "artist": ["David August", "Deutsches Symphonie Orchester"],
+      "name": "Boiler Room Berlin Live Performance",
+      "description": "I love collaborations like that. Almost everything that emerges at the intersection of styles deserves attention.",
+      "tags": ["David August", "Deutsches Symphonie Orchester"],
+      "date": 1546513210000,
+      "image": "http://res.cloudinary.com/barhamon/image/upload/v1667682821/music/DavidAugustDeutschesSymphonieOrchesterBoilerRoomBerlinLivePerformance.jpg",
+      "links": { "Youtube (live)": "https://youtu.be/l9tRdSmVZAc" },
+      "ready": true
+    },
+    {
+      "artist": ["King Gizzard And The Lizard Wizard"],
+      "name": "Full Performance (Live on KEXP)",
+      "description": "I just discovered this band, and they are fantastic.",
+      "tags": ["King Gizzard And The Lizard Wizard", "kexp"],
+      "date": 1546599614000,
+      "image": "http://res.cloudinary.com/barhamon/image/upload/v1667682821/music/KingGizzardAndTheLizardWizardFullPerformance%28liveOnKexp%29.jpg",
+      "links": { "Youtube (live)": "https://youtu.be/G5Z4bma_tUM" },
+      "ready": true
+    },
+    {
+      "artist": ["Kasper Bjørke Quartet"],
+      "name": "The Fifty Eleven Project",
+      "description": "I did not expect this album to be like that, and I liked it anyway. ",
+      "tags": ["Kasper Bjørke Quartet"],
+      "date": 1546686016000,
+      "image": "http://res.cloudinary.com/barhamon/image/upload/v1667682821/music/KasperBj%C3%B8rkeQuartetTheFiftyElevenProject.jpg",
+      "links": {
+        "Bandcamp": "https://kasperbjorke.bandcamp.com/album/the-fifty-eleven-project",
+        "Apple Music": "https://music.apple.com/album/kasper-bj%C3%B8rke-quartet-the-fifty-eleven-project/1421904399"
+      },
+      "ready": true
+    },
+    {
+      "artist": ["Bjork"],
+      "name": "MTV Unplugged",
+      "description": "Yeah, MTV Unplugged is an awesome series of records. And this is one of the best shows I have ever seen.",
+      "tags": ["Bjork", "Old But Gold"],
+      "date": 1546858804000,
+      "image": "http://res.cloudinary.com/barhamon/image/upload/v1667682821/music/BjorkMtvUnplugged.jpg",
+      "links": { "Youtube (live)": "https://youtu.be/8J0KBM2xK4w" },
+      "ready": true
+    },
+    {
+      "artist": ["Annimal Collective"],
+      "name": "Merriweather Post Pavilion",
+      "description": "This album is ten years old already. Time flies.",
+      "tags": ["Annimal Collective"],
+      "date": 1547031613000,
+      "image": "http://res.cloudinary.com/barhamon/image/upload/v1667682892/music/AnnimalCollectiveMerriweatherPostPavilion.jpg",
+      "links": {
+        "Bandcamp": "https://anmlcollectve.bandcamp.com/album/merriweather-post-pavilion",
+        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_lq6ZY8GSCQhbG7Z6cr-rw5EL9CQ54CdSs",
+        "iTunes": "https://music.apple.com/album/merriweather-post-pavilion/300683110?l=en",
+        "Spotify": "https://open.spotify.com/album/5O9OXl9zAWMJTzawofxuan"
+      },
+      "ready": true
+    },
+    {
+      "artist": ["Intrepol"],
+      "name": "TRNSMT (BBC 2018)",
+      "description": "On the twelve of June, they will be playing in Kyiv. And if you have doubts if you should go, go.",
+      "tags": ["Intrepol", "Live"],
+      "date": 1547377211000,
+      "image": "http://res.cloudinary.com/barhamon/image/upload/v1667768034/music/IntrepolTrnsmt%28bbc2018%29.jpg",
+      "links": { "Youtube (live)": "https://youtu.be/jWMFpeGYOoE" },
+      "ready": true
+    },
+    {
+      "artist": ["Bad Bad Not Good"],
+      "name": "IV (Full Live Concert)",
+      "description": "Found this recently. A not fresh one, but a really good one.",
+      "tags": ["Live", "Bad Bad Not Good"],
+      "date": 1547982006000,
+      "image": "http://res.cloudinary.com/barhamon/image/upload/v1667768034/music/BadBadNotGoodIv%28fullLiveConcert%29.jpg",
+      "links": { "Youtube (live)": "https://youtu.be/bdPkzcsYQKA" },
+      "ready": true
+    },
+    {
+      "artist": ["Go Go Penguin"],
+      "name": "Jazz à la Villette",
+      "description": "Watch this show while you are buying tickets for their performance in Kyiv on the sixteens of April.",
+      "tags": ["Go Go Penguin", "Live"],
+      "date": 1548759647000,
+      "image": "http://res.cloudinary.com/barhamon/image/upload/v1667768040/music/GoGoPenguinJazzA%CC%80LaVillette.jpg",
+      "links": { "Youtube (live)": "https://youtu.be/x7LmhOEnIs4" },
+      "ready": true
+    },
+    {
+      "artist": ["Beth Gibbons", "Rustin Man"],
+      "name": "Out of Season",
+      "description": "Yeah, of course, I am waiting for a new album of Portishead, and obviously, it is not the same, but Beth Gibbons announced a new album, which I am waiting for anyways. The previous album of Beth not with Portishead was this one, which was good.",
+      "tags": ["Portishead", "Beth Gibbons", "Rustin Man"],
+      "date": 1548932443000,
+      "image": "http://res.cloudinary.com/barhamon/image/upload/v1667768034/music/BethGibbonsRustinManOutOfSeason.jpg",
+      "links": {
+        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_l0Lns5MJxJfMjpELRIsHsp0QMJxHWzBIg",
+        "Spotify": "https://open.spotify.com/album/6nTOCPzj8JiohYlZxW5Zl1",
+        "iTunes": "https://music.apple.com/album/out-of-season/1443794694?l=en"
+      },
+      "ready": true
+    },
+    {
+      "artist": ["Black Midi"],
+      "name": "Schlagenheim",
+      "description": "There were days when I only wanted to sit in a dark corner and sway from side to side, hugging my knees. Schlagenheim was the album that kicked me out of that corner.",
+      "tags": ["Black Midi"],
+      "date": 1565085641000,
+      "image": "http://res.cloudinary.com/barhamon/image/upload/v1667768034/music/BlackMidiSchlagenheim.jpg",
+      "links": {
+        "Spotify": "https://open.spotify.com/album/14LuwckQuyWIvVlKrYuLzP",
+        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_kDywRWnE1m9W15HG-N59PnP2rm9rUr_vY",
+        "Youtube (live)": "https://youtu.be/TMn1UuEIVvA",
+        "Bandcamp": "https://bmblackmidi.bandcamp.com/album/schlagenheim",
+        "iTunes": "https://music.apple.com/ua/album/schlagenheim/1463962813"
+      },
+      "ready": true
+    },
+    {
+      "artist": ["Idles"],
+      "name": "Joy as an Act of Resistance.",
+      "description": "Woah. I don't think I ever liked any punk record as much as I like this one.",
+      "tags": ["Idles"],
+      "date": 1565258445000,
+      "image": "http://res.cloudinary.com/barhamon/image/upload/v1667768034/music/IdlesJoyAsAnActOfResistance..jpg",
+      "links": {
+        "Bandcamp": "https://idlesband.bandcamp.com/album/joy-as-an-act-of-resistance",
+        "Youtube": "https://youtu.be/wMehItNQKAA",
+        "Spotify": "https://open.spotify.com/album/7BbRSUBwTB37ut0Ht3yAqt",
+        "iTunes": "https://music.apple.com/ua/album/joy-as-an-act-of-resistance/1391070525"
+      },
+      "ready": true
+    },
+    {
+      "artist": ["The Doors"],
+      "name": "Live at The Bowl '68",
+      "description": "Yeah, The Doors. You know, sometimes you just find those things.",
+      "tags": ["Old But Gold", "Live"],
+      "date": 1547550022000,
+      "image": "http://res.cloudinary.com/barhamon/image/upload/v1667768076/music/TheDoorsLiveAtTheBowl%2768.jpg",
+      "links": { "Youtube (live)": "https://youtu.be/3mA75vvFylc" },
+      "ready": true
+    }
+  ]
+}
