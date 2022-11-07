@@ -1,5 +1,25 @@
 import { PostInterface } from "../../models/posts";
-import { a, p } from "../../models/tree";
+import { a, p, createMessage } from "../../models/tree";
+
+function getLinkIcon(text: string) {
+  switch (text) {
+    case "iTunes":
+      return "itunes";
+    case "Spotify":
+      return "spotify";
+    case "Youtube":
+    case "Youtube (live)":
+      return "youtube";
+    case "Bandcamp":
+      return "bandcamp";
+    case "Mixcloud":
+      return "mixcloud";
+    case "Soundcloud":
+      return "soundcloud";
+    default:
+      return "linkify";
+  }
+}
 
 export async function getMusic(): Promise<PostInterface[]> {
   const albums = await import("./data.json");
@@ -8,24 +28,22 @@ export async function getMusic(): Promise<PostInterface[]> {
     header: `${album.artist.join(" & ")} - ${album.name}`,
     description: `${album.artist.join(" & ")} - ${album.name}`,
     time: album.date,
-    preview: [
-      p([album.description]),
-      p([
-        " | ",
-        ...Object.entries(album.links).flatMap(([text, url]) => [
-          a({ url, text }),
-          " | ",
-        ]),
-      ]),
-    ],
+    preview: [],
     full: [
       p([album.description]),
-      p([
-        " | ",
-        ...Object.entries(album.links).flatMap(([text, url]) => [
-          a({ url, text }),
-          " | ",
-        ]),
+      ...Object.entries(album.links).flatMap(([text, url]) => [
+        createMessage({
+          content: [
+            p([
+              a({
+                url,
+                text: `${album.artist.join(" & ")} - ${album.name} on ${text}`,
+              }),
+            ]),
+          ],
+          icon: getLinkIcon(text),
+          warning: false,
+        }),
       ]),
     ],
     image: album.image,

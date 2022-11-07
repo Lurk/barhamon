@@ -7,7 +7,7 @@ export const Message: React.FC<{
   children: React.ReactNode;
 }> = ({ data, children }) => {
   return (
-    <M size="mini" warning icon={!!data.value.icon}>
+    <M size="mini" warning={data.value.warning} icon={!!data.value.icon}>
       {data.value.icon && <Icon name={data.value.icon as SemanticICONS} />}
       <M.Content>
         {data.value.header && <M.Header>{data.value.header}</M.Header>}

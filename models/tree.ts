@@ -102,6 +102,7 @@ export interface Message {
     header?: string;
     icon?: string;
     content: Paragraph[];
+    warning?: boolean;
   };
 }
 
@@ -223,10 +224,14 @@ export function createMessage(value: {
   content: Paragraph[];
   header?: string;
   icon?: string;
+  warning?: boolean;
 }): Message {
   return {
     type: Types.MESSAGE,
-    value,
+    value: {
+      ...value,
+      warning: value.warning === undefined ? true : value.warning,
+    },
   };
 }
 
