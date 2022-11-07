@@ -52,8 +52,8 @@
       "date": 1546686016000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667682821/music/KasperBj%C3%B8rkeQuartetTheFiftyElevenProject.jpg",
       "links": {
-        "iTunes": "https://music.apple.com/album/kasper-bj%C3%B8rke-quartet-the-fifty-eleven-project/1421904399",
-        "Bandcamp": "https://kasperbjorke.bandcamp.com/album/the-fifty-eleven-project"
+        "Bandcamp": "https://kasperbjorke.bandcamp.com/album/the-fifty-eleven-project",
+        "iTunes": "https://music.apple.com/album/kasper-bj%C3%B8rke-quartet-the-fifty-eleven-project/1421904399"
       },
       "ready": true
     },
@@ -75,10 +75,10 @@
       "date": 1547031613000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667682892/music/AnnimalCollectiveMerriweatherPostPavilion.jpg",
       "links": {
-        "Bandcamp": "https://anmlcollectve.bandcamp.com/album/merriweather-post-pavilion",
-        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_lq6ZY8GSCQhbG7Z6cr-rw5EL9CQ54CdSs",
         "iTunes": "https://music.apple.com/album/merriweather-post-pavilion/300683110?l=en",
-        "Spotify": "https://open.spotify.com/album/5O9OXl9zAWMJTzawofxuan"
+        "Bandcamp": "https://anmlcollectve.bandcamp.com/album/merriweather-post-pavilion",
+        "Spotify": "https://open.spotify.com/album/5O9OXl9zAWMJTzawofxuan",
+        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_lq6ZY8GSCQhbG7Z6cr-rw5EL9CQ54CdSs"
       },
       "ready": true
     },
@@ -134,11 +134,11 @@
       "date": 1565085641000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667768034/music/BlackMidiSchlagenheim.jpg",
       "links": {
-        "Spotify": "https://open.spotify.com/album/14LuwckQuyWIvVlKrYuLzP",
         "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_kDywRWnE1m9W15HG-N59PnP2rm9rUr_vY",
-        "Bandcamp": "https://bmblackmidi.bandcamp.com/album/schlagenheim",
+        "Spotify": "https://open.spotify.com/album/14LuwckQuyWIvVlKrYuLzP",
         "Youtube (live)": "https://youtu.be/TMn1UuEIVvA",
-        "iTunes": "https://music.apple.com/ua/album/schlagenheim/1463962813"
+        "iTunes": "https://music.apple.com/ua/album/schlagenheim/1463962813",
+        "Bandcamp": "https://bmblackmidi.bandcamp.com/album/schlagenheim"
       },
       "ready": true
     },
@@ -150,10 +150,10 @@
       "date": 1565258445000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667768034/music/IdlesJoyAsAnActOfResistance..jpg",
       "links": {
-        "Spotify": "https://open.spotify.com/album/7BbRSUBwTB37ut0Ht3yAqt",
+        "Youtube": "https://youtu.be/wMehItNQKAA",
         "Bandcamp": "https://idlesband.bandcamp.com/album/joy-as-an-act-of-resistance",
         "iTunes": "https://music.apple.com/ua/album/joy-as-an-act-of-resistance/1391070525",
-        "Youtube": "https://youtu.be/wMehItNQKAA"
+        "Spotify": "https://open.spotify.com/album/7BbRSUBwTB37ut0Ht3yAqt"
       },
       "ready": true
     },
@@ -189,9 +189,9 @@
       "date": 1565604048000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667849054/music/PolskaRadioOneCosmosInside.jpg",
       "links": {
-        "Bandcamp": "https://polskaradioone.bandcamp.com/album/polska-radio-one",
         "iTunes": "https://music.apple.com/ua/album/cosmos-inside/809089040",
         "Spotify": "https://open.spotify.com/album/4TGIT5xw5BuRZQw26QLeLJ",
+        "Bandcamp": "https://polskaradioone.bandcamp.com/album/polska-radio-one",
         "Youtube": "https://www.youtube.com/watch?v=9mEilg5ScIU"
       },
       "ready": true
@@ -204,24 +204,24 @@
       "date": 1565776841000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667849054/music/HarryAndThePottersLumos.jpg",
       "links": {
-        "iTunes": "https://music.apple.com/ua/album/lumos/1460849437",
         "Bandcamp": "https://harryandthepotters.bandcamp.com/album/lumos",
-        "Spotify": "https://open.spotify.com/album/5GrhoQoKBUNxAUKBPiUa6z",
-        "Youtube": "https://www.youtube.com/watch?v=He7xaCLJ9Nc"
+        "Youtube": "https://www.youtube.com/watch?v=He7xaCLJ9Nc",
+        "iTunes": "https://music.apple.com/ua/album/lumos/1460849437",
+        "Spotify": "https://open.spotify.com/album/5GrhoQoKBUNxAUKBPiUa6z"
       },
       "ready": true
     },
     {
       "artist": ["Blockhead"],
       "name": "The music scene",
-      "description": "This is the first Blockhead album I heard, and it is still in my play despite its age. On the fifteen of October, he will be playing in Kyiv. See you there.",
+      "description": "This is the first Blockhead album I heard, and it is still in my playlist despite its age. On the fifteen of October, he will be playing in Kyiv. See you there.",
       "tags": ["Blockhead"],
       "date": 1565949646000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667849054/music/BlockheadTheMusicScene.jpg",
       "links": {
-        "iTunes": "https://music.apple.com/ua/album/the-music-scene/416288927",
         "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_mjjjnehIyiwMX00KbE8K2WE8tnpgbvK14",
-        "Spotify": "https://open.spotify.com/album/4i0QEXwMps7KIuVq5PBckJ"
+        "Spotify": "https://open.spotify.com/album/4i0QEXwMps7KIuVq5PBckJ",
+        "iTunes": "https://music.apple.com/ua/album/the-music-scene/416288927"
       },
       "ready": true
     },
@@ -233,9 +233,9 @@
       "date": 1566295252000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667849054/music/TommyGuerreroRoadToKnowhere.jpg",
       "links": {
-        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_mSk86dgp59Vknw1EN-RlhMTzq7x2mOXhY",
-        "iTunes": "https://music.apple.com/ua/album/road-to-knowhere-bonus-version/1437846004",
         "Bandcamp": "https://tommy-guerrero-too-good.bandcamp.com/album/road-to-knowhere",
+        "iTunes": "https://music.apple.com/ua/album/road-to-knowhere-bonus-version/1437846004",
+        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_mSk86dgp59Vknw1EN-RlhMTzq7x2mOXhY",
         "Spotify": "https://open.spotify.com/album/5XNcBTBDka0LqtQ7FYJlVh"
       },
       "ready": true
@@ -248,8 +248,8 @@
       "date": 1566468052000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667849054/music/FloatingPointsReflectionsMojaveDesert.jpg",
       "links": {
-        "Bandcamp": "https://floatingpoints.bandcamp.com/album/reflections-mojave-desert",
         "Apple music": "https://music.apple.com/ua/album/reflections-mojave-desert/1226611591",
+        "Bandcamp": "https://floatingpoints.bandcamp.com/album/reflections-mojave-desert",
         "Spotify": "https://open.spotify.com/album/77F3DlvE34zoQ0OQs97UBN",
         "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_mmTdMts3eLTvWGGpOSPDOgxMs3IaVYrW4"
       },
