@@ -52,8 +52,8 @@
       "date": 1546686016000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667682821/music/KasperBj%C3%B8rkeQuartetTheFiftyElevenProject.jpg",
       "links": {
-        "Bandcamp": "https://kasperbjorke.bandcamp.com/album/the-fifty-eleven-project",
-        "Apple Music": "https://music.apple.com/album/kasper-bj%C3%B8rke-quartet-the-fifty-eleven-project/1421904399"
+        "iTunes": "https://music.apple.com/album/kasper-bj%C3%B8rke-quartet-the-fifty-eleven-project/1421904399",
+        "Bandcamp": "https://kasperbjorke.bandcamp.com/album/the-fifty-eleven-project"
       },
       "ready": true
     },
@@ -120,9 +120,9 @@
       "date": 1548932443000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667768034/music/BethGibbonsRustinManOutOfSeason.jpg",
       "links": {
+        "iTunes": "https://music.apple.com/album/out-of-season/1443794694?l=en",
         "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_l0Lns5MJxJfMjpELRIsHsp0QMJxHWzBIg",
-        "Spotify": "https://open.spotify.com/album/6nTOCPzj8JiohYlZxW5Zl1",
-        "iTunes": "https://music.apple.com/album/out-of-season/1443794694?l=en"
+        "Spotify": "https://open.spotify.com/album/6nTOCPzj8JiohYlZxW5Zl1"
       },
       "ready": true
     },
@@ -136,8 +136,8 @@
       "links": {
         "Spotify": "https://open.spotify.com/album/14LuwckQuyWIvVlKrYuLzP",
         "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_kDywRWnE1m9W15HG-N59PnP2rm9rUr_vY",
-        "Youtube (live)": "https://youtu.be/TMn1UuEIVvA",
         "Bandcamp": "https://bmblackmidi.bandcamp.com/album/schlagenheim",
+        "Youtube (live)": "https://youtu.be/TMn1UuEIVvA",
         "iTunes": "https://music.apple.com/ua/album/schlagenheim/1463962813"
       },
       "ready": true
@@ -150,10 +150,10 @@
       "date": 1565258445000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667768034/music/IdlesJoyAsAnActOfResistance..jpg",
       "links": {
-        "Bandcamp": "https://idlesband.bandcamp.com/album/joy-as-an-act-of-resistance",
-        "Youtube": "https://youtu.be/wMehItNQKAA",
         "Spotify": "https://open.spotify.com/album/7BbRSUBwTB37ut0Ht3yAqt",
-        "iTunes": "https://music.apple.com/ua/album/joy-as-an-act-of-resistance/1391070525"
+        "Bandcamp": "https://idlesband.bandcamp.com/album/joy-as-an-act-of-resistance",
+        "iTunes": "https://music.apple.com/ua/album/joy-as-an-act-of-resistance/1391070525",
+        "Youtube": "https://youtu.be/wMehItNQKAA"
       },
       "ready": true
     },
@@ -165,6 +165,94 @@
       "date": 1547550022000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667768076/music/TheDoorsLiveAtTheBowl%2768.jpg",
       "links": { "Youtube (live)": "https://youtu.be/3mA75vvFylc" },
+      "ready": true
+    },
+    {
+      "artist": ["Cat Power"],
+      "name": "Moon Pix",
+      "description": "Every time I listen to this album, I feel like I am relaxing near the fire pit, even if I am stuck in a traffic jam.",
+      "tags": ["Cat Power"],
+      "date": 1565431239000,
+      "image": "http://res.cloudinary.com/barhamon/image/upload/v1667849054/music/CatPowerMoonPix.jpg",
+      "links": {
+        "Spotify": "https://open.spotify.com/album/0PBUZ2KHPp5Q9fybGuT2ry",
+        "iTunes": "https://music.apple.com/ua/album/moon-pix/1023398873",
+        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_mG0xioTTtb8JzfISKVFLO8CVU7ibsCU1w"
+      },
+      "ready": true
+    },
+    {
+      "artist": ["Polska Radio One"],
+      "name": "Cosmos Inside",
+      "description": "They are a very underrated psychedelic rock band, which, unfortunately, broke up in 2015.",
+      "tags": ["Polska Radio One"],
+      "date": 1565604048000,
+      "image": "http://res.cloudinary.com/barhamon/image/upload/v1667849054/music/PolskaRadioOneCosmosInside.jpg",
+      "links": {
+        "Bandcamp": "https://polskaradioone.bandcamp.com/album/polska-radio-one",
+        "iTunes": "https://music.apple.com/ua/album/cosmos-inside/809089040",
+        "Spotify": "https://open.spotify.com/album/4TGIT5xw5BuRZQw26QLeLJ",
+        "Youtube": "https://www.youtube.com/watch?v=9mEilg5ScIU"
+      },
+      "ready": true
+    },
+    {
+      "artist": ["Harry And The Potters"],
+      "name": "Lumos",
+      "description": "I just recently discovered this band, and they are interesting not only because of the music they play, which is good, but also the lyrics. I am genuinely amazed that something like this exists around Harry Potter. If you read/watched Harry with pleasure, put your headphones on and hit the play button.",
+      "tags": ["Harry And The Potters", "Harry Potter"],
+      "date": 1565776841000,
+      "image": "http://res.cloudinary.com/barhamon/image/upload/v1667849054/music/HarryAndThePottersLumos.jpg",
+      "links": {
+        "iTunes": "https://music.apple.com/ua/album/lumos/1460849437",
+        "Bandcamp": "https://harryandthepotters.bandcamp.com/album/lumos",
+        "Spotify": "https://open.spotify.com/album/5GrhoQoKBUNxAUKBPiUa6z",
+        "Youtube": "https://www.youtube.com/watch?v=He7xaCLJ9Nc"
+      },
+      "ready": true
+    },
+    {
+      "artist": ["Blockhead"],
+      "name": "The music scene",
+      "description": "This is the first Blockhead album I heard, and it is still in my play despite its age. On the fifteen of October, he will be playing in Kyiv. See you there.",
+      "tags": ["Blockhead"],
+      "date": 1565949646000,
+      "image": "http://res.cloudinary.com/barhamon/image/upload/v1667849054/music/BlockheadTheMusicScene.jpg",
+      "links": {
+        "iTunes": "https://music.apple.com/ua/album/the-music-scene/416288927",
+        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_mjjjnehIyiwMX00KbE8K2WE8tnpgbvK14",
+        "Spotify": "https://open.spotify.com/album/4i0QEXwMps7KIuVq5PBckJ"
+      },
+      "ready": true
+    },
+    {
+      "artist": ["Tommy Guerrero"],
+      "name": "Road To Knowhere",
+      "description": "Excellent soundtrack for the life.",
+      "tags": ["Tommy Guerrero"],
+      "date": 1566295252000,
+      "image": "http://res.cloudinary.com/barhamon/image/upload/v1667849054/music/TommyGuerreroRoadToKnowhere.jpg",
+      "links": {
+        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_mSk86dgp59Vknw1EN-RlhMTzq7x2mOXhY",
+        "iTunes": "https://music.apple.com/ua/album/road-to-knowhere-bonus-version/1437846004",
+        "Bandcamp": "https://tommy-guerrero-too-good.bandcamp.com/album/road-to-knowhere",
+        "Spotify": "https://open.spotify.com/album/5XNcBTBDka0LqtQ7FYJlVh"
+      },
+      "ready": true
+    },
+    {
+      "artist": ["Floating Points"],
+      "name": "Reflections - Mojave Desert",
+      "description": "I love them very much. Especially in nature, especially at night, especially when stars.",
+      "tags": ["Floating Points"],
+      "date": 1566468052000,
+      "image": "http://res.cloudinary.com/barhamon/image/upload/v1667849054/music/FloatingPointsReflectionsMojaveDesert.jpg",
+      "links": {
+        "Bandcamp": "https://floatingpoints.bandcamp.com/album/reflections-mojave-desert",
+        "Apple music": "https://music.apple.com/ua/album/reflections-mojave-desert/1226611591",
+        "Spotify": "https://open.spotify.com/album/77F3DlvE34zoQ0OQs97UBN",
+        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_mmTdMts3eLTvWGGpOSPDOgxMs3IaVYrW4"
+      },
       "ready": true
     }
   ]
