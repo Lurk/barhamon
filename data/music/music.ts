@@ -31,20 +31,24 @@ export async function getMusic(): Promise<PostInterface[]> {
     preview: [],
     full: [
       p([album.description]),
-      ...Object.entries(album.links).flatMap(([text, url]) => [
-        createMessage({
-          content: [
-            p([
-              a({
-                url,
-                text: `${album.artist.join(" & ")} - ${album.name} on ${text}`,
-              }),
-            ]),
-          ],
-          icon: getLinkIcon(text),
-          warning: false,
-        }),
-      ]),
+      ...Object.entries(album.links)
+        .sort((a, b) => a[0].localeCompare(b[0]))
+        .map(([text, url]) =>
+          createMessage({
+            content: [
+              p([
+                a({
+                  url,
+                  text: `${album.artist.join(" & ")} - ${
+                    album.name
+                  } on ${text}`,
+                }),
+              ]),
+            ],
+            icon: getLinkIcon(text),
+            warning: false,
+          })
+        ),
     ],
     image: album.image,
     tags: ["music", ...album.tags],
