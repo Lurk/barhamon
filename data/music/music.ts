@@ -24,9 +24,9 @@ function getLinkIcon(text: string) {
 export async function getMusic(): Promise<PostInterface[]> {
   const albums = await import("./data.json");
   const result: PostInterface[] = albums.albums.map((album) => ({
-    pid: `${album.artist.join(" & ")} - ${album.name}`,
-    header: `${album.artist.join(" & ")} - ${album.name}`,
-    description: `${album.artist.join(" & ")} - ${album.name}`,
+    pid: `${album.name} by ${album.artist.join(" & ")}`,
+    header: `${album.name} by ${album.artist.join(" & ")}`,
+    description: `${album.name} by ${album.artist.join(" & ")}`,
     time: album.date,
     preview: [],
     full: [
@@ -39,9 +39,9 @@ export async function getMusic(): Promise<PostInterface[]> {
               p([
                 a({
                   url,
-                  text: `${album.artist.join(" & ")} - ${
-                    album.name
-                  } on ${text}`,
+                  text: `${album.name} by ${album.artist.join(
+                    " & "
+                  )} on ${text}`,
                 }),
               ]),
             ],
