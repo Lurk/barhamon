@@ -2,6 +2,7 @@
   "albums": [
     {
       "artist": ["Muqata'a"],
+      "slug": "boiler-room-palestine-by-muqata-a",
       "name": "Boiler Room Palestine",
       "description": "First will be Muqata’a. This live is on repeat whole December.",
       "tags": ["Muqata'a", "Live", "Boiler Room"],
@@ -14,6 +15,7 @@
     },
     {
       "artist": ["Adam Kvasnica"],
+      "slug": "the-sound-of-africa-by-adam-kvasnica",
       "name": "The Sound Of Africa",
       "description": "Today will be a wonderful mix from Adam Kvasnitsa. And if you still did not subscribe, now is the time.",
       "tags": ["Adam Kvasnica"],
@@ -26,26 +28,33 @@
     },
     {
       "artist": ["David August", "Deutsches Symphonie Orchester"],
+      "slug": "boiler-room-berlin-live-performance-by-david-august-and-deutsches-symphonie-orchester",
       "name": "Boiler Room Berlin Live Performance",
       "description": "I love collaborations like that. Almost everything that emerges at the intersection of styles deserves attention.",
-      "tags": ["David August", "Deutsches Symphonie Orchester"],
+      "tags": ["David August", "Deutsches Symphonie Orchester", "Live"],
       "date": 1546513210000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667682821/music/DavidAugustDeutschesSymphonieOrchesterBoilerRoomBerlinLivePerformance.jpg",
-      "links": { "Youtube (live)": "https://youtu.be/l9tRdSmVZAc" },
+      "links": {
+        "Youtube (live)": "https://youtu.be/l9tRdSmVZAc"
+      },
       "ready": true
     },
     {
       "artist": ["King Gizzard And The Lizard Wizard"],
+      "slug": "full-performance-live-on-kexp-by-king-gizzard-and-the-lizard-wizard",
       "name": "Full Performance (Live on KEXP)",
       "description": "I just discovered this band, and they are fantastic.",
       "tags": ["King Gizzard And The Lizard Wizard", "KEXP", "Live"],
       "date": 1546599614000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667682821/music/KingGizzardAndTheLizardWizardFullPerformance%28liveOnKexp%29.jpg",
-      "links": { "Youtube (live)": "https://youtu.be/G5Z4bma_tUM" },
+      "links": {
+        "Youtube (live)": "https://youtu.be/G5Z4bma_tUM"
+      },
       "ready": true
     },
     {
       "artist": ["Kasper Bjørke Quartet"],
+      "slug": "the-fifty-eleven-project-by-kasper-bjorke-quartet",
       "name": "The Fifty Eleven Project",
       "description": "I did not expect this album to be like that, and I liked it anyway. ",
       "tags": ["Kasper Bjørke Quartet"],
@@ -59,16 +68,20 @@
     },
     {
       "artist": ["Bjork"],
+      "slug": "mtv-unplugged-by-bjork",
       "name": "MTV Unplugged",
       "description": "Yeah, MTV Unplugged is an awesome series of records. And this is one of the best shows I have ever seen.",
-      "tags": ["Bjork", "Old But Gold"],
+      "tags": ["Bjork", "Old But Gold", "Live"],
       "date": 1546858804000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667682821/music/BjorkMtvUnplugged.jpg",
-      "links": { "Youtube (live)": "https://youtu.be/8J0KBM2xK4w" },
+      "links": {
+        "Youtube (live)": "https://youtu.be/8J0KBM2xK4w"
+      },
       "ready": true
     },
     {
       "artist": ["Annimal Collective"],
+      "slug": "merriweather-post-pavilion-by-annimal-collective",
       "name": "Merriweather Post Pavilion",
       "description": "This album is ten years old already. Time flies.",
       "tags": ["Annimal Collective"],
@@ -76,44 +89,54 @@
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667682892/music/AnnimalCollectiveMerriweatherPostPavilion.jpg",
       "links": {
         "Bandcamp": "https://anmlcollectve.bandcamp.com/album/merriweather-post-pavilion",
+        "iTunes": "https://music.apple.com/album/merriweather-post-pavilion/300683110?l=en",
         "Spotify": "https://open.spotify.com/album/5O9OXl9zAWMJTzawofxuan",
-        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_lq6ZY8GSCQhbG7Z6cr-rw5EL9CQ54CdSs",
-        "iTunes": "https://music.apple.com/album/merriweather-post-pavilion/300683110?l=en"
+        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_lq6ZY8GSCQhbG7Z6cr-rw5EL9CQ54CdSs"
       },
       "ready": true
     },
     {
       "artist": ["Intrepol"],
+      "slug": "trnsmt-bbc-2018-by-intrepol",
       "name": "TRNSMT (BBC 2018)",
       "description": "On the twelve of June, they will be playing in Kyiv. And if you have doubts if you should go, go.",
       "tags": ["Intrepol", "Live"],
       "date": 1547377211000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667768034/music/IntrepolTrnsmt%28bbc2018%29.jpg",
-      "links": { "Youtube (live)": "https://youtu.be/jWMFpeGYOoE" },
+      "links": {
+        "Youtube (live)": "https://youtu.be/jWMFpeGYOoE"
+      },
       "ready": true
     },
     {
       "artist": ["Bad Bad Not Good"],
+      "slug": "iv-full-live-concert-by-bad-bad-not-good",
       "name": "IV (Full Live Concert)",
       "description": "Found this recently. A not fresh one, but a really good one.",
       "tags": ["Live", "Bad Bad Not Good"],
       "date": 1547982006000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667768034/music/BadBadNotGoodIv%28fullLiveConcert%29.jpg",
-      "links": { "Youtube (live)": "https://youtu.be/bdPkzcsYQKA" },
+      "links": {
+        "Youtube (live)": "https://youtu.be/bdPkzcsYQKA"
+      },
       "ready": true
     },
     {
       "artist": ["Go Go Penguin"],
+      "slug": "jazz-a-la-villette-by-go-go-penguin",
       "name": "Jazz à la Villette",
       "description": "Watch this show while you are buying tickets for their performance in Kyiv on the sixteens of April.",
       "tags": ["Go Go Penguin", "Live"],
       "date": 1548759647000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667768040/music/GoGoPenguinJazzA%CC%80LaVillette.jpg",
-      "links": { "Youtube (live)": "https://youtu.be/x7LmhOEnIs4" },
+      "links": {
+        "Youtube (live)": "https://youtu.be/x7LmhOEnIs4"
+      },
       "ready": true
     },
     {
       "artist": ["Beth Gibbons", "Rustin Man"],
+      "slug": "out-of-season-by-beth-gibbons-and-rustin-man",
       "name": "Out of Season",
       "description": "Yeah, of course, I am waiting for a new album of Portishead, and obviously, it is not the same, but Beth Gibbons announced a new album, which I am waiting for anyways. The previous album of Beth not with Portishead was this one, which was good.",
       "tags": ["Portishead", "Beth Gibbons", "Rustin Man"],
@@ -121,54 +144,60 @@
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667768034/music/BethGibbonsRustinManOutOfSeason.jpg",
       "links": {
         "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_l0Lns5MJxJfMjpELRIsHsp0QMJxHWzBIg",
-        "iTunes": "https://music.apple.com/album/out-of-season/1443794694?l=en",
-        "Spotify": "https://open.spotify.com/album/6nTOCPzj8JiohYlZxW5Zl1"
+        "Spotify": "https://open.spotify.com/album/6nTOCPzj8JiohYlZxW5Zl1",
+        "iTunes": "https://music.apple.com/album/out-of-season/1443794694?l=en"
       },
       "ready": true
     },
     {
       "artist": ["Black Midi"],
+      "slug": "schlagenheim-by-black-midi",
       "name": "Schlagenheim",
       "description": "There were days when I only wanted to sit in a dark corner and sway from side to side, hugging my knees. Schlagenheim was the album that kicked me out of that corner.",
       "tags": ["Black Midi"],
       "date": 1565085641000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667768034/music/BlackMidiSchlagenheim.jpg",
       "links": {
+        "Youtube (live)": "https://youtu.be/TMn1UuEIVvA",
         "Bandcamp": "https://bmblackmidi.bandcamp.com/album/schlagenheim",
         "iTunes": "https://music.apple.com/ua/album/schlagenheim/1463962813",
         "Spotify": "https://open.spotify.com/album/14LuwckQuyWIvVlKrYuLzP",
-        "Youtube (live)": "https://youtu.be/TMn1UuEIVvA",
         "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_kDywRWnE1m9W15HG-N59PnP2rm9rUr_vY"
       },
       "ready": true
     },
     {
       "artist": ["Idles"],
+      "slug": "joy-as-an-act-of-resistance-by-idles",
       "name": "Joy as an Act of Resistance.",
       "description": "Woah. I don't think I ever liked any punk record as much as I like this one.",
       "tags": ["Idles"],
       "date": 1565258445000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667768034/music/IdlesJoyAsAnActOfResistance..jpg",
       "links": {
-        "Bandcamp": "https://idlesband.bandcamp.com/album/joy-as-an-act-of-resistance",
-        "iTunes": "https://music.apple.com/ua/album/joy-as-an-act-of-resistance/1391070525",
         "Spotify": "https://open.spotify.com/album/7BbRSUBwTB37ut0Ht3yAqt",
-        "Youtube": "https://youtu.be/wMehItNQKAA"
+        "Youtube": "https://youtu.be/wMehItNQKAA",
+        "Bandcamp": "https://idlesband.bandcamp.com/album/joy-as-an-act-of-resistance",
+        "iTunes": "https://music.apple.com/ua/album/joy-as-an-act-of-resistance/1391070525"
       },
       "ready": true
     },
     {
       "artist": ["The Doors"],
+      "slug": "live-at-the-bowl-68-by-the-doors",
       "name": "Live at The Bowl '68",
       "description": "Yeah, The Doors. You know, sometimes you just find those things.",
       "tags": ["Old But Gold", "Live"],
       "date": 1547550022000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667768076/music/TheDoorsLiveAtTheBowl%2768.jpg",
-      "links": { "Youtube (live)": "https://youtu.be/3mA75vvFylc" },
+      "links": {
+        "Youtube (live)": "https://youtu.be/3mA75vvFylc"
+      },
       "ready": true
     },
     {
       "artist": ["Cat Power"],
+      "slug": "moon-pix-by-cat-power",
       "name": "Moon Pix",
       "description": "Every time I listen to this album, I feel like I am relaxing near the fire pit, even if I am stuck in a traffic jam.",
       "tags": ["Cat Power"],
@@ -183,29 +212,31 @@
     },
     {
       "artist": ["Polska Radio One"],
+      "slug": "cosmos-inside-by-polska-radio-one",
       "name": "Cosmos Inside",
       "description": "They are a very underrated psychedelic rock band, which, unfortunately, broke up in 2015.",
       "tags": ["Polska Radio One"],
       "date": 1565604048000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667849054/music/PolskaRadioOneCosmosInside.jpg",
       "links": {
+        "Youtube": "https://www.youtube.com/watch?v=9mEilg5ScIU",
         "Bandcamp": "https://polskaradioone.bandcamp.com/album/polska-radio-one",
         "iTunes": "https://music.apple.com/ua/album/cosmos-inside/809089040",
-        "Spotify": "https://open.spotify.com/album/4TGIT5xw5BuRZQw26QLeLJ",
-        "Youtube": "https://www.youtube.com/watch?v=9mEilg5ScIU"
+        "Spotify": "https://open.spotify.com/album/4TGIT5xw5BuRZQw26QLeLJ"
       },
       "ready": true
     },
     {
       "artist": ["Harry And The Potters"],
+      "slug": "lumos-by-harry-and-the-potters",
       "name": "Lumos",
       "description": "I just recently discovered this band, and they are interesting not only because of the music they play, which is good, but also the lyrics. I am genuinely amazed that something like this exists around Harry Potter. If you read/watched Harry with pleasure, put your headphones on and hit the play button.",
       "tags": ["Harry And The Potters", "Harry Potter"],
       "date": 1565776841000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667849054/music/HarryAndThePottersLumos.jpg",
       "links": {
-        "iTunes": "https://music.apple.com/ua/album/lumos/1460849437",
         "Spotify": "https://open.spotify.com/album/5GrhoQoKBUNxAUKBPiUa6z",
+        "iTunes": "https://music.apple.com/ua/album/lumos/1460849437",
         "Bandcamp": "https://harryandthepotters.bandcamp.com/album/lumos",
         "Youtube": "https://www.youtube.com/watch?v=He7xaCLJ9Nc"
       },
@@ -213,105 +244,128 @@
     },
     {
       "artist": ["Blockhead"],
+      "slug": "the-music-scene-by-blockhead",
       "name": "The music scene",
       "description": "This is the first Blockhead album I heard, and it is still in my playlist despite its age. On the fifteen of October, he will be playing in Kyiv. See you there.",
       "tags": ["Blockhead"],
       "date": 1565949646000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667849054/music/BlockheadTheMusicScene.jpg",
       "links": {
-        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_mjjjnehIyiwMX00KbE8K2WE8tnpgbvK14",
+        "Spotify": "https://open.spotify.com/album/4i0QEXwMps7KIuVq5PBckJ",
         "iTunes": "https://music.apple.com/ua/album/the-music-scene/416288927",
-        "Spotify": "https://open.spotify.com/album/4i0QEXwMps7KIuVq5PBckJ"
+        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_mjjjnehIyiwMX00KbE8K2WE8tnpgbvK14"
       },
       "ready": true
     },
     {
       "artist": ["Tommy Guerrero"],
+      "slug": "road-to-knowhere-by-tommy-guerrero",
       "name": "Road To Knowhere",
       "description": "Excellent soundtrack for the life.",
       "tags": ["Tommy Guerrero"],
       "date": 1566295252000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667849054/music/TommyGuerreroRoadToKnowhere.jpg",
       "links": {
-        "iTunes": "https://music.apple.com/ua/album/road-to-knowhere-bonus-version/1437846004",
         "Bandcamp": "https://tommy-guerrero-too-good.bandcamp.com/album/road-to-knowhere",
-        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_mSk86dgp59Vknw1EN-RlhMTzq7x2mOXhY",
-        "Spotify": "https://open.spotify.com/album/5XNcBTBDka0LqtQ7FYJlVh"
+        "Spotify": "https://open.spotify.com/album/5XNcBTBDka0LqtQ7FYJlVh",
+        "iTunes": "https://music.apple.com/ua/album/road-to-knowhere-bonus-version/1437846004",
+        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_mSk86dgp59Vknw1EN-RlhMTzq7x2mOXhY"
       },
       "ready": true
     },
     {
       "artist": ["Floating Points"],
+      "slug": "reflections-mojave-desert-by-floating-points",
       "name": "Reflections - Mojave Desert",
       "description": "I love them very much. Especially in nature, especially at night, especially when stars.",
       "tags": ["Floating Points"],
       "date": 1566468052000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667849054/music/FloatingPointsReflectionsMojaveDesert.jpg",
       "links": {
-        "Spotify": "https://open.spotify.com/album/77F3DlvE34zoQ0OQs97UBN",
         "Bandcamp": "https://floatingpoints.bandcamp.com/album/reflections-mojave-desert",
         "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_mmTdMts3eLTvWGGpOSPDOgxMs3IaVYrW4",
-        "iTunes": "https://music.apple.com/ua/album/reflections-mojave-desert/1226611591"
+        "iTunes": "https://music.apple.com/ua/album/reflections-mojave-desert/1226611591",
+        "Spotify": "https://open.spotify.com/album/77F3DlvE34zoQ0OQs97UBN"
       },
       "ready": true
     },
     {
       "artist": ["Гш"],
+      "slug": "pol-za-by-gsh",
       "name": "польза",
       "description": "I believe you will go to the Brave! Factory festival today, so let’s meet near the stage where those guys will be playing. I don’t feel like this is the music you would expect to hear on Brave, so be prepared to bang your head.",
       "tags": ["Гш", "Live", "KEXP"],
       "date": 1566640850000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667938919/music/%D0%93%D1%88%D0%9F%D0%BE%D0%BB%D1%8C%D0%B7%D0%B0.jpg",
       "links": {
-        "Bandcamp": "https://glintshake.bandcamp.com/album/--2",
         "iTunes": "https://music.apple.com/ua/album/%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%B0/1443862640",
-        "Spotify": "https://open.spotify.com/album/4d1sBqr4zy4onFrRTJRELh",
         "Youtube (live)": "https://youtu.be/qGREPm3SAFw",
+        "Bandcamp": "https://glintshake.bandcamp.com/album/--2",
+        "Spotify": "https://open.spotify.com/album/4d1sBqr4zy4onFrRTJRELh",
         "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_lHaWE4DKyh8MN8nhKGifkTJo3pnTqhs4E"
       },
       "ready": true
     },
     {
       "artist": ["Seelenluft"],
+      "slug": "synchronschwimmer-by-seelenluft",
       "name": "Synchronschwimmer",
       "description": "Nice and fluffy album. Like waves on the sea on a good day.",
       "tags": ["Seelenluft"],
       "date": 1566813654000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667938919/music/SeelenluftSynchronschwimmer.jpg",
       "links": {
-        "iTunes": "https://music.apple.com/ua/album/synchronschwimmer/271991013",
         "Spotify": "https://open.spotify.com/album/3KOHPVjPN4ZVSAltWSoPfR",
-        "Youtube": "https://www.youtube.com/watch?v=gcuv37LaAVs&list=PLAGFqjyb_MqnXG5sc9F_TROOzxUzoNAnv"
+        "Youtube": "https://www.youtube.com/watch?v=gcuv37LaAVs&list=PLAGFqjyb_MqnXG5sc9F_TROOzxUzoNAnv",
+        "iTunes": "https://music.apple.com/ua/album/synchronschwimmer/271991013"
       },
       "ready": true
     },
     {
       "artist": ["Delvon Lamarr Organ Trio"],
+      "slug": "close-but-no-cigar-by-delvon-lamarr-organ-trio",
       "name": "Close but No Cigar",
       "description": "I never heard of those guys. I just clicked on the recommendation and liked the album and live performance. Cute detail. All organ players I have seen always take off their shoes before starting to play.",
       "tags": ["Delvon Lamarr Organ Trio", "Live", "KEXP"],
       "date": 1566986461000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667938919/music/DelvonLamarrOrganTrioCloseButNoCigar.jpg",
       "links": {
-        "Youtube (live)": "https://youtu.be/tNO71hgto7c",
         "Spotify": "https://open.spotify.com/album/7mSHK38A3LExKFJpKPohlR",
-        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_lE_omtjvBx9BUDcJ8SCn_FG0bp1mUWMc8",
+        "Youtube (live)": "https://youtu.be/tNO71hgto7c",
+        "Bandcamp": "https://delvonlamarrorgantrio.bandcamp.com/album/close-but-no-cigar",
         "iTunes": "https://music.apple.com/ua/album/close-but-no-cigar/1447726312",
-        "Bandcamp": "https://delvonlamarrorgantrio.bandcamp.com/album/close-but-no-cigar"
+        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_lE_omtjvBx9BUDcJ8SCn_FG0bp1mUWMc8"
       },
       "ready": true
     },
     {
       "artist": ["Tool"],
+      "slug": "fear-inoculum-by-tool",
       "name": "Fear Inoculum",
       "description": "If you still have not listened to this album, you must stop doing whatever you are doing right now and start listening to it.",
       "tags": ["Tool"],
       "date": 1568282444000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667938919/music/ToolFearInoculum.jpg",
       "links": {
-        "Spotify": "https://open.spotify.com/album/7acEciVtnuTzmwKptkjth5",
+        "iTunes": "https://music.apple.com/ua/album/fear-inoculum/1475686696",
         "Youtube": "https://www.youtube.com/watch?v=q7DfQMPmJRI&list=PL3htOwmtQv_yHPXNRHNJ-naKnAsvOuclt",
-        "iTunes": "https://music.apple.com/ua/album/fear-inoculum/1475686696"
+        "Spotify": "https://open.spotify.com/album/7acEciVtnuTzmwKptkjth5"
+      },
+      "ready": true
+    },
+    {
+      "artist": ["Trentemøller"],
+      "slug": "obverse-by-trentemoller",
+      "name": "Obverse",
+      "description": "Did you miss me? Finally, I  heard something I wanted to share.",
+      "tags": ["Trentemøller"],
+      "date": 1569664840000,
+      "image": "http://res.cloudinary.com/barhamon/image/upload/v1668030468/music/Trentem%C3%B8llerObverse.jpg",
+      "links": {
+        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_nkhOJcAIwqfbw8hKAE9pjKX7YCaNq1iws",
+        "Bandcamp": "https://trentemoller.bandcamp.com/album/obverse",
+        "Spotify": "https://open.spotify.com/album/5QBPUvhS6UYro3JLHeQVwF",
+        "iTunes": "https://music.apple.com/ua/album/obverse/1469414241"
       },
       "ready": true
     }
