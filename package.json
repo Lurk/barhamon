@@ -12,7 +12,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@babel/core": "7.19.6",
+    "@babel/core": "7.20.2",
     "classnames": "2.3.2",
     "date-fns": "2.29.3",
     "disqus-react": "1.1.5",
@@ -28,7 +28,7 @@
   "devDependencies": {
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "13.4.0",
-    "@types/babel__core": "7.1.19",
+    "@types/babel__core": "7.1.20",
     "@types/babel__generator": "7.6.4",
     "@types/babel__template": "7.4.1",
     "@types/babel__traverse": "7.18.2",
@@ -37,11 +37,11 @@
     "@types/node": "^18.11.9",
     "@types/prismjs": "1.26.0",
     "@types/prop-types": "15.7.5",
-    "@types/react": "18.0.24",
+    "@types/react": "18.0.25",
     "@types/scheduler": "0.16.2",
     "@types/yargs-parser": "21.0.0",
-    "@typescript-eslint/eslint-plugin": "5.42.0",
-    "eslint": "8.26.0",
+    "@typescript-eslint/eslint-plugin": "5.42.1",
+    "eslint": "8.27.0",
     "eslint-config-next": "13.0.2",
     "husky": "8.0.1",
     "identity-obj-proxy": "3.0.0",
