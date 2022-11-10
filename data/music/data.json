@@ -34,9 +34,7 @@
       "tags": ["David August", "Deutsches Symphonie Orchester", "Live"],
       "date": 1546513210000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667682821/music/DavidAugustDeutschesSymphonieOrchesterBoilerRoomBerlinLivePerformance.jpg",
-      "links": {
-        "Youtube (live)": "https://youtu.be/l9tRdSmVZAc"
-      },
+      "links": { "Youtube (live)": "https://youtu.be/l9tRdSmVZAc" },
       "ready": true
     },
     {
@@ -47,9 +45,7 @@
       "tags": ["King Gizzard And The Lizard Wizard", "KEXP", "Live"],
       "date": 1546599614000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667682821/music/KingGizzardAndTheLizardWizardFullPerformance%28liveOnKexp%29.jpg",
-      "links": {
-        "Youtube (live)": "https://youtu.be/G5Z4bma_tUM"
-      },
+      "links": { "Youtube (live)": "https://youtu.be/G5Z4bma_tUM" },
       "ready": true
     },
     {
@@ -61,8 +57,8 @@
       "date": 1546686016000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667682821/music/KasperBj%C3%B8rkeQuartetTheFiftyElevenProject.jpg",
       "links": {
-        "Bandcamp": "https://kasperbjorke.bandcamp.com/album/the-fifty-eleven-project",
-        "iTunes": "https://music.apple.com/album/kasper-bj%C3%B8rke-quartet-the-fifty-eleven-project/1421904399"
+        "iTunes": "https://music.apple.com/album/kasper-bj%C3%B8rke-quartet-the-fifty-eleven-project/1421904399",
+        "Bandcamp": "https://kasperbjorke.bandcamp.com/album/the-fifty-eleven-project"
       },
       "ready": true
     },
@@ -74,9 +70,7 @@
       "tags": ["Bjork", "Old But Gold", "Live"],
       "date": 1546858804000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667682821/music/BjorkMtvUnplugged.jpg",
-      "links": {
-        "Youtube (live)": "https://youtu.be/8J0KBM2xK4w"
-      },
+      "links": { "Youtube (live)": "https://youtu.be/8J0KBM2xK4w" },
       "ready": true
     },
     {
@@ -103,9 +97,7 @@
       "tags": ["Intrepol", "Live"],
       "date": 1547377211000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667768034/music/IntrepolTrnsmt%28bbc2018%29.jpg",
-      "links": {
-        "Youtube (live)": "https://youtu.be/jWMFpeGYOoE"
-      },
+      "links": { "Youtube (live)": "https://youtu.be/jWMFpeGYOoE" },
       "ready": true
     },
     {
@@ -116,9 +108,7 @@
       "tags": ["Live", "Bad Bad Not Good"],
       "date": 1547982006000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667768034/music/BadBadNotGoodIv%28fullLiveConcert%29.jpg",
-      "links": {
-        "Youtube (live)": "https://youtu.be/bdPkzcsYQKA"
-      },
+      "links": { "Youtube (live)": "https://youtu.be/bdPkzcsYQKA" },
       "ready": true
     },
     {
@@ -129,9 +119,7 @@
       "tags": ["Go Go Penguin", "Live"],
       "date": 1548759647000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667768040/music/GoGoPenguinJazzA%CC%80LaVillette.jpg",
-      "links": {
-        "Youtube (live)": "https://youtu.be/x7LmhOEnIs4"
-      },
+      "links": { "Youtube (live)": "https://youtu.be/x7LmhOEnIs4" },
       "ready": true
     },
     {
@@ -143,8 +131,8 @@
       "date": 1548932443000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667768034/music/BethGibbonsRustinManOutOfSeason.jpg",
       "links": {
-        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_l0Lns5MJxJfMjpELRIsHsp0QMJxHWzBIg",
         "Spotify": "https://open.spotify.com/album/6nTOCPzj8JiohYlZxW5Zl1",
+        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_l0Lns5MJxJfMjpELRIsHsp0QMJxHWzBIg",
         "iTunes": "https://music.apple.com/album/out-of-season/1443794694?l=en"
       },
       "ready": true
@@ -158,8 +146,8 @@
       "date": 1565085641000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667768034/music/BlackMidiSchlagenheim.jpg",
       "links": {
-        "Youtube (live)": "https://youtu.be/TMn1UuEIVvA",
         "Bandcamp": "https://bmblackmidi.bandcamp.com/album/schlagenheim",
+        "Youtube (live)": "https://youtu.be/TMn1UuEIVvA",
         "iTunes": "https://music.apple.com/ua/album/schlagenheim/1463962813",
         "Spotify": "https://open.spotify.com/album/14LuwckQuyWIvVlKrYuLzP",
         "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_kDywRWnE1m9W15HG-N59PnP2rm9rUr_vY"
@@ -175,8 +163,8 @@
       "date": 1565258445000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667768034/music/IdlesJoyAsAnActOfResistance..jpg",
       "links": {
-        "Spotify": "https://open.spotify.com/album/7BbRSUBwTB37ut0Ht3yAqt",
         "Youtube": "https://youtu.be/wMehItNQKAA",
+        "Spotify": "https://open.spotify.com/album/7BbRSUBwTB37ut0Ht3yAqt",
         "Bandcamp": "https://idlesband.bandcamp.com/album/joy-as-an-act-of-resistance",
         "iTunes": "https://music.apple.com/ua/album/joy-as-an-act-of-resistance/1391070525"
       },
@@ -190,9 +178,7 @@
       "tags": ["Old But Gold", "Live"],
       "date": 1547550022000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667768076/music/TheDoorsLiveAtTheBowl%2768.jpg",
-      "links": {
-        "Youtube (live)": "https://youtu.be/3mA75vvFylc"
-      },
+      "links": { "Youtube (live)": "https://youtu.be/3mA75vvFylc" },
       "ready": true
     },
     {
@@ -204,9 +190,9 @@
       "date": 1565431239000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667849054/music/CatPowerMoonPix.jpg",
       "links": {
-        "Spotify": "https://open.spotify.com/album/0PBUZ2KHPp5Q9fybGuT2ry",
         "iTunes": "https://music.apple.com/ua/album/moon-pix/1023398873",
-        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_mG0xioTTtb8JzfISKVFLO8CVU7ibsCU1w"
+        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_mG0xioTTtb8JzfISKVFLO8CVU7ibsCU1w",
+        "Spotify": "https://open.spotify.com/album/0PBUZ2KHPp5Q9fybGuT2ry"
       },
       "ready": true
     },
@@ -219,10 +205,10 @@
       "date": 1565604048000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667849054/music/PolskaRadioOneCosmosInside.jpg",
       "links": {
-        "Youtube": "https://www.youtube.com/watch?v=9mEilg5ScIU",
         "Bandcamp": "https://polskaradioone.bandcamp.com/album/polska-radio-one",
-        "iTunes": "https://music.apple.com/ua/album/cosmos-inside/809089040",
-        "Spotify": "https://open.spotify.com/album/4TGIT5xw5BuRZQw26QLeLJ"
+        "Spotify": "https://open.spotify.com/album/4TGIT5xw5BuRZQw26QLeLJ",
+        "Youtube": "https://www.youtube.com/watch?v=9mEilg5ScIU",
+        "iTunes": "https://music.apple.com/ua/album/cosmos-inside/809089040"
       },
       "ready": true
     },
@@ -251,9 +237,9 @@
       "date": 1565949646000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667849054/music/BlockheadTheMusicScene.jpg",
       "links": {
+        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_mjjjnehIyiwMX00KbE8K2WE8tnpgbvK14",
         "Spotify": "https://open.spotify.com/album/4i0QEXwMps7KIuVq5PBckJ",
-        "iTunes": "https://music.apple.com/ua/album/the-music-scene/416288927",
-        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_mjjjnehIyiwMX00KbE8K2WE8tnpgbvK14"
+        "iTunes": "https://music.apple.com/ua/album/the-music-scene/416288927"
       },
       "ready": true
     },
@@ -268,8 +254,8 @@
       "links": {
         "Bandcamp": "https://tommy-guerrero-too-good.bandcamp.com/album/road-to-knowhere",
         "Spotify": "https://open.spotify.com/album/5XNcBTBDka0LqtQ7FYJlVh",
-        "iTunes": "https://music.apple.com/ua/album/road-to-knowhere-bonus-version/1437846004",
-        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_mSk86dgp59Vknw1EN-RlhMTzq7x2mOXhY"
+        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_mSk86dgp59Vknw1EN-RlhMTzq7x2mOXhY",
+        "iTunes": "https://music.apple.com/ua/album/road-to-knowhere-bonus-version/1437846004"
       },
       "ready": true
     },
@@ -282,10 +268,10 @@
       "date": 1566468052000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667849054/music/FloatingPointsReflectionsMojaveDesert.jpg",
       "links": {
-        "Bandcamp": "https://floatingpoints.bandcamp.com/album/reflections-mojave-desert",
         "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_mmTdMts3eLTvWGGpOSPDOgxMs3IaVYrW4",
-        "iTunes": "https://music.apple.com/ua/album/reflections-mojave-desert/1226611591",
-        "Spotify": "https://open.spotify.com/album/77F3DlvE34zoQ0OQs97UBN"
+        "Spotify": "https://open.spotify.com/album/77F3DlvE34zoQ0OQs97UBN",
+        "Bandcamp": "https://floatingpoints.bandcamp.com/album/reflections-mojave-desert",
+        "iTunes": "https://music.apple.com/ua/album/reflections-mojave-desert/1226611591"
       },
       "ready": true
     },
@@ -298,9 +284,9 @@
       "date": 1566640850000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667938919/music/%D0%93%D1%88%D0%9F%D0%BE%D0%BB%D1%8C%D0%B7%D0%B0.jpg",
       "links": {
+        "Bandcamp": "https://glintshake.bandcamp.com/album/--2",
         "iTunes": "https://music.apple.com/ua/album/%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%B0/1443862640",
         "Youtube (live)": "https://youtu.be/qGREPm3SAFw",
-        "Bandcamp": "https://glintshake.bandcamp.com/album/--2",
         "Spotify": "https://open.spotify.com/album/4d1sBqr4zy4onFrRTJRELh",
         "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_lHaWE4DKyh8MN8nhKGifkTJo3pnTqhs4E"
       },
@@ -330,11 +316,11 @@
       "date": 1566986461000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667938919/music/DelvonLamarrOrganTrioCloseButNoCigar.jpg",
       "links": {
+        "iTunes": "https://music.apple.com/ua/album/close-but-no-cigar/1447726312",
         "Spotify": "https://open.spotify.com/album/7mSHK38A3LExKFJpKPohlR",
         "Youtube (live)": "https://youtu.be/tNO71hgto7c",
-        "Bandcamp": "https://delvonlamarrorgantrio.bandcamp.com/album/close-but-no-cigar",
-        "iTunes": "https://music.apple.com/ua/album/close-but-no-cigar/1447726312",
-        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_lE_omtjvBx9BUDcJ8SCn_FG0bp1mUWMc8"
+        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_lE_omtjvBx9BUDcJ8SCn_FG0bp1mUWMc8",
+        "Bandcamp": "https://delvonlamarrorgantrio.bandcamp.com/album/close-but-no-cigar"
       },
       "ready": true
     },
@@ -347,9 +333,9 @@
       "date": 1568282444000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667938919/music/ToolFearInoculum.jpg",
       "links": {
+        "Spotify": "https://open.spotify.com/album/7acEciVtnuTzmwKptkjth5",
         "iTunes": "https://music.apple.com/ua/album/fear-inoculum/1475686696",
-        "Youtube": "https://www.youtube.com/watch?v=q7DfQMPmJRI&list=PL3htOwmtQv_yHPXNRHNJ-naKnAsvOuclt",
-        "Spotify": "https://open.spotify.com/album/7acEciVtnuTzmwKptkjth5"
+        "Youtube": "https://www.youtube.com/watch?v=q7DfQMPmJRI&list=PL3htOwmtQv_yHPXNRHNJ-naKnAsvOuclt"
       },
       "ready": true
     },
@@ -363,9 +349,57 @@
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1668030468/music/Trentem%C3%B8llerObverse.jpg",
       "links": {
         "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_nkhOJcAIwqfbw8hKAE9pjKX7YCaNq1iws",
-        "Bandcamp": "https://trentemoller.bandcamp.com/album/obverse",
+        "iTunes": "https://music.apple.com/ua/album/obverse/1469414241",
         "Spotify": "https://open.spotify.com/album/5QBPUvhS6UYro3JLHeQVwF",
-        "iTunes": "https://music.apple.com/ua/album/obverse/1469414241"
+        "Bandcamp": "https://trentemoller.bandcamp.com/album/obverse"
+      },
+      "ready": true
+    },
+    {
+      "artist": ["Portico Quartet"],
+      "slug": "memory-streams-by-portico-quartet",
+      "name": "Memory Streams",
+      "description": "Third day on repeat.",
+      "tags": ["Portico Quartet"],
+      "date": 1570442440000,
+      "image": "http://res.cloudinary.com/barhamon/image/upload/v1668108239/music/PorticoQuartetMemoryStreams.jpg",
+      "links": {
+        "iTunes": "https://music.apple.com/ua/album/memory-streams/1472062404",
+        "Bandcamp": "https://porticoquartet.bandcamp.com/album/memory-streams",
+        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_lC-ZPauOtVoE8jBaqseL3PrDTy35_dc80",
+        "Spotify": "https://open.spotify.com/album/3giCj6KyF3WQqSk5UBde2n"
+      },
+      "ready": true
+    },
+    {
+      "artist": ["Amon Tobin"],
+      "slug": "long-stories-by-amon-tobin",
+      "name": "Long Stories",
+      "description": "While I worked hard and treat my teeth (never thought that in the human body could be that many holes), my favorite artists were busy releasing new albums.",
+      "tags": ["Amon Tobin"],
+      "date": 1571997673000,
+      "image": "http://res.cloudinary.com/barhamon/image/upload/v1668108239/music/AmonTobinLongStories.jpg",
+      "links": {
+        "iTunes": "https://music.apple.com/ua/album/long-stories/1478909494",
+        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_nTVvGtCwRll4mW0vO9MxnB5oDEspWcx1A",
+        "Bandcamp": "https://music.amontobin.com/album/long-stories",
+        "Spotify": "https://open.spotify.com/album/0kC59LuttfKletFf38YAX4"
+      },
+      "ready": true
+    },
+    {
+      "artist": ["Floating Points"],
+      "slug": "crush-by-floating-points",
+      "name": "Crush",
+      "description": "You wait for the new album from an artist. It is finally out. You put on your headphones. You press the play button. You know that you've been waiting for this album for a reason.",
+      "tags": ["Floating Points"],
+      "date": 1572174045000,
+      "image": "http://res.cloudinary.com/barhamon/image/upload/v1668108239/music/FloatingPointsCrush.jpg",
+      "links": {
+        "iTunes": "https://music.apple.com/ua/album/crush/1475361065",
+        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_nUIraolq1Ehrp4Pf35jS2pNL_TLMuzFSo",
+        "Spotify": "https://open.spotify.com/album/1WwZwdTICfaZI51BIIEN9z",
+        "Bandcamp": "https://floatingpoints.bandcamp.com/album/crush"
       },
       "ready": true
     }
