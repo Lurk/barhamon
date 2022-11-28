@@ -82,10 +82,10 @@
       "date": 1547031613000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667682892/music/AnnimalCollectiveMerriweatherPostPavilion.jpg",
       "links": {
-        "Spotify": "https://open.spotify.com/album/5O9OXl9zAWMJTzawofxuan",
+        "Bandcamp": "https://anmlcollectve.bandcamp.com/album/merriweather-post-pavilion",
         "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_lq6ZY8GSCQhbG7Z6cr-rw5EL9CQ54CdSs",
         "iTunes": "https://music.apple.com/album/merriweather-post-pavilion/300683110?l=en",
-        "Bandcamp": "https://anmlcollectve.bandcamp.com/album/merriweather-post-pavilion"
+        "Spotify": "https://open.spotify.com/album/5O9OXl9zAWMJTzawofxuan"
       },
       "ready": true
     },
@@ -131,9 +131,9 @@
       "date": 1548932443000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667768034/music/BethGibbonsRustinManOutOfSeason.jpg",
       "links": {
-        "iTunes": "https://music.apple.com/album/out-of-season/1443794694?l=en",
         "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_l0Lns5MJxJfMjpELRIsHsp0QMJxHWzBIg",
-        "Spotify": "https://open.spotify.com/album/6nTOCPzj8JiohYlZxW5Zl1"
+        "Spotify": "https://open.spotify.com/album/6nTOCPzj8JiohYlZxW5Zl1",
+        "iTunes": "https://music.apple.com/album/out-of-season/1443794694?l=en"
       },
       "ready": true
     },
@@ -146,11 +146,11 @@
       "date": 1565085641000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667768034/music/BlackMidiSchlagenheim.jpg",
       "links": {
-        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_kDywRWnE1m9W15HG-N59PnP2rm9rUr_vY",
         "Spotify": "https://open.spotify.com/album/14LuwckQuyWIvVlKrYuLzP",
-        "Bandcamp": "https://bmblackmidi.bandcamp.com/album/schlagenheim",
         "Youtube (live)": "https://youtu.be/TMn1UuEIVvA",
-        "iTunes": "https://music.apple.com/ua/album/schlagenheim/1463962813"
+        "iTunes": "https://music.apple.com/ua/album/schlagenheim/1463962813",
+        "Bandcamp": "https://bmblackmidi.bandcamp.com/album/schlagenheim",
+        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_kDywRWnE1m9W15HG-N59PnP2rm9rUr_vY"
       },
       "ready": true
     },
@@ -164,8 +164,8 @@
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667768034/music/IdlesJoyAsAnActOfResistance..jpg",
       "links": {
         "Spotify": "https://open.spotify.com/album/7BbRSUBwTB37ut0Ht3yAqt",
-        "iTunes": "https://music.apple.com/ua/album/joy-as-an-act-of-resistance/1391070525",
         "Bandcamp": "https://idlesband.bandcamp.com/album/joy-as-an-act-of-resistance",
+        "iTunes": "https://music.apple.com/ua/album/joy-as-an-act-of-resistance/1391070525",
         "Youtube": "https://youtu.be/wMehItNQKAA"
       },
       "ready": true
@@ -190,9 +190,9 @@
       "date": 1565431239000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667849054/music/CatPowerMoonPix.jpg",
       "links": {
+        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_mG0xioTTtb8JzfISKVFLO8CVU7ibsCU1w",
         "Spotify": "https://open.spotify.com/album/0PBUZ2KHPp5Q9fybGuT2ry",
-        "iTunes": "https://music.apple.com/ua/album/moon-pix/1023398873",
-        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_mG0xioTTtb8JzfISKVFLO8CVU7ibsCU1w"
+        "iTunes": "https://music.apple.com/ua/album/moon-pix/1023398873"
       },
       "ready": true
     },
@@ -205,10 +205,10 @@
       "date": 1565604048000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667849054/music/PolskaRadioOneCosmosInside.jpg",
       "links": {
-        "iTunes": "https://music.apple.com/ua/album/cosmos-inside/809089040",
         "Spotify": "https://open.spotify.com/album/4TGIT5xw5BuRZQw26QLeLJ",
-        "Bandcamp": "https://polskaradioone.bandcamp.com/album/polska-radio-one",
-        "Youtube": "https://www.youtube.com/watch?v=9mEilg5ScIU"
+        "iTunes": "https://music.apple.com/ua/album/cosmos-inside/809089040",
+        "Youtube": "https://www.youtube.com/watch?v=9mEilg5ScIU",
+        "Bandcamp": "https://polskaradioone.bandcamp.com/album/polska-radio-one"
       },
       "ready": true
     },
@@ -221,10 +221,10 @@
       "date": 1565776841000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667849054/music/HarryAndThePottersLumos.jpg",
       "links": {
-        "iTunes": "https://music.apple.com/ua/album/lumos/1460849437",
         "Spotify": "https://open.spotify.com/album/5GrhoQoKBUNxAUKBPiUa6z",
+        "Bandcamp": "https://harryandthepotters.bandcamp.com/album/lumos",
         "Youtube": "https://www.youtube.com/watch?v=He7xaCLJ9Nc",
-        "Bandcamp": "https://harryandthepotters.bandcamp.com/album/lumos"
+        "iTunes": "https://music.apple.com/ua/album/lumos/1460849437"
       },
       "ready": true
     },
@@ -252,10 +252,10 @@
       "date": 1566295252000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667849054/music/TommyGuerreroRoadToKnowhere.jpg",
       "links": {
-        "Spotify": "https://open.spotify.com/album/5XNcBTBDka0LqtQ7FYJlVh",
+        "iTunes": "https://music.apple.com/ua/album/road-to-knowhere-bonus-version/1437846004",
         "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_mSk86dgp59Vknw1EN-RlhMTzq7x2mOXhY",
         "Bandcamp": "https://tommy-guerrero-too-good.bandcamp.com/album/road-to-knowhere",
-        "iTunes": "https://music.apple.com/ua/album/road-to-knowhere-bonus-version/1437846004"
+        "Spotify": "https://open.spotify.com/album/5XNcBTBDka0LqtQ7FYJlVh"
       },
       "ready": true
     },
@@ -268,9 +268,9 @@
       "date": 1566468052000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667849054/music/FloatingPointsReflectionsMojaveDesert.jpg",
       "links": {
-        "Bandcamp": "https://floatingpoints.bandcamp.com/album/reflections-mojave-desert",
-        "iTunes": "https://music.apple.com/ua/album/reflections-mojave-desert/1226611591",
         "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_mmTdMts3eLTvWGGpOSPDOgxMs3IaVYrW4",
+        "iTunes": "https://music.apple.com/ua/album/reflections-mojave-desert/1226611591",
+        "Bandcamp": "https://floatingpoints.bandcamp.com/album/reflections-mojave-desert",
         "Spotify": "https://open.spotify.com/album/77F3DlvE34zoQ0OQs97UBN"
       },
       "ready": true
@@ -284,11 +284,11 @@
       "date": 1566640850000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667938919/music/%D0%93%D1%88%D0%9F%D0%BE%D0%BB%D1%8C%D0%B7%D0%B0.jpg",
       "links": {
-        "Youtube (live)": "https://youtu.be/qGREPm3SAFw",
-        "Bandcamp": "https://glintshake.bandcamp.com/album/--2",
-        "iTunes": "https://music.apple.com/ua/album/%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%B0/1443862640",
         "Spotify": "https://open.spotify.com/album/4d1sBqr4zy4onFrRTJRELh",
-        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_lHaWE4DKyh8MN8nhKGifkTJo3pnTqhs4E"
+        "Bandcamp": "https://glintshake.bandcamp.com/album/--2",
+        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_lHaWE4DKyh8MN8nhKGifkTJo3pnTqhs4E",
+        "Youtube (live)": "https://youtu.be/qGREPm3SAFw",
+        "iTunes": "https://music.apple.com/ua/album/%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%B0/1443862640"
       },
       "ready": true
     },
@@ -302,8 +302,8 @@
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667938919/music/SeelenluftSynchronschwimmer.jpg",
       "links": {
         "iTunes": "https://music.apple.com/ua/album/synchronschwimmer/271991013",
-        "Spotify": "https://open.spotify.com/album/3KOHPVjPN4ZVSAltWSoPfR",
-        "Youtube": "https://www.youtube.com/watch?v=gcuv37LaAVs&list=PLAGFqjyb_MqnXG5sc9F_TROOzxUzoNAnv"
+        "Youtube": "https://www.youtube.com/watch?v=gcuv37LaAVs&list=PLAGFqjyb_MqnXG5sc9F_TROOzxUzoNAnv",
+        "Spotify": "https://open.spotify.com/album/3KOHPVjPN4ZVSAltWSoPfR"
       },
       "ready": true
     },
@@ -316,11 +316,11 @@
       "date": 1566986461000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667938919/music/DelvonLamarrOrganTrioCloseButNoCigar.jpg",
       "links": {
+        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_lE_omtjvBx9BUDcJ8SCn_FG0bp1mUWMc8",
         "Bandcamp": "https://delvonlamarrorgantrio.bandcamp.com/album/close-but-no-cigar",
-        "iTunes": "https://music.apple.com/ua/album/close-but-no-cigar/1447726312",
-        "Youtube (live)": "https://youtu.be/tNO71hgto7c",
         "Spotify": "https://open.spotify.com/album/7mSHK38A3LExKFJpKPohlR",
-        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_lE_omtjvBx9BUDcJ8SCn_FG0bp1mUWMc8"
+        "Youtube (live)": "https://youtu.be/tNO71hgto7c",
+        "iTunes": "https://music.apple.com/ua/album/close-but-no-cigar/1447726312"
       },
       "ready": true
     },
@@ -333,8 +333,8 @@
       "date": 1568282444000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667938919/music/ToolFearInoculum.jpg",
       "links": {
-        "Spotify": "https://open.spotify.com/album/7acEciVtnuTzmwKptkjth5",
         "iTunes": "https://music.apple.com/ua/album/fear-inoculum/1475686696",
+        "Spotify": "https://open.spotify.com/album/7acEciVtnuTzmwKptkjth5",
         "Youtube": "https://www.youtube.com/watch?v=q7DfQMPmJRI&list=PL3htOwmtQv_yHPXNRHNJ-naKnAsvOuclt"
       },
       "ready": true
@@ -348,10 +348,10 @@
       "date": 1569664840000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1668030468/music/Trentem%C3%B8llerObverse.jpg",
       "links": {
-        "iTunes": "https://music.apple.com/ua/album/obverse/1469414241",
+        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_nkhOJcAIwqfbw8hKAE9pjKX7YCaNq1iws",
         "Bandcamp": "https://trentemoller.bandcamp.com/album/obverse",
         "Spotify": "https://open.spotify.com/album/5QBPUvhS6UYro3JLHeQVwF",
-        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_nkhOJcAIwqfbw8hKAE9pjKX7YCaNq1iws"
+        "iTunes": "https://music.apple.com/ua/album/obverse/1469414241"
       },
       "ready": true
     },
@@ -364,8 +364,8 @@
       "date": 1570442440000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1668108239/music/PorticoQuartetMemoryStreams.jpg",
       "links": {
-        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_lC-ZPauOtVoE8jBaqseL3PrDTy35_dc80",
         "Spotify": "https://open.spotify.com/album/3giCj6KyF3WQqSk5UBde2n",
+        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_lC-ZPauOtVoE8jBaqseL3PrDTy35_dc80",
         "iTunes": "https://music.apple.com/ua/album/memory-streams/1472062404",
         "Bandcamp": "https://porticoquartet.bandcamp.com/album/memory-streams"
       },
@@ -380,8 +380,8 @@
       "date": 1571997673000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1668108239/music/AmonTobinLongStories.jpg",
       "links": {
-        "iTunes": "https://music.apple.com/ua/album/long-stories/1478909494",
         "Spotify": "https://open.spotify.com/album/0kC59LuttfKletFf38YAX4",
+        "iTunes": "https://music.apple.com/ua/album/long-stories/1478909494",
         "Bandcamp": "https://music.amontobin.com/album/long-stories",
         "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_nTVvGtCwRll4mW0vO9MxnB5oDEspWcx1A"
       },
@@ -396,10 +396,10 @@
       "date": 1572174045000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1668108239/music/FloatingPointsCrush.jpg",
       "links": {
-        "Bandcamp": "https://floatingpoints.bandcamp.com/album/crush",
         "Spotify": "https://open.spotify.com/album/1WwZwdTICfaZI51BIIEN9z",
-        "iTunes": "https://music.apple.com/ua/album/crush/1475361065",
-        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_nUIraolq1Ehrp4Pf35jS2pNL_TLMuzFSo"
+        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_nUIraolq1Ehrp4Pf35jS2pNL_TLMuzFSo",
+        "Bandcamp": "https://floatingpoints.bandcamp.com/album/crush",
+        "iTunes": "https://music.apple.com/ua/album/crush/1475361065"
       },
       "ready": true
     },
@@ -428,8 +428,8 @@
       "date": 1572692418000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1668273397/music/CalibreTheDeep.jpg",
       "links": {
-        "Spotify": "https://open.spotify.com/album/65hN94M7IG3BjYThIlK1Lx",
         "iTunes": "https://music.apple.com/ua/album/the-deep/1210359965",
+        "Spotify": "https://open.spotify.com/album/65hN94M7IG3BjYThIlK1Lx",
         "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_mg6KWFsh7FpM9J70ppwuk7qFIQySFHLvE",
         "Bandcamp": "https://calibre.bandcamp.com/album/the-deep"
       },
@@ -444,10 +444,10 @@
       "date": 1572865229000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1668273397/music/KasperBj%C3%B8rkeNothingGoldCanStay%28partA%29.jpg",
       "links": {
-        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_mgcz-EHCDUPwfah5mt6wuGyp0ah5nPFfM",
-        "Bandcamp": "https://kasperbjorke.bandcamp.com/album/nothing-gold-can-stay-part-a",
         "Spotify": "https://open.spotify.com/album/3rsYFSxc3izf8YCwBsR6vr",
-        "iTunes": "https://music.apple.com/ua/album/nothing-gold-can-stay-part-a-ep/1481902002"
+        "iTunes": "https://music.apple.com/ua/album/nothing-gold-can-stay-part-a-ep/1481902002",
+        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_mgcz-EHCDUPwfah5mt6wuGyp0ah5nPFfM",
+        "Bandcamp": "https://kasperbjorke.bandcamp.com/album/nothing-gold-can-stay-part-a"
       },
       "ready": true
     },
@@ -461,9 +461,9 @@
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1668273397/music/BalthazarRats.jpg",
       "links": {
         "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_npZnTRhQ-n_eNjAHdeW47DPeeaqMyywqE",
-        "Bandcamp": "https://balthazarband.bandcamp.com/album/rats",
         "iTunes": "https://music.apple.com/ua/album/rats/561820082",
-        "Spotify": "https://open.spotify.com/album/6eIZQoMoV7naXES2HBkxVg"
+        "Spotify": "https://open.spotify.com/album/6eIZQoMoV7naXES2HBkxVg",
+        "Bandcamp": "https://balthazarband.bandcamp.com/album/rats"
       },
       "ready": true
     },
@@ -476,10 +476,10 @@
       "date": 1573383656000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1668274517/music/FelixLabandDeafSafari.jpg",
       "links": {
-        "Spotify": "https://open.spotify.com/album/0ahe3C1JwEyoGYKtZGY8qx",
-        "iTunes": "https://music.apple.com/ua/album/deaf-safari/996418916",
         "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_kb7TxGWe3Bt1MFSUBHBwDegiOMctKteqg",
-        "Bandcamp": "https://felixlaband.bandcamp.com/album/deaf-safari"
+        "Bandcamp": "https://felixlaband.bandcamp.com/album/deaf-safari",
+        "Spotify": "https://open.spotify.com/album/0ahe3C1JwEyoGYKtZGY8qx",
+        "iTunes": "https://music.apple.com/ua/album/deaf-safari/996418916"
       },
       "ready": true
     },
@@ -492,8 +492,8 @@
       "date": 1573556411000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1668274518/music/DevandraBanhartMala.jpg",
       "links": {
-        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_nEYMugMy4l07pU3A-3zTD6yo4YCqxS1xI",
         "iTunes": "https://music.apple.com/ua/album/mala/608045906",
+        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_nEYMugMy4l07pU3A-3zTD6yo4YCqxS1xI",
         "Bandcamp": "https://devendrabanhart.bandcamp.com/album/mala",
         "Spotify": "https://open.spotify.com/album/1Z69PSnbIBojgF9NBJbKca"
       },
@@ -508,10 +508,10 @@
       "date": 1573729217000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1668806158/music/40WinksSoundPuzzle.jpg",
       "links": {
-        "Spotify": "https://open.spotify.com/album/26VHTyQATgSGj5XzNIYsis",
-        "iTunes": "https://music.apple.com/ua/album/sound-puzzle-deluxe-edition/1041417471",
         "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_n2d1iAWNImn5bWtwbjdLfjTPPng5R6kAw",
-        "Bandcamp": "https://projectmooncircle.bandcamp.com/album/sound-puzzle-deluxe-edition"
+        "Bandcamp": "https://projectmooncircle.bandcamp.com/album/sound-puzzle-deluxe-edition",
+        "iTunes": "https://music.apple.com/ua/album/sound-puzzle-deluxe-edition/1041417471",
+        "Spotify": "https://open.spotify.com/album/26VHTyQATgSGj5XzNIYsis"
       },
       "ready": true
     },
@@ -524,11 +524,11 @@
       "date": 1574074837000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1668806158/music/OuriSuperficial.jpg",
       "links": {
+        "Youtube (live)": "https://www.youtube.com/watch?v=L7tBRjScJk0",
         "Bandcamp": "https://ourimusic.bandcamp.com/album/superficial",
-        "Spotify": "https://open.spotify.com/album/32R6LVCceGtQqbxV1RxDMf",
         "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_lnYFr2fuEnPqhVnRjpNFQH2yj7K-BAfkE",
         "iTunes": "https://music.apple.com/ua/album/superficial/1331209468",
-        "Youtube (live)": "https://www.youtube.com/watch?v=L7tBRjScJk0"
+        "Spotify": "https://open.spotify.com/album/32R6LVCceGtQqbxV1RxDMf"
       },
       "ready": true
     },
@@ -542,8 +542,8 @@
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1668806158/music/AfxHangableAutoBulb.jpg",
       "links": {
         "iTunes": "https://music.apple.com/ua/album/hangable-auto-bulb/82752669",
-        "Spotify": "https://open.spotify.com/album/1iSgbeoQoFtHEp1wrInW9A",
-        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_lJH0tvwVyZMNqLoQIlPnblGIjPgexr8kY"
+        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_lJH0tvwVyZMNqLoQIlPnblGIjPgexr8kY",
+        "Spotify": "https://open.spotify.com/album/1iSgbeoQoFtHEp1wrInW9A"
       },
       "ready": true
     },
@@ -557,8 +557,8 @@
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1668806158/music/2EcondClassCitizenAHallOfMirrors.jpg",
       "links": {
         "iTunes": "https://music.apple.com/ua/album/a-hall-of-mirrors/1170667550",
-        "Youtube": "https://www.youtube.com/playlist?list=PLkJy748yhuU82_hCtGLD8UpYkbxiyEJfO",
-        "Spotify": "https://open.spotify.com/album/786vhhmY4uonh6XUIuLvFn"
+        "Spotify": "https://open.spotify.com/album/786vhhmY4uonh6XUIuLvFn",
+        "Youtube": "https://www.youtube.com/playlist?list=PLkJy748yhuU82_hCtGLD8UpYkbxiyEJfO"
       },
       "ready": true
     },
@@ -571,10 +571,10 @@
       "date": 1574593215000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1668806158/music/BlockheadBubbleBath.jpg",
       "links": {
-        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_l0kfhVLko7aarQkgAfvxNskmpQYKZMrNA",
         "Spotify": "https://open.spotify.com/album/5yUMiQWkjKWbn5xwUTg3Q3",
         "Bandcamp": "https://blockheadnyc.bandcamp.com/album/bubble-bath",
-        "iTunes": "https://music.apple.com/ua/album/bubble-bath/1477324886"
+        "iTunes": "https://music.apple.com/ua/album/bubble-bath/1477324886",
+        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_l0kfhVLko7aarQkgAfvxNskmpQYKZMrNA"
       },
       "ready": true
     },
@@ -587,10 +587,10 @@
       "date": 1574766035000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1668980604/music/Beak.jpg",
       "links": {
-        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_l9pmHurLqUSYUgaJUEYClHlR1Vvr_glag",
         "Spotify": "https://open.spotify.com/album/60yPG02ecqockwxPD5XWSJ",
         "Bandcamp": "https://beak.bandcamp.com/album/-",
         "iTunes": "https://music.apple.com/ua/album/1414002676",
+        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_l9pmHurLqUSYUgaJUEYClHlR1Vvr_glag",
         "Youtube (live)": "https://www.youtube.com/watch?v=zsruANXfTIE"
       },
       "ready": true
@@ -604,9 +604,9 @@
       "date": 1574938852000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1668979301/music/AndyStottItShouldBeUs.jpg",
       "links": {
-        "Youtube": "https://www.youtube.com/watch?v=qSgKfGDycL4",
         "Spotify": "https://open.spotify.com/album/2b4RNCznna9U13uXza9jdl",
-        "iTunes": "https://music.apple.com/ua/album/it-should-be-us/1486934069"
+        "iTunes": "https://music.apple.com/ua/album/it-should-be-us/1486934069",
+        "Youtube": "https://www.youtube.com/watch?v=qSgKfGDycL4"
       },
       "ready": true
     },
@@ -644,9 +644,9 @@
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1669064301/music/AcidArabJdid.jpg",
       "links": {
         "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_mvsQsXz8MzLYQ5OxCeu2i9Ze6gZScHCps",
-        "Bandcamp": "https://acidarab.bandcamp.com/album/jdid",
         "iTunes": "https://music.apple.com/album/jdid/1475196755",
-        "Spotify": "https://open.spotify.com/album/6BzhupVusCkaxKIOXpGbPg"
+        "Spotify": "https://open.spotify.com/album/6BzhupVusCkaxKIOXpGbPg",
+        "Bandcamp": "https://acidarab.bandcamp.com/album/jdid"
       },
       "ready": true
     },
@@ -659,10 +659,10 @@
       "date": 1575802888000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1669064301/music/MaxCooperYearningForTheInfinite.jpg",
       "links": {
-        "iTunes": "https://music.apple.com/album/yearning-for-the-infinite/1472730148",
-        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_mZSHogfyQqvL86iyKf3MWeJoB5jnoD5Vs",
         "Spotify": "https://open.spotify.com/album/2qOai8aBLM3813p4luleGt",
-        "Bandcamp": "https://maxcooper.bandcamp.com/album/yearning-for-the-infinite"
+        "iTunes": "https://music.apple.com/album/yearning-for-the-infinite/1472730148",
+        "Bandcamp": "https://maxcooper.bandcamp.com/album/yearning-for-the-infinite",
+        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_mZSHogfyQqvL86iyKf3MWeJoB5jnoD5Vs"
       },
       "ready": true
     },
@@ -675,10 +675,21 @@
       "date": 1575975658000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1669149040/music/WuLufGoTellFireToTheMountain.jpg",
       "links": {
-        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_lXQuI6S5nByQ9ByVlwQ2YCwxgWHktyWq4",
         "iTunes": "https://music.apple.com/ua/album/go-tell-fire-to-the-mountain/438267039",
-        "Spotify": "https://open.spotify.com/album/0h3OHv0VdzfFSuqK4kGQO4"
+        "Spotify": "https://open.spotify.com/album/0h3OHv0VdzfFSuqK4kGQO4",
+        "Youtube": "https://www.youtube.com/playlist?list=OLAK5uy_lXQuI6S5nByQ9ByVlwQ2YCwxgWHktyWq4"
       },
+      "ready": true
+    },
+    {
+      "artist": ["Author Punisher"],
+      "slug": "boiler-room-berlin-live-set-by-author-punisher",
+      "name": "Boiler Room Berlin Live Set",
+      "description": "I do not know your relationship with this kind of music, but this guy is my type of cool. He builds all his instruments by himself and then plays on them. Live.",
+      "tags": ["Author Punisher", "Boiler Room"],
+      "date": 1576321221000,
+      "image": "http://res.cloudinary.com/barhamon/image/upload/v1669662825/music/authorpunisherboilerroomberlinliveset.jpg",
+      "links": { "Youtube (live)": "https://youtu.be/72xrS-ezmA4" },
       "ready": true
     }
   ]
