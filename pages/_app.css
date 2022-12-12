@@ -1,5 +1,6 @@
 body {
   background-color: #f5f4f3;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 
 .ui.compact.grid > .column:not(.row),
