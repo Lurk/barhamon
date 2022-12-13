@@ -482,7 +482,7 @@ export const how_to_iterate_over_the_array_in_js: PostInterface = {
           "I ran all those benchmarks on the cheapest Hetzner server (CX11), which has one vCPU and 2GB of RAM. With Ubuntu 22.04.1 LTS and NodeJS 18.12.1 on top.",
         ]),
         p([
-          "You can find all the code, including benchmarks and Jupiter notebook, in ",
+          "You can find all the code, including benchmarks and Jupyter notebook, in ",
           a({
             url: "https://github.com/Lurk/generators_js",
             text: "the GitHub repo",
