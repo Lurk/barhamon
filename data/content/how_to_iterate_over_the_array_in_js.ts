@@ -378,7 +378,7 @@ export const how_to_iterate_over_the_array_in_js: PostInterface = {
         url: "https://262.ecma-international.org/13.0/#sec-generator-abstract-operations",
         text: "ECMA-262 27.5.3",
       }),
-      " in full glory",
+      " in full glory.",
     ]),
     p([
       "But! But we can create iterators by ourselves, right? Generators are excellent when you want to make any arbitrary function return an iterator, and we need only two functions.",
