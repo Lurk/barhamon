@@ -32,7 +32,7 @@ export const the2022: PostInterface = {
           a({ url: "https://uanimals.org" }),
         ]),
         p([
-          "- There are thousands of artists who defend their freedom. If you can help them through this foundation. ",
+          "- There are thousands of artists who defend their freedom. You can help them through this foundation. ",
           a({ url: "https://shpytal.com/musicians-defend-ukraine/" }),
         ]),
         p([
