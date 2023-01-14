@@ -1,6 +1,5 @@
 import { a, p, b, createMessage } from "../../models/tree";
 import { PostInterface } from "../../models/posts";
-import { Icon } from "semantic-ui-react";
 
 const preview = p(["by M. Mitchell Waldrop"]);
 
@@ -47,7 +46,9 @@ export const the_dream_machine: PostInterface = {
     ]),
     createMessage({
       content: [
-        'About 85 percent of my "thinking" time was spent getting into a position to think to make a decision, to learn something I needed to know. Much more time went into finding or obtaining information than into digesting it.',
+        p([
+          'About 85 percent of my "thinking" time was spent getting into a position to think to make a decision, to learn something I needed to know. Much more time went into finding or obtaining information than into digesting it.',
+        ]),
       ],
       icon: "quote left",
     }),
