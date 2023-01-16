@@ -13,7 +13,7 @@ export const just_for_fun: PostInterface = {
     "https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v1634063604/header/just_for_fun.jpg",
   tags: ["book"],
   description: preview,
-  preview: [preview],
+  preview: [p([preview])],
   full: [
     p([preview]),
     p([
