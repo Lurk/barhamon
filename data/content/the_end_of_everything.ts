@@ -1,19 +1,19 @@
 import { a, p, b } from "../../models/tree";
 import { PostInterface } from "../../models/posts";
 
-const preview = p(["by Katie Mack"]);
+const preview = "Nerdy jokes and ultimate death.";
 
 export const the_end_of_everything: PostInterface = {
   pid: "the_end_of_everything",
-  header: "The End of Everything",
+  header: "The End of Everything by Katie Mack",
   time: 1655379922743,
   image:
     "https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v1655379868/header/the_end_of_everything.jpeg",
   tags: ["book"],
-  description: "The End of Everything - nerdy jokes and ultimate death.",
-  preview: [preview],
+  description: preview,
+  preview: [p([preview])],
   full: [
-    preview,
+    p([preview]),
     p([
       "I do not know if it is only me or if it is like that for everybody, but I do not have any mental model for thinking about the early times of the universe. And I celebrate moments when I found a good one. ",
     ]),

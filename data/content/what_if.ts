@@ -1,22 +1,23 @@
 import { a, p, b } from "../../models/tree";
 import { PostInterface } from "../../models/posts";
 
-const preview = p(["by Randall Munroe"]);
+const preview =
+  "If you have been on the internet for a long enough time, you know the XKCD and Randall Munroe.";
 
 export const what_if: PostInterface = {
   pid: "what_if",
   header:
-    "What If? Serious Scientific Answers to Absurd Hypothetical Questions",
+    "What If? Serious Scientific Answers to Absurd Hypothetical Questions by Randall Munroe",
   time: 1637182052756,
   image:
     "https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v1637181907/header/what_if.jpg",
   tags: ["book"],
   description:
     "If you have been on the internet for a long enough time, you know the XKCD and Randall Munroe. And he wrote the book. Good one.",
-  preview: [preview],
+  preview: [p([preview])],
   full: [
-    preview,
     p([
+      preview,
       "If you have been on the internet for a long enough time, you know the XKCD and Randall Munroe. And he wrote the book. Good one.",
     ]),
     p([

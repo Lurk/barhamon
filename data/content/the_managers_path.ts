@@ -1,21 +1,21 @@
 import { a, p, b, ul, li } from "../../models/tree";
 import { PostInterface } from "../../models/posts";
 
-const preview = p(["by Camille Fournier"]);
+const preview =
+  "Book about how to manage people, and be managed by other people";
 
 export const the_managers_path: PostInterface = {
   pid: "the_managers_path",
   header:
-    "The Manager's Path: A Guide for Tech Leaders Navigating Growth and Change",
+    "The Manager's Path: A Guide for Tech Leaders Navigating Growth and Change by Camille Fournier",
   time: 1641723580884,
   image:
     "https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v1641722817/header/the_managers_path.jpg",
   tags: ["book"],
-  description:
-    "Book about how to manage people, and be managed by other people",
-  preview: [preview],
+  description: preview,
+  preview: [p([preview])],
   full: [
-    preview,
+    p([preview]),
     p([
       "This is the book you should read as early as possible in your tech career, despite the name. After reading it, you will understand what and why people around you want from you, which will help your daily activities.",
     ]),

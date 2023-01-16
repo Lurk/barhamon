@@ -1,19 +1,19 @@
 import { a, p, b, createMessage } from "../../models/tree";
 import { PostInterface } from "../../models/posts";
 
-const preview = p(["by M. Mitchell Waldrop"]);
+const preview = "A 500ish page instruction on how to dream big.";
 
 export const the_dream_machine: PostInterface = {
   pid: "the_dream_machine",
-  header: "The Dream Machine",
+  header: "The Dream Machine by M. Mitchell Waldrop",
   time: 1673695512290,
   image:
     "https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v1673690028/header/the_dream_machine.jpg",
   tags: ["book"],
-  description: "A 500ish page instruction on how to dream big.",
-  preview: [preview],
+  description: preview,
+  preview: [p([preview])],
   full: [
-    preview,
+    p([preview]),
     p([
       "This book is about how we got here. How all that connectivity and supercomputers in our pockets were envisioned and born.",
     ]),

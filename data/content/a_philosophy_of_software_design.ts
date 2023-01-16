@@ -1,11 +1,13 @@
 import { a, p, b } from "../../models/tree";
 import { PostInterface } from "../../models/posts";
 
-const preview = p(["by John Ousterhout"]);
+const preview = p([
+  "A Philosophy of Software Design - the must-read for software engineers.",
+]);
 
 export const a_philosophy_of_software_design: PostInterface = {
   pid: "a_philosophy_of_software_design",
-  header: "A Philosophy of Software Design",
+  header: "A Philosophy of Software Design by John Ousterhout",
   time: 1632772104907,
   image:
     "https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v1632772550/header/a_philosophy_of_software_design.jpg",

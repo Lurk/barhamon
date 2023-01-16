@@ -1,20 +1,19 @@
 import { a, p, b } from "../../models/tree";
 import { PostInterface } from "../../models/posts";
 
-const preview = p(["by Jon Gjengset"]);
+const preview = "Idiomatic programming for experienced developers.";
 
 export const rust_for_rustaceans: PostInterface = {
   pid: "rust_for_rustaceans",
-  header: "Rust for Rustaceans",
+  header: "Rust for Rustaceans by Jon Gjengset",
   time: 1664631424538,
   image:
     "https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v1664632340/header/rust_for.jpeg",
   tags: ["book"],
-  description:
-    "Rust for Rustaceans: idiomatic programming for experienced developers.",
-  preview: [preview],
+  description: preview,
+  preview: [p([preview])],
   full: [
-    preview,
+    p([preview]),
     p([
       "The book goes deep into interface design, memory layout, concurrency, testing, no std, and so on. Multiple times, while reading it, I had “oh, that's how it should be done” moments. So I would say If you are writing software using Rust, this book is must read. It does not repeat the Rust book, and assumes that you already familiar with the language. In general, I like how the author explains things, and if you are not subscribed to his ",
       a({

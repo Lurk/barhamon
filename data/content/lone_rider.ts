@@ -1,19 +1,19 @@
 import { a, p, b } from "../../models/tree";
 import { PostInterface } from "../../models/posts";
 
-const preview = p(["by Elspeth Beard"]);
+const preview = "The First British Woman to Motorcycle Around the World";
 
 export const lone_rider: PostInterface = {
   pid: "lone_rider",
-  header: "Lone Rider",
+  header: "Lone Rider by Elspeth Beard",
   time: 1638029785631,
   image:
     "https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v1638029283/header/lone_rider.jpg",
   tags: ["book"],
-  description: "The First British Woman to Motorcycle Around the World",
-  preview: [preview],
+  description: preview,
+  preview: [p([preview])],
   full: [
-    preview,
+    p([preview]),
     p([
       "Everyone who knows me knows that I am quite an adventurous person. And one of my big dreams is to make motorcycle trip around the world. That is the reason why I started this book. Elseph made my dream trip almost 40 years ago. And that was Adventure with capital A. The story is also very personal. Reading it felt like your friend telling you the stories from her life.",
     ]),

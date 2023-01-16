@@ -1,20 +1,21 @@
 import { a, p, b } from "../../models/tree";
 import { PostInterface } from "../../models/posts";
 
-const preview = p(["by Linus Torvalds and David Diamond"]);
+const preview =
+  "All my nerdy senses were pleased by this book. I highly recommend it.";
 
 export const just_for_fun: PostInterface = {
   pid: "just_for_fun",
-  header: "Just for Fun: The Story of an Accidental Revolutionary",
+  header:
+    "Just for Fun: The Story of an Accidental Revolutionary by Linus Torvalds and David Diamond",
   time: 1634063874636,
   image:
     "https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v1634063604/header/just_for_fun.jpg",
   tags: ["book"],
-  description:
-    "All my nerdy senses were pleased by this book. I highly recommend it",
+  description: preview,
   preview: [preview],
   full: [
-    preview,
+    p([preview]),
     p([
       "Linus was (and still is) my Hero with capital H for a long time. But just recently, I found out that there is a book from/about him. So I bought it, and boy, it is good. All my nerdy memories (someday I will write stuff about school days, how we with my friends tried to create our operating system because windows suck) were alive again while I read it.",
     ]),
