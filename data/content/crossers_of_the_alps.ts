@@ -131,7 +131,7 @@ export const crossers_of_the_alps: PostInterface = {
     h2(["Tenth day"]),
     h4(["Tieflehn to Vent."]),
     p([
-      "Our initial plan was to go from Tieflehn to Vent with the help of a bus that brings you to the other side of a glacier. Bus saves you at least 10km of walking around the glacier. We woke up at 5 am to start the hike at 6 am, but it was raining till 7 am. So we started later than we thought, which did not matter much because when we got to Braunschweiger hütte, we understood that we had already had enough walking.",
+      "Our initial plan was to go from Tieflehn to Vent with the help of a bus that brings you to the other side of a glacier. Bus saves you at least 10km of walking around the glacier. We woke up at 5 am to start the hike at 6 am, but it was raining till 7 am. So we started later than we thought, which did not matter much because when we got to Braunschweiger hütte, we understood that we had enough walking for today.",
     ]),
     p([
       "The way up is pretty steep, and elevation starts to kick in. We met a guy from Nepal on the way. He was going in circles around us like it was nothing, which was funny if you consider that I was dying. Mahindra, if you are somehow reading this, it was nice to meet you there.",
