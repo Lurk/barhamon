@@ -24,8 +24,8 @@ const FindMe: React.FC = () => (
   <>
     <p>You can find me at:</p>
     <p>
-      <a href="https://twitter.com/SergeyBargamon">
-        <Icon className="twitter" /> Twitter
+      <a href="https://mas.to/@barhamon">
+        <Icon className="at" /> Mastodon
       </a>
     </p>
     <p>
