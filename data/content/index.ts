@@ -51,4 +51,4 @@ export { blog_updates } from "./blog_updates";
 export { how_to_iterate_over_the_array_in_js } from "./how_to_iterate_over_the_array_in_js";
 export { the2022 } from "./2022";
 export { the_dream_machine } from "./the_dream_machine";
-export { systems_design_interview } from "./systems_design_interview.ts";
+export { systems_design_interview } from "./systems_design_interview";
