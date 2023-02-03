@@ -12,7 +12,7 @@ export const systems_design_interview: PostInterface = {
     "https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v1675421924/header/systems_design_interview.jpg",
   tags: ["book"],
   description: preview,
-  preview: [preview],
+  preview: [p([preview])],
   full: [
     p([
       preview,
