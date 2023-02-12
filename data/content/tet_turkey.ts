@@ -13,7 +13,7 @@ export const tet_turkey: PostInterface = {
   time: 1676228294524,
   image:
     "https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v1676228073/header/tet_turkey.png",
-  tags: ["adventure", "hike"],
+  tags: ["adventure", "motorcycle"],
   description,
   preview: [preview],
   full: [
