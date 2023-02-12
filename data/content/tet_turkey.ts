@@ -9,7 +9,7 @@ const preview = p([description]);
 
 export const tet_turkey: PostInterface = {
   pid: "tet_turkey",
-  header: "Preparations for the paert of the TET Turkey ride",
+  header: "Preparations for the part of the TET Turkey ride",
   time: 1676228294524,
   image:
     "https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v1676228073/header/tet_turkey.png",
