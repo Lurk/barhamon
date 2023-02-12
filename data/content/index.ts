@@ -52,3 +52,4 @@ export { how_to_iterate_over_the_array_in_js } from "./how_to_iterate_over_the_a
 export { the2022 } from "./2022";
 export { the_dream_machine } from "./the_dream_machine";
 export { systems_design_interview } from "./systems_design_interview";
+export { tet_turkey } from "./tet_turkey";
