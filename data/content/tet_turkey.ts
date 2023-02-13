@@ -65,7 +65,7 @@ export const tet_turkey: PostInterface = {
       ],
     }),
     p([
-      "All that is already 20 kilograms, so maybe I need to rethink what to bring with me or finally buy a new lightweight tent or wear boots instead of sneakers on the plain. I will also carry a helmet and a backpack with my clothes. Yeah, surprisingly, a lot of stuff.",
+      "All that is already 20 kilograms, so maybe I need to rethink what to bring with me or finally buy a new lightweight tent or wear boots instead of sneakers on the plane. I will also carry a helmet and a backpack with my clothes. Yeah, surprisingly, a lot of stuff.",
     ]),
     img({
       ...prepareImgProps({
