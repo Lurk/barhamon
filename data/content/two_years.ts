@@ -94,7 +94,11 @@ export const two_years: PostInterface = {
         p(["This is a series of universary posts."]),
         p([
           "The previous one you can read here: ",
-          a({ text: "A year", as: "/post/a_year", url: "/post/[pid]" }),
+          a({
+            text: "A year has passed since we moved to Munich",
+            as: "/post/a_year",
+            url: "/post/[pid]",
+          }),
           ".",
         ]),
       ],
