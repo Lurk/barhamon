@@ -137,8 +137,21 @@ export const a_year: PostInterface = {
       content: [
         p(["The next big anniversary post will be in a year."]),
         p([
-          "The previous one you can read ",
-          a({ text: "here", as: "/post/half_a_year", url: "/post/[pid]" }),
+          "The previous one you can read here: ",
+          a({
+            text: "Half a year",
+            as: "/post/half_a_year",
+            url: "/post/[pid]",
+          }),
+          ".",
+        ]),
+        p([
+          "The next one you can read here: ",
+          a({
+            text: "Two years in Munich",
+            as: "/post/two_years",
+            url: "/post/[pid]",
+          }),
           ".",
         ]),
       ],
