@@ -1,4 +1,4 @@
-import { img, p, a, createMessage, ul, li } from "../../models/tree";
+import { img, p, a, createMessage } from "../../models/tree";
 import { PostInterface } from "../../models/posts";
 import { prepareImgProps } from "../../utils";
 
@@ -128,7 +128,7 @@ export const a_year: PostInterface = {
         version: 1620243822,
       }),
       src: "https://res.cloudinary.com/barhamon/image/upload/v1650032862/a_year/cant_believe_i_have_to_protest_this_shit.jpg",
-      alt: "cant believe i have to protest this shit",
+      alt: "can't believe i have to protest this shit",
     }),
     p([
       "A big part of life now is helping refugees to find a way to live everyday life and participating in anti-war/Russia protests. What amazes me the most is how many people care. Every day I meet a random person who does something good. I thought that there were more good people than bad people, and now I have proof.",
