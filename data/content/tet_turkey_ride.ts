@@ -124,7 +124,7 @@ first half of our route was a 3000m summit. We decided that we had enough snow a
       `. One had 600 km on the clock, and the second had 16000 km. A guy said upfront that clutch is a weak 
       spot of those bikes and that we should not ride deep sand or any other terrain that involves heavy clutch 
       usage. If we do and run out of the clutch, it will be our problem. The older bike ran out of the clutch on a 
-      second day. I am sure it was not our fault, but that was our problem now. The closest city where that clutch 
+      second day. I am sure it was not our fault, but that was our problem. The closest city where that clutch 
       could be replaced was 60 km away. Those were the longest 60 km in my life, and I even was not riding a faulty 
       bike. When we reached Isparta city, the clutch was replaced in an hour and 100 euros. On the same day, but later, 
       I lost my license plate. I rode to the point where it was seen last time with no luck. It had already tried to 
@@ -185,9 +185,9 @@ first half of our route was a 3000m summit. We decided that we had enough snow a
     h2(["Gear"]),
     p([
       `At the last minute, I changed the char to the hammock. There was no space for them, so I needed to choose. I used that 
-      hammock only once and wanted a chair every evening. What I missed was the multi-tool with pliers. There were a few instances 
-      when life would be much simpler if we had one with us. Once we borrowed them from locals, all other times, we were inventive. 
-      Also, at the last second, I put a waterproof poncho (`,
+      hammock only once and wanted a chair every evening. What really I missed was the multi-tool with pliers. There were a few 
+      instances when life would be much simpler if we had one with us. Once we borrowed them from locals, all other times, we 
+      were inventive. Also, at the last second, I put a waterproof poncho (`,
       a({
         text: "molfar",
         url: "https://www.turbat.ua/turbat_ukrainian/tent-poncho-turbat-molfar.html",
@@ -196,17 +196,18 @@ first half of our route was a 3000m summit. We decided that we had enough snow a
       crucial piece of equipment for loading/unloading, outfit change, and other camping activities.`,
     ]),
     p([
-      `I finally battle-tested my new sleeping pad. This year I bought `,
+      `This year I got a sleeping pad (`,
       a({
         text: "Therm-a-rest NeoAir® XTherm™ NXT MAX",
         url: "https://www.thermarest.com/de/isomatten/fast-and-light/neoair-xtherm-nxt-max-isomatten/neoair-xtherm-nxt-max.html",
       }),
-      `, the most comfortable sleeping pad I had ever had. We slept on rocks multiple times, and I felt nothing pointy. The first 
-      half of the trip nights were freezing. I even slept in my puffy jacket. So yeah, I am pretty sure our next big outdoor 
-      purchase will be three-season dawn sleeping bags. If you have recommendations, I am all ears.`,
+      `) as a birthday present from my wife. I finally battle-tested it, and it is the most comfortable sleeping pad I ever had. 
+      We slept on rocks multiple times, and I felt nothing pointy. The first half of the trip nights were freezing. I even slept in 
+      my puffy jacket. So yeah, I am pretty sure our next big outdoor purchase will be three-season dawn sleeping bags. If you have 
+      recommendations, I am all ears.`,
     ]),
     p([
-      `I rode in my AVG K3 helmet, which I like, but I mostly rode with my opened visor. My nose and cheeks were burnt by the sun 
+      `I rode in my AVG K3 helmet, which I like, but I mostly rode with a wide-open visor, and the sun burned my nose and cheeks 
       like never before. I want a helmet with a peak to reduce sunburns next time. One of the first gear for motorcycle traveling 
       I bought was rain gear. It was long ago, and I was lucky enough never to use it. On the last day of this adventure, the 
       pouring rain with thunderstorms and all that fun started right when we strapped all our gear to motorcycles. So I finally 
