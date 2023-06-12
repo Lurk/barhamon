@@ -34,7 +34,9 @@
       "tags": ["David August", "Deutsches Symphonie Orchester", "Live"],
       "date": 1546513210000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667682821/music/DavidAugustDeutschesSymphonieOrchesterBoilerRoomBerlinLivePerformance.jpg",
-      "links": { "Youtube (live)": "https://youtu.be/l9tRdSmVZAc" },
+      "links": {
+        "Youtube (live)": "https://youtu.be/l9tRdSmVZAc"
+      },
       "ready": true
     },
     {
@@ -45,7 +47,9 @@
       "tags": ["King Gizzard And The Lizard Wizard", "KEXP", "Live"],
       "date": 1546599614000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667682821/music/KingGizzardAndTheLizardWizardFullPerformance%28liveOnKexp%29.jpg",
-      "links": { "Youtube (live)": "https://youtu.be/G5Z4bma_tUM" },
+      "links": {
+        "Youtube (live)": "https://youtu.be/G5Z4bma_tUM"
+      },
       "ready": true
     },
     {
@@ -70,7 +74,9 @@
       "tags": ["Bjork", "Old But Gold", "Live"],
       "date": 1546858804000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667682821/music/BjorkMtvUnplugged.jpg",
-      "links": { "Youtube (live)": "https://youtu.be/8J0KBM2xK4w" },
+      "links": {
+        "Youtube (live)": "https://youtu.be/8J0KBM2xK4w"
+      },
       "ready": true
     },
     {
@@ -97,7 +103,9 @@
       "tags": ["Intrepol", "Live"],
       "date": 1547377211000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667768034/music/IntrepolTrnsmt%28bbc2018%29.jpg",
-      "links": { "Youtube (live)": "https://youtu.be/jWMFpeGYOoE" },
+      "links": {
+        "Youtube (live)": "https://youtu.be/jWMFpeGYOoE"
+      },
       "ready": true
     },
     {
@@ -108,7 +116,9 @@
       "tags": ["Live", "Bad Bad Not Good"],
       "date": 1547982006000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667768034/music/BadBadNotGoodIv%28fullLiveConcert%29.jpg",
-      "links": { "Youtube (live)": "https://youtu.be/bdPkzcsYQKA" },
+      "links": {
+        "Youtube (live)": "https://youtu.be/bdPkzcsYQKA"
+      },
       "ready": true
     },
     {
@@ -119,7 +129,9 @@
       "tags": ["Go Go Penguin", "Live"],
       "date": 1548759647000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667768040/music/GoGoPenguinJazzA%CC%80LaVillette.jpg",
-      "links": { "Youtube (live)": "https://youtu.be/x7LmhOEnIs4" },
+      "links": {
+        "Youtube (live)": "https://youtu.be/x7LmhOEnIs4"
+      },
       "ready": true
     },
     {
@@ -178,7 +190,9 @@
       "tags": ["Old But Gold", "Live"],
       "date": 1547550022000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1667768076/music/TheDoorsLiveAtTheBowl%2768.jpg",
-      "links": { "Youtube (live)": "https://youtu.be/3mA75vvFylc" },
+      "links": {
+        "Youtube (live)": "https://youtu.be/3mA75vvFylc"
+      },
       "ready": true
     },
     {
@@ -520,7 +534,7 @@
       "slug": "superficial-by-ouri",
       "name": "Superficial",
       "description": "Watch live if you have time. I am dancing. ",
-      "tags": ["Ouri", "live", "Boiler Room"],
+      "tags": ["Ouri", "Live", "Boiler Room"],
       "date": 1574074837000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1668806158/music/OuriSuperficial.jpg",
       "links": {
@@ -583,7 +597,7 @@
       "slug": "by-beak",
       "name": ">>>",
       "description": "AAA! Look what I found! Beck is Geoff Barrow, Billy Fuller, and Will Young. I would be pretty surprised if those guys made terrible albums. Check out the live, where they talk a little about the album.",
-      "tags": ["Beak>", "kexp"],
+      "tags": ["Beak>", "KEXP"],
       "date": 1574766035000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1668980604/music/Beak.jpg",
       "links": {
@@ -618,7 +632,9 @@
       "tags": ["Tasha"],
       "date": 1575111659000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1668980604/music/TashaKeepHushLive1985MusicTakeover2.jpg",
-      "links": { "Youtube": "https://www.youtube.com/watch?v=zzoxXIHJcFI" },
+      "links": {
+        "Youtube": "https://www.youtube.com/watch?v=zzoxXIHJcFI"
+      },
       "ready": true
     },
     {
@@ -689,7 +705,9 @@
       "tags": ["Author Punisher", "Boiler Room"],
       "date": 1576321221000,
       "image": "http://res.cloudinary.com/barhamon/image/upload/v1669662825/music/authorpunisherboilerroomberlinliveset.jpg",
-      "links": { "Youtube (live)": "https://youtu.be/72xrS-ezmA4" },
+      "links": {
+        "Youtube (live)": "https://youtu.be/72xrS-ezmA4"
+      },
       "ready": true
     }
   ]

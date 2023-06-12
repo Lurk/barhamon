@@ -31,25 +31,35 @@ type Tag = {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
+  const tags: Set<string> = new Set(
+    posts
+      .getAll()
+      .map((p) => p.tags)
+      .flat()
+  );
+
+  console.log(tags);
+
+  const paths = Array.from(tags)
+    .map((tag: string) => {
+      const p = posts.getPage({ limit, tag, offset: 0 });
+      const pages = new Array(p.totalPages)
+        .fill({})
+        .map((v, i) => ({ params: { tag: [tag, `${i + 1}`] } }));
+      pages.push({ params: { tag: [tag] } });
+      return pages;
+    })
+    .flat();
+
+  console.log(
+    JSON.stringify(
+      paths.filter((path) => path.params.tag.includes("Live")),
+      null,
+      2
+    )
+  );
   return {
-    paths: posts.getAll().reduce(
-      (acc: { params: Tag }[], p) => [
-        ...acc,
-        ...p.tags
-          .map((tag) => {
-            const p = posts.getPage({ limit, tag, offset: 0 });
-            return new Array(p.totalPages)
-              .fill(0)
-              .map((v, i) => [
-                { params: { tag: [tag, `${i + 1}`] } },
-                { params: { tag: [tag] } },
-              ])
-              .flat();
-          })
-          .flat(),
-      ],
-      []
-    ),
+    paths,
     fallback: false,
   };
 };
