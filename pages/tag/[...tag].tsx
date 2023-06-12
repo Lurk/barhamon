@@ -30,7 +30,7 @@ type Tag = {
   tag: [string, string];
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = () => {
   const tags: Set<string> = new Set(
     posts
       .getAll()
@@ -38,12 +38,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
       .flat()
   );
 
-  console.log(tags);
-
   const paths = Array.from(tags)
     .map((tag: string) => {
-      const p = posts.getPage({ limit, tag, offset: 0 });
-      const pages = new Array(p.totalPages)
+      const page = posts.getPage({ limit, tag, offset: 0 });
+      const pages = new Array(page.totalPages)
         .fill({})
         .map((v, i) => ({ params: { tag: [tag, `${i + 1}`] } }));
       pages.push({ params: { tag: [tag] } });
@@ -51,13 +49,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
     })
     .flat();
 
-  console.log(
-    JSON.stringify(
-      paths.filter((path) => path.params.tag.includes("Live")),
-      null,
-      2
-    )
-  );
   return {
     paths,
     fallback: false,
