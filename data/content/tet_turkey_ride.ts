@@ -184,7 +184,7 @@ first half of our route was a 3000m summit. We decided that we had enough snow a
     createDivider(),
     h2(["Gear"]),
     p([
-      `At the last minute, I changed the char to the hammock. There was no space for them, so I needed to choose. I used that 
+      `At the last minute, I changed the chair to the hammock. There was no space for them, so I needed to choose. I used that 
       hammock only once and wanted a chair every evening. What really I missed was the multi-tool with pliers. There were a few 
       instances when life would be much simpler if we had one with us. Once we borrowed them from locals, all other times, we 
       were inventive. Also, at the last second, I put a waterproof poncho (`,
