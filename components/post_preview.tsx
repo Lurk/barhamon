@@ -47,7 +47,7 @@ export const PostPreview: React.FC<PostInterface> = memo(
         </Card.Content>
       </Card>
     );
-  }
+  },
 );
 
 PostPreview.displayName = "PostPreview";

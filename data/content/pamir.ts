@@ -14,21 +14,21 @@ const firstSlider = new Array(18).fill(0).map((v, k) =>
     src: `/img/rls_pamir/1/${k + 1}.jpg`,
     thumbnail: `/img/rls_pamir/1/${k + 1}_tn.jpg`,
     alt: `A 3-day motorcycle adventure in the Carpathian mountains. Day 1. #${k}`,
-  })
+  }),
 );
 const secondSlider = new Array(31).fill(0).map((v, k) =>
   img({
     src: `/img/rls_pamir/2/2 - ${k + 1}.jpg`,
     thumbnail: `/img/rls_pamir/2/2 - ${k + 1}_tn.jpg`,
     alt: `A 3-day motorcycle adventure in the Carpathian mountains. Day 2. #${k}`,
-  })
+  }),
 );
 const thirdSlider = new Array(9).fill(0).map((v, k) =>
   img({
     src: `/img/rls_pamir/3/3 - ${k + 1}.jpg`,
     thumbnail: `/img/rls_pamir/3/3 - ${k + 1}_tn.jpg`,
     alt: `A 3-day motorcycle adventure in the Carpathian mountains. Day 3. #${k}`,
-  })
+  }),
 );
 
 export const pamir: PostInterface = {

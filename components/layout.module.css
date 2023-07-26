@@ -13,7 +13,9 @@
 }
 
 .stick {
-  box-shadow: 0 3px 3px 0 #d4d4d5, 0 0 0 0 #d4d4d5 !important;
+  box-shadow:
+    0 3px 3px 0 #d4d4d5,
+    0 0 0 0 #d4d4d5 !important;
 }
 
 .content {

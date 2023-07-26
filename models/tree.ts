@@ -267,7 +267,7 @@ export function createDivider(): Divider {
 
 export function createCloudinaryGallery(
   username: string,
-  tag: string
+  tag: string,
 ): CloudinaryGallery {
   return {
     type: Types.CLOUDINARY_GALLERY,

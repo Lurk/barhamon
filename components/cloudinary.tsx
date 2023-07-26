@@ -60,7 +60,7 @@ export const CloudinaryGal: React.FC<CloudinaryGalProps> = ({
                 version: image.version,
                 username,
               });
-            })
+            }),
         );
         setLoading(false);
       })

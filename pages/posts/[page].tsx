@@ -36,7 +36,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
           ...acc,
           { params: { page: String(k + 1) } },
         ],
-        []
+        [],
       ),
     fallback: false,
   };

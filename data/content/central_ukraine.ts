@@ -13,21 +13,21 @@ const firstSlider = new Array(8).fill(0).map((v, k) =>
     src: `/img/central_ukraine/1/${k + 1}.jpg`,
     thumbnail: `/img/central_ukraine/1/${k + 1}_tn.jpg`,
     alt: `800 km along the roads of central Ukraine. Day 1. #${k}`,
-  })
+  }),
 );
 const secondSlider = new Array(10).fill(0).map((v, k) =>
   img({
     src: `/img/central_ukraine/2/${k + 1}.jpg`,
     thumbnail: `/img/central_ukraine/2/${k + 1}_tn.jpg`,
     alt: `800 km along the roads of central Ukraine. Day 2. #${k}`,
-  })
+  }),
 );
 const thirdSlider = new Array(5).fill(0).map((v, k) =>
   img({
     src: `/img/central_ukraine/3/${k + 1}.jpg`,
     thumbnail: `/img/central_ukraine/3/${k + 1}_tn.jpg`,
     alt: `Trakhtemyrivsʹkyy Pivostriv on a motorcycle. #${k}`,
-  })
+  }),
 );
 
 export const central_ukraine: PostInterface = {

@@ -28,7 +28,7 @@ export const Pagination: React.FC<PaginationProps> = ({
           router
             .push(
               router.pathname === "/" ? "/posts/[page]" : router.pathname,
-              url(data.activePage.toString())
+              url(data.activePage.toString()),
             )
             .then(() => window.scrollTo(0, 0));
         }}

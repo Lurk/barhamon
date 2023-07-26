@@ -40,14 +40,14 @@ export async function getMusic(): Promise<PostInterface[]> {
                 a({
                   url,
                   text: `${album.name} by ${album.artist.join(
-                    " & "
+                    " & ",
                   )} on ${text}`,
                 }),
               ]),
             ],
             icon: getLinkIcon(text),
             warning: false,
-          })
+          }),
         ),
     ],
     image: album.image,

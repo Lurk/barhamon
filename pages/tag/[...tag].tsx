@@ -35,7 +35,7 @@ export const getStaticPaths: GetStaticPaths = () => {
     posts
       .getAll()
       .map((p) => p.tags)
-      .flat()
+      .flat(),
   );
 
   const paths = Array.from(tags)

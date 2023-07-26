@@ -93,7 +93,7 @@ export const weird_interview_question: PostInterface = {
     p(["Where x and y are the coordinates of our random dot."]),
     p(["It is time to write some code."]),
     embed(
-      "https://replit.com/@SergeyBar/rustrandom?lite=icon_title_nologo&theme=replitLight"
+      "https://replit.com/@SergeyBar/rustrandom?lite=icon_title_nologo&theme=replitLight",
     ),
     p([
       "I would not recommend using this method to calculate Pi for something serious. First. How to say it lightly. The accuracy of this method is not the best on the market. And second, to get stable accuracy to the second digit, you need 10 000 000 dots. So yeah, performance-wise, it is not the best method either. But it was fun.",

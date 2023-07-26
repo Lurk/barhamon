@@ -37,7 +37,7 @@ test("addPost should throw exception when adding post with similar pid", () => {
   const p = new Posts();
   p.addPost(createDumbPost({ pid: "test" }));
   expect(() => p.addPost(createDumbPost({ pid: "test" }))).toThrow(
-    new Error(`post with id: test already exists`)
+    new Error(`post with id: test already exists`),
   );
 });
 

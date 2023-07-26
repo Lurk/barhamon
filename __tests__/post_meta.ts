@@ -11,7 +11,7 @@ test("date format when post was published about 1 hour ago", () => {
 
 test("date format when post was published about 23 hours ago", () => {
   expect(getPostMeta(Date.now() - 23 * 60 * 60 * 1000)).toBe(
-    "about 23 hours ago"
+    "about 23 hours ago",
   );
 });
 

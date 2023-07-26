@@ -12,7 +12,7 @@ function renderPost(post: PostInterface) {
   }</link><description>${
     post.description
   }</description><pubDate>${formatRFC7231(
-    post.time
+    post.time,
   )}</pubDate><guid isPermaLink="true">${POST_URL_PREFIX}${
     post.pid
   }</guid></item>`;
