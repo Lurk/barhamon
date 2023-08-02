@@ -27,8 +27,8 @@ export const tmb_preparations: PostInterface = {
       ", which is around 160 kilometers long and crosses three countries: Switzerland, Italy, and France.",
     ]),
     p([
-      `While researching the trail, we discovered a picturesque lake in the mountains where wild camping is allowed. 
-      And because of that, of course, we need a new lightweight tent and sleeping pads. Our old and trustworthy tent 
+      `While researching the trail, we discovered a picturesque lake in the mountains where wild camping is allowed.
+      And because of that, of course, we need a new lightweight tent and sleeping pads. Our old and trustworthy tent
       weighs 4.7 kilos, and our very comfortable self-inflating sleeping pad is as big as my backpack.`,
     ]),
     img({
@@ -62,8 +62,8 @@ export const tmb_preparations: PostInterface = {
         text: "Big Agnes Copper Spur",
         url: "https://www.bigagnes.com/products/copper-spur-hv-ul2",
       }),
-      `. Both tents are around 1.5 kilos. Both can fit two wide sleeping pads. Copper Spur is lighter and has more 
-      storage options, while Huba Huba feels sturdier. It was a tough choice, but MSR won in the end. I have already 
+      `. Both tents are around 1.5 kilos. Both can fit two wide sleeping pads. Copper Spur is lighter and has more
+      storage options, while Huba Huba feels sturdier. It was a tough choice, but MSR won in the end. I have already
       used it on a few short adventures, and it is the best tent I tried in my life.`,
     ]),
     img({
@@ -76,9 +76,9 @@ export const tmb_preparations: PostInterface = {
       alt: "it is nice to hike knowing that you do not need to carry food for a week",
     }),
     p([
-      `Camping means cooking food. We want to bring our gas stove, a small aluminum pot, foldable silicon cups, and 
-      freeze-dried food. Of course, we prefer cooking real food, but we tested freeze-dried meals, and some are good. 
-      And coffee, judging by my wife’s determination, half of her backpack will be coffee beans. The good thing 
+      `Camping means cooking food. We want to bring our gas stove, a small aluminum pot, foldable silicon cups, and
+      freeze-dried food. Of course, we prefer cooking real food, but we tested freeze-dried meals, and some are good.
+      And coffee, judging by my wife’s determination, half of her backpack will be coffee beans. The good thing
       is - that we don't need to carry all the food from the start because there are plenty of places to resupply.`,
     ]),
     img({
@@ -91,11 +91,11 @@ export const tmb_preparations: PostInterface = {
       alt: "Hiking cook set in action",
     }),
     p([
-      `It looks like our base weight will be around nine kilos. Judging by the online information, you do not need 
-      more than one liter of water for a day on that trail. So it plus one kilo. The longest stretch without food 
-      resupply is three days. If we want a meal three times daily, that's nine packs per person. There will be plenty 
-      of places to eat, but shops with trekking food are rare, so those nine packs include an emergency stash. Each 
-      bag is around 210 grams, which is 1890 grams in total. Summing all that up, the whole backpack should be around 
+      `It looks like our base weight will be around nine kilos. Judging by the online information, you do not need
+      more than one liter of water for a day on that trail. So it plus one kilo. The longest stretch without food
+      resupply is three days. If we want a meal three times daily, that's nine packs per person. There will be plenty
+      of places to eat, but shops with trekking food are rare, so those nine packs include an emergency stash. Each
+      bag is around 210 grams, which is 1890 grams in total. Summing all that up, the whole backpack should be around
       12 kilos. It is a good weight, I would even consider adding a chair, but the backpack has no room left.`,
     ]),
     img({
@@ -109,10 +109,10 @@ export const tmb_preparations: PostInterface = {
     }),
     p([
       "This is how our route looks like - ",
-      a({ text: "TMB", url: "" }),
-      `. We roughly planned the route on Komoot (they do not pay me, I like their route planner), then looked for 
-      sleeping options so the daily distance stays reasonable, and then booked whatever we needed to book. One Hütte 
-      was booked out for the night we wanted to stay—nine (9) months in advance. But, because we will carry our 
+      a({ text: "TMB", url: "https://www.komoot.com/tour/1010233496" }),
+      `. We roughly planned the route on Komoot (they do not pay me, I like their route planner), then looked for
+      sleeping options so the daily distance stays reasonable, and then booked whatever we needed to book. One Hütte
+      was booked out for the night we wanted to stay—nine (9) months in advance. But, because we will carry our
       camping gear anyway, it is not a big deal.`,
     ]),
     img({
