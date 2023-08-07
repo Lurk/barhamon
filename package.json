@@ -34,7 +34,7 @@
     "@types/babel__traverse": "7.20.1",
     "@types/istanbul-lib-report": "3.0.0",
     "@types/natural-compare-lite": "^1.4.0",
-    "@types/node": "^20.4.7",
+    "@types/node": "^20.4.8",
     "@types/prismjs": "1.26.0",
     "@types/prop-types": "15.7.5",
     "@types/react": "18.2.18",
