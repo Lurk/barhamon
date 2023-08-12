@@ -56,3 +56,4 @@ export { tet_turkey } from "./tet_turkey";
 export { two_years } from "./two_years";
 export { tet_turkey_ride } from "./tet_turkey_ride";
 export { tmb_preparations } from "./tmb_preparations";
+export { designing_data_intensive_applications } from "./designing_data_intensive_applications";
