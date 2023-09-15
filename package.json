@@ -12,7 +12,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@babel/core": "7.22.17",
+    "@babel/core": "7.22.19",
     "classnames": "2.3.2",
     "date-fns": "2.30.0",
     "disqus-react": "1.1.5",
