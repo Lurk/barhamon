@@ -36,7 +36,7 @@
     "@types/natural-compare-lite": "^1.4.0",
     "@types/node": "^20.6.3",
     "@types/prismjs": "1.26.0",
-    "@types/prop-types": "15.7.6",
+    "@types/prop-types": "15.7.7",
     "@types/react": "18.2.22",
     "@types/scheduler": "0.16.3",
     "@types/yargs-parser": "21.0.0",
