@@ -35,7 +35,7 @@
     "@types/istanbul-lib-report": "3.0.0",
     "@types/natural-compare-lite": "^1.4.0",
     "@types/node": "^20.6.5",
-    "@types/prismjs": "1.26.0",
+    "@types/prismjs": "1.26.1",
     "@types/prop-types": "15.7.7",
     "@types/react": "18.2.22",
     "@types/scheduler": "0.16.3",
