@@ -40,7 +40,7 @@
     "@types/react": "18.2.22",
     "@types/scheduler": "0.16.4",
     "@types/yargs-parser": "21.0.1",
-    "@typescript-eslint/eslint-plugin": "6.7.2",
+    "@typescript-eslint/eslint-plugin": "6.7.3",
     "eslint": "8.50.0",
     "eslint-config-next": "13.5.3",
     "husky": "8.0.3",
