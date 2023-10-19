@@ -39,7 +39,7 @@
     "@types/prop-types": "15.7.9",
     "@types/react": "18.2.28",
     "@types/scheduler": "0.16.4",
-    "@types/yargs-parser": "21.0.1",
+    "@types/yargs-parser": "21.0.2",
     "@typescript-eslint/eslint-plugin": "6.8.0",
     "eslint": "8.51.0",
     "eslint-config-next": "13.5.5",
