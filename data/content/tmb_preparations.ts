@@ -5,14 +5,12 @@ import { prepareImgProps } from "../../utils";
 const description =
   "This year is my wife's turn to come up with a vacation plan, and we will go on a two-week hike around Mont Blanc Mountain.";
 
-const preview = p([description]);
-
 export const tmb_preparations: PostInterface = {
   pid: "tmb_preparations",
   header: "Preparations for the TMB hike",
   time: 1690394854100,
   image:
-    "https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v1690394689/tmb_preparations/header.jpg",
+    "https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v1690394689/tmb-preparations/header.jpg",
   tags: ["adventure", "hike"],
   description,
   preview: [p([description])],
@@ -33,11 +31,11 @@ export const tmb_preparations: PostInterface = {
     ]),
     img({
       ...prepareImgProps({
-        file: "tmb_preparations/thermarest_neoair_max.jpg",
+        file: "tmb-preparations/thermarest_neoair_max.jpg",
         username: "barhamon",
         version: 1690395823,
       }),
-      src: "https://res.cloudinary.com/barhamon/image/upload/v1690395823/tmb_preparations/thermarest_neoair_max.jpg",
+      src: "https://res.cloudinary.com/barhamon/image/upload/v1690395823/tmb-preparations/thermarest_neoair_max.jpg",
       alt: "Therm-A-Rest NeoAir XTherm Max",
     }),
     p([
@@ -68,11 +66,11 @@ export const tmb_preparations: PostInterface = {
     ]),
     img({
       ...prepareImgProps({
-        file: "tmb_preparations/msr_huba_huba_nx_2.jpg",
+        file: "tmb-preparations/msr_huba_huba_nx_2.jpg",
         username: "barhamon",
         version: 1690395852,
       }),
-      src: "https://res.cloudinary.com/barhamon/image/upload/v1690395852/tmb_preparations/msr_huba_huba_nx_2.jpg",
+      src: "https://res.cloudinary.com/barhamon/image/upload/v1690395852/tmb-preparations/msr_huba_huba_nx_2.jpg",
       alt: "it is nice to hike knowing that you do not need to carry food for a week",
     }),
     p([
@@ -83,11 +81,11 @@ export const tmb_preparations: PostInterface = {
     ]),
     img({
       ...prepareImgProps({
-        file: "tmb_preparations/cooking_food.jpg",
+        file: "tmb-preparations/cooking_food.jpg",
         username: "barhamon",
         version: 1690395836,
       }),
-      src: "https://res.cloudinary.com/barhamon/image/upload/v1690395836/tmb_preparations/cooking_food.jpg",
+      src: "https://res.cloudinary.com/barhamon/image/upload/v1690395836/tmb-preparations/cooking_food.jpg",
       alt: "Hiking cook set in action",
     }),
     p([
@@ -100,11 +98,11 @@ export const tmb_preparations: PostInterface = {
     ]),
     img({
       ...prepareImgProps({
-        file: "tmb_preparations/gear_for_the_tmb.jpg",
+        file: "tmb-preparations/gear_for_the_tmb.jpg",
         username: "barhamon",
         version: 1690395845,
       }),
-      src: "https://res.cloudinary.com/barhamon/image/upload/v1690395845/tmb_preparations/gear_for_the_tmb.jpg",
+      src: "https://res.cloudinary.com/barhamon/image/upload/v1690395845/tmb-preparations/gear_for_the_tmb.jpg",
       alt: "Gear for the TMB",
     }),
     p([
@@ -117,11 +115,11 @@ export const tmb_preparations: PostInterface = {
     ]),
     img({
       ...prepareImgProps({
-        file: "tmb_preparations/tmb_route_map.png",
+        file: "tmb-preparations/tmb_route_map.png",
         username: "barhamon",
         version: 1690395857,
       }),
-      src: "https://res.cloudinary.com/barhamon/image/upload/v1690395857/tmb_preparations/tmb_route_map.png",
+      src: "https://res.cloudinary.com/barhamon/image/upload/v1690395857/tmb-preparations/tmb_route_map.png",
       alt: "Tour du Mont Blanc route map",
     }),
     p([

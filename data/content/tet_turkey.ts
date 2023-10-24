@@ -12,7 +12,7 @@ export const tet_turkey: PostInterface = {
   header: "Preparations for the part of the TET Turkey ride",
   time: 1676228294524,
   image:
-    "https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v1676228073/header/tet_turkey.png",
+    "https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v1676228073/header/tet-turkey.png",
   tags: ["adventure", "motorcycle"],
   description,
   preview: [preview],
@@ -35,11 +35,11 @@ export const tet_turkey: PostInterface = {
     ]),
     img({
       ...prepareImgProps({
-        file: "tet_turkey/gear_packing.jpg",
+        file: "tet-turkey/gear_packing.jpg",
         username: "barhamon",
         version: 1620243822,
       }),
-      src: "https://res.cloudinary.com/barhamon/image/upload/v1676229058/tet_turkey/gear_packing.jpg",
+      src: "https://res.cloudinary.com/barhamon/image/upload/v1676229058/tet-turkey/gear_packing.jpg",
       alt: "gear packing",
     }),
     p([
@@ -69,11 +69,11 @@ export const tet_turkey: PostInterface = {
     ]),
     img({
       ...prepareImgProps({
-        file: "tet_turkey/jacket.jpg",
+        file: "tet-turkey/jacket.jpg",
         username: "barhamon",
         version: 1620243822,
       }),
-      src: "https://res.cloudinary.com/barhamon/image/upload/v1676229679/tet_turkey/jacket.jpg",
+      src: "https://res.cloudinary.com/barhamon/image/upload/v1676229679/tet-turkey/jacket.jpg",
       alt: "my trustworthy CAYENNE jacket",
     }),
     p([
@@ -81,11 +81,11 @@ export const tet_turkey: PostInterface = {
     ]),
     img({
       ...prepareImgProps({
-        file: "tet_turkey/perseverance.jpg",
+        file: "tet-turkey/perseverance.jpg",
         username: "barhamon",
         version: 1620243822,
       }),
-      src: "https://res.cloudinary.com/barhamon/image/upload/v1676229889/tet_turkey/perseverance.jpg",
+      src: "https://res.cloudinary.com/barhamon/image/upload/v1676229889/tet-turkey/perseverance.jpg",
       alt: "my happy face",
     }),
     p([
