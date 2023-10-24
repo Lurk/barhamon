@@ -2,11 +2,8 @@ import {
   a,
   createCloudinaryGallery,
   createDivider,
-  createYoutubeVideo,
   p,
   h2,
-  h3,
-  h4,
   img,
 } from "../../models/tree";
 import { PostInterface } from "../../models/posts";
@@ -19,7 +16,7 @@ export const tet_turkey_ride: PostInterface = {
   header: "The southern part of TET Turkey ride",
   time: 1684070627694,
   image:
-    "https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v1684077303/tet_turkey/ride/route/1_-_37_b2byhh.jpg",
+    "https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v1684077303/tet-turkey/ride/route/1_-_37_b2byhh.jpg",
   tags: ["adventure", "motorcycle"],
   description,
   preview: [p([description])],
@@ -89,11 +86,11 @@ first half of our route was a 3000m summit. We decided that we had enough snow a
     ]),
     img({
       ...prepareImgProps({
-        file: "tet_turkey/ride/navigation/1_-_1_baulhh.jpg",
+        file: "tet-turkey/ride/navigation/1_-_1_baulhh.jpg",
         username: "barhamon",
         version: 1684077397,
       }),
-      src: "https://res.cloudinary.com/barhamon/image/upload/v1684077397/tet_turkey/ride/navigation/1_-_1_baulhh.jpg",
+      src: "https://res.cloudinary.com/barhamon/image/upload/v1684077397/tet-turkey/ride/navigation/1_-_1_baulhh.jpg",
       alt: "Komoot route planer",
     }),
     createDivider(),
