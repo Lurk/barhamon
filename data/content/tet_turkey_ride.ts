@@ -16,7 +16,7 @@ export const tet_turkey_ride: PostInterface = {
   header: "The southern part of TET Turkey ride",
   time: 1684070627694,
   image:
-    "https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v1684077303/tet-turkey/ride/route/1_-_37_b2byhh.jpg",
+    "https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v1698169652/tet-turkey/ride/route/1_-_19_rl7bqj.jpg",
   tags: ["adventure", "motorcycle"],
   description,
   preview: [p([description])],
@@ -57,7 +57,7 @@ first half of our route was a 3000m summit. We decided that we had enough snow a
       giving up.`,
     ]),
     p([`And that smell when you drive into the forest.`]),
-    createCloudinaryGallery("barhamon", "s_p_tet_turkey_ride_route_2023"),
+    createCloudinaryGallery("barhamon", "tet-turkey-ride-2023-route"),
     createDivider(),
     h2(["Navigation"]),
     p([
@@ -107,7 +107,7 @@ first half of our route was a 3000m summit. We decided that we had enough snow a
       the hill and praying that my motorcycle does not follow me. Thankfully it did not. That was 100 meters from 
       only one flat patch of the land, big enough to put a tent there. But the spot was worth it.`,
     ]),
-    createCloudinaryGallery("barhamon", "s_p_tet_turkey_ride_nights_2023"),
+    createCloudinaryGallery("barhamon", "tet-turkey-ride-2023-nights"),
     createDivider(),
     h2(["Bikes"]),
     p([
@@ -135,7 +135,7 @@ first half of our route was a 3000m summit. We decided that we had enough snow a
       There is one thing, though: you must change the seat on those bikes. It is impossible to sit on that seat for 
       more than two hours. It hurts. I don't know why Honda hates butts so much.`,
     ]),
-    createCloudinaryGallery("barhamon", "s_p_tet_turkey_ride_bikes_2023"),
+    createCloudinaryGallery("barhamon", "tet-turkey-ride-2023-bikes"),
     createDivider(),
     h2(["Food"]),
     p([
@@ -159,7 +159,7 @@ first half of our route was a 3000m summit. We decided that we had enough snow a
       say that it was delicious? It was. As soon as we got food on our table, at least ten cats appeared and started demanding 
       their share. Since then, if we saw butchery at lunchtime, we went straight there. And every time, it was awesome.`,
     ]),
-    createCloudinaryGallery("barhamon", "s_p_tet_turkey_ride_food_2023"),
+    createCloudinaryGallery("barhamon", "tet-turkey-ride-2023-food"),
     createDivider(),
     h2(["People"]),
     p([
@@ -177,7 +177,7 @@ first half of our route was a 3000m summit. We decided that we had enough snow a
       once police officer helped us to find the nearest gas station because the one we were standing on was under construction. 
       Now I have a police officer as an Instagram friend.`,
     ]),
-    createCloudinaryGallery("barhamon", "s_p_tet_turkey_ride_people_2023"),
+    createCloudinaryGallery("barhamon", "tet-turkey-ride-2023-people"),
     createDivider(),
     h2(["Gear"]),
     p([
@@ -214,12 +214,12 @@ first half of our route was a 3000m summit. We decided that we had enough snow a
       `We brought fishing gear with us and had the opportunity to use it only twice. Success was only last night when we bought 
       canned corn as bait. Because of the rain, we have not cooked our catch but left it in the closest village for the cats.`,
     ]),
-    createCloudinaryGallery("barhamon", "s_p_tet_turkey_ride_gear_2023"),
+    createCloudinaryGallery("barhamon", "tet-turkey-ride-2023-gear"),
     createDivider(),
     p([
       `Yeah! That was the one that you finish with a grin and yell - We did it. The only thing left is to cut the 7 hours of video 
       from GoPro.`,
     ]),
-    createCloudinaryGallery("barhamon", "s_p_tet_turkey_ride_end_2023"),
+    createCloudinaryGallery("barhamon", "tet-turkey-ride-2023-end"),
   ],
 };
