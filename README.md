@@ -11,5 +11,3 @@ Built with:
 Deployed on [Vercel](https://vercel.com/).
 
 If you find a bug, or typo, or error, or you know ways to do things better - please submit an issue.
-
-

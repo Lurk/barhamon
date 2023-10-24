@@ -86,11 +86,11 @@ first half of our route was a 3000m summit. We decided that we had enough snow a
     ]),
     img({
       ...prepareImgProps({
-        file: "tet-turkey/ride/navigation/1_-_1_baulhh.jpg",
+        file: "tet-turkey/ride/navigation/1_-_1_tlhnf5.jpg",
         username: "barhamon",
         version: 1684077397,
       }),
-      src: "https://res.cloudinary.com/barhamon/image/upload/v1684077397/tet-turkey/ride/navigation/1_-_1_baulhh.jpg",
+      src: "https://res.cloudinary.com/barhamon/image/upload/v1684077397/tet-turkey/ride/navigation/1_-_1_tlhnf5.jpg",
       alt: "Komoot route planer",
     }),
     createDivider(),
