@@ -37,7 +37,7 @@
     "@types/node": "^20.8.8",
     "@types/prismjs": "1.26.2",
     "@types/prop-types": "15.7.9",
-    "@types/react": "18.2.31",
+    "@types/react": "18.2.33",
     "@types/scheduler": "0.16.5",
     "@types/yargs-parser": "21.0.2",
     "@typescript-eslint/eslint-plugin": "6.9.0",
