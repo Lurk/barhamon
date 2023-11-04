@@ -155,7 +155,7 @@ export const rtw_trip: PostInterface = {
         text: "Sjaak Lucassen",
       }),
       " - 2001 until 2006 on a Yamaha YZF R1 (250,000 km). I heard a lot about him but just recently found his youtube channel. So go and subscribe, hit like buttons, and share because he deserved to be famous.",
-      createImageGallery(fifthSlider),
     ]),
+    createImageGallery(fifthSlider),
   ],
 };
