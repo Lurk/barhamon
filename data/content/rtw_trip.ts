@@ -13,70 +13,70 @@ const firstSlider = [
   img({
     src: `/img/rtw/AnneFranceDautheville.jpg`,
     thumbnail: `/img/rtw/AnneFranceDautheville.jpg`,
-    alt: "Anne-France Dautheville",
+    alt: "Anne-France Dautheville 1",
   }),
   img({
     src: `/img/rtw/AnneFranceDautheville2.jpg`,
     thumbnail: `/img/rtw/AnneFranceDautheville2.jpg`,
-    alt: "Anne-France Dautheville",
+    alt: "Anne-France Dautheville 2",
   }),
   img({
     src: `/img/rtw/AnneFranceDautheville3.jpg`,
     thumbnail: `/img/rtw/AnneFranceDautheville3.jpg`,
-    alt: "Anne-France Dautheville",
+    alt: "Anne-France Dautheville 3",
   }),
 ];
 const secondSlider = [
   img({
     src: `/img/rtw/CarlStearnsClancy.jpg`,
     thumbnail: `/img/rtw/CarlStearnsClancy.jpg`,
-    alt: "Carl Stearns Clancy",
+    alt: "Carl Stearns Clancy 1",
   }),
   img({
     src: `/img/rtw/CarlStearnsClancy2.png`,
     thumbnail: `/img/rtw/CarlStearnsClancy2.png`,
-    alt: "Carl Stearns Clancy",
+    alt: "Carl Stearns Clancy 2",
   }),
 ];
 const thirdSlider = [
   img({
     src: `/img/rtw/ElspethBeard.webp`,
     thumbnail: `/img/rtw/ElspethBeard.webp`,
-    alt: "Elspeth Beard",
+    alt: "Elspeth Beard 1",
   }),
   img({
     src: `/img/rtw/ElspethBeard2.jpg`,
     thumbnail: `/img/rtw/ElspethBeard2.jpg`,
-    alt: "Elspeth Beard",
+    alt: "Elspeth Beard 2",
   }),
   img({
     src: `/img/rtw/ElspethBeard3.jpg`,
     thumbnail: `/img/rtw/ElspethBeard3.jpg`,
-    alt: "Elspeth Beard",
+    alt: "Elspeth Beard 3",
   }),
 ];
 const fourthSlider = [
   img({
     src: `/img/rtw/lwr.webp`,
     thumbnail: `/img/rtw/lwr.webp`,
-    alt: "Ewan McGregor and Charley Boorman",
+    alt: "Ewan McGregor and Charley Boorman 1",
   }),
   img({
     src: `/img/rtw/lwr2.webp`,
     thumbnail: `/img/rtw/lwr2.webp`,
-    alt: "Ewan McGregor and Charley Boorman",
+    alt: "Ewan McGregor and Charley Boorman 2",
   }),
 ];
 const fifthSlider = [
   img({
     src: `/img/rtw/SjaakLucassen.jpg`,
     thumbnail: `/img/rtw/SjaakLucassen.jpg`,
-    alt: "Sjaak Lucassen",
+    alt: "Sjaak Lucassen 1",
   }),
   img({
     src: `/img/rtw/SjaakLucassen2.jpg`,
     thumbnail: `/img/rtw/SjaakLucassen2.jpg`,
-    alt: "Sjaak Lucassen",
+    alt: "Sjaak Lucassen 2",
   }),
 ];
 
