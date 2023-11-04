@@ -114,53 +114,48 @@ export const rtw_trip: PostInterface = {
     p([
       "But I read a lot about it, so here is a couple of examples for inspiration:",
     ]),
-    ul({
-      type: "dot",
-      content: [
-        li([
-          "The first woman who did solo round the world trip was ",
-          a({
-            url: "https://www.facebook.com/annefrancedautheville",
-            text: "Anne-France Dautheville",
-          }),
-          ". I didn't find a lot of info about that trip, but I can imagine that it was a hell of an Adventure in 1972. Just imagine no phones, no GPS, no fancy adventure bikes.",
-          createImageGallery(firstSlider),
-        ]),
-        li([
-          "The first man who made a solo motorcycle trip around the world was ",
-          a({
-            url: "https://en.wikipedia.org/wiki/Carl_Stearns_Clancy",
-            text: "Carl Stearns Clancy",
-          }),
-          ". He made that in 1912 - 1913. At that time, I am not sure even the roads were there. If you think you need some unique bike for travel, look at his.",
-          createImageGallery(secondSlider),
-        ]),
-        li([
-          a({ url: "https://www.elspethbeard.com/", text: "Elspeth Beard" }),
-          ". Her story remains unknown for 30 years. Go to her web site you won't be disappointed. (I know that Dave Calderwood apologized, but that letter steel makes me angry)",
-          createImageGallery(thirdSlider),
-        ]),
-        li([
-          a({
-            url: "https://www.longwayround.com/",
-            text: "Ewan McGregor and Charley Boorman",
-          }),
-          " whos journey inspired a lot of people, included me. Also, they do a new show right now - ",
-          a({
-            url: "https://www.youtube.com/watch?v=611fw81BN98&ab_channel=AppleTV",
-            text: "Long way up",
-          }),
-          createImageGallery(fourthSlider),
-        ]),
-        li([
-          a({
-            url: "https://www.youtube.com/channel/UCYf4z6G9EqeJeOHnBu7l-mQ",
-            text: "Sjaak Lucassen",
-          }),
-          " - 2001 until 2006 on a Yamaha YZF R1 (250,000 km). I heard a lot about him but just recently found his youtube channel. So go and subscribe, hit like buttons, and share because he deserved to be famous.",
-          createImageGallery(fifthSlider),
-        ]),
-      ],
-    }),
+    p([
+      "The first woman who did solo round the world trip was ",
+      a({
+        url: "https://www.facebook.com/annefrancedautheville",
+        text: "Anne-France Dautheville",
+      }),
+      ". I didn't find a lot of info about that trip, but I can imagine that it was a hell of an Adventure in 1972. Just imagine no phones, no GPS, no fancy adventure bikes.",
+    ]),
+    createImageGallery(firstSlider),
+    p([
+      "The first man who made a solo motorcycle trip around the world was ",
+      a({
+        url: "https://en.wikipedia.org/wiki/Carl_Stearns_Clancy",
+        text: "Carl Stearns Clancy",
+      }),
+      ". He made that in 1912 - 1913. At that time, I am not sure even the roads were there. If you think you need some unique bike for travel, look at his.",
+    ]),
+    createImageGallery(secondSlider),
+    p([
+      a({ url: "https://www.elspethbeard.com/", text: "Elspeth Beard" }),
+      ". Her story remains unknown for 30 years. Go to her web site you won't be disappointed. (I know that Dave Calderwood apologized, but that letter steel makes me angry)",
+    ]),
+    createImageGallery(thirdSlider),
+    p([
+      a({
+        url: "https://www.longwayround.com/",
+        text: "Ewan McGregor and Charley Boorman",
+      }),
+      " whos journey inspired a lot of people, included me. Also, they do a new show right now - ",
+      a({
+        url: "https://www.youtube.com/watch?v=611fw81BN98&ab_channel=AppleTV",
+        text: "Long way up",
+      }),
+    ]),
+    createImageGallery(fourthSlider),
+    p([
+      a({
+        url: "https://www.youtube.com/channel/UCYf4z6G9EqeJeOHnBu7l-mQ",
+        text: "Sjaak Lucassen",
+      }),
+      " - 2001 until 2006 on a Yamaha YZF R1 (250,000 km). I heard a lot about him but just recently found his youtube channel. So go and subscribe, hit like buttons, and share because he deserved to be famous.",
+      createImageGallery(fifthSlider),
+    ]),
   ],
 };
