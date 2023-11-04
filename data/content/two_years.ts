@@ -10,7 +10,7 @@ export const two_years: PostInterface = {
   header: "Two years in Munich",
   time: 1681498952405,
   image:
-    "https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v1681502106/two_years/two_years.jpg",
+    "https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v1681502106/two-years/two_years.jpg",
   tags: ["blog", "relocation"],
   description: preview,
   preview: [p([preview])],
@@ -21,11 +21,11 @@ export const two_years: PostInterface = {
     ]),
     img({
       ...prepareImgProps({
-        file: "two_years/nothing_to_complain.jpg",
+        file: "two-years/nothing_to_complain.jpg",
         username: "barhamon",
         version: 1620243822,
       }),
-      src: "https://res.cloudinary.com/barhamon/image/upload/v1681502257/two_years/nothing_to_complain.jpg",
+      src: "https://res.cloudinary.com/barhamon/image/upload/v1681502257/two-years/nothing_to_complain.jpg",
       alt: "Nothing to complain about",
     }),
     p([
@@ -33,11 +33,11 @@ export const two_years: PostInterface = {
     ]),
     img({
       ...prepareImgProps({
-        file: "two_years/our_tiny_flat.jpg",
+        file: "two-years/our_tiny_flat.jpg",
         username: "barhamon",
         version: 1620243822,
       }),
-      src: "https://res.cloudinary.com/barhamon/image/upload/v1681502509/two_years/our_tiny_flat.jpg",
+      src: "https://res.cloudinary.com/barhamon/image/upload/v1681502509/two-years/our_tiny_flat.jpg",
       alt: "Our tiny flat",
     }),
     p([
@@ -45,11 +45,11 @@ export const two_years: PostInterface = {
     ]),
     img({
       ...prepareImgProps({
-        file: "two_years/bicycle_trip.jpg",
+        file: "two-years/bicycle_trip.jpg",
         username: "barhamon",
         version: 1620243822,
       }),
-      src: "https://res.cloudinary.com/barhamon/image/upload/v1681502739/two_years/bicycle_trip.jpg",
+      src: "https://res.cloudinary.com/barhamon/image/upload/v1681502739/two-years/bicycle_trip.jpg",
       alt: "Bicycle trip",
     }),
     p([
@@ -57,11 +57,11 @@ export const two_years: PostInterface = {
     ]),
     img({
       ...prepareImgProps({
-        file: "two_years/adventure.jpg",
+        file: "two-years/adventure.jpg",
         username: "barhamon",
         version: 1620243822,
       }),
-      src: "https://res.cloudinary.com/barhamon/image/upload/v1681502862/two_years/adventure.jpg",
+      src: "https://res.cloudinary.com/barhamon/image/upload/v1681502862/two-years/adventure.jpg",
       alt: "We like our adventures",
     }),
     p([
@@ -69,11 +69,11 @@ export const two_years: PostInterface = {
     ]),
     img({
       ...prepareImgProps({
-        file: "two_years/portable_music_station.jpg",
+        file: "two-years/portable_music_station.jpg",
         username: "barhamon",
         version: 1620243822,
       }),
-      src: "https://res.cloudinary.com/barhamon/image/upload/v1681503053/two_years/portable_music_station.jpg",
+      src: "https://res.cloudinary.com/barhamon/image/upload/v1681503053/two-years/portable_music_station.jpg",
       alt: "Playing music in the train",
     }),
     p([
@@ -81,11 +81,11 @@ export const two_years: PostInterface = {
     ]),
     img({
       ...prepareImgProps({
-        file: "two_years/freedom_for_ukraine.jpg",
+        file: "two-years/freedom_for_ukraine.jpg",
         username: "barhamon",
         version: 1620243822,
       }),
-      src: "https://res.cloudinary.com/barhamon/image/upload/v1681503200/two_years/freedom_for_ukraine.jpg",
+      src: "https://res.cloudinary.com/barhamon/image/upload/v1681503200/two-years/freedom_for_ukraine.jpg",
       alt: "Playing music in the train",
     }),
     p(["See you in a year!"]),
