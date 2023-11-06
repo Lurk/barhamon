@@ -41,7 +41,7 @@
     "@types/scheduler": "0.16.5",
     "@types/yargs-parser": "21.0.2",
     "@typescript-eslint/eslint-plugin": "6.9.1",
-    "eslint": "8.52.0",
+    "eslint": "8.53.0",
     "eslint-config-next": "14.0.1",
     "husky": "8.0.3",
     "identity-obj-proxy": "3.0.0",
