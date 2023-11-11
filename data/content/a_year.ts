@@ -21,11 +21,11 @@ export const a_year: PostInterface = {
     ]),
     img({
       ...prepareImgProps({
-        file: "a_year/fishing_with_granddad.jpg",
+        file: "a-year/fishing_with_granddad.jpg",
         username: "barhamon",
         version: 1620243822,
       }),
-      src: "https://res.cloudinary.com/barhamon/image/upload/v1650031459/a_year/fishing_with_granddad.jpg",
+      src: "https://res.cloudinary.com/barhamon/image/upload/v1650031459/a-year/fishing_with_granddad.jpg",
       alt: "My granddad is the best fishing partner",
     }),
     p([
@@ -33,11 +33,11 @@ export const a_year: PostInterface = {
     ]),
     img({
       ...prepareImgProps({
-        file: "a_year/waiting_for_a_plane_to_kyiv.jpg",
+        file: "a-year/waiting_for_a_plane_to_kyiv.jpg",
         username: "barhamon",
         version: 1620243822,
       }),
-      src: "https://res.cloudinary.com/barhamon/image/upload/v1650031788/a_year/waiting_for_a_plane_to_kyiv.jpg",
+      src: "https://res.cloudinary.com/barhamon/image/upload/v1650031788/a-year/waiting_for_a_plane_to_kyiv.jpg",
       alt: "Waiting for plane in Moscow Domodedovo airport",
     }),
     p([
@@ -45,11 +45,11 @@ export const a_year: PostInterface = {
     ]),
     img({
       ...prepareImgProps({
-        file: "a_year/german_course_schedule.jpg",
+        file: "a-year/german_course_schedule.jpg",
         username: "barhamon",
         version: 1620243822,
       }),
-      src: "https://res.cloudinary.com/barhamon/image/upload/v1650032133/a_year/german_course_schedule.jpg",
+      src: "https://res.cloudinary.com/barhamon/image/upload/v1650032133/a-year/german_course_schedule.jpg",
       alt: "Everything you do in Germany involves beer",
     }),
     p([
@@ -73,11 +73,11 @@ export const a_year: PostInterface = {
     ]),
     img({
       ...prepareImgProps({
-        file: "a_year/bicycle.jpg",
+        file: "a-year/bicycle.jpg",
         username: "barhamon",
         version: 1620243822,
       }),
-      src: "https://res.cloudinary.com/barhamon/image/upload/v1650032311/a_year/bicycle.jpg",
+      src: "https://res.cloudinary.com/barhamon/image/upload/v1650032311/a-year/bicycle.jpg",
       alt: "Cycling is fun",
     }),
     p([
@@ -85,11 +85,11 @@ export const a_year: PostInterface = {
     ]),
     img({
       ...prepareImgProps({
-        file: "a_year/team.jpg",
+        file: "a-year/team.jpg",
         username: "barhamon",
         version: 1620243822,
       }),
-      src: "https://res.cloudinary.com/barhamon/image/upload/v1650032501/a_year/team.jpg",
+      src: "https://res.cloudinary.com/barhamon/image/upload/v1650032501/a-year/team.jpg",
       alt: "We actually a big team",
     }),
     p([
@@ -97,11 +97,11 @@ export const a_year: PostInterface = {
     ]),
     img({
       ...prepareImgProps({
-        file: "a_year/the_flat.jpg",
+        file: "a-year/the_flat.jpg",
         username: "barhamon",
         version: 1620243822,
       }),
-      src: "https://res.cloudinary.com/barhamon/image/upload/v1650032671/a_year/the_flat.jpg",
+      src: "https://res.cloudinary.com/barhamon/image/upload/v1650032671/a-year/the_flat.jpg",
       alt: "view from the balcony",
     }),
     p([
@@ -111,11 +111,11 @@ export const a_year: PostInterface = {
     ]),
     img({
       ...prepareImgProps({
-        file: "a_year/social_life.jpg",
+        file: "a-year/social_life.jpg",
         username: "barhamon",
         version: 1620243822,
       }),
-      src: "https://res.cloudinary.com/barhamon/image/upload/v1650032745/a_year/social_life.jpg",
+      src: "https://res.cloudinary.com/barhamon/image/upload/v1650032745/a-year/social_life.jpg",
       alt: "almost all social interactions outside workplace looks like that",
     }),
     p([
@@ -123,11 +123,11 @@ export const a_year: PostInterface = {
     ]),
     img({
       ...prepareImgProps({
-        file: "a_year/cant_believe_i_have_to_protest_this_shit.jpg",
+        file: "a-year/cant_believe_i_have_to_protest_this_shit.jpg",
         username: "barhamon",
         version: 1620243822,
       }),
-      src: "https://res.cloudinary.com/barhamon/image/upload/v1650032862/a_year/cant_believe_i_have_to_protest_this_shit.jpg",
+      src: "https://res.cloudinary.com/barhamon/image/upload/v1650032862/a-year/cant_believe_i_have_to_protest_this_shit.jpg",
       alt: "can't believe i have to protest this shit",
     }),
     p([
