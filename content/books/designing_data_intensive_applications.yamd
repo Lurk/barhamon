@@ -1,0 +1,23 @@
+---
+title: "Designing Data-Intensive Applications by Martin Kleppmann"
+date: 2023-08-12T11:47:01+02:00
+image: https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v1691833825/header/designing_data_intensive_applications.jpg
+preview: "Designing Data-Intensive Applications - the one book to read to understand software development."
+tags:
+- books
+---
+
+If you ask me today what one book of all books I must read to understand software development, this is it. It 
+goes into every little detail about how the software will break and gives you tools to avoid that.
+
+The name is a bit misleading. For some reason, I was expecting terabyte-crunching algorithms from the beginning.
+But no, the book covers cases from your load that can fit into the memory of one machine, and one core is enough - to
+multi-datacenter transactions and batch processing.
+
+My only complaint - it is huge. Which is understandable, given the number of topics covered.
+
+**Original Title:** Designing Data-Intensive Applications
+
+**ISBN:** 1449373321 (ISBN13: 9781449373320)
+
+**GoodReads:** [4.71 / 5](https://www.goodreads.com/book/show/23463279-designing-data-intensive-applications)

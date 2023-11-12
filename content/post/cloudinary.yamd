@@ -1,0 +1,57 @@
+---
+title: "Image gallery with Cloudinary"
+date: 2020-12-13T22:09:35+01:00
+image: /img/cloudinary.png
+preview: "Here's how I build an image gallery with Cloudinary"
+tags:
+- blog
+- cdn
+- images
+- react
+- ts
+- nextjs
+- software
+---
+
+As you can see in my previous posts, I like photography.
+
+Not like I am particularly good at that, but I enjoy seeing those moments later. That brings me to CDN's because those photos should be stored and delivered.
+
+After some googling, I choose Cloudinary because it has some nice features and a decent free plan - 25000 transformations or 25 GB storage or 25 GB bandwidth monthly.
+
+>>>
+>> More free stuff for me
+> linkify
+I will receive more free services for every registered user. So if you like my photos, go on, click on that link, and register. [That link](https://cloudinary.com/invites/lpov9zyyucivvxsnalc5/hqd3swadmblfw3ivxjmv)
+>>>
+
+Cloudinary has a react library, but I did not find any image gallery. So here is how I did it.
+
+After uploading images to Cloudinary servers, I tag them. After that, I fetch the list of photos by this URL:
+
+```typescript
+`https://res.cloudinary.com/${your_username}/image/list/${tag}.json`
+```
+
+response type:
+
+```typescript
+interface CloudinaryTagResponse {
+  resources: Array<{
+    "public_id": string,
+    "version": number,
+    "format": string,
+    "width": number,
+    "height": number,
+    "type": string,
+    "created_at": string,
+  }>,
+  "updated_at": string,
+}
+```
+
+Here is source code [cloudinary.tsx](https://github.com/Lurk/barhamon/blob/master/components/cloudinary.tsx) how I use it with [React Carousel Image Gallery](https://github.com/xiaolin/react-image-gallery)
+
+If you look at lines 64 and 65, you will notice the **srcSet** and **sizes** field. You may ask how I calculate those params? I did not :)
+
+I used the excellent [RespImageLint](https://github.com/ausi/respimage) tool created by Martin Auswöger.

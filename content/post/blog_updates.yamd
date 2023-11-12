@@ -1,0 +1,22 @@
+---
+title: "Blog updates"
+date: 2022-11-06T22:47:11+01:00
+image: https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v1667771702/header/IMG_8826_rwtang.jpg
+preview: "In one of the first posts, I promised to post the music here. This time has come."
+tags:
+- blog
+- software
+---
+
+In one of the first posts, I promised to post the music here. This time has come.
+
+I have a Telegram channel where I have been posting music for quite some time for my friends. The first step is to move all the entries I already posted there. It is pretty simple to download the channel archive from telegram. And, because I can, I wrote some tools on Rust to convert data to a format my blog will understand, upload images, and so on.
+
+>>>
+> microchip
+If you are interested in code, check those GitHub repos: [telegram-post-converter](https://github.com/Lurk/telegram-post-converter) and [Cloudinary SDK](https://github.com/Lurk/cloudinary_rs). Maybe I will make an effort to make something resembling a crate from the Cloudinary SDK repo.
+>>>
+
+The second step is translating old descriptions into English, checking for broken links, and so on. This is a work in progress. You can already check the stuff here: [music](/tag/music). I wouldn’t say I like how it looks, so expect some change in design.
+
+I also think about implementing [ActivityPub](https://activitypub.rocks/) as part of a migration to Rust. But it took me two years to start migrating my music posts here, so no promises.

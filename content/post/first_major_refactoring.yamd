@@ -1,0 +1,24 @@
+---
+title: "First major refactoring"
+date: 2020-12-29T19:54:14+01:00
+image: /img/refactoring.jpg
+preview: "the birthday of the Bar part of barhamon.com"
+tags:
+- blog
+- ts
+- nextjs
+- react
+- software
+---
+
+Initially, I wanted to separate the "engine" from the data.
+
+Today I did the first step in this direction. Pull request [#92](https://github.com/Lurk/barhamon/pull/92)
+
+Now posts are stored not as React components but as a serializable tree.
+
+This refactoring will allow not only to separate the "engine" from the data but also to separate the templates into a separate package. That means that sooner or later, there will be more than one theme :)
+
+And the data itself can now be stored anywhere, which means that there will be connectors to MongoDB, Postgres, or JSON files.
+
+It means that today is the birthday of the Bar part of barhamon.com :)

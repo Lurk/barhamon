@@ -1,0 +1,43 @@
+---
+title: "Disqus and Next.js"
+date: 2020-11-27T22:05:56+01:00
+image: https://res.cloudinary.com/barhamon/image/upload/c_scale,q_auto,w_600/v1609664771/header/comments_ertdr5.jpg
+preview: "You will learn how to add comments to your Next.js project. And it is easy with Disqus."
+tags:
+- blog
+- nextjs
+- comments
+- disqus
+- ts
+- software
+---
+
+In this post, you will learn how to add comments to your Next.js project. And it is easy with Disqus.
+
+First, create an account on [Disqus](https://disqus.com/).
+
+Second, go to the [https://disqus.com/profile/signup/intent/](https://disqus.com/profile/signup/intent/) and press "I want to install Disqus on my site", fill-up the form, and remember the short name (it will be useful later).
+
+Third, install the [disqus-react](https://www.npmjs.com/package/disqus-react) package from npm. If you are a Typescript user, this package already has typings.
+
+```bash
+npm install disqus-react
+```
+
+And use it like this:
+
+```jsx
+import { DiscussionEmbed } from "disqus-react"
+
+<DiscussionEmbed
+  shortname={"remember that short name from second step?"}
+  config={{
+    url: "this page url",
+    identifier: "unique identifier of this page",
+    title: "this page title"
+  }}
+/>
+
+```
+
+You can find a usage example here: [comments.tsx](https://github.com/Lurk/barhamon/blob/master/components/comments.tsx)
