@@ -1,0 +1,76 @@
+---
+title: "Yamd notes"
+date: 2023-11-12T15:41:30+01:00
+image: https://res.cloudinary.com/barhamon/image/upload/v1699798237/header/yamd.jpg
+preview: "What I learned while writing my flavor of markdown"
+tags:
+- software
+- rust
+---
+
+Those are the notes I took while writing [YAMD](https://github.com/Lurk/yamd). 
+
+-----
+
+First of all, it is more complex than it looked in the beginning. 
+
+The test case for nested lists is failing. I rewrote the deserializer logic multiple times. I rewrote half of the 
+project. Two weeks later - Oh, a space is missing in the test case. 
+
+Naming is really hard. How should I name a thing that contains a vector of patterns? Is it a Token? 
+
+Most of the nodes do not require context for deserialization. But a few of them, you can only deserialize correctly 
+with context. Adding an optional param to deserialize is a bad idea because that would mean two things. First, I will 
+need to add None to every deserialize call. Second, that would be a longer explanation, so bear with me. 
+
+```rust
+trait deserializer {
+ pub fn deserialize(input:&str)->Option<Self>{}
+}
+```
+
+I want to add context, right?
+
+`Fn deserializer(input: &str, context:` <What type should be here?>`)`
+
+It does not make much sense to specify type here because every node can have it is own context type. Generics will 
+pollute (is that a term?) the tree all the way up.
+
+For now, I am fighting the urge to go and check how it is done in Serde. They should have solved this problem years 
+ago. 
+
+You know what? Maybe I do not want to have context. But I want a read-only access to the parent, which will implement 
+some traits. 
+
+Ok. I checked Serde. And yes, they had this problem. The solution is 
+[Trait serde::de::DeserializeSeed](https://docs.rs/serde/latest/serde/de/trait.DeserializeSeed.html). IDK, it looks 
+like it will have the same problem as the generic context approach from above.
+
+I massaged the idea of a parent instead of context. It does not work, or I did not figure out how to make it work. The 
+problem is:
+
+```rust
+fn deserialize<Parent>(input: &str, parent: Option<Parent>) -> Option<Self> {
+	<what type Parent is?> 
+}
+```
+
+It turned out that I needed to pass multiple values in one context. I ended up with a wrapper around HashMap. It may 
+not be the best approach, and I could remove the HashMap in the future, but from what I read, all alternatives will 
+involve some unsafe code, and I do not feel comfortable enough yet. For now, it works, and I can finally finish the 
+List node deserializer.  
+
+It may be time to write some documentation. 
+
+I just rewrote the matcher for the third time. Maybe using regex is not a bad idea. 
+
+Oh, “yamd” is free on crates.io. 
+
+Publishing a crate went surprisingly smoothly. 
+
+GitHub shows [John Hoo](https://github.com/jonhoo) as a contributor, which is technically accurate, but he does not 
+know about that.
+
+-----
+
+Now, when I publish those notes, I think I should do that more often. It is a good way to keep track of the project.
