@@ -1,0 +1,33 @@
+---
+title: "Clink"
+date: 2021-02-14T13:33:15+01:00
+image: https://res.cloudinary.com/barhamon/image/upload/c_scale,q_auto,w_650/v1613307615/header/clink_buqa5t.png
+preview: "My first rust app"
+tags:
+- rust
+- software
+---
+
+My first rust app that works and does something useful.
+
+What does it do?
+
+Have you ever pasted a link in messenger and deleted all those fbclid, utm_source, utm_campaign, utm_medium GET params by hands? Clink does that for you. It sits quietly in the background, and if you copy a link to the clipboard, Clink automatically removes those params for you.
+
+Inspiration for this project was this [tweet](https://twitter.com/ftrain/status/1359138516681314311?s=21). And yes, Clink has "your mom" mode :)
+
+If you are interested, here is the link to the [Clink GitHub repo](https://github.com/Lurk/clink). And if you are not interested in reading source codes, [here](https://github.com/Lurk/clink/releases) you can download the latest version of Clink for your operating system (macOS, Linux, Windows).
+
+Usage is pretty straightforward:
+
+```bash
+clink [OPTIONS]
+    Options:
+    -v, --verbose Be verbose.
+    -m, --mode Mode of Clink. Available "remove" and "your_mom" modes (default: Remove)
+    -h, --help Show this help message.
+```
+
+I learned a few things along the way and some things I want to learn in the near future. Like is it ok to thread::sleep, or there is a better way. Or how to automatically build deb and dmg? And so on.
+
+So yeah, stay tuned to more Rust content :)

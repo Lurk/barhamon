@@ -1,0 +1,22 @@
+---
+title: "Systems desigh interview by Alex Xu"
+date: 2023-02-03T11:54:35+01:00
+image: https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v1675421924/header/systems_design_interview.jpg
+preview: "The high-level design of different systems, from URL shorteners to YouTube."
+tags:
+- books
+---
+
+The high-level design of different systems, from URL shorteners to YouTube.And It reads surprisingly fast. Sadly, I didn't read that book earlier. That would help to avoid some mistakes I made in the past.
+
+I understand that this was not the author's aim, and it is probably impossible to contain all details in one book, but for me, it was not deep enough. Designing storage, CDN, video transcoder, or conflict resolution systems is hard, but that makes it exciting, right?
+
+Anyway, I had a nice feeling while reading it. You know, when you read something and nod to it. I think the only surprise for me was the lack of Verimatrix in the list of DRM. But, to be honest, I do not know if they ever had a client of a YouTube size.
+
+Overall I am glad that I read that book.
+
+**Original Title:** System Design Interview – An Insider's Guide
+
+**ISBN:** 1736049100 (ISBN13: 9781736049105)
+
+**GoodReads:** [4.29 / 5](https://www.goodreads.com/book/show/58042887-system-design-interview-an-insider-s-guide)

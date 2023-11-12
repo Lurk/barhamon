@@ -1,0 +1,34 @@
+---
+title: "This blog"
+date: 2020-07-01T12:33:53+02:00
+image: /img/this_blog.jpg
+preview: ""
+tags:
+- blog
+- roadmap
+- software
+---
+
+This blog built with:
+
+- [next.js](https://nextjs.org/)
+- [Semantic UI React](https://react.semantic-ui.com/)
+- [date-fns](https://date-fns.org/)
+- [Prism JS](https://prismjs.com/index.html)
+- [Disqus](https://disqus.com/)
+
+Deployed on [Vercel](https://vercel.com/).
+
+You can find source code on [GitHub repo](https://github.com/Lurk/barhamon). If you find a bug, or typo, or error, or you know ways to do things better - please submit [an issue](https://github.com/Lurk/barhamon/issues).
+
+Roadmap:
+
++ ~~Tags page~~
++ ~~Code formatting in posts~~
++ ~~"Read more" button in posts with preview~~
++ ~~Meta tags~~
++ ~~Pagination~~
++ ~~Comments~~
++ ~~RSS feed~~
++ Pages (bio, contacts, etc)
++ Music

@@ -1,0 +1,27 @@
+---
+title: "Clink"
+date: 2021-06-20T22:46:40+02:00
+image: https://res.cloudinary.com/barhamon/image/upload/v1624223477/header/clink_now_with_a_memory_leak.png
+preview: "Rust and memory leaks"
+tags:
+- rust
+- software
+---
+
+Now with a memory leak 🎉
+
+Since my first [mention](/post/clink) of it, I've made a lot of changes. If you interested in changelog you can look at the [releases](https://github.com/Lurk/clink/releases) page.
+
+But most important thing that I noticed is a memory leak. To be completely honest, I am not sure if there is a memory leak, but it looks there is. So yeah, I noticed that after couple of weeks clink process consumes more than 600mb of RAM. I found it wrong because this is a small app, and my expectation is that it should be less than a megabyte.
+
+I still did not find the time to do a proper analysis what is going on. So far, I have a couple of theories :
+
+- I am so “talented” that even languages with “memory safe“ selling point are leaking in my hands. 
+- There is something that I don't know about how memory allocation works on Mac OS
+- I am using the ,[clipboard@0.5.0](https://crates.io/crates/clipboard/0.5.0), crate, and the leak is there.
+
+I read a couple of blog post about how to approach tasks like that, and it feels like takes couple of days😔
+
+And one more thing™ - when I packed my stuff, I noticed that I am running low on T-shirts. And guess what? Now I have the clink T-Shirt. At first, I did not liked it. I mean printing quality was not that impressive, but the longer I have it, more I like it. Maybe, when I will have time or inspiration there will be 1.1 version of it. Right now I do not know why you will want one, but if you do - drop me a message.
+
+{{cloudinary_gallery|barhamon&clink_tshirt}}
