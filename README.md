@@ -2,12 +2,10 @@ This is my nth attempt to write a [blog](https://barhamon.com/).
 
 Built with:
 
-- [next.js](https://nextjs.org/)
-- [Semantic UI React](https://react.semantic-ui.com/)
-- [date-fns](https://date-fns.org/)
-- [Prism JS](https://prismjs.com/index.html)
-- [Disqus](https://disqus.com/)
+- [bar](https://github.com/Lurk/bar)
+- [Hamon](https://github.com/Lurk/Hamon)
+- [Yamd](https://github.com/Lurk/yamd)
 
-Deployed on [Vercel](https://vercel.com/).
+Served with [serve](https://github.com/Lurk/serve).
 
 If you find a bug, or typo, or error, or you know ways to do things better - please submit an issue.
