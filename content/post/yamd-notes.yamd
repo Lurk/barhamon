@@ -8,7 +8,7 @@ tags:
 - rust
 ---
 
-Those are the notes I took while writing [YAMD](https://github.com/Lurk/yamd). 
+Those are the notes I took while implementing [YAMD](https://github.com/Lurk/yamd) crate. 
 
 -----
 
