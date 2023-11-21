@@ -1,0 +1,119 @@
+---
+title: "Look ma, NO JS!"
+date: 2023-11-21T21:30:00+01:00
+image: https://res.cloudinary.com/barhamon/image/upload/v1700600099/header/look-ma-nojs.jpg
+preview: "I rewrote my blog without any JS."
+tags:
+- blog
+- rust
+- software
+---
+
+I rewrote my blog without any JS.  
+
+I have been doing JS full-time/stack for over ~~9000~~ fifteen years. I have solved every front-end problem with React 
+for the last ten years. I did a few IPTV apps for various platforms and a dozen websites in those years. At the time, 
+React solved all my problems, which were mostly code organization problems (components are the best thing). Since 
+then, the web platform has evolved so much that a usual website does not need JS, and you are looking at the proof of 
+that statement. 
+
+>>>
+> pepper-hot
+I also have some strong opinions on the direction that Vercel pushes the React ecosystem, which may end up in a 
+separate post. Spoiler alert! That direction sucks. 
+>>>
+
+In the process of rewriting this blog, I produced a few artifacts which may be interesting. 
+
+## YAMD
+
+[Yet another markdown document (flavor)](https://crates.io/crates/yamd) implemented in Rust markdown to Serde 
+serializable tree of nodes parser.
+
+I thought about parsing markdown as an easy task. I was so naive that on version 0.2.0, I wrote, `It is ready to poke 
+around. There are no significant API changes expected.` in the readme file. That was fixed only at 0.10.0. 
+
+I kept notes while implementing it [Yamd notes](/post/yamd-notes.html). I should do it (notes) more often.
+
+The following steps are implementing a proper lexer, introducing escape sequences, tree-sitter, etc. 
+
+## Cloudinary Rust client
+
+That’s not a new [crate](https://crates.io/crates/cloudinary), but I added some stuff to it, and to my surprise, other 
+people did a few pull requests. There is still a long way to a release, but we are getting there. 
+
+Implementing it I got a few good insights on how image transformations API should look like. I will need to implement 
+some of those in BAR.
+
+>>>
+> handshake
+Here is my Cloudinary 
+[referal link](https://console.cloudinary.com/invites/lpov9zyyucivvxsnalc5/hqd3swadmblfw3ivxjmv?t=default). Every 
+registration is expanding my free tier, so I can post more cat photos.
+
+Thank you. 
+>>>
+
+## BAR
+
+Static website generator. Every web developer should write one, right? 
+
+The idea is simple. Read some files, render that data as HTML, and save those HTML files to the specified folder. But 
+then, you do not need just any files. They must be in a suitable format. That’s why Yamd. You also need machinery to 
+handle static files, feeds, etc.
+
+Then, you need to find a template engine. From the beginning, I wanted to be able to render different templates. That 
+requirement alone significantly limited my options. All nice `rsx` stuff was out of the picture because there is no 
+easy way to include arbitrary rust code after the compilation.  
+
+I want a template engine that has the following:
+
+- A way to expose custom API to the template. 
+- Nice way to define components because I want to structure my template code so it does not suck right away.  
+- It should be as close to the resulting HTML as possible. 
+- Tooling: tree-sitter, type checking, linter, prettier, etc.
+
+Ultimately, I chose [Tera](https://keats.github.io/tera/docs/) mainly because exposing BAR API to the template is 
+relatively easy. Developing a theme with it reminded me of the old days of doing PHP and Smarty. I would consider 
+moving to another template engine if I find something better. Also, version 2 of Tera is in progress, but I haven’t 
+read anything yet.
+
+Anyway, here is the first template for BAR - [Hamon](https://github.com/Lurk/Hamon). 
+
+Another adventure is code highlighting. I chose [Syntect](https://github.com/trishume/syntect/) to do the job. In the 
+middle of integration, it turned out that they do not support TypeScript. I spent some time getting around it, but 
+now, if you already use or are planning to use Syntect and need Typescript support, here is the way to do it 
+[Syntect SyntaxSet with Typescript support](https://github.com/Lurk/syntect_ts). 
+
+I have many ideas on how to improve the whole BAR situation: docs, git integration, webhooks for automatic site 
+rendering, partial rerendering, comments, etc. 
+
+So yeah, come and build some websites with [BAR](https://github.com/Lurk/bar). 
+
+## Serve
+
+[Simple HTTP(S) server for static files](https://github.com/Lurk/serve). At some point, I needed a tool to serve the 
+files that BAR produced. I reached out to the familiar Nginx but then wrote a simple Axum-based Rust program that did 
+the job. The source code of the first version was smaller than the Nginx config would be. The current version supports 
+TLS and is still very simple. I haven’t done any benchmarks, so I do not know how good or bad it is. But it did serve 
+this particular page and did it well. 
+
+Side note: Jeez, this whole HTTPS stuff nowadays is so easy to do. I spent a maximum of 10 minutes getting Certbot up 
+and running. 
+
+-----
+
+I like the mantra of Rust dev:
+
+- make it work
+- make right
+- make it fast
+
+All pieces of that project are in the first stage. There is a lot of stuff that I am not proud of. But it works and 
+can be improved. 
+
+The main Rust related surprise is how easy async stuff is. Yes, there is nothing extra complicated, reading some files 
+and sending some requests. But I read so many articles about how hard async in Rust is that I was expecting much more
+hustle. 
+
+Overall I am happy with the result. I will use tools, and knowledge that I got from this project in the future.

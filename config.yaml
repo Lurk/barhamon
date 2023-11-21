@@ -6,8 +6,8 @@ description: 'blog'
 dist_path: './dist'
 template_config:
   index_tags: 
-    - books
     - software
+    - books
     - life
     - adventures
     - music
