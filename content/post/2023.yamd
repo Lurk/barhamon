@@ -1,0 +1,109 @@
+---
+title: "The year 2023"
+date: 2023-12-30T16:00:00+01:00
+image: https://res.cloudinary.com/barhamon/image/upload/tmb-2023/day%205/7_lavvto.jpg
+preview: "Unfortunately, that’s a bad sign when you start a year review with the word unfortunately, but what can I do?"
+tags:
+- life
+- me
+---
+
+Unfortunately, that’s a bad sign when you start a year review with the word unfortunately, but what can I do? 
+Unfortunately, there is still no sign of the war ending. Most Ukrainians understand that If they give up, those who 
+will survive occupation will go to die in a war with Georgia, Armenia, Moldova, Latvia, Kazakhstan, Finland, or you 
+name it, under the Russian flag. And if someone hopes that by some miracle Russia will stop, well, it will not stop 
+from the inside. Most Russians are okay with what is going on. 
+
+>>>
+>> If you want to help Ukrainians, here is where you can do it
+> handshake
+
+- There are many pets in the fighting area whose owners were killed or displaced. They need food and medical care.
+[uanimals.org](https://uanimals.org)
+
+- I know those guys from my motorcycle life in Ukraine. They were saving lives then and do the same now. 
+[motohelp.ua](https://motohelp.ua)
+
+- Those guys are risking lives saving others on the front line: [hospitallers.life](https://www.hospitallers.life)
+
+- Most importantly, all of that does not make much sense if the army of Ukraine does not have enough rounds, warm 
+clothes, vehicles, etc. [prytulafoundation.org](https://prytulafoundation.org/en)
+>>>
+
+## What I did do this year? 
+
+### Software: 
+
+This year I had no contributions to other projects but merged a few in my own. It was surprising that someone used my 
+stuff and even wanted to improve it. 
+
+The list of software that I maintain is growing. 
+
+- [BAR](https://github.com/Lurk/bar) static site generator. Is in a super early stage, but this blog is a working demo. 
+- [YAMD](https://github.com/Lurk/yamd) yet another markdown (flavor)
+- [Clink](https://github.com/Lurk/clink) cross-platform URL cleaner. 
+- [Cloudinary Rust API](https://github.com/Lurk/cloudinary_rs)
+- [Serve](https://github.com/Lurk/serve) a simple tool to serve static files over the network. This blog is a working demo. 
+
+All my side projects are now in Rust. Still getting in fights with the borrow checker now and then, but most of the 
+time it is a butter-smooth experience.
+
+The whole year I was using Neovim as my main IDE. I tried some of the prebuilt config distributions and settled on the 
+[AstroNvim](https://astronvim.com) with some [tweaks of mine](https://github.com/Lurk/astronvim_user). The reason I 
+got into it was rust-analyzer. I have not found a way to make it work with JetBrains stuff, and for some reason, I do 
+not like vsCode. So far there are two things I still have not figured out: 
+
++ debugging. I know about dap and dap-ui. Just didn’t find time to figure out how to configure it. 
++ Autosave + autoformat brakes undo/redo and makes me crazy. 
+
+Oh yeah, and last month of a year I was busy with Advent of Code. I am still on day 17, but I am not planning to give 
+up.
+
+![nvim](https://res.cloudinary.com/barhamon/image/upload/v1703948622/2023/nvim.png)
+
+### Adventures:
+
+This year I managed to have two big adventures:
+
+- [TET Turkey](https://barhamon.com/post/tet_turkey_ride.html). 
+- [Tour du Mont Blanc hike](https://barhamon.com/post/tmb-2023.html). 
+
+And a few small ones. Which is more than usual, but I like it and do not plan to stop. This year I tried multiday 
+bikepacking. And looks like I am going to do more of it next year. 
+
+![adventures](https://res.cloudinary.com/barhamon/image/upload/tet-turkey/ride/bikes/1_-_9_afzitc.jpg)
+
+### Music:
+
+This was the most productive year for me as a musician. I recorded five tracks. At some point, I even started to think 
+about releasing an album on vinyl, but haven’t found the inspiration/time to make enough tracks.
+
+{{soundcloud|https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1579457740&color=%232b2a2a&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true}}
+
+### Paintings:
+
+I really like how oil behaves on canvas, and would like to spend more time exploring it. But there are so many things 
+to do and so little time, looks like one painting in a year is my pace.
+
+![everything will be all right](https://res.cloudinary.com/barhamon/image/upload/v1703951412/2023/everything-will-be-all-right.png)
+
+### Books:
+
+I was so busy with everything else that there are only four books that I managed to finish this year: 
+
+- [The Dream Machine by M. Mitchell Waldrop](https://barhamon.com/books/the_dream_machine.html)
+- [Systems design interview by Alex Xu](https://barhamon.com/books/systems_design_interview.html)
+- [Designing Data-Intensive Applications by Martin Kleppmann](https://barhamon.com/books/designing_data_intensive_applications.html)
+- [Point and Line to Plane by Wassily Kandinsky](https://barhamon.com/books/Point-and-Line-to-Plane-by-Wassily-Kandinsky.html)
+
+I want to read more fiction next year. 
+
+### Work-related stuff: 
+
+This year I got promoted to a lead developer at Check24. And I thought that there would be no changes in my position 
+for the next years. But a few months back my manager asked if I wanted to try myself in a team lead role and I said 
+yes. Now I manage a team of three engineers and figuring out how to measure my productivity in a new role. 
+
+-----
+
+See you next year and happy holidays.
