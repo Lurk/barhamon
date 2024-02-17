@@ -6,10 +6,10 @@ description: 'blog'
 dist_path: './dist'
 template_config:
   index_tags: 
+    - software
     - adventures
     - books
     - life
-    - software
     - music
   should_unpack_cloudinary: true
   favicon: './public/favicon.ico'
