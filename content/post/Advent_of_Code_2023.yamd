@@ -457,7 +457,7 @@ There is a pattern. Starting from step 39, the second derivative is `2` on test 
 
 And while all other values are all over the place, the sum of the second derivatives of those ten steps is always 16. 
 There are two problems. While I can eyeball it, I can't come up with a way to detect such a pattern, and most 
-importantly - I am still trying to figure out how that can help me solve my problem. Yet. 
+importantly - I am still trying to figure out how that can help me solve my problem. 
 
 The map from the test input is square, and eleven is the length of a side.
 
