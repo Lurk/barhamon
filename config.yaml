@@ -6,9 +6,9 @@ description: 'blog'
 dist_path: './dist'
 template_config:
   index_tags: 
+    - books
     - software
     - adventures
-    - books
     - life
     - music
   should_unpack_cloudinary: true

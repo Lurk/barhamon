@@ -1,0 +1,31 @@
+---
+title: "Rust Atomics and Locks by Mara Bos"
+date: 2024-02-23T19:00:00+02:00
+image: https://res.cloudinary.com/barhamon/image/upload/v1708543734/header/Rust-Atomics-and-Locks-by-Mara-Bos.jpg
+preview: "I remember that I wanted to read more fiction, but hear me out."
+tags:
+- books
+---
+
+I remember that I wanted to read more fiction, but hear me out.
+
+At some point, borrow checker will force you to slap that Arc and Mutex on some of your HashMaps, Vec’s, and what have 
+you. If you want to know answers to what, why, and all other important questions, as I did, I highly recommend Mara’s 
+answer. 
+
+A big chunk of the book is atomics and memory ordering. And, I think, for the first time, the ordering concept kind of 
+clicked for me. One of the things that I got out of that book is that despite wanting the strongest guarantee possible, 
+most of the time, you need a relaxed one. But it is so subtle that right now, if I need to specify memory ordering, 
+I'll go and reread that chapter.
+
+One more thing. Rust itself is good at expressing safety mechanisms like locks. This should not be news, right? But 
+how often have you thought about the implementation of a Mutex? For me answer is maybe once before this book. And the 
+fact that Rust allows you to express API of it in a compile-time checkable way, makes me appreciate the language even 
+more. 
+
+**Original Title:** Rust Atomics and Locks: Low-Level Concurrency in Practice
+
+**ISBN:** 1098119444 (ISBN13: 9781098119447)
+
+**GoodReads:** [4.79 / 5](https://www.goodreads.com/book/show/63291820-rust-atomics-and-locks)
+
