@@ -14,9 +14,9 @@ you. If you want to know answers to what, why, and all other important questions
 answer. 
 
 A big chunk of the book is atomics and memory ordering. And, I think, for the first time, the ordering concept kind of 
-clicked for me. One of the things that I got out of that book is that despite wanting the strongest guarantee possible, 
-most of the time, you need a relaxed one. But it is so subtle that right now, if I need to specify memory ordering, 
-I'll go and reread that chapter.
+clicked for me. One particular thing is that despite wanting the strongest guarantee possible, most of the time, you 
+need a relaxed one. But it is so subtle that right now, if I need to specify memory ordering, I'll go and reread that 
+chapter.
 
 One more thing. Rust itself is good at expressing safety mechanisms like locks. This should not be news, right? But 
 how often have you thought about the implementation of a Mutex? For me answer is maybe once before this book. And the 
