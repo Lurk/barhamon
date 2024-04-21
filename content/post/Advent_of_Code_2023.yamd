@@ -178,7 +178,6 @@ With a Christmas party and hangover after it, I am lagging five days behind :(
 
 Ok. Instead of generating all possible combinations, I can use a tree. `??#???##?? 1,3` can be 
 
-
 ```Plain Text
                             _/\_
                           0|0  0|0
