@@ -1,20 +1,18 @@
+dist_path: './dist'
 content_path: './content/'
+static_source_path: './public/'
+static_path: './public/'
 template: '../hamon/'
 domain: 'https://barhamon.com'
 title: 'Serhiy Barhamon blog'
 description: 'blog'
-dist_path: './dist'
 template_config:
   index_tags: 
+    - life
     - books
     - software
     - adventures
-    - life
     - music
   should_unpack_cloudinary: true
-  favicon: './public/favicon.ico'
-  svg_icon: './public/icon.svg'
-  apple_touch_icon: './public/icon.png'
-  webmanifest: './public/site.webmanifest'
   index_post: '/me.html'
 
