@@ -7,11 +7,11 @@ domain: 'https://barhamon.com'
 title: 'Serhiy Barhamon blog'
 description: 'blog'
 template_config:
-  index_tags: 
+  index_tags:
+    - adventures
     - life
     - books
     - software
-    - adventures
     - music
   should_unpack_cloudinary: true
   index_post: '/me.html'
