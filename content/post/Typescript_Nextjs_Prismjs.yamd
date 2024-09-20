@@ -16,18 +16,17 @@ I needed to add code highlighting to posts (no one likes ugly code :).
 
 A quick googling showed that for my stack there is nothing ready. But everything revolves around Prismjs.
 
->>>
+!!
 The guys from FormidableLabs with [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer) came 
 closest to what I need. But I want to figure it out myself.
->>>
+!!
 
->>>
->> update #1
+!! update #1
 to reduce js bundle size you can use [babel-plugin-prismjs](https://github.com/mAAdhaTTah/babel-plugin-prismjs). With 
 this babel plugin you can bundle only languages you need.
 
 You can find usage example [here](https://github.com/Lurk/barhamon/blob/f0cb751604c5fc90b2dd679a6b1f96705b1a2bc3/.babelrc)
->>>
+!!
 
 ### If you didn’t come here for details:
 

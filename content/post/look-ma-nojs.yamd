@@ -16,11 +16,11 @@ a dozen websites in those years. I have solved every front-end problem with Reac
 the web platform has evolved so much that a usual website does not need JS, and you are looking at the proof of that 
 statement. 
 
->>>
-> pepper-hot
+!!
+! pepper-hot
 I also have some strong opinions on the direction that Vercel pushes the React ecosystem, which may end up in a 
 separate post. Spoiler alert! That direction sucks. 
->>>
+!!
 
 In the process of rewriting this blog, I produced a few artifacts which may be interesting. 
 
@@ -44,14 +44,14 @@ people did a few pull requests. There is still a long way to a release, but we a
 Implementing it I got a few good insights on how image transformations API should look like. I will need to implement 
 some of those in BAR.
 
->>>
-> handshake
+!!
+! handshake
 Here is my Cloudinary 
 [referal link](https://console.cloudinary.com/invites/lpov9zyyucivvxsnalc5/hqd3swadmblfw3ivxjmv?t=default). Every 
 registration is expanding my free tier, so I can post more cat photos.
 
 Thank you. 
->>>
+!!
 
 ## BAR
 
