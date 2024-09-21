@@ -41,7 +41,7 @@
       font-family: monospace;
     }
     .wrap {
-      border: 2px solid var(--medium);
+      border: 2px solid var(--dark);
       box-sizing: border-box;
       border-radius: 1ch;
       height: 49ch;
@@ -101,29 +101,24 @@
   </style>
   <script>
     const chars =
-      "Ư§µÄÑÕØÞĦħƆƔƜ֍ऴॹচଳകლናᑸᑔᗗᘸᘠほをデスㄓ㆗ᓕᖵᖆᔨᙈᙋᙧᕡᕒᓆᐑᐬጥሠሰተነአዠጀ፠፰ჰრაචධවൠరஐસઊ੩ফটտѾѢѤ";
+      "Ư§µØÞĦħƆƔƜ֍ऴॹচଳകლናᑸᑔᗗᘸᘠほをデスㄓ㆗ᓕᖵᖆᔨᙈᙋᙧᕡᕒᓆᐑᐬጥሠሰተነአዠጀ፠፰ჰრაචධවൠరஐસઊ੩ফটտѾѢѤጴፍツポヸㄠㅃㆆㅪ㆕";
 
     function getRandomInt(max) {
       return Math.floor(Math.random() * max);
     }
 
-    setTimeout(() => {
-      for (const el of document.getElementsByClassName("char")) {
+    const els = document.getElementsByClassName("char");
+    function a() {
+      requestAnimationFrame(() => {
+        const el = els.item(getRandomInt(els.length));
         el.innerHTML = chars[getRandomInt(chars.length)];
-        el.classList.add("animate");
-      }
-    }, 1);
-
-    setInterval(() => {
-      for (const el of document.getElementsByClassName("char")) {
-        if (getRandomInt(200) === 1) {
-          el.innerHTML = chars[getRandomInt(chars.length)];
-          el.animate([{ color: "#403f3f" }, { color: "#a5a5a5" }], {
-            duration: 8000,
-          });
-        }
-      }
-    }, 24);
+        el.animate([{ color: "#403f3f" }, { color: "#a5a5a5" }], {
+          duration: 8000,
+        });
+        a();
+      });
+    }
+    a();
   </script>
   <body>
     <div class="wrap">
