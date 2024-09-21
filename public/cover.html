@@ -21,6 +21,17 @@
   </head>
 
   <style>
+    @media (orientation: landscape) {
+      :root {
+        --w-or-h: 100vh;
+      }
+    }
+
+    @media (orientation: portrait) {
+      :root {
+        --w-or-h: 100vw;
+      }
+    }
     :root {
       --dark: #403f3f;
       --darker: #2b2a2a;
@@ -28,7 +39,7 @@
       --medium: #a5a5a5;
       --light: #cccccc;
       --lighter: #f2f2f2;
-      --font-size: 30px;
+      --font-size: calc(var(--w-or-h) / 32);
     }
 
     html,
