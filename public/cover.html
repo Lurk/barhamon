@@ -1,0 +1,618 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <meta name="description" content="tag" />
+
+    <meta property="og:title" content="tag" />
+    <meta property="og:type" content="tag" />
+    <meta property="og:url" content="tag" />
+    <meta property="og:image" content="tag" />
+    <meta property="og:image:alt" content="tag" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#2b2a2a" />
+  </head>
+
+  <style>
+    :root {
+      --dark: #403f3f;
+      --darker: #2b2a2a;
+      --extra-dark: #1d1c1c;
+      --medium: #a5a5a5;
+      --light: #cccccc;
+      --lighter: #f2f2f2;
+      --font-size: 30px;
+    }
+
+    html,
+    body {
+      padding: 1ch;
+      margin: 0;
+      background-color: var(--darker);
+      box-sizing: border-box;
+      font-size: var(--font-size);
+      font-family: monospace;
+    }
+    .wrap {
+      border: 2px solid var(--medium);
+      box-sizing: border-box;
+      border-radius: 1ch;
+      height: 49ch;
+      padding: 2ch;
+      aspect-ratio: 1;
+      margin: auto;
+      min-width: 4ch;
+    }
+    .content {
+      height: 100%;
+      color: var(--medium);
+      word-break: break-all;
+      overflow: hidden;
+      box-sizing: border-box;
+      display: grid;
+      grid-template-columns: repeat(22, 1fr);
+      grid-template-rows: repeat(22, 1fr);
+      grid-column-gap: 0;
+      grid-row-gap: 0;
+    }
+    .char,
+    .tag {
+      width: 2ch;
+      height: 2ch;
+      text-align: center;
+      animation: char 4s;
+    }
+
+    .tag {
+      color: var(--lighter);
+      animation: tag 4s;
+    }
+
+    .title {
+      position: absolute;
+      background-color: var(--darker);
+      color: var(--light);
+    }
+
+    @keyframes char {
+      0% {
+        color: var(--dark);
+      }
+      100% {
+        color: var(--medium);
+      }
+    }
+
+    @keyframes tag {
+      0% {
+        color: var(--dark);
+      }
+      100% {
+        color: var(--lighter);
+      }
+    }
+  </style>
+  <script>
+    const chars =
+      "Ư§µÄÑÕØÞĦħƆƔƜ֍ऴॹচଳകლናᑸᑔᗗᘸᘠほをデスㄓ㆗ᓕᖵᖆᔨᙈᙋᙧᕡᕒᓆᐑᐬጥሠሰተነአዠጀ፠፰ჰრაචධවൠరஐસઊ੩ফটտѾѢѤ";
+
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * max);
+    }
+
+    setTimeout(() => {
+      for (const el of document.getElementsByClassName("char")) {
+        el.innerHTML = chars[getRandomInt(chars.length)];
+        el.classList.add("animate");
+      }
+    }, 1);
+
+    setInterval(() => {
+      for (const el of document.getElementsByClassName("char")) {
+        if (getRandomInt(200) === 1) {
+          el.innerHTML = chars[getRandomInt(chars.length)];
+          el.animate([{ color: "#403f3f" }, { color: "#a5a5a5" }], {
+            duration: 8000,
+          });
+        }
+      }
+    }, 24);
+  </script>
+  <body>
+    <div class="wrap">
+      <div class="content">
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="tag"></div>
+        <div class="tag">B</div>
+        <div class="tag">R</div>
+        <div class="tag">E</div>
+        <div class="tag">A</div>
+        <div class="tag">K</div>
+        <div class="tag">I</div>
+        <div class="tag">N</div>
+        <div class="tag">G</div>
+        <div class="tag"></div>
+        <div class="tag">T</div>
+        <div class="tag">H</div>
+        <div class="tag">E</div>
+        <div class="tag"></div>
+        <div class="tag">L</div>
+        <div class="tag">A</div>
+        <div class="tag">W</div>
+        <div class="tag"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+        <div class="char"></div>
+      </div>
+    </div>
+  </body>
+</html>
