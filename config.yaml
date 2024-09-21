@@ -1,6 +1,18 @@
 dist_path: './dist'
 content_path: './content/'
 static_source_path: './public/'
+static_files_extensions:
+- css
+- js
+- png
+- jpg
+- jpeg
+- gif
+- svg
+- webmanifest
+- ico
+- txt
+- html
 static_path: './public/'
 template: '../hamon/'
 domain: 'https://barhamon.com'
