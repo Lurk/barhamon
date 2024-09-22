@@ -51,7 +51,7 @@
       font-size: var(--font-size);
       font-family: monospace;
     }
-    .wrap {
+    #wrap {
       border: 2px solid var(--dark);
       box-sizing: border-box;
       border-radius: 1ch;
@@ -60,6 +60,7 @@
       aspect-ratio: 1;
       margin: auto;
       min-width: 4ch;
+      cursor: pointer;
     }
     #content {
       height: 100%;
@@ -147,8 +148,16 @@
       };
     }
 
+    function f() {
+      if (document.fullscreen) {
+        document.exitFullscreen();
+      } else {
+        document.documentElement.requestFullscreen();
+      }
+    }
+
     const chars =
-      "Ư§µØÞĦħƆƔƜ֍ऴॹচଳകლናᑸᑔᗗᘸᘠほをデスㄓ㆗ᓕᖵᖆᔨᙈᙋᙧᕡᕒᓆᐑᐬጥሠሰተነአዠጀ፠፰ჰრაචධවൠరஐસઊ੩ফটտѾѢѤጴፍツポヸㄠㅃㆆㅪ";
+      "Ư§µØÞĦħƆƔƜ֍ऴॹচଳകლናᑸᑔᗗᘸᘠほをデスㄓ㆗ᓕᖵᖆᔨᙈᙋᙧᕡᕒᓆᐑᐬጥሠሰተነአዠጀ፠፰ჰრაචධවൠరஐસઊ੩ফটտѾѢѤጴፍツポヸㄠㅃㆆㅪ㌦㈥㆔ㆄㄫㄭヱヰぬ〺";
 
     const pos = initPos("");
 
@@ -249,7 +258,7 @@
     a();
   </script>
   <body>
-    <div class="wrap">
+    <div id="wrap" onclick="f()">
       <div id="content">
         <div></div>
         <div></div>
