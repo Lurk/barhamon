@@ -32,6 +32,7 @@
         --w-or-h: 100vw;
       }
     }
+
     :root {
       --dark: #403f3f;
       --darker: #2b2a2a;
@@ -51,6 +52,7 @@
       font-size: var(--font-size);
       font-family: monospace;
     }
+
     #wrap {
       border: 2px solid var(--dark);
       box-sizing: border-box;
@@ -59,9 +61,11 @@
       padding: 2ch;
       aspect-ratio: 1;
       margin: auto;
-      min-width: 4ch;
+      min-width: 300px;
+      min-height: 300px;
       cursor: pointer;
     }
+
     #content {
       height: 100%;
       color: var(--medium);
@@ -74,6 +78,7 @@
       grid-column-gap: 0;
       grid-row-gap: 0;
     }
+
     #content div {
       width: 2ch;
       height: 2ch;
@@ -162,50 +167,48 @@
     const pos = initPos("");
 
     const texts = [
-      () => {
+      () =>
+        pos
+          .setText(
+            "                         MIXED SIGNALS                                      BY SERHIY BARHAMON                   ",
+          )
+          .encode(0, 19, 289)
+          .encode(19, 19, 311)
+          .encode(38, 19, 333)
+          .encode(57, 19, 355)
+          .encode(75, 19, 377)
+          .encode(94, 19, 399),
+      () =>
         pos
           .setText("DREAMS OF A WELDING MACHINE")
           .encode(0, 11, 247 - 22)
           .encode(12, 7, 249)
-          .encode(20, 7, 249 + 22);
-      },
-      () => {
-        pos.setText(" SINCE THE BIG BANG ");
-        pos.encode(0, pos.text.length, 23);
-      },
-      () => {
-        pos.setText("ANEMIC ROYALITY");
-        pos.encode(0, 6, 396).encode(7, pos.text.length - 7, 418);
-      },
-      () => {
-        pos.setText(" BREAKING THE LAW ");
-        pos.encode(0, pos.text.length, 244);
-      },
-      () => {
-        pos.setText(" MOONBASE CONSTRUCTION WORKER ");
+          .encode(20, 7, 249 + 22),
+      () => pos.setText(" SINCE THE BIG BANG ").encode(0, 20, 23),
+      () => pos.setText("ANEMIC ROYALITY").encode(0, 6, 396).encode(7, 8, 418),
+      () => pos.setText(" BREAKING THE LAW ").encode(0, 18, 244),
+      () =>
         pos
+          .setText(" MOONBASE CONSTRUCTION WORKER ")
           .encode(0, 10, 160)
           .encode(9, 14, 180)
-          .encode(22, pos.text.length - 22, 205);
-      },
-      () => {
-        pos.setText("SUSPICIOUS ACTIVITIES");
-        pos.encode(0, 10, 452).encode(11, 10, 474);
-      },
-      () => {
-        pos.setText(" PHASE OF LIFE ");
-        pos.encode(0, pos.text.length, 94);
-      },
-      () => {
-        pos.setText("WILL NOT CRY IN PUBLIC");
-        pos.encode(0, pos.text.length, 0).encode(0, pos.text.length, 462);
-      },
-      () => {
-        pos.setText("");
-      },
+          .encode(22, 8, 205),
+      () =>
+        pos
+          .setText("SUSPICIOUS ACTIVITIES")
+          .encode(0, 10, 452)
+          .encode(11, 10, 474),
+      () => pos.setText(" PHASE OF LIFE ").encode(0, 15, 94),
+      () =>
+        pos
+          .setText("WILL NOT CRY IN PUBLIC")
+          .encode(0, 22, 0)
+          .encode(0, 22, 462),
     ];
 
-    let current = 0;
+    texts[0]();
+
+    let current = 1;
 
     setInterval(() => {
       texts[current]();
@@ -215,19 +218,16 @@
     let els = [];
     setTimeout(() => {
       els = [...document.getElementById("content").children];
+      a();
     }, 10);
-
-    let prevI = 0;
 
     function a() {
       requestAnimationFrame(() => {
         const i = getRandomInt(els.length);
 
-        if (prevI === i || !els.length || pos.isVisited(i)) {
+        if (!els.length || pos.isVisited(i)) {
           return a();
         }
-
-        prevI = i;
 
         const el = els[i];
 
@@ -254,8 +254,6 @@
         a();
       });
     }
-
-    a();
   </script>
   <body>
     <div id="wrap" onclick="f()">
