@@ -360,10 +360,10 @@ There is nothing visible on a linear scale, so this is a logarithmical one. And 
 
 Do you see? Something strange happens around 20_000 and 65_000 input sizes. I rerun the whole thing multiple times on different machines, and it is still there. If you know what it is and why it is there, drop me a message, I would also like to know.
 
->>>
-> info circle
+!!
+! info circle
 I also wanted to add a nodejs vs deno vs bun comparison. But deno does not have JSON output from the benchmarking tool [yet](https://github.com/denoland/deno/issues/14385), and I am too lazy to parse console output.
->>>
+!!
 
 But let's get back to generators. Why may you still want to use them? You may want to use generators when you get data in chunks, and those chunks are arriving slower than you can process them. Imagine any IO operation, reading from the filesystem, network, etc. Instead of waiting till all the chunks are received, you can start processing the data while waiting for the next chunk. You can do that with streams or generators. I find stream API hard to make type-safe and compose. This leaves only one real option - generators. If you want an example, check out [readline API](https://nodejs.org/api/readline.html#rlsymbolasynciterator), and imagine how easily you can apply map and filter helpers from the above.
 
@@ -375,10 +375,9 @@ Let's stop here. I hope that you had fun reading this. I had fun writing it. And
 + Generators in javascript are slow.
 + Array methods in Javascript are surprisingly fast.
 
->>>
->> specs and links
-> lightbulb
+!! specs and links
+! lightbulb
 I ran all those benchmarks on the cheapest Hetzner server (CX11), which has one vCPU and 2GB of RAM. With Ubuntu 22.04.1 LTS and NodeJS 18.12.1 on top.
 
 You can find all the code, including benchmarks and Jupyter notebook, in [the GitHub repo](https://github.com/Lurk/generators_js).
->>>
+!!

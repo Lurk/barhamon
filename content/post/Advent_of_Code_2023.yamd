@@ -2,7 +2,7 @@
 title: "The Advent of Code 2023"
 date: 2024-02-17T20:00:00+01:00
 image: https://res.cloudinary.com/barhamon/image/upload/v1708198221/header/Advent-of-Code-2023.png
-preview: "It is time to be honest, and say \"I will not finish it\". Come on, it is the middle of February."
+preview: It is time to be honest, and say \"I will not finish it\". Come on, it is the middle of February.
 tags:
 - software
 - rust
@@ -32,10 +32,10 @@ happens, I will participate in the next Advent of Code.
 
 Below are my notes. If you still want to solve this year’s puzzles, SPOILER ALERT. 
 
->>>
-> github
+!!
+! github
 You can find the code and unedited notes at the [github repo](https://github.com/Lurk/ac2023). 
->>>
+!!
 
 ## [Day 1](https://adventofcode.com/2023/day/1)
 

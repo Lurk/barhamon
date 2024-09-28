@@ -11,11 +11,10 @@ tags:
 
 I reach the next level of understanding how **NSString::UTF8String** works under the hood. If you are interested in how I get here, please read my [previous post.](/post/rust_and_nsstring)
 
->>>
->> Disclaimer:
-> lightbulb
+!! Disclaimer:
+! lightbulb
 Because docs are hard to understand and the source code of the runtime is closed, everything below is based on poking around, reading various GitHub issues, and pull requests. I am trying to say that I can not guarantee that there is no next level, but there are far fewer unanswered questions than before.
->>>
+!!
 
 So, we need to know that despite **NSString::UTF8String** in [apple doc](https://developer.apple.com/documentation/foundation/nsstring/1411189-utf8string?language=objc) noted as a property, it is a method. It creates [Data](https://developer.apple.com/documentation/foundation/data?language=objc) with null-terminated cstring in it and then autorelease it. In one stack overflow thread, which I can not find now, I read that it creates new Data only if NSString contains characters outside ASCII. That would explain why UTF8String behavior differs from documentation most of the time, memory is not freed when NSString receives release message, but sometimes it actually works as expected. But my [tests](https://github.com/Lurk/nsstring_leak/blob/main/src/lib.rs) do not confirm this theory. So I still don't know why runtime sometimes frees memory.
 

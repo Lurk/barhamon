@@ -28,17 +28,15 @@ How to end self-isolation? You have two options. One is to wait five days, make 
 
 To get a tax ID, you should register yourself in KVR. Since it is corona time, you can do it remotely. To do that, you need to send an email to this address: **buergerbuero.kvr@muenchen.de**. In attachments should be a filled by you PDF form "[Anmeldeformular und Vollmacht](https://www.muenchen.de/rathaus/dms/Home/Stadtverwaltung/Kreisverwaltungsreferat/fachspezifisch/HA-II/Buergerbuero/Dokumente/anmeldung_meldebehoerde.pdf)", another PDF form "[Wohnungsgeberbestätigung](https://www.muenchen.de/rathaus/dms/Home/Stadtverwaltung/Kreisverwaltungsreferat/fachspezifisch/HA-II/Buergerbuero/Dokumente/Wohnungsgeberbest-tigung_Internet.pdf)" supplied by your landlord, your passport, and your visa.
 
->>>
->> IMPORTANT
-> warning sign
+!! IMPORTANT
+! warning sign
 Before you download those forms and fill them, go to [https://www.muenchen.de/](https://www.muenchen.de/) and check if they are still valid.
->>>
+!!
 
 Since I did not find any advice on what to write in the header and body of the letter, I wrote:
 
->>>
->> registration
-> envelope
+!! registration
+! envelope
 Hi, my name is Serhiy Barhamon. I just moved to Munich and want to register myself. In the attachment to this letter you will find:
 
  - Anmeldeformular und Vollmacht
@@ -52,7 +50,7 @@ Hi, my name is Serhiy Barhamon. I just moved to Munich and want to register myse
 In case you have any questions, please contact me by phone ...  or email ....
 
 Best regards
->>>
+!!
 
 I received my registration after two weeks and still waiting for my tax ID. Side note, do not forget to put your name on postbox.
 

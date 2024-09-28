@@ -15,13 +15,13 @@ move all the entries I already posted there. It is pretty simple to download the
 because I can, I wrote some tools on Rust to convert data to a format my blog will understand, upload images, and so 
 on.
 
->>>
-> microchip
+!!
+! microchip
 If you are interested in code, check those GitHub repos: 
 [telegram-post-converter](https://github.com/Lurk/telegram-post-converter) and 
 [Cloudinary SDK](https://github.com/Lurk/cloudinary_rs). Maybe I will make an effort to make something resembling a 
 crate from the Cloudinary SDK repo.
->>>
+!!
 
 The second step is translating old descriptions into English, checking for broken links, and so on. This is a work in 
 progress. You can already check the stuff here: [music](/tag/music). I wouldn’t say I like how it looks, so expect 

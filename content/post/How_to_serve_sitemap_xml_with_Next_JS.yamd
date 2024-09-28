@@ -15,14 +15,14 @@ tags:
 To not only increase entropy but also be useful, this blog should be indexed by search engines. And to make it easier 
 for search engines to index, they came up with robots.txt and sitemap.
 
->>>
+!!
 sitemap.xml - a list of pages that can be downloaded. Optionally you can specify how often the page is refreshed and 
 when was the last time, but as far as I know, the optional parameters are ignored. More details can be found 
 [here](https://www.sitemaps.org/).
 
 robots.txt - instructions for robots. In our case, we simply indicate the path from where to get the sitemap. More 
 details can be found [here](https://www.robotstxt.org/).
->>>
+!!
 
 For our site to produce sitemap.xml, create a sitemap.xml.tsx file in the pages folder:
 

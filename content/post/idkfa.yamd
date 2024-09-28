@@ -2,7 +2,7 @@
 title: "IDKFA"
 date: 2021-04-02T11:12:59+02:00
 image: https://res.cloudinary.com/barhamon/image/upload/c_scale,h_450,q_auto,w_600/v1617355059/header/idkfa_gcd5ox.png
-preview: "If you googled something like \"I have this idea, with what I should build it.\", here is my take on it."
+preview: If you googled something like \"I have this idea, with what I should build it.\", here is my take on it.
 tags:
 - software
 ---
@@ -40,8 +40,7 @@ I will choose GraphQL over REST because I never saw REST API, which was working 
 
 If you came here with questions like questions in the first paragraph, I hope this post will somehow help you.
 
->>>
->> IDKFA
-> lightbulb
+!! IDKFA
+! lightbulb
 ID, Keys, Firearms, Armor (cheat in the Doom game)
->>>
+!!
