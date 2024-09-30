@@ -1,0 +1,152 @@
+---
+title: "YAMD 0.14.0 release"
+date: 2024-09-28T14:00:00+01:00
+image: https://res.cloudinary.com/barhamon/image/upload/v1727520593/header/yamd-0.14.0-release.png
+preview: "YAMD stands for - Yet Another MarkDown (flavor) and is a simplified version of CommonMark."
+tags:
+- software
+- rust
+- yamd
+---
+
+[YAMD](https://github.com/Lurk/yamd) stands for - Yet Another MarkDown (flavor) and is a simplified version of 
+[CommonMark](https://spec.commonmark.org/).
+
+## Why does someone even need a simplified version of CommonMark?
+
+I’m glad you asked.
+
+I started doing it because I thought it would be fun and easy. The fact that it is version 0.14.0 should tell you that
+it was not easy for me, but I had tremendous amounts of fun and learned quite a few new things.
+
+!!
+! computer
+That's one of the reasons I like software engineering. The depth and breadth of it feels endless. I have been doing it
+in different capacities since I was six and haven’t even scratched the surface.
+!!
+
+Actually, I had a few more solid reasons for a new flavor and parser for it:
+
+- I haven’t found any library that would expose an intermediate structure instead of the resulting HTML. That’s not
+true anymore. If you are happy with CommonMark, check out the [markdown-rs](https://github.com/wooorm/markdown-rs)
+crate.
+- I found that all markdown flavors lacked important blocks:
+ + Image Gallery
+ + Highlight.
+
+Now, I learned a few things about the topic, and I have a few more reasons to continue.
+
+CommonMark defines the [precedence](https://spec.commonmark.org/0.31.2/#precedence) of a container block over a leaf
+block. I haven’t found any need for that, except when you want multiple paragraphs in one list item. I do not think
+markdown is a good format to convey such a complex structure. On the other hand, there are fewer rules to encode and
+remember without discrimination by block type. This results in a better UX and potentially allows a more efficient
+parser.
+
+There are a few caveats, though:
+
++ The tooling (linter, formatter, and LSP server) needed to write the correct YAMD does not exist and will take a long
+time to become available.
++ List items can contain only one paragraph. At least for now.
++ I can be wrong.
+
+There are a few more points why I continue with YAMD.
+
+- No one needs more than one way to convey a heading or any other node. Trust me.
+- Using numbers to identify an ordered list is not user-friendly. I spent enormous amounts of time fixing those
+numbers while shuffling list items, and in YAMD, it is just `+`.
+- I still need an Image gallery and Highlight.
+
+## Okay. Okay. What’s in this release?
+
+Finally, there is [documentation](https://docs.rs/yamd/latest/yamd/). It is not much, but it is honest work. I did my
+best to describe how it works, sometimes even why, and It took me an unbelievable amount of time.
+
+!!
+! list-check
+While writing documentation, I realized I could not host YAMD documentation written in YAMD because you need tables.
+So yeah. Maybe.
+!!
+
+## Breaking changes.
+
+This release is full of breaking changes. As always, I hope that this is the last release like that. This time,
+though, there is more ground for that hope.
+
+### [Highlight](https://docs.rs/yamd/latest/yamd/nodes/struct.Highlight.html).
+
+While writing documentation for Highlight, I noticed that CommonMark reserves the `>` symbol for backquotes. If I leave
+it like that, converting from CommonMark to YAMD and back will be unnecessarily complicated. To avoid that
+complication, Highlight now has a new syntax. Please check the docs for more info.
+
+### [Images](https://docs.rs/yamd/latest/yamd/nodes/struct.Images.html).
+
+The transition from ImageGallery to Images breaks both syntax and API. While writing a parser for
+[Image](https://docs.rs/yamd/latest/yamd/nodes/struct.Image.html) and ImageGallery, I noticed that wrapping a sequence
+of images with `!!!` is unnecessary. I added them because I thought it would be much easier to parse when I wrote the
+first version of YAMD, which is not valid anymore. And since I am already breaking syntax, it was an excellent
+opportunity to fix that mistake.
+
+### Frontmatter
+
+From now on, the Frontmatter must be parsed by a consumer. There is no reason to force a specific metadata format or
+shape in the YAMD, and from now on, the metadata field will contain an optional string that the consumer can parse
+from the preferred format to the required structure. That means breaking changes in the API and syntax because a new
+version can potentially contain invalid YAML, such as a JSON.
+
+I hope that's the last breaking change in YAMD syntax. It’s not guaranteed, but from now on, I promise to figure out a
+way for easy migration. The biggest obstacle is the absence of a serialization back to YAMD.
+
+Next up, breaking changes in API. It is hard to stop when you start breaking stuff.
+
+### Text
+
+The Text node was just wrapped String without adding any new functionality. From now on, when the yamd instance
+contains text, it will be String. That also forced me to change Enum representation from
+[Internally tagged](https://serde.rs/enum-representations.html#internally-tagged) to
+[Adjacently tagged](https://serde.rs/enum-representations.html#adjacently-tagged). As a side effect, Yamd will not
+have reserved words from now on. Before that, nodes were not allowed a field with the name 'type’ because it was
+reserved by Internally tagged enum representation when serializing.
+
+### Bunch of other breaking changes.
+
+The documentation writing also inspired me to rename the `nodes` field to `body`. It makes more sense and aligns with
+the terminology. I am also renaming InlineCode to
+[CodeSpan](https://docs.rs/yamd/latest/yamd/nodes/struct.CodeSpan.html) since I use CommonMark as a reference. And I
+am also renaming all shorthand enum variants to a full name, which makes more sense. I believe that is also a way
+forward:
+
+- No shorthands in the API.
+- When in doubt, use CommonMark as a reference.
+
+I need to add those rules to the documentation.
+
+## New features.
+
+Apart from breaking changes, YAMD has exciting new features.
+
+From now on, YAMD will support escaping sequences. Before, there was no way to represent `\`` inside
+[CodeSpan](https://docs.rs/yamd/latest/yamd/nodes/struct.CodeSpan.html). Which was very annoying and the actual reason
+for this release. To fix It, I added a [lexer](https://docs.rs/yamd/latest/yamd/lexer/struct.Lexer.html) and rewrote
+the parser. It took me ages to get to the point when it worked and had a way to move forward.
+
+!!
+! lightbulb
+A better Idea might be to use packages such as [Logos](https://github.com/maciejhirsz/logos) to generate Lexer. It
+would save me at least a month, but it would also strip me of all the fun and frustration.
+!!
+
+Lexer also allowed me to implement `\\r\\n` support quickly. It is literally one line of code.
+
+## Plans:
+
+I think I have covered all the new stuff. Here is a plan for the future:
+
+- Serializing to YAMD.
+- Tooling like linter, formatter, and LSP server.
+- Table node.
+
+## Wrapping it up.
+
+That was a lot of stuff, and I bet I forgot something. But the main goal is to start a conversation. If any of that
+interests you or if you have strong opinions on the matter, please write to me. I would very much like to talk about
+it.
