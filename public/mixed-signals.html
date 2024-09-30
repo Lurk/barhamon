@@ -220,6 +220,7 @@
       current = current === texts.length - 1 ? 0 : current + 1;
     }, 30000);
 
+    const refreshRate = new Array(22 * 22).fill(-1);
     let els = [];
     setTimeout(() => {
       els = [...document.getElementById("content").children];
@@ -229,11 +230,13 @@
     function a() {
       requestAnimationFrame(() => {
         const i = getRandomInt(els.length);
+        const now = Date.now();
 
-        if (!els.length || pos.isVisited(i)) {
+        if (!els.length || now - refreshRate[i] < 1000 || pos.isVisited(i)) {
           return a();
         }
 
+        refreshRate[i] = now;
         const el = els[i];
 
         el.innerHTML = pos.isSet(i)
