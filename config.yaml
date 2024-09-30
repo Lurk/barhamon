@@ -20,10 +20,10 @@ title: 'Serhiy Barhamon blog'
 description: 'blog'
 template_config:
   index_tags:
+    - software
     - adventures
     - life
     - books
-    - software
     - music
   should_unpack_cloudinary: true
   index_post: '/me.html'
