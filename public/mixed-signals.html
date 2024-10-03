@@ -21,6 +21,11 @@
   </head>
 
   <style>
+    @font-face {
+      font-family: "dsm";
+      src: url("/DejavuSansMono-5m7L.ttf");
+    }
+
     @media (orientation: landscape) {
       :root {
         --w-or-h: 100vh;
@@ -33,6 +38,18 @@
       }
     }
 
+    @media all and (display-mode: fullscreen) {
+      :root {
+        --divider: 31;
+      }
+    }
+
+    @media all and (display-mode: browser) {
+      :root {
+        --divider: 36;
+      }
+    }
+
     :root {
       --dark: #403f3f;
       --darker: #2b2a2a;
@@ -40,7 +57,7 @@
       --medium: #a5a5a5;
       --light: #cccccc;
       --lighter: #f2f2f2;
-      --font-size: calc(var(--w-or-h) / 32);
+      --font-size: calc(var(--w-or-h) / var(--divider));
     }
 
     ::selection {
@@ -49,12 +66,21 @@
     }
     html,
     body {
-      padding: 1ch;
+      padding: 0;
       margin: 0;
       background-color: var(--darker);
       box-sizing: border-box;
       font-size: var(--font-size);
-      font-family: monospace;
+      font-family: "dsm";
+      color: var(--dark);
+      text-align: center;
+    }
+
+    #fullscreen {
+      padding: 1ch;
+      margin: 1ch;
+      background-color: var(--darker);
+      font-size: var(--font-size);
     }
 
     #wrap {
@@ -86,7 +112,6 @@
     #content div {
       width: 2ch;
       height: 2ch;
-      text-align: center;
     }
 
     .tag {
@@ -157,13 +182,7 @@
       };
     }
 
-    function f() {
-      if (document.fullscreen) {
-        document.exitFullscreen();
-      } else {
-        document.documentElement.requestFullscreen();
-      }
-    }
+    function f(e) {}
 
     const chars =
       "Ư§µØÞĦħƆƔƜ֍ऴॹচଳകლናᑸᑔᗗᘸᘠほをデスㄓ㆗ᓕᖵᖆᔨᙈᙋᙧᕡᕒᓆᐑᐬጥሠሰተነአዠጀ፠፰ჰრაචධවൠరஐસઊ੩ফটտѾѢѤጴፍツポヸㄠㅃㆆㅪ㌦㈥㆔ㆄㄫㄭヱヰぬ〺";
@@ -182,47 +201,116 @@
           .encode(57, 19, 355)
           .encode(75, 19, 377)
           .encode(94, 19, 399),
-      () =>
+      () => {
+        next("/mp3/dreams of a welding machine.mp3");
         pos
           .setText("DREAMS OF A WELDING MACHINE")
           .encode(0, 11, 247 - 22)
           .encode(12, 7, 249)
-          .encode(20, 7, 249 + 22),
-      () => pos.setText(" SINCE THE BIG BANG ").encode(0, 20, 23),
-      () => pos.setText("ANEMIC ROYALITY").encode(0, 6, 396).encode(7, 8, 418),
-      () => pos.setText(" BREAKING THE LAW ").encode(0, 18, 244),
-      () =>
+          .encode(20, 7, 249 + 22);
+      },
+      () => {
+        next("/mp3/since the big bang.mp3");
+        pos.setText(" SINCE THE BIG BANG ").encode(0, 20, 23);
+      },
+      () => {
+        next("/mp3/anemic royality.mp3");
+        pos.setText("ANEMIC ROYALITY").encode(0, 6, 396).encode(7, 8, 418);
+      },
+
+      () => {
+        next("/mp3/breaking the law.mp3");
+        pos.setText(" BREAKING THE LAW ").encode(0, 18, 244);
+      },
+      () => {
+        next("/mp3/moonbase construction worker.mp3");
         pos
           .setText(" MOONBASE CONSTRUCTION WORKER ")
           .encode(0, 10, 160)
           .encode(9, 14, 180)
-          .encode(22, 8, 205),
-      () =>
+          .encode(22, 8, 205);
+      },
+      () => {
+        next("/mp3/suspicious activities.mp3");
         pos
           .setText("SUSPICIOUS ACTIVITIES")
           .encode(0, 10, 452)
-          .encode(11, 10, 474),
-      () => pos.setText(" PHASE OF LIFE ").encode(0, 15, 94),
-      () =>
+          .encode(11, 10, 474);
+      },
+      () => {
+        next("/mp3/phase of life.mp3");
+        pos.setText(" PHASE OF LIFE ").encode(0, 15, 94);
+      },
+      () => {
+        next("/mp3/will not cry in public.mp3");
         pos
           .setText("WILL NOT CRY IN PUBLIC")
           .encode(0, 22, 0)
-          .encode(0, 22, 462),
-      () => pos.setText("AMBIGUOUS SOURCES").encode(0, 17, 71),
+          .encode(0, 22, 462);
+      },
+      () => {
+        next("/mp3/ambiguous sources.mp3");
+        pos.setText("AMBIGUOUS SOURCES").encode(0, 17, 71);
+      },
+      () =>
+        pos
+          .setText(
+            "DREAMS OF A WELDING MACHINE SINCE THE BIG BANG MOONBASE CONSTRUCTION WORKER SUSPICIOUS ACTIVITIES PHASE OF LIFE WILL NOT CRY IN PUBLIC AMBIGUOUS SOURCES",
+          )
+          .encode(0, 19, 22 * 0)
+          .encode(20, 7, 22 * 1)
+          .encode(28, 18, 22 * 4)
+          .encode(47, 21, 22 * 7)
+          .encode(69, 6, 22 * 8)
+          .encode(76, 21, 22 * 11)
+          .encode(98, 13, 22 * 14)
+          .encode(112, 22, 22 * 17)
+          .encode(135, 17, 22 * 20),
     ];
 
     texts[0]();
 
     let current = 1;
 
-    setInterval(() => {
+    document.onkeydown = ({ keyCode }) => {
+      if (keyCode == 37) {
+        current = current === 0 ? 0 : current - 1;
+        texts[current]();
+      } else if (keyCode == 39) {
+        current = current === texts.length - 1 ? texts.length - 1 : current + 1;
+        texts[current]();
+      }
+    };
+
+    let p = new Audio("");
+    const next = (src) => {
+      p.src = src;
+      p.load();
+      p.play();
+    };
+
+    p.addEventListener("ended", (event) => {
+      current = current === texts.length - 1 ? texts.length - 1 : current + 1;
       texts[current]();
-      current = current === texts.length - 1 ? 0 : current + 1;
-    }, 30000);
+    });
 
     const refreshRate = new Array(22 * 22).fill(-1);
     let els = [];
+
     setTimeout(() => {
+      const w = document.getElementById("fullscreen");
+
+      w.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        texts[current]();
+        if (document.fullscreen) {
+          document.exitFullscreen();
+        } else {
+          w.requestFullscreen();
+        }
+      });
+
       const container = document.getElementById("content");
       container.innerHTML = "<div></div>".repeat(22 * 22);
       els = [...container.children];
@@ -266,8 +354,12 @@
     }
   </script>
   <body>
-    <div id="wrap" onclick="f()">
-      <div id="content"></div>
+    <div id="fullscreen">
+      <div id="wrap">
+        <div id="content"></div>
+      </div>
     </div>
+    <div>click on center of the screen to play.</div>
+    <div>left/right arrows to navigate.</div>
   </body>
 </html>
