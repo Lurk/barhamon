@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -26,18 +26,6 @@
       src: url("/DejavuSansMono-5m7L.ttf");
     }
 
-    @media (orientation: landscape) {
-      :root {
-        --w-or-h: 100vh;
-      }
-    }
-
-    @media (orientation: portrait) {
-      :root {
-        --w-or-h: 100vw;
-      }
-    }
-
     @media all and (display-mode: fullscreen) {
       :root {
         --divider: 31;
@@ -50,6 +38,18 @@
       }
     }
 
+    @media screen (max-width: 300px), (max-height: 300px) {
+      :root {
+        --base: 300px;
+      }
+    }
+
+    @media screen (min-width: 300px), (min-height: 300px) {
+      :root {
+        --base: 100vmin;
+      }
+    }
+
     :root {
       --dark: #403f3f;
       --darker: #2b2a2a;
@@ -57,7 +57,7 @@
       --medium: #a5a5a5;
       --light: #cccccc;
       --lighter: #f2f2f2;
-      --font-size: calc(var(--w-or-h) / var(--divider));
+      --font-size: calc(var(--base) / var(--divider));
     }
 
     ::selection {
@@ -84,7 +84,7 @@
     }
 
     #wrap {
-      border: 2px solid var(--dark);
+      border: 0.2ch solid var(--dark);
       box-sizing: border-box;
       border-radius: 1ch;
       height: 49ch;
@@ -142,8 +142,12 @@
     }
   </style>
   <script>
+    function getRandom(min, max) {
+      return Math.floor(Math.random() * (max - min) + min);
+    }
+
     function getRandomInt(max) {
-      return Math.floor(Math.random() * max);
+      return getRandom(0, max);
     }
 
     function initPos(text) {
@@ -182,25 +186,87 @@
       };
     }
 
-    function f(e) {}
+    function animate() {
+      requestAnimationFrame(() => {
+        const i = getRandomInt(els.length);
+        const now = Date.now();
 
-    const chars =
-      "Ư§µØÞĦħƆƔƜ֍ऴॹচଳകლናᑸᑔᗗᘸᘠほをデスㄓ㆗ᓕᖵᖆᔨᙈᙋᙧᕡᕒᓆᐑᐬጥሠሰተነአዠጀ፠፰ჰრაචධවൠరஐસઊ੩ফটտѾѢѤጴፍツポヸㄠㅃㆆㅪ㌦㈥㆔ㆄㄫㄭヱヰぬ〺";
+        if (!els.length || now - refreshRate[i] < 1000 || pos.isVisited(i)) {
+          return animate();
+        }
 
-    const pos = initPos("");
+        refreshRate[i] = now;
+        const el = els[i];
 
-    const texts = [
-      () =>
+        el.innerHTML = pos.isSet(i)
+          ? pos.getChar(i)
+          : String.fromCodePoint(chars[getRandomInt(chars.length)]());
+
+        if (pos.isSet(i)) {
+          pos.markVisited(i);
+          el.classList.add("tag");
+        } else {
+          el.classList.remove("tag");
+          el.animate(
+            [
+              { color: "#403f3f" },
+              { color: pos.isSet(i) ? "#ccc" : "#a5a5a5" },
+            ],
+            {
+              duration: 8000,
+            },
+          );
+        }
+
+        animate();
+      });
+    }
+
+    function next(src) {
+      p.src = src;
+      p.load();
+      p.play();
+    }
+
+    const chars = [
+      () => getRandom(1488, 1514),
+      () => getRandom(1920, 1967),
+      () => getRandom(2304, 2431),
+      () => getRandom(4256, 4287),
+      () => getRandom(4304, 4441),
+      () => getRandom(4608, 4671),
+      () => getRandom(4832, 4879),
+      () => getRandom(4896, 4943),
+      () => getRandom(4960, 4988),
+      () => getRandom(5120, 5743),
+      () => getRandom(6176, 6263),
+      () => getRandom(6272, 6314),
+      () => getRandom(12353, 12543),
+      () => getRandom(12549, 12591),
+      () => getRandom(12688, 12703),
+      () => getRandom(66640, 66687),
+      () => getRandom(67968, 67999),
+      () => getRandom(68192, 68223),
+      () => getRandom(68608, 68680),
+      () => getRandom(72384, 72430),
+      () => getRandom(72816, 72847),
+      () => getRandom(128769, 128847),
+    ];
+
+    const tracks = [
+      () => {
+        if (!p.paused) {
+          p.pause();
+        }
         pos
-          .setText(
-            "                         MIXED SIGNALS                                      BY SERHIY BARHAMON                   ",
-          )
+          .setText("                         MIXED SIGNALS BY SERHIY BARHAMON ")
           .encode(0, 19, 289)
           .encode(19, 19, 311)
-          .encode(38, 19, 333)
-          .encode(57, 19, 355)
-          .encode(75, 19, 377)
-          .encode(94, 19, 399),
+          .encode(0, 19, 333)
+          .encode(0, 19, 355)
+          .encode(38, 19, 377)
+          .encode(0, 19, 399);
+      },
       () => {
         next("/mp3/dreams of a welding machine.mp3");
         pos
@@ -231,15 +297,15 @@
           .encode(22, 8, 205);
       },
       () => {
+        next("/mp3/phase of life.mp3");
+        pos.setText(" PHASE OF LIFE ").encode(0, 15, 94);
+      },
+      () => {
         next("/mp3/suspicious activities.mp3");
         pos
           .setText("SUSPICIOUS ACTIVITIES")
           .encode(0, 10, 452)
           .encode(11, 10, 474);
-      },
-      () => {
-        next("/mp3/phase of life.mp3");
-        pos.setText(" PHASE OF LIFE ").encode(0, 15, 94);
       },
       () => {
         next("/mp3/will not cry in public.mp3");
@@ -252,106 +318,87 @@
         next("/mp3/ambiguous sources.mp3");
         pos.setText("AMBIGUOUS SOURCES").encode(0, 17, 71);
       },
-      () =>
+      () => {
+        if (!p.paused) {
+          p.pause();
+        }
         pos
           .setText(
-            "DREAMS OF A WELDING MACHINE SINCE THE BIG BANG MOONBASE CONSTRUCTION WORKER SUSPICIOUS ACTIVITIES PHASE OF LIFE WILL NOT CRY IN PUBLIC AMBIGUOUS SOURCES",
+            "DREAMS OF A WELDING MACHINE SINCE THE BIG BANG MOONBASE CONSTRUCTION WORKER BREAKING THE LAW SUSPICIOUS ACTIVITIES PHASE OF LIFE WILL NOT CRY IN PUBLIC AMBIGUOUS SOURCES ANEMIC ROYALITY MIXED  SIGNALS",
           )
-          .encode(0, 19, 22 * 0)
-          .encode(20, 7, 22 * 1)
-          .encode(28, 18, 22 * 4)
-          .encode(47, 21, 22 * 7)
-          .encode(69, 6, 22 * 8)
-          .encode(76, 21, 22 * 11)
-          .encode(98, 13, 22 * 14)
-          .encode(112, 22, 22 * 17)
-          .encode(135, 17, 22 * 20),
+          .encode(186, 14, 22 + 4)
+          .encode(0, 19, 22 * 3)
+          .encode(20, 7, 22 * 4)
+          .encode(28, 18, 22 * 6)
+          .encode(170, 15, 22 * 8)
+          .encode(76, 16, 22 * 10)
+          .encode(47, 21, 22 * 12)
+          .encode(69, 6, 22 * 13)
+          .encode(115, 13, 22 * 15)
+          .encode(93, 21, 22 * 17)
+          .encode(129, 22, 22 * 19)
+          .encode(152, 17, 22 * 21);
+      },
     ];
 
-    texts[0]();
-
-    let current = 1;
+    const refreshRate = new Array(22 * 22).fill(-1);
+    const pos = initPos("");
+    const p = new Audio("");
+    let current = 0;
+    let els = [];
 
     document.onkeydown = ({ keyCode }) => {
       if (keyCode == 37) {
+        // left arrow
         current = current === 0 ? 0 : current - 1;
-        texts[current]();
+        tracks[current]();
       } else if (keyCode == 39) {
-        current = current === texts.length - 1 ? texts.length - 1 : current + 1;
-        texts[current]();
+        //right arrow
+        current =
+          current === tracks.length - 1 ? tracks.length - 1 : current + 1;
+        tracks[current]();
+      } else if (keyCode == 32) {
+        // space
+        if (p.paused) {
+          if (current === 0 || current === tracks.length - 1) {
+            current = 1;
+            tracks[current]();
+          } else if (p.readyState) {
+            p.play();
+          } else {
+            tracks[current]();
+          }
+        } else {
+          p.pause();
+        }
       }
     };
 
-    let p = new Audio("");
-    const next = (src) => {
-      p.src = src;
-      p.load();
-      p.play();
-    };
-
     p.addEventListener("ended", (event) => {
-      current = current === texts.length - 1 ? texts.length - 1 : current + 1;
-      texts[current]();
+      current = current === tracks.length - 1 ? tracks.length - 1 : current + 1;
+      tracks[current]();
     });
 
-    const refreshRate = new Array(22 * 22).fill(-1);
-    let els = [];
-
     setTimeout(() => {
-      const w = document.getElementById("fullscreen");
+      const fullscreen = document.getElementById("fullscreen");
 
-      w.addEventListener("click", (e) => {
+      fullscreen.addEventListener("click", (e) => {
         e.preventDefault();
         e.stopPropagation();
-        texts[current]();
         if (document.fullscreen) {
           document.exitFullscreen();
         } else {
-          w.requestFullscreen();
+          fullscreen.requestFullscreen();
         }
       });
 
       const container = document.getElementById("content");
       container.innerHTML = "<div></div>".repeat(22 * 22);
       els = [...container.children];
-      a();
+      animate();
     }, 10);
 
-    function a() {
-      requestAnimationFrame(() => {
-        const i = getRandomInt(els.length);
-        const now = Date.now();
-
-        if (!els.length || now - refreshRate[i] < 1000 || pos.isVisited(i)) {
-          return a();
-        }
-
-        refreshRate[i] = now;
-        const el = els[i];
-
-        el.innerHTML = pos.isSet(i)
-          ? pos.getChar(i)
-          : chars[getRandomInt(chars.length)];
-
-        if (pos.isSet(i)) {
-          pos.markVisited(i);
-          el.classList.add("tag");
-        } else {
-          el.classList.remove("tag");
-          el.animate(
-            [
-              { color: "#403f3f" },
-              { color: pos.isSet(i) ? "#ccc" : "#a5a5a5" },
-            ],
-            {
-              duration: 8000,
-            },
-          );
-        }
-
-        a();
-      });
-    }
+    tracks[current]();
   </script>
   <body>
     <div id="fullscreen">
@@ -359,7 +406,8 @@
         <div id="content"></div>
       </div>
     </div>
-    <div>click on center of the screen to play.</div>
-    <div>left/right arrows to navigate.</div>
+    <div>click on center of the screen to full screen</div>
+    <div>left/right arrows to navigate</div>
+    <div>space to play/pause</div>
   </body>
 </html>
