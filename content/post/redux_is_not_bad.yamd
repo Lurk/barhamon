@@ -6,6 +6,8 @@ preview: "This is why you should use redux as a state manager for your app"
 tags:
 - software
 - frontend
+- js
+- ts
 ---
 
 If you are in tech twitter, especially in the JS part, you definitely read something about how bad redux is. Let me disagree :)

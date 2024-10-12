@@ -6,6 +6,7 @@ preview: "What I learned while writing my flavor of markdown"
 tags:
 - software
 - rust
+- yamd
 ---
 
 Those are the notes I took while implementing [YAMD](https://github.com/Lurk/yamd) crate. 

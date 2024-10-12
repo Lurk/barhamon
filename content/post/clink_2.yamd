@@ -6,6 +6,7 @@ preview: "Rust and memory leaks"
 tags:
 - rust
 - software
+- clink
 ---
 
 Now with a memory leak 🎉
