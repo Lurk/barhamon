@@ -13,6 +13,7 @@ static_files_extensions:
 - ico
 - txt
 - html
+- ttf
 static_path: './public/'
 template: '../hamon/'
 domain: 'https://barhamon.com'
@@ -20,11 +21,11 @@ title: 'Serhiy Barhamon'
 description: 'blog'
 template_config:
   index_tags:
+    - music
     - software
     - adventures
     - life
     - books
-    - music
   should_unpack_cloudinary: true
   index_post: '/me.html'
 
