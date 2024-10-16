@@ -16,7 +16,7 @@ static_files_extensions:
 static_path: './public/'
 template: '../hamon/'
 domain: 'https://barhamon.com'
-title: 'Serhiy Barhamon blog'
+title: 'Serhiy Barhamon'
 description: 'blog'
 template_config:
   index_tags:

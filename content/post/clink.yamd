@@ -6,6 +6,7 @@ preview: "My first rust app"
 tags:
 - rust
 - software
+- clink
 ---
 
 My first rust app that works and does something useful.

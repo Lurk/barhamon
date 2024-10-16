@@ -7,6 +7,7 @@ tags:
 - rust
 - software
 - objc
+- clink
 ---
 
 I reach the next level of understanding how **NSString::UTF8String** works under the hood. If you are interested in how I get here, please read my [previous post.](/post/rust_and_nsstring)

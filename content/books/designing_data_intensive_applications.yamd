@@ -5,6 +5,9 @@ image: https://res.cloudinary.com/barhamon/image/upload/c_scale,h_800,q_auto/v16
 preview: "Designing Data-Intensive Applications - the one book to read to understand software development."
 tags:
 - books
+- non-fiction
+- software
+- engineering
 ---
 
 If you ask me today what one book of all books I must read to understand software development, this is it. It 
