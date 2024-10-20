@@ -37,7 +37,7 @@
 
     @media all and (display-mode: browser) {
       :root {
-        --divider: 36;
+        --divider: 37;
       }
     }
 
@@ -79,14 +79,16 @@
       text-align: center;
     }
 
-    span {
+    span,
+    a {
       color: var(--dark);
       text-decoration: underline;
       cursor: pointer;
       transition: color 0.1s ease;
     }
 
-    span:hover {
+    span:hover,
+    a:hover {
       color: var(--medium);
     }
 
@@ -449,5 +451,6 @@
       arrows to navigate
     </div>
     <div><span id="space">space</span> to play/pause</div>
+    <div><a href="/post/mixed-signals.html">to read</a></div>
   </body>
 </html>
