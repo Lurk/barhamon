@@ -79,6 +79,17 @@
       text-align: center;
     }
 
+    span {
+      color: var(--dark);
+      text-decoration: underline;
+      cursor: pointer;
+      transition: color 0.1s ease;
+    }
+
+    span:hover {
+      color: var(--medium);
+    }
+
     #fullscreen {
       padding: 1ch;
       margin: 1ch;
@@ -155,8 +166,13 @@
 
     function initPos(text) {
       const init = () => new Array(22 * 22).fill(-1);
+      const container = document.getElementById("content");
+      container.innerHTML = "<div></div>".repeat(22 * 22);
+      const els = [...container.children];
+
       return {
         textPos: init(),
+        refreshRate: init(),
         text,
         reinit() {
           this.textPos = init();
@@ -170,65 +186,78 @@
         },
         setText(text) {
           this.text = text;
-          this.reinit();
-          return this;
+          return this.reinit();
         },
         isSet(i) {
           return this.textPos[i] >= 0;
         },
-        markVisited(i) {
-          this.textPos[i] = -2;
-          return this;
+        isTimeToRefresh(i) {
+          const now = Date.now();
+          if (now - this.refreshRate[i] < 1000) {
+            return false;
+          }
+          this.refreshRate[i] = now;
+          return true;
         },
-        isVisited(i) {
-          return this.textPos[i] === -2;
-        },
-        getChar(i) {
-          return this.text[this.textPos[i]];
+        tick() {
+          const i = getRandomInt(els.length);
+          if (els.length && this.isTimeToRefresh(i) && this.textPos[i] !== -2) {
+            const el = els[i];
+
+            el.innerHTML = this.isSet(i)
+              ? this.text[this.textPos[i]]
+              : String.fromCodePoint(chars[getRandomInt(chars.length)]());
+
+            if (this.isSet(i)) {
+              this.textPos[i] = -2;
+              el.classList.add("tag");
+            } else {
+              el.classList.remove("tag");
+              el.animate(
+                [
+                  { color: "#403f3f" },
+                  { color: this.isSet(i) ? "#ccc" : "#a5a5a5" },
+                ],
+                {
+                  duration: 8000,
+                },
+              );
+            }
+          }
         },
       };
     }
 
-    function animate() {
+    function animate(pos) {
       requestAnimationFrame(() => {
-        const i = getRandomInt(els.length);
-        const now = Date.now();
-
-        if (!els.length || now - refreshRate[i] < 1000 || pos.isVisited(i)) {
-          return animate();
-        }
-
-        refreshRate[i] = now;
-        const el = els[i];
-
-        el.innerHTML = pos.isSet(i)
-          ? pos.getChar(i)
-          : String.fromCodePoint(chars[getRandomInt(chars.length)]());
-
-        if (pos.isSet(i)) {
-          pos.markVisited(i);
-          el.classList.add("tag");
-        } else {
-          el.classList.remove("tag");
-          el.animate(
-            [
-              { color: "#403f3f" },
-              { color: pos.isSet(i) ? "#ccc" : "#a5a5a5" },
-            ],
-            {
-              duration: 8000,
-            },
-          );
-        }
-
-        animate();
+        pos.tick();
+        animate(pos);
       });
     }
 
-    function next(src) {
-      p.src = src;
-      p.load();
-      p.play();
+    function player(src, next) {
+      const player = new Audio(src);
+      player.addEventListener("ended", next);
+      return {
+        player,
+        play() {
+          if (player.readyState) {
+            player.play();
+            return true;
+          }
+          return false;
+        },
+        playThis(src) {
+          player.src = src;
+          player.load();
+          player.play();
+        },
+        pause() {
+          if (!player.paused) {
+            player.pause();
+          }
+        },
+      };
     }
 
     const chars = [
@@ -256,134 +285,129 @@
       () => getRandom(128769, 128847),
     ];
 
-    const tracks = [
-      () => {
-        if (!p.paused) {
+    function initTracks(p, pos) {
+      const tracks = [
+        () => {
           p.pause();
-        }
-        pos
-          .setText("                         MIXED SIGNALS BY SERHIY BARHAMON ")
-          .encode(0, 19, 289)
-          .encode(19, 19, 311)
-          .encode(0, 19, 333)
-          .encode(0, 19, 355)
-          .encode(38, 19, 377)
-          .encode(0, 19, 399);
-      },
-      () => {
-        next("/mp3/dreams of a welding machine.mp3");
-        pos
-          .setText("DREAMS OF A WELDING MACHINE")
-          .encode(0, 11, 247 - 22)
-          .encode(12, 7, 249)
-          .encode(20, 7, 249 + 22);
-      },
-      () => {
-        next("/mp3/since the big bang.mp3");
-        pos.setText(" SINCE THE BIG BANG ").encode(0, 20, 23);
-      },
-      () => {
-        next("/mp3/anemic royality.mp3");
-        pos.setText("ANEMIC ROYALITY").encode(0, 6, 396).encode(7, 8, 418);
-      },
-
-      () => {
-        next("/mp3/breaking the law.mp3");
-        pos.setText(" BREAKING THE LAW ").encode(0, 18, 244);
-      },
-      () => {
-        next("/mp3/moonbase construction worker.mp3");
-        pos
-          .setText(" MOONBASE CONSTRUCTION WORKER ")
-          .encode(0, 10, 160)
-          .encode(9, 14, 180)
-          .encode(22, 8, 205);
-      },
-      () => {
-        next("/mp3/phase of life.mp3");
-        pos.setText(" PHASE OF LIFE ").encode(0, 15, 94);
-      },
-      () => {
-        next("/mp3/suspicious activities.mp3");
-        pos
-          .setText("SUSPICIOUS ACTIVITIES")
-          .encode(0, 10, 452)
-          .encode(11, 10, 474);
-      },
-      () => {
-        next("/mp3/will not cry in public.mp3");
-        pos
-          .setText("WILL NOT CRY IN PUBLIC")
-          .encode(0, 22, 0)
-          .encode(0, 22, 462);
-      },
-      () => {
-        next("/mp3/ambiguous sources.mp3");
-        pos.setText("AMBIGUOUS SOURCES").encode(0, 17, 71);
-      },
-      () => {
-        if (!p.paused) {
+          pos
+            .setText(
+              "                         MIXED SIGNALS BY SERHIY BARHAMON ",
+            )
+            .encode(0, 19, 289)
+            .encode(19, 19, 311)
+            .encode(0, 19, 333)
+            .encode(0, 19, 355)
+            .encode(38, 19, 377)
+            .encode(0, 19, 399);
+        },
+        () => {
+          p.playThis("/mp3/dreams of a welding machine.mp3");
+          pos
+            .setText("DREAMS OF A WELDING MACHINE")
+            .encode(0, 11, 247 - 22)
+            .encode(12, 7, 249)
+            .encode(20, 7, 249 + 22);
+        },
+        () => {
+          p.playThis("/mp3/since the big bang.mp3");
+          pos.setText(" SINCE THE BIG BANG ").encode(0, 20, 23);
+        },
+        () => {
+          p.playThis("/mp3/anemic royality.mp3");
+          pos.setText("ANEMIC ROYALITY").encode(0, 6, 396).encode(7, 8, 418);
+        },
+        () => {
+          p.playThis("/mp3/breaking the law.mp3");
+          pos.setText(" BREAKING THE LAW ").encode(0, 18, 244);
+        },
+        () => {
+          p.playThis("/mp3/moonbase construction worker.mp3");
+          pos
+            .setText(" MOONBASE CONSTRUCTION WORKER ")
+            .encode(0, 10, 160)
+            .encode(9, 14, 180)
+            .encode(22, 8, 205);
+        },
+        () => {
+          p.playThis("/mp3/phase of life.mp3");
+          pos.setText(" PHASE OF LIFE ").encode(0, 15, 94);
+        },
+        () => {
+          p.playThis("/mp3/suspicious activities.mp3");
+          pos
+            .setText("SUSPICIOUS ACTIVITIES")
+            .encode(0, 10, 452)
+            .encode(11, 10, 474);
+        },
+        () => {
+          p.playThis("/mp3/will not cry in public.mp3");
+          pos
+            .setText("WILL NOT CRY IN PUBLIC")
+            .encode(0, 22, 0)
+            .encode(0, 22, 462);
+        },
+        () => {
+          p.playThis("/mp3/ambiguous sources.mp3");
+          pos.setText("AMBIGUOUS SOURCES").encode(0, 17, 71);
+        },
+        () => {
           p.pause();
-        }
-        pos
-          .setText(
-            "DREAMS OF A WELDING MACHINE SINCE THE BIG BANG MOONBASE CONSTRUCTION WORKER BREAKING THE LAW SUSPICIOUS ACTIVITIES PHASE OF LIFE WILL NOT CRY IN PUBLIC AMBIGUOUS SOURCES ANEMIC ROYALITY MIXED  SIGNALS",
-          )
-          .encode(186, 14, 22 + 4)
-          .encode(0, 19, 22 * 3)
-          .encode(20, 7, 22 * 4)
-          .encode(28, 18, 22 * 6)
-          .encode(170, 15, 22 * 8)
-          .encode(76, 16, 22 * 10)
-          .encode(47, 21, 22 * 12)
-          .encode(69, 6, 22 * 13)
-          .encode(115, 13, 22 * 15)
-          .encode(93, 21, 22 * 17)
-          .encode(129, 22, 22 * 19)
-          .encode(152, 17, 22 * 21);
-      },
-    ];
+          pos
+            .setText(
+              "DREAMS OF A WELDING MACHINE SINCE THE BIG BANG MOONBASE CONSTRUCTION WORKER BREAKING THE LAW SUSPICIOUS ACTIVITIES PHASE OF LIFE WILL NOT CRY IN PUBLIC AMBIGUOUS SOURCES ANEMIC ROYALITY MIXED  SIGNALS",
+            )
+            .encode(186, 14, 22 + 4)
+            .encode(0, 19, 22 * 3)
+            .encode(20, 7, 22 * 4)
+            .encode(28, 18, 22 * 6)
+            .encode(170, 15, 22 * 8)
+            .encode(76, 16, 22 * 10)
+            .encode(47, 21, 22 * 12)
+            .encode(69, 6, 22 * 13)
+            .encode(115, 13, 22 * 15)
+            .encode(93, 21, 22 * 17)
+            .encode(129, 22, 22 * 19)
+            .encode(152, 17, 22 * 21);
+        },
+      ];
 
-    const refreshRate = new Array(22 * 22).fill(-1);
-    const pos = initPos("");
-    const p = new Audio("/mp3/dreams of a welding machine.mp3");
-    let current = 0;
-    let els = [];
+      let current = 0;
+      tracks[current](pos);
 
-    document.onkeydown = ({ keyCode }) => {
-      if (keyCode == 37) {
-        // left arrow
-        current = current === 0 ? 0 : current - 1;
-        tracks[current]();
-      } else if (keyCode == 39) {
-        //right arrow
-        current =
-          current === tracks.length - 1 ? tracks.length - 1 : current + 1;
-        tracks[current]();
-      } else if (keyCode == 32) {
-        // space
-        if (p.paused) {
-          if (current === 0 || current === tracks.length - 1) {
-            current = 1;
+      return {
+        next() {
+          current =
+            current === tracks.length - 1 ? tracks.length - 1 : current + 1;
+          tracks[current]();
+        },
+
+        previous() {
+          current = current === 0 ? 0 : current - 1;
+          tracks[current]();
+        },
+        playPause() {
+          if (p.player.paused) {
+            if (current === 0 || current === tracks.length - 1) {
+              current = 1;
+            } else if (p.play()) {
+              return;
+            }
             tracks[current]();
-          } else if (p.readyState) {
-            p.play();
           } else {
-            tracks[current]();
+            p.pause();
           }
-        } else {
-          p.pause();
-        }
-      }
-    };
-
-    p.addEventListener("ended", (event) => {
-      current = current === tracks.length - 1 ? tracks.length - 1 : current + 1;
-      tracks[current]();
-    });
+        },
+      };
+    }
 
     setTimeout(() => {
       const fullscreen = document.getElementById("fullscreen");
+
+      const pos = initPos("");
+      const p = player("/mp3/dreams of a welding machine.mp3", () =>
+        tracks.next(),
+      );
+      const tracks = initTracks(p, pos);
 
       fullscreen.addEventListener("click", (e) => {
         e.preventDefault();
@@ -395,13 +419,23 @@
         }
       });
 
-      const container = document.getElementById("content");
-      container.innerHTML = "<div></div>".repeat(22 * 22);
-      els = [...container.children];
-      animate();
-    }, 10);
+      document.onkeydown = ({ keyCode }) => {
+        switch (keyCode) {
+          case 37:
+            return tracks.previous(); // left arrow
+          case 39:
+            return tracks.next(); // right arrow
+          case 32:
+            return tracks.playPause(); // space
+        }
+      };
 
-    tracks[current]();
+      document.getElementById("left").onclick = () => tracks.previous();
+      document.getElementById("right").onclick = () => tracks.next();
+      document.getElementById("space").onclick = () => tracks.playPause();
+
+      animate(pos);
+    }, 10);
   </script>
   <body>
     <div id="fullscreen">
@@ -410,7 +444,10 @@
       </div>
     </div>
     <div>click on center of the screen to full screen</div>
-    <div>left/right arrows to navigate</div>
-    <div>space to play/pause</div>
+    <div>
+      <span id="left">left</span>/<span id="right">right</span>
+      arrows to navigate
+    </div>
+    <div><span id="space">space</span> to play/pause</div>
   </body>
 </html>
