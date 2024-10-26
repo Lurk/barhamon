@@ -1,0 +1,46 @@
+---
+title: "Crafting Interpreters by Robert Nystrom"
+date: 2024-10-25T20:00:00+01:00
+image: https://res.cloudinary.com/barhamon/image/upload/v1729860858/header/crafting-interpreters-by-robert-nystrom.png
+preview: "I wish all technical books were this good."
+tags:
+- books
+- non-fiction
+- software
+- engineering
+---
+
+I wish all technical books were this good. It not only walks you through the necessary steps to create your programming
+language but also includes a lot of context, memes, and references.
+
+It is also a huge and intimidating book. I do not think I would start reading it if I would not writing
+[YAMD](https://github.com/Lurk/yamd). Even though YAMD is not a programming language, one can name a resulting code -
+interpreter. And I can say that most of the [recent changes](/post/yamd-0.14.0-release.html) in the codebase of YAMD
+were inspired by this book.
+
+It also enriched my vocabulary and allowed me to search for the correct stuff. The frequency of “Oh, that's what it is”
+moments was unbelievably high. That is a good thing but also very distracting. My mind was constantly carried away by
+new ideas requiring further reading or experiments. That significantly contributed to the amount of time I spent
+reading it.
+
+!!
+! link
+I want to highlight two documents Robert goes through in the book. They greatly impacted the software engineering in
+general and are a good read on themselves.
+
+[Top-down operator presence by Vaughan R. Pratt](https://tdop.github.io/)
+
+[Goto statement considered harmful by Edgar Dijkstra](https://homepages.cwi.nl/~storm/teaching/reader/Dijkstra68.pdf)
+
+Go and read them even if you don't plan to read the book.
+!!
+
+It will be a good read for you to geekout. It will be a great read if you want to learn what lexer, parser,
+context-free grammar, AST, bytecode, etc. are.
+
+**Original Title:** Crafting Interpreters by Robert Nystrom
+
+**ISBN:** 0990582930 (ISBN13: 9780990582939)
+
+**GoodReads:** [4.69 / 5](https://www.goodreads.com/book/show/58661468-crafting-interpreters)
+
