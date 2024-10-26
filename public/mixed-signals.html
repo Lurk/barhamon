@@ -414,7 +414,7 @@
       fullscreen.addEventListener("click", (e) => {
         e.preventDefault();
         e.stopPropagation();
-        if (document.fullscreen) {
+        if (document.fullscreenElement) {
           document.exitFullscreen();
         } else {
           fullscreen.requestFullscreen();
