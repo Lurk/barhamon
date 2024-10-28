@@ -28,7 +28,7 @@ positioning, improved HTML structure, etc.
 One more thing. Unfortunately, there is JavaScript. Since there is no way to enter fullscreen mode without JS, the
 Hamon theme now contains four lines of
 [JS code](https://github.com/Lurk/Hamon/blob/c75cc80f7a61c00069850ec80e9a375181b78fee/static/js.js#L1). Here is a
-gallery with a few months of foto roll. Look at the `⛶` sign in the top-left corner.
+gallery with a few months of foto roll. Look at the `⛶` sign in the bottom-right corner.
 
 {{cloudinary_gallery|barhamon&roll-2024-10-26}}
 
