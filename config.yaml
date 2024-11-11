@@ -26,7 +26,6 @@ template_config:
     - adventures
     - life
     - books
-    - music
   index_article_id: '/me'
 yamd_processors:
   convert_cloudinary_embed: true
