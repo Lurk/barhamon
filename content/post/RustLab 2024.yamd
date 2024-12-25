@@ -1,0 +1,68 @@
+---
+title: "Rustlab 2024"
+date: 2024-12-16T22:30:00+01:00
+image: https://res.cloudinary.com/barhamon/image/upload/v1734385176/header/rustlab2024.jpg
+preview: "The International Conference on Rust in Florence"
+tags:
+- life
+- software
+---
+
+It was a long time ago, and I couldn’t write anything longer than would fit in a toot. It is weird because that was my
+first conference, and it felt awesome to be one of two hundred geeks who truly care about their craft. I enjoyed the
+entire experience.
+
+The workshop part was awesome (I ran out of positive adjectives). In the first session, I developed my shell, which can
+execute commands, change the current directory, and perform basic logic and grouping. In the second session, I created
+a TUI chat client using RatatUI. I had a great time working on them. The workshops were the best part of the
+conference, and I really look forward to the next one.
+
+!! Should I make shell and chat TUI public?
+! github
+I don’t think so. Most importantly, I don’t intend to support or improve them, at least not for now.
+!!
+
+Then, there were two days of cool presentations. I haven’t taken any notes, and looking back, I see that they would
+help me write this post. On the other hand, I wouldn’t have enjoyed the presentations as much if I had been distracted
+by note-taking. So yeah, no regrets.
+
+In the opening presentation, [Tim Clicks](https://mastodon.nz/@timClicks) talked about ways to improve software
+quality. One of the techniques he mentioned was fuzing. At home I scrolled through the photo roll and found the library
+name he was using.
+
+!! Pictures
+! image
+I took some technical pictures to remember the talks, which proved helpful. However, I don’t think it’s a good idea to
+share those pictures. I haven’t asked the people in those images for permission to share them, and I’m too lazy
+to gather their permissions.
+!!
+
+I maintain a markdown flavor/parser. This blog uses it, and I know one more person who at least tried to use it. Hi
+Augustin 🖖. I wouldn’t say that it’s a battle-tested piece of software, but it’s pretty solid and has never panicked
+on me. It has 100% code coverage and is written in Rust (by the way, TM). I am telling you all that not to brag about
+how cool it is (maybe a little) but to illustrate my confidence in it. I was very confident that YAMD had no obvious
+bugs. And you know what? Cargo-fuzz library found three bugs in less than a second. I’m very impressed and highly
+recommend incorporating fuzing into your workflow.
+
+!! cargo-fuzz
+! rust
+Has all the bells and whistles you can imagine. Check out the
+[Rust Fuzz Book](https://rust-fuzz.github.io/book/cargo-fuzz.html) for more details. It is totally worth it.
+!!
+
+One of the most unexpected and positive outcomes for me was the one I got from Cooking Parsers with Winnit by
+[Santiago Fraire Willemoes](https://woile.dev/). His story about creating a new language to describe cooking recipes
+inspired me to keep working on YAMD. It’s not that I lacked inspiration to do so, but at times it felt pointless. There
+are plenty of markdown parsers and flavors available. I could use one of them, as I always have, and it would be
+perfectly fine. Seeing in person that I’m not the only one reinventing the wheel adds meaning to the whole enterprise.
+I don’t know how that works.
+
+!! recipe-lang
+! github
+Check out [https://github.com/reciperium/recipe-lang](https://github.com/reciperium/recipe-lang) if you are into
+recipes!  
+!!
+
+Unfortunately, I didn’t have the time and energy to explore the city, but the venue was a 20-minute walk from my hotel.
+I experienced enough of Florence to be certain that I will return someday. And, as a note to myself, next time I should
+take at least one day before and after conference. It was tough with traveling.
