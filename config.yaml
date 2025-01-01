@@ -21,10 +21,10 @@ title: 'Serhiy Barhamon'
 description: 'blog'
 template_config:
   index_tags:
-    - software
-    - adventures
-    - books
     - life
+    - adventures
+    - software
+    - books
     - music
   index_article_id: '/me'
 yamd_processors:

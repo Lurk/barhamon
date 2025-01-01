@@ -1,0 +1,126 @@
+---
+title: "2024 recap"
+date: 2024-12-31T22:00:00+01:00
+image: https://res.cloudinary.com/barhamon/image/upload/v1735725175/rolls/2024/11_o5ipcs.jpg
+preview: "That was a productive year."
+tags:
+- life
+- me
+- photo roll
+---
+
+Russia is still trying to conquer Ukraine, and Ukraine still fights back. I don't see how it can end anytime soon. I
+would very much like russians to stop and go home, but until then
+
+!! If you want to help Ukrainians, here is where you can do it
+! handshake
+- There are many pets in the fighting area whose owners were killed or displaced. They need food and medical care.
+[uanimals.org](https://uanimals.org/en/)
+
+- I know those guys from my motorcycle life in Ukraine. They were saving lives then and do the same now.
+[motohelp.ua](https://motohelp.ua/)
+
+- Those guys are risking lives saving others on the front line: [hospitallers.life](https://www.hospitallers.life/)
+
+- Most importantly, all of that does not make much sense if the army of Ukraine does not have enough rounds, warm
+clothes, vehicles, etc. [prytulafoundation.org](https://prytulafoundation.org/en)
+!!
+
+## What I did this year?
+
+### Music
+
+This year, I released my first [music album](/music/mixed-signals-by-serhiy-barhamon.html). I have
+been somewhere near music all my life, trying to play some. That was the first time I liked the result so much that I
+did not care if someone else would like it. I do not think I ever felt that way. And this is a nice feeling. If there
+is one thing I would like to get from Santa, that would be it. I wish to do more stuff that I would like that much.
+
+And you know what, I am recording a new one. I have a few ideas that I want to explore, and I am making good progress.
+But no deadline is set yet. I am very happy that the amount of food in my fridge does not depend on the amount of music
+I am releasing, and I want it to stay that way, at least for now.
+
+### Lapland crossing
+
+Yeah. [I crossed Lapland](/post/lapland-2024.html) on a bicycle. I did it alone. Researched the
+trail and figured out logistics, food, charge, etc. Then, I rode 800 km on a bicycle, wild-camped, fished, and had a
+sauna a few times. Even though not everything went according to plan, it was awesome.
+
+People often say they like to go on adventures alone, but I have never done so. While I was never truly alone, the
+internet makes it hard, I did enjoy going at my pace. I don't think, though, that solo will be my main mode of
+adventuring, but I know that I can do it alone, and it is not as scary as I thought before.
+
+### Road trip in France
+
+When I started riding motorcycles, driving a car became a lame and utility thing. You know, if one needs to move a
+fridge or get groceries, one uses the car. If one wants to travel, one uses a motorcycle. It turned out I missed the
+car driving as much as motorcycle riding. We got the cheapest car at the Paris train station and rode around 2000 km of
+small roads in the North of France. All those castles and villages with century-old churches are very cool.
+
+### Rust conference
+
+I visited [Rustlab 2024](/post/RustLab%202024.html), and I want more of that. I already monitor the
+conference schedule for the next year. [Fosdem](https://fosdem.org/2025/) looks very attractive. I don’t know yet if I
+can make it.
+
+### Software
+
+#### Yamd
+
+This year, [I worked hard on YAMD](/post/yamd-0.14.0-release.html). The most significant change is
+the introduction of a lexer. It took me ages to figure out how to do it. I like the result and have a few ideas on how
+to make it even better. I am writing these ideas as [issues](https://github.com/Lurk/yamd/issues) on GitHub, with a
+variable success rate.
+
+I also added a simple benchmark and fuzing to the CI pipeline to future-proof the parser pipeline. It was
+[not as straightforward](https://github.com/boa-dev/criterion-compare-action/issues/62#issuecomment-2562556407) as I
+hoped, but I think it was worth it.
+
+#### Cloudinary
+
+I still maintain unofficial [Cloudinary Rust SDK](https://crates.io/crates/cloudinary). I do it because I need one, and
+there is no official one. If, at some point, Cloudinary decides to take over or write one from scratch - I will be very
+happy to stop maintaining it.
+
+Cloudinary has a very extensive API for uploads and transformations. My first idea was to have a hashmap with helper
+methods around it, which I didn't like from the beginning. This year, I finally found time to rewrite it. Now, there
+are a bunch of enums with
+[documentation](https://docs.rs/cloudinary/0.8.0/cloudinary/upload/enum.OptionalParameters.html) and tests. The work
+was labor intensive, but I find it much easier to work with now, and I hope it will be easier to support.
+
+#### BAR
+
+I convinced at least one person to try [BAR](https://github.com/Lurk/bar), and he sent bug reports and pull requests.
+Be as cool as Augustin. Use BAR.
+
+#### Mixed Signals cover
+
+I used HTML, CSS, and JavaScript to create an [animated cover](/mixed-signals.html) for my album.
+It turned out to be a full-fledged player with animation and other features. That is why I like the Web ecosystem. I
+can create an interactive, multiplatform, responsive (the
+[responsive part](https://github.com/Lurk/barhamon/blob/main/public/mixed-signals.html#L58) is particularly neat) audio
+player that fits in one file.
+
+### Books
+
+- [Project Hail Mary by Andy Weir](/books/project_hail_mary.html)
+- [Rust Atomics and Locks by Mara Bos](/books/Rust-Atomics-and-Locks-by-Mara-Bos.html)
+- [Mad, Bad & Dangerous to Know by Ranulph Fiennes](/books/Mad-Bad-and-Dangerous-to-Know-by-Ranulph-Fiennes.html)
+- [Crafting Interpreters by Robert Nystrom](/books/crafting-interpreters-by-robert-nystrom.html)
+- [Cosmos by Carl Sagan](/books/Cosmos%20by%20Carl%20Sagan.html)
+- [Dirk Gently’s Holistic Detective Agency by James Goss and Arvin Ethan David based on the novel by Douglas Adams](/books/Dirk%20Gently%E2%80%99s%20Holistic%20Detective%20Agency%20by%20James%20Goss%20and%20Arvin%20Ethan%20David%20based%20on%20the%20novel%20by%20Douglas%20Adams.html)
+
+That’s two books more than the previous year. I hope it is a trend :)
+
+## Work-related stuff.
+
+I am a team lead at Check24. No changes there. It is still hard to feel productive sometimes, but I am getting positive
+feedback, which helps a lot.
+
+## 2024 roll
+
+{{cloudinary_gallery|barhamon&2024-roll}}
+
+## Outro
+
+That was a productive year. I do not experience that feeling often enough, but I like it. If you ask why one writes a
+year review, that's the answer for me.
