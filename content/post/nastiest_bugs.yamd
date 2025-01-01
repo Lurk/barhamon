@@ -5,8 +5,7 @@ image: /img/this_is_fine.jpg
 preview: "Here is tail about the nastiest bugs in my life."
 tags:
 - interview
-- bugs
-- me
+- software
 ---
 
 One of the questions I usually get on an interview - Tell me about a time that you had to deal with a tricky bug.
