@@ -1,0 +1,237 @@
+---
+title: "Yamd 0.15.0 release notes"
+date: 2025-01-11T14:00:00+01:00
+image: https://res.cloudinary.com/barhamon/image/upload/v1736712589/header/yamd%200.15.0.jpg
+preview: "More tests, benchmarks, and a 70% throughput increase."
+tags:
+- software
+- yamd
+- rust
+- github
+---
+
+There is still no YAMD-dedicated website, so here is a changelog.
+
+## Fuzz is now a part of CI
+
+For some reason, it was not as straightforward as I hoped. It took me six commits to make it work. Is there a better
+way to test Github actions than pushing your change?
+
+That's what works for me:
+
+{% rust fuzz github action
+```yaml
+permissions:
+  contents: read
+on:
+  push:
+    branches: [main]
+  pull_request:
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+name: fuzz
+jobs:
+  required:
+    runs-on: ubuntu-latest
+    name: ubuntu / nightly
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+      - name: Install nightly
+        uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: nightly
+      - name: cargo install cargo-fuzz
+        uses: taiki-e/install-action@v2
+        with:
+          tool: cargo-fuzz
+      - name: cargo fuzz run --target x86_64-unknown-linux-gnu deserialize -- -max_total_time=10
+        run: cargo fuzz run --target x86_64-unknown-linux-gnu deserialize -- -max_total_time=10
+```
+%}
+
+I don’t know why, but I am extremely happy that Fuzz is now part of CI.
+
+## semver-checks are now part of CI
+
+[Semver checks](https://github.com/obi1kenobi/cargo-semver-checks/) is a neat project that can say if you have a
+breaking change in your PR and fail if the minor version was not bumped. It does not cover all possible ways to violate
+[semver](https://semver.org/), but it is close.
+
+Integrating it into CI was very straightforward.
+
+## Benchmarks
+
+I want to measure execution time and throughput. Both make sense, but I think throughput is a more relevant measurement
+for parsers.
+
+The first benchmark was all YAMD files I could find (that was easy because I searched only only on my hard drive), fed
+concatenated to the parser. This benchmark is supposed to show how much time the parser spends on a human-generated
+input.
+
+{% Human input benchmark result
+```sh
+throughput/~344kb of YAMD written by humman
+                        time:   [4.5165 ms 4.5367 ms 4.5589 ms]
+                        thrpt:  [73.709 MiB/s 74.069 MiB/s 74.401 MiB/s]
+Found 9 outliers among 100 measurements (9.00%)
+  6 (6.00%) high mild
+  3 (3.00%) high severe
+```
+%}
+
+That’s the most important benchmark, but it would not show the whole picture. Human input primarily consists of
+[Literal](https://docs.rs/yamd/latest/yamd/lexer/enum.TokenKind.html#variant.Literal) and
+[Space](https://docs.rs/yamd/latest/yamd/lexer/enum.TokenKind.html#variant.Space) tokens with the parser rarely
+backtracking. A bench with random tokens should give insight into backtracking performance.
+
+{% Random token input benchmark result
+```sh
+throughput/~346kb of random tokens
+                        time:   [656.42 µs 660.58 µs 665.10 µs]
+                        thrpt:  [508.32 MiB/s 511.80 MiB/s 515.04 MiB/s]
+Found 6 outliers among 100 measurements (6.00%)
+  6 (6.00%) high mild
+```
+%}
+
+I expected the benchmark with random tokens as input to be less performant, but the bench shows a ~7x increase in
+throughput. The input for this benchmark contained literals up to 100 characters. That means the lexer will produce
+output with lower token density (fewer tokens for the same output size).
+
+It is ~7x faster because throughput depends on the density of tokens. More tokens == more work for the parser.
+
+{% Benchmark result with high token density
+```sh
+throughput/~344kb with high density of tokens
+                        time:   [7.7707 ms 7.8265 ms 7.8858 ms]
+                        thrpt:  [42.611 MiB/s 42.934 MiB/s 43.242 MiB/s]
+Found 2 outliers among 100 measurements (2.00%)
+  2 (2.00%) high mild
+```
+%}
+
+Finally, it makes sense.
+
+Benchmark integration to the CI pipeline required some digging, because benchmarking action was not able to comment PR
+with the result. If you are having the same trouble, check this issue
+[Not working on GitHub enterprise](https://github.com/boa-dev/criterion-compare-action/issues/62#issuecomment-2562556407)
+(TLDR: it has nothing to do with enterprise, it lacks permission).
+
+## ~70% throughput increase
+
+While working on benches and thinking about token density, I found a way to dramatically decrease token density for
+human input. Consider this input `Hello world`. Lexer would emit `[“Hello”, “ “, “world’]`, or
+`[Literal, Space, Literal]`. Since no parsing rule involves
+[Space](https://docs.rs/yamd/latest/yamd/lexer/enum.TokenKind.html#variant.Space) token after
+[Literal](https://docs.rs/yamd/latest/yamd/lexer/enum.TokenKind.html#variant.Literal) token, the lexer can compress it
+into one Literal token without losing any information. For our `Hello world` example, after compression, the lexer
+would emit `[“Hello world”]` or `[Literal]`.
+
+Since human input consists primarily of words separated by spaces, token density should significantly improve after
+compression.
+
+{% Token statistics for: ../benches/human_input.yamd before compression
+```sh
+Total token count:    117221
+
+Literal:              53808
+Space:                47737
+Eol:                  4072
+Minus:                2750
+Terminator:           1943
+RightParenthesis:     1040
+Bang:                 989
+LeftParenthesis:      972
+Underscore:           824
+LeftSquareBracket:    660
+RightSquareBracket:   660
+Hash:                 263
+Backtick:             252
+RightCurlyBrace:      248
+LeftCurlyBrace:       248
+Plus:                 240
+Star:                 187
+Pipe:                 167
+GreaterThan:          133
+Tilde:                18
+CollapsibleEnd:       5
+CollapsibleStart:     5
+```
+%}
+
+{% Token statistics for: ../benches/human_input.yamd after compression
+```sh
+Total token count:    27776
+
+Literal:              9771
+Eol:                  4072
+Minus:                2750
+Space:                2329
+Terminator:           1943
+RightParenthesis:     1040
+Bang:                 989
+LeftParenthesis:      972
+Underscore:           824
+LeftSquareBracket:    660
+RightSquareBracket:   660
+Hash:                 263
+Backtick:             252
+LeftCurlyBrace:       248
+RightCurlyBrace:      248
+Plus:                 240
+Star:                 187
+Pipe:                 167
+GreaterThan:          133
+Tilde:                18
+CollapsibleStart:     5
+CollapsibleEnd:       5
+```
+%}
+
+That's a 4x improvement in token density for human input, which translates to a nice ~70% throughput increase and ~40%
+execution time decrease with no penalties 🎉
+
+{% Benchmark results with compression
+```sh
+throughput/~344kb of YAMD written by humman
+                        time:   [2.7355 ms 2.7438 ms 2.7539 ms]
+                        thrpt:  [122.02 MiB/s 122.47 MiB/s 122.83 MiB/s]
+                 change:
+                        time:   [-41.784% -41.188% -40.680%] (p = 0.00 < 0.05)
+                        thrpt:  [+68.576% +70.033% +71.775%]
+                        Performance has improved.
+Found 13 outliers among 100 measurements (13.00%)
+  4 (4.00%) high mild
+  9 (9.00%) high severe
+
+throughput/~344kb with high density of tokens
+                        time:   [7.5607 ms 7.5899 ms 7.6255 ms]
+                        thrpt:  [44.065 MiB/s 44.272 MiB/s 44.443 MiB/s]
+Found 9 outliers among 100 measurements (9.00%)
+  2 (2.00%) high mild
+  7 (7.00%) high severe
+
+throughput/~346kb with low density of tokens
+                        time:   [653.02 µs 657.18 µs 663.70 µs]
+                        thrpt:  [509.39 MiB/s 514.45 MiB/s 517.72 MiB/s]
+Found 18 outliers among 100 measurements (18.00%)
+  4 (4.00%) high mild
+  14 (14.00%) high severe
+```
+%}
+
+## Escape marker
+
+We must know if it escaped when deserializing the Token back to a string. Even though it makes sense to have only one
+Literal kind of token, `escaped` property in [Token](https://docs.rs/yamd/latest/yamd/lexer/struct.Token.html) struct
+is much easier to use.
+
+## Utils
+
+Random token generator and token statistics gatherer are now part of the repo. I am thinking of adding `main` to YAMD
+itself, but it is a separate project for now.
+
+
