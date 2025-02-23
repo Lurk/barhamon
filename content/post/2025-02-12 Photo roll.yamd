@@ -1,0 +1,47 @@
+---
+title: "2025-02-12 Photo roll"
+date: 2025-02-12T14:30:00+02:00
+image: https://res.cloudinary.com/barhamon/image/upload/v1739366979/rolls/2025-02-12/header.jpg
+preview: "Dark days."
+tags:
+- life
+- photo roll
+---
+
+The days are short and mostly gray, which, to be honest, I do not mind. I enjoy sitting at home in front of a screen
+when it is dark outside.
+
+While sitting at home, I was playing with context2d in the browser. The idea was to create an animation for one of my
+tracks. While switching between synth and vim, I discovered the distortion effect and lost sleep over it. Finishing
+something is hard, and music is no exception. At some point I got distracted by an urge to make a game and I started to
+learn [Bevy](https://bevyengine.org/), by building a [Crimsonland](https://en.wikipedia.org/wiki/Crimsonland)-inspired
+game. Which I abandoned because I got an idea of how to make LFO-based animation factory...
+
+There is no way I will be that productive in summer.
+
+A few notable things happened:
+
+- I had a birthday.
+- We visited the [Alpine Museum](https://www.alpenverein.de/museum).
+- We went to the opera.
+
+## Birthday
+
+For a few years in a row, I was sick on my birthday. Once, we got tickets to The Black Angels show in Barcelona and had
+to cancel everything because I was extremely ill. Because of that, we were not planning anything.
+
+I did not get sick (yey!), so we hiked along the wild parts of Isar and had a bit of adventure.
+
+## Alpine museum.
+
+It feels like it has been closed forever. But finally the renovation is finished and everyone can visit it. There are
+stories/pictures about mountaineering as exposition and the library. We liked it.
+
+## Opera
+
+We went to see [Die Fledermaus](https://www.gaertnerplatztheater.de/de/produktionen/die-fledermaus.html), and it was
+awesome. The last time I went to the opera was when I was a kid. It was incredibly boring, and I hated it. This time,
+I liked every bit of it. The decorations are so brilliant that whoever designed them deserves a (p)raise. The way the
+actors used those decorations to act blew my mind. And it even had English subtitles. How cool is that?
+
+{{cloudinary_gallery|barhamon&2025-02-12}}
