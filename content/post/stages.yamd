@@ -1,0 +1,216 @@
+---
+title: "Stages"
+date: 2025-03-15T18:08:14+02:00
+image: https://res.cloudinary.com/barhamon/image/upload/v1699743410/rls-pamir/header_kykwot.jpg
+preview: "A tool for trippy animations"
+is_draft: true
+tags:
+- software
+- js
+- ts
+---
+
+At the beginning of the year, I had a chat with [12 min albums](https://12minalbums.bandcamp.com/) record label. Dante,
+the guy from the label, said that if I record mini album (12 minutes) they would be glad to publish it. One of the
+requirements from their side was that, together with audio, I needed to provide video. So, naturally, I spent the last
+few months developing a tool to make trippy animations. Like this one:
+
+{{iframe|/stages/?s=001N003.x_t6.0.00017.0.545411.1011.x4.zero5.width3.x_t3.x_t007.lfo_min6.0.74947.0.749686.0.7499007.lfo_max6.0.74994.0.754.0.75005.lfo_t1.211.40558.984546.100000013.lfo7.lfo_min7.lfo_max5.lfo_t4.zero011.y4.zero6.height3.lfo3.lfo025.first1.x1.y3.one1.v051.v1.05.width6.height6.height5.width}}
+
+!! TLDR:
+! lightbulb
+The spacebar hides/shows controls. Click on animation makes it fullscreen.
+
+The controls look like a backend engineer designed them, and the code is messy. But I had a tight deadline :)
+
+While animation does work on mobile, controls were not tested on a mobile.
+
+Open [the link](/stages/?s=001Y003.x_t6.0.00017.0.545411.1011.x4.zero5.width3.x_t3.x_t007.lfo_min6.0.74947.0.749686.0.7499007.lfo_max6.0.74994.0.754.0.75005.lfo_t1.211.40558.984546.100000013.lfo7.lfo_min7.lfo_max5.lfo_t4.zero011.y4.zero6.height3.lfo3.lfo025.first1.x1.y3.one1.v051.v1.05.width6.height6.height5.width)
+and drag some sliders around.
+!!
+
+## Documentation
+
+There is two types of controls and factory to spawn them.
+
++ Value producers. Some of them are just values like Zero or One. Some of them need other vales to produce values. For
+example, Math needs two values to perform an operation.
++ Outputs: Line. Outputs are the ones that draw something on the screen.
+
+### Built in value producers.
+
+- `Zero`: 0
+- `One`: 1
+- `Width`: width of the browser window
+- `Height`: height of the browser window
+- `i` - In each frame, some amount of shapes will be drawn, and this will be the serial number of the shape drawn.
+
+### Factory
+
+The factory spawns any available control and restarts the animation.
+
+### Slider
+
+Produces a value that can be changed by user in UI. Minimum slider resolution is `0.00001`. But it can be achieved only
+if `min` and `max` are close to each other.
+
+### Math
+
+Produces a value that is a result of math operations.
+
+- `sum` - adds two values
+- `sub` - subtracts two values
+- `mul` - multiplies two values
+- `div` - divides two values
+- `avg` - averages two values
+
+In order to use screen real estate efficiently, `Math` has two blocks `a` (top) and `b` (bottom). Each block has `lhs`
+and `rhs` values and `mode` that specifies operation. Those two blocks produce two values with `_a` and `_b` postfixes.
+
+### Oscillator
+
+Produces a value that oscillates between `min` and `max` in time specified by `raise` and `fall`. All oscillators are
+synced to the same zero time. `raise` and `fall` are in milliseconds.
+
+### Random
+
+Produces a random value between `min` and `max`
+
+### Line output
+
+Connects `vertices` amount of vertices connects them by a straight line. For each frame, it will read values from
+`vertices` and `sr` (sample rate) parameters. Then it will read values from `x` and `y`, `vertices` amount of time,
+advancing `now` by `sr` and `i` by one.
+
+### Logic
+
+Produces a value that is a result of logic operation.
+
+- `eq`: left hand equals right hand
+- `neq`: left hand not equals right hand
+- `gt`: left hand greater than right hand
+- `lt`: left hand less than right hand
+- `gte`: left hand greater than or equals right hand
+- `lte`: left hand less than or equals right hand
+
+If logic operation evaluates to true, value from `is_true` connector will be returned, otherwise value from `is_false`.
+
+## Walkthrough
+
+### Simple line
+
+Lets open [empty stage](/stages/), add a `Slider` with name `y` and `Line` with name `line` to the stage. Nothing
+happens, but that because we do not have any connections yet. Lets connect:
+
+- `line.x` to `width`
+- `line.y` to `y`
+- `line.vertices` to `height`
+- `line.sr` to `one`
+
+Now we have a line that goes from the left side of the screen to the right side of the screen. When you move the
+`y` slider, the line will move up and down.
+
+{{iframe|/stages/?s=001N001.y1.03.1003.500024.line1.i1.y3.one5.width}}
+
+[simple line](/stages/?s=001Y001.y1.03.1003.500024.line1.i1.y3.one5.width)
+
+### A line that always in the center of the screen
+
+While previous example we were able to draw a line at position that needs to be adjusted manually. If we want to draw
+a line that will stay always at center of the screen, we can use `Math` control. With `Math` we will divide `height`
+value by two. We can get two from `Slider` control, but since we already have `Math` on stage, we can use first half
+to sum `one` with `one` and second half to divide `height` by the value from first half.
+
+Lets open [empty stage](/stages/), add a `Math` with name `center` and `Line` with name `line` to the stage. And add
+connections:
+
+- `center.mode_a` to `sum`
+- `center.lhs` to `one`
+- `center.rhs` to `one`
+- `center.mode_b` to `div`
+- `center.lhs` to `height`
+- `center.rhs` to `center_a`
+- `line.x` to `width`
+- `line.y` to `center_b`
+- `line.vertices` to `width`
+- `line.sr` to `one`
+
+{{iframe|/stages/?s=001N036.center1.03.one3.one3.div6.height8.center_a024.line1.i8.center_b3.one5.width}}
+
+[line in center](/stages/?s=001Y036.center1.03.one3.one3.div6.height8.center_a024.line1.i8.center_b3.one5.width)
+
+### Triangle wave
+
+With `Oscillator` control we can create a triangle wave.
+
+Lets open [empty stage](/stages/), add a `Slider` with name `y_t`, `Oscillator` with name `y` and `Line` with name
+`line` to the stage. Add connections:
+
+- `y.min` to `zero`
+- `y.max` to `height`
+- `y.raise` to `y_t`
+- `y.fall` to `y_t`
+- `line.x` to `i`
+- `line.y` to `y`
+- `line.vertices` to `width`
+- `line.sr` to `one`
+
+{{iframe|/stages/?s=001N003.y_t1.03.5003.500011.y4.zero6.height3.y_t3.y_t024.line1.i1.y3.one5.width}}
+
+[triangle wave](/stages/?s=001Y003.y_t1.03.5003.500011.y4.zero6.height3.y_t3.y_t024.line1.i1.y3.one5.width)
+
+You can easily create a sawtooth wave by connecting `y.raise` to `zero`.
+
+### More interesting wave
+
+Let's modulate `y.min` with another `Oscillator` control.
+
+We can reuse
+[triangle wave](/stages/?s=001Y003.y_t1.03.5003.500011.y4.zero6.height3.y_t3.y_t024.line1.i1.y3.one5.width) from
+previous example. Lets add another `Oscillator` control with name `y_min_mod` and make following connections:
+
+- `y_min_mod.min` to `zero`
+- `y_min_mod.max` to `height`
+- `y_min_mod.raise` to `y_t`
+- `y_min_mod.fall` to `y_t`
+- `y.min` to `y_min_mod`
+
+{{iframe|/stages/?s=001N003.y_t1.03.5003.500011.y9.y_min_mod6.height3.y_t3.y_t024.line1.i1.y3.one5.width019.y_min_mod4.zero6.height3.y_t3.y_t}}
+
+[more interesting wave](/stages/?s=001Y003.y_t1.03.5003.500011.y9.y_min_mod6.height3.y_t3.y_t024.line1.i1.y3.one5.width019.y_min_mod4.zero6.height3.y_t3.y_t)
+
+And why stop here? Lets modulate `y_min_mod` with another `Oscillator` control that runs with a different frequency.
+
+{{iframe|/stages/?s=001N003.y_t1.010.1624.663984.5000011.y9.y_min_mod6.height3.y_t3.y_t024.line1.i1.y3.one5.width019.y_min_mod8.y_min_mm6.height3.y_t3.y_t018.y_min_mm4.zero6.height4.mm_t4.mm_t004.mm_t3.NaN7.1.192882.50}}
+
+[even more interesting wave](/stages/?s=001Y003.y_t1.010.1624.663984.5000011.y9.y_min_mod6.height3.y_t3.y_t024.line1.i1.y3.one5.width019.y_min_mod8.y_min_mm6.height3.y_t3.y_t018.y_min_mm4.zero6.height4.mm_t4.mm_t004.mm_t3.NaN7.1.192882.50)
+
+### 2d wave
+
+Up until now we were drawing lines that were moving in one dimension. Lets fix that. Open [empty stage](/stages/) and
+add following controls: 
+
+- `Slider` with name `x_t`
+- `Oscillator` with name `x`
+- `Slider` with name `y_t`
+- `Oscillator` with name `y`
+- `Line` with name `line`.
+
+And connect all of them like this:
+
+- `x.min` to `zero`
+- `x.max` to `width`
+- `x.raise` to `x_t`
+- `x.fall` to `x_t`
+- `y.min` to `zero`
+- `y.max` to `height`
+- `y.raise` to `y_t`
+- `y.fall` to `y_t`
+- `line.x` to `x`
+- `line.y` to `y`
+- `line.vertices` to `width`
+- `line.sr` to `one`
+
+{{iframe|http://localhost:3000/stages/?s=001Y003.x_t1.01.01.0011.x4.zero1.03.x_t3.x_t003.y_t3.NaN2.503.500011.y4.zero6.height3.y_t3.y_t024.line1.x1.y3.one1.0}}
+
+[2d wave](/stages/?s=001Y003.x_t1.03.5003.500011.x4.zero6.width3.x_t3.x_t024.y_t1.03.5003.500011.y4.zero6.height3.y_t3.y_t024.line1.i1.y3.one5.width)
