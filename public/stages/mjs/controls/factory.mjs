@@ -60,7 +60,7 @@ function init(state, values, outputs) {
                 return sliderWithNumericInputs({
                     values,
                     onRemove,
-                    args: config.args,
+                    args: { min: 0, max: 500, value: 50, ...config.args },
                     onChange: (args) => state.updateControl({ type: config.type, args }),
                 });
             case "oscillator":
