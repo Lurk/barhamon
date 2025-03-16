@@ -211,6 +211,6 @@ And connect all of them like this:
 - `line.vertices` to `width`
 - `line.sr` to `one`
 
-{{iframe|http://localhost:3000/stages/?s=001Y003.x_t1.01.01.0011.x4.zero1.03.x_t3.x_t003.y_t3.NaN2.503.500011.y4.zero6.height3.y_t3.y_t024.line1.x1.y3.one1.0}}
+{{iframe|/stages/?s=001Y003.x_t1.02.503.500011.x4.zero5.width3.x_t3.x_t003.y_t1.02.503.500011.y4.zero6.height3.y_t3.y_t024.line1.x1.y3.one5.width}}
 
-[2d wave](/stages/?s=001Y003.x_t1.03.5003.500011.x4.zero6.width3.x_t3.x_t024.y_t1.03.5003.500011.y4.zero6.height3.y_t3.y_t024.line1.i1.y3.one5.width)
+[2d wave](/stages/?s=001Y003.x_t1.02.503.500011.x4.zero5.width3.x_t3.x_t003.y_t1.02.503.500011.y4.zero6.height3.y_t3.y_t024.line1.x1.y3.one5.width)
