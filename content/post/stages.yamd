@@ -37,6 +37,12 @@ There is two types of controls and factory to spawn them.
 example, Math needs two values to perform an operation.
 + Outputs: Line. Outputs are the ones that draw something on the screen.
 
+Browser back/forth works like undo/redo.
+
+Spacebar - toggles controls visibility.
+
+Click on animation makes it fullscreen.
+
 ### Built in value producers.
 
 - `Zero`: 0
@@ -51,8 +57,8 @@ The factory spawns any available control and restarts the animation.
 
 ### Slider
 
-Produces a value that can be changed by user in UI. Minimum slider resolution is `0.00001`. But it can be achieved only
-if `min` and `max` are close to each other.
+Produces a value that can be changed by user in UI. Minimum slider resolution is `0.00001`, if `min` and `max` are
+close enough to each other.
 
 ### Math
 
@@ -211,6 +217,36 @@ And connect all of them like this:
 - `line.vertices` to `width`
 - `line.sr` to `one`
 
-{{iframe|/stages/?s=001Y003.x_t1.02.503.500011.x4.zero5.width3.x_t3.x_t003.y_t1.02.503.500011.y4.zero6.height3.y_t3.y_t024.line1.x1.y3.one5.width}}
+{{iframe|/stages/?s=001N003.x_t1.02.503.500011.x4.zero5.width3.x_t3.x_t003.y_t1.02.503.500011.y4.zero6.height3.y_t3.y_t024.line1.x1.y3.one5.width}}
 
 [2d wave](/stages/?s=001Y003.x_t1.02.503.500011.x4.zero5.width3.x_t3.x_t003.y_t1.02.503.500011.y4.zero6.height3.y_t3.y_t024.line1.x1.y3.one5.width)
+
+Does not look like much, right? That's because `x` and `y` oscillators are synced. Which can be easily changed by
+tweaking `x_t` or `y_t` sliders.
+
+{{iframe|/stages/?s=001N003.x_t1.01.51.5011.x4.zero5.width3.x_t3.x_t003.y_t1.07.2.001011.5011.y4.zero6.height3.y_t3.y_t024.line1.x1.y3.one5.width}}
+
+[2d wave](/stages/?s=001Y003.x_t1.01.51.5011.x4.zero5.width3.x_t3.x_t003.y_t1.07.2.001011.5011.y4.zero6.height3.y_t3.y_t024.line1.x1.y3.one5.width)
+
+### Pulsed distortion
+
+Lets add a bit of chaos to the previous stage. We get random value in `x` +/- 100 range, and use it 2 seconds out 6 as
+`x` value.
+
+{{iframe|/stages/?s=001N003.x_t1.01.51.5011.x4.zero5.width3.x_t3.x_t003.y_t1.07.2.001011.5011.y4.zero6.height3.y_t3.y_t024.line5.logic1.y3.one5.width007.r_width1.03.1003.100036.limits3.sub1.x7.r_width3.sum1.x7.r_width041.r8.limits_a8.limits_b055.logic3.lte7.r_width3.loo1.r1.x013.loo4.zero3.max4.time4.time004.time1.04.60004.6000003.max1.03.1503.150}}
+
+[pulsed distortion](/stages/?s=001Y003.x_t1.01.51.5011.x4.zero5.width3.x_t3.x_t003.y_t1.07.2.001011.5011.y4.zero6.height3.y_t3.y_t024.line5.logic1.y3.one5.width007.r_width1.03.1003.100036.limits3.sub1.x7.r_width3.sum1.x7.r_width041.r8.limits_a8.limits_b055.logic3.lte7.r_width3.loo1.r1.x013.loo4.zero3.max4.time4.time004.time1.04.60004.6000003.max1.03.1503.150)
+
+## TODO
+
+This is in super early stage and my plans for the future looks like that:
+
+- Color control. Most likely in HSB format.
+- More shapes. Circles, squares, etc.
+- Trigonometry. cos, sin, tan, etc. Should open doors to a different kinds of waves.
+- Math control requires more options: powers, roots, logs, etc.
+
+If you have feature requests - I am all ears.
+
+Mandatory link to a repo: 
+
