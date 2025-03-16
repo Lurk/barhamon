@@ -107,7 +107,7 @@ export function logic({ values, args, onRemove, onChange }) {
         Object.assign(state, {
             lhs: selectedLhs(),
             rhs: selectedRhs(),
-            is_true: selectedIsTrue,
+            is_true: selectedIsTrue(),
             is_false: selectedIsFalse(),
         });
         onChange(state);
