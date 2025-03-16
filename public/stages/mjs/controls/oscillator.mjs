@@ -11,7 +11,7 @@ export function oscillatorWithConnectInput({ values, args, onRemove, onChange, }
         removeFall();
     });
     const state = { ...args };
-    const { value: min, update: updateMin, onRemove: removeMin, } = connect({
+    const { value: min, update: updateMin, onRemove: removeMin, selected: selectedMin, } = connect({
         values,
         omit: args.name,
         args: {
@@ -24,7 +24,7 @@ export function oscillatorWithConnectInput({ values, args, onRemove, onChange, }
             onChange({ ...Object.assign(state, { min }) });
         },
     });
-    const { value: max, update: updateMax, onRemove: removeMax, } = connect({
+    const { value: max, update: updateMax, onRemove: removeMax, selected: selectedMax, } = connect({
         values,
         omit: args.name,
         args: {
@@ -37,7 +37,7 @@ export function oscillatorWithConnectInput({ values, args, onRemove, onChange, }
             onChange({ ...Object.assign(state, { max }) });
         },
     });
-    const { value: raise, update: updateRaise, onRemove: removeRaise, } = connect({
+    const { value: raise, update: updateRaise, onRemove: removeRaise, selected: selectedRaise, } = connect({
         values,
         omit: args.name,
         args: {
@@ -50,7 +50,7 @@ export function oscillatorWithConnectInput({ values, args, onRemove, onChange, }
             onChange({ ...Object.assign(state, { raise }) });
         },
     });
-    const { value: fall, update: updateFall, onRemove: removeFall, } = connect({
+    const { value: fall, update: updateFall, onRemove: removeFall, selected: selectedFall, } = connect({
         values,
         omit: args.name,
         args: {
@@ -82,5 +82,12 @@ export function oscillatorWithConnectInput({ values, args, onRemove, onChange, }
         updateMax(args.max);
         updateRaise(args.raise);
         updateFall(args.fall);
+        onChange({
+            min: selectedMin(),
+            max: selectedMax(),
+            raise: selectedRaise(),
+            fall: selectedFall(),
+            ...state,
+        });
     }, 10);
 }
