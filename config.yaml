@@ -22,8 +22,8 @@ title: 'Serhiy Barhamon'
 description: 'blog'
 template_config:
   index_tags:
-    - life
     - software
+    - life
     - adventures
     - books
     - music
