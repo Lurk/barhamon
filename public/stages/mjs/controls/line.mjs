@@ -76,12 +76,12 @@ export function line({ values, outputs, args, onRemove, onChange }) {
         updateY(args.y);
         updateSr(args.sr);
         updateVertices(args.vertices);
-        onChange({
+        Object.assign(state, {
             x: selectedX(),
             y: selectedY(),
             sr: selectedSr(),
             vertices: selectedVertices(),
-            ...state,
         });
+        onChange(state);
     }, 1);
 }

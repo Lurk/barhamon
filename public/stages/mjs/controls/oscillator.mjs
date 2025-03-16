@@ -82,12 +82,12 @@ export function oscillatorWithConnectInput({ values, args, onRemove, onChange, }
         updateMax(args.max);
         updateRaise(args.raise);
         updateFall(args.fall);
-        onChange({
+        Object.assign(state, {
             min: selectedMin(),
             max: selectedMax(),
             raise: selectedRaise(),
             fall: selectedFall(),
-            ...state,
         });
-    }, 10);
+        onChange(state);
+    }, 1);
 }

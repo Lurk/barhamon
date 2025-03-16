@@ -118,14 +118,14 @@ export function math({ values, args, onRemove, onChange }) {
         rhs1_u(args.rhs1);
         lhs2_u(args.lhs2);
         rhs2_u(args.rhs2);
-        onChange({
+        Object.assign(state, {
             mode_a: mode_a.value,
             lhs1: selectedLhs1(),
             rhs1: selectedRhs1(),
             mode_b: mode_b.value,
             lhs2: selectedLhs2(),
             rhs2: selectedRhs2(),
-            ...state,
         });
+        onChange(state);
     }, 1);
 }

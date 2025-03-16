@@ -43,6 +43,7 @@ export function random({ values, args, onRemove, onChange }) {
     setTimeout(() => {
         updateMin(args.min);
         updateMax(args.max);
-        onChange({ min: selectedMin(), max: selectedMax(), ...state });
+        Object.assign(state, { min: selectedMin(), max: selectedMax() });
+        onChange(state);
     }, 1);
 }
