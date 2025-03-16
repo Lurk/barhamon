@@ -25,15 +25,12 @@ export function sliderWithNumericInputs({ values, args, onRemove, onChange, }) {
         container,
         value: args.min ?? 0,
     });
-    const change = () => {
-        debugger;
-        onChange({
-            name: args.name,
-            min: s.min ? parseFloat(s.min) : 0,
-            value: s.valueAsNumber,
-            max: s.max ? parseFloat(s.max) : 500,
-        });
-    };
+    const change = () => onChange({
+        name: args.name,
+        min: s.min ? parseFloat(s.min) : 0,
+        value: s.valueAsNumber,
+        max: s.max ? parseFloat(s.max) : 500,
+    });
     from.addEventListener("change", () => {
         s.min = from.value;
         change();
@@ -49,4 +46,5 @@ export function sliderWithNumericInputs({ values, args, onRemove, onChange, }) {
         showValue(val.toPrecision(6));
         return val;
     });
+    change();
 }
