@@ -37,7 +37,7 @@ export function math({ values, args, onRemove, onChange }) {
     mode_a.addEventListener("change", () => {
         onChange({ ...Object.assign(state, { mode_a: mode_a.value }) });
     });
-    const { value: lhs1, update: lhs1_u, onRemove: lhs1_r, } = connect({
+    const { value: lhs1, update: lhs1_u, onRemove: lhs1_r, selected: selectedLhs1, } = connect({
         values,
         omit: `${args.name}_a`,
         args: {
@@ -50,7 +50,7 @@ export function math({ values, args, onRemove, onChange }) {
             onChange({ ...Object.assign(state, { lhs1 }) });
         },
     });
-    const { value: rhs1, update: rhs1_u, onRemove: rhs1_r, } = connect({
+    const { value: rhs1, update: rhs1_u, onRemove: rhs1_r, selected: selectedRhs1, } = connect({
         values,
         omit: `${args.name}_a`,
         args: {
@@ -74,7 +74,7 @@ export function math({ values, args, onRemove, onChange }) {
     mode_b.addEventListener("change", () => {
         onChange({ ...Object.assign(state, { mode_b: mode_b.value }) });
     });
-    const { value: lhs2, update: lhs2_u, onRemove: lhs2_r, } = connect({
+    const { value: lhs2, update: lhs2_u, onRemove: lhs2_r, selected: selectedLhs2, } = connect({
         values,
         omit: `${args.name}_b`,
         args: {
@@ -87,7 +87,7 @@ export function math({ values, args, onRemove, onChange }) {
             onChange({ ...Object.assign(state, { lhs2 }) });
         },
     });
-    const { value: rhs2, update: rhs2_u, onRemove: rhs2_r, } = connect({
+    const { value: rhs2, update: rhs2_u, onRemove: rhs2_r, selected: selectedRhs2, } = connect({
         values,
         omit: `${args.name}_b`,
         args: {
@@ -118,5 +118,14 @@ export function math({ values, args, onRemove, onChange }) {
         rhs1_u(args.rhs1);
         lhs2_u(args.lhs2);
         rhs2_u(args.rhs2);
+        Object.assign(state, {
+            mode_a: mode_a.value,
+            lhs1: selectedLhs1(),
+            rhs1: selectedRhs1(),
+            mode_b: mode_b.value,
+            lhs2: selectedLhs2(),
+            rhs2: selectedRhs2(),
+        });
+        onChange(state);
     }, 1);
 }
