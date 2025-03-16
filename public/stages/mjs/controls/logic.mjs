@@ -29,7 +29,7 @@ export function logic({ values, args, onRemove, onChange }) {
         is_true_r();
     });
     const state = { ...args };
-    const { value: lhs, update: lhs_u, onRemove: lhs_r, } = connect({
+    const { value: lhs, update: lhs_u, onRemove: lhs_r, selected: selectedLhs, } = connect({
         values,
         omit: `${args.name}_a`,
         args: {
@@ -52,7 +52,7 @@ export function logic({ values, args, onRemove, onChange }) {
     mode.addEventListener("change", () => {
         onChange({ ...Object.assign(state, { mode: mode.value }) });
     });
-    const { value: rhs, update: rhs_u, onRemove: rhs_r, } = connect({
+    const { value: rhs, update: rhs_u, onRemove: rhs_r, selected: selectedRhs, } = connect({
         values,
         omit: `${args.name}`,
         args: {
@@ -65,7 +65,7 @@ export function logic({ values, args, onRemove, onChange }) {
             onChange({ ...Object.assign(state, { rhs }) });
         },
     });
-    const { value: is_true, update: is_true_u, onRemove: is_true_r, } = connect({
+    const { value: is_true, update: is_true_u, onRemove: is_true_r, selected: selectedIsTrue, } = connect({
         values,
         omit: `${args.name}`,
         args: {
@@ -78,7 +78,7 @@ export function logic({ values, args, onRemove, onChange }) {
             onChange({ ...Object.assign(state, { is_true }) });
         },
     });
-    const { value: is_false, update: is_false_u, onRemove: is_false_r, } = connect({
+    const { value: is_false, update: is_false_u, onRemove: is_false_r, selected: selectedIsFalse, } = connect({
         values,
         omit: `${args.name}`,
         args: {
@@ -104,5 +104,12 @@ export function logic({ values, args, onRemove, onChange }) {
         rhs_u(args.rhs);
         is_true_u(args.is_true);
         is_false_u(args.is_false);
+        Object.assign(state, {
+            lhs: selectedLhs(),
+            rhs: selectedRhs(),
+            is_true: selectedIsTrue(),
+            is_false: selectedIsFalse(),
+        });
+        onChange(state);
     }, 1);
 }

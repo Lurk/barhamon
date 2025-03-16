@@ -19,5 +19,8 @@ export function connect({ values, omit, args, onChange }) {
         onRemove() {
             values.unsubscribe(onChangeCb);
         },
+        selected() {
+            return element.el.value;
+        },
     };
 }

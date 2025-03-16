@@ -10,7 +10,7 @@ export function line({ values, outputs, args, onRemove, onChange }) {
         removeVertices();
     });
     const state = { ...args };
-    const { value: x, update: updateX, onRemove: removeX, } = connect({
+    const { value: x, update: updateX, onRemove: removeX, selected: selectedX, } = connect({
         values,
         omit: "",
         args: {
@@ -23,7 +23,7 @@ export function line({ values, outputs, args, onRemove, onChange }) {
             onChange({ ...Object.assign(state, { x }) });
         },
     });
-    const { value: y, update: updateY, onRemove: removeY, } = connect({
+    const { value: y, update: updateY, onRemove: removeY, selected: selectedY, } = connect({
         values,
         omit: "",
         args: {
@@ -36,7 +36,7 @@ export function line({ values, outputs, args, onRemove, onChange }) {
             onChange({ ...Object.assign(state, { y }) });
         },
     });
-    const { value: sr, update: updateSr, onRemove: removeSr, } = connect({
+    const { value: sr, update: updateSr, onRemove: removeSr, selected: selectedSr, } = connect({
         values,
         omit: "",
         args: {
@@ -49,7 +49,7 @@ export function line({ values, outputs, args, onRemove, onChange }) {
             onChange({ ...Object.assign(state, { sr }) });
         },
     });
-    const { value: vertices, update: updateVertices, onRemove: removeVertices, } = connect({
+    const { value: vertices, update: updateVertices, onRemove: removeVertices, selected: selectedVertices, } = connect({
         values,
         omit: "",
         args: {
@@ -76,5 +76,12 @@ export function line({ values, outputs, args, onRemove, onChange }) {
         updateY(args.y);
         updateSr(args.sr);
         updateVertices(args.vertices);
+        Object.assign(state, {
+            x: selectedX(),
+            y: selectedY(),
+            sr: selectedSr(),
+            vertices: selectedVertices(),
+        });
+        onChange(state);
     }, 1);
 }
