@@ -8,7 +8,7 @@ export function random({ values, args, onRemove, onChange }) {
         removeMax();
     });
     const state = { ...args };
-    const { value: min, update: updateMin, onRemove: removeMin, } = connect({
+    const { value: min, update: updateMin, onRemove: removeMin, selected: selectedMin, } = connect({
         values,
         omit: args.name,
         args: {
@@ -20,7 +20,7 @@ export function random({ values, args, onRemove, onChange }) {
             onChange({ ...Object.assign(state, { min }) });
         },
     });
-    const { value: max, update: updateMax, onRemove: removeMax, } = connect({
+    const { value: max, update: updateMax, onRemove: removeMax, selected: selectedMax, } = connect({
         values,
         omit: args.name,
         args: {
@@ -43,5 +43,6 @@ export function random({ values, args, onRemove, onChange }) {
     setTimeout(() => {
         updateMin(args.min);
         updateMax(args.max);
+        onChange({ min: selectedMin(), max: selectedMax(), ...state });
     }, 1);
 }
