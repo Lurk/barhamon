@@ -104,7 +104,7 @@ function init(state, values, outputs) {
         }
     };
 }
-export function factory({ animate, ctx }) {
+export function factory({ ctx }) {
     const vals = values();
     const outputs = new Map();
     const s = state();
@@ -117,7 +117,7 @@ export function factory({ animate, ctx }) {
     two(vals);
     monotonic(vals);
     now(vals);
-    render({ vals, animate, add });
+    render({ vals, add });
     s.eachControl((c) => add(c, true));
     return outputs;
 }
