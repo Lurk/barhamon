@@ -19,6 +19,7 @@ body {
 	margin: 0;
 	padding: 0;
 	color: #cccccc;
+	overflow-y: hidden;
 }
 
 select,
@@ -59,7 +60,7 @@ input[type=text] {
 }
 
 #canvas.fill {
-	height: 100vh;
+	height: 100%;
 }
 
 @media (display-mode: fullscreen) {

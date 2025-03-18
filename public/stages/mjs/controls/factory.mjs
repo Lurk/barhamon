@@ -1,6 +1,6 @@
 import { line } from "./line.mjs";
 import { values } from "../value.mjs";
-import { height, monotonic, one, width, zero } from "./defaults.mjs";
+import { height, monotonic, now, one, two, width, zero } from "./defaults.mjs";
 import { render } from "../ui/control.mjs";
 import { sliderWithNumericInputs } from "./slider.mjs";
 import { oscillatorWithConnectInput } from "./oscillator.mjs";
@@ -113,8 +113,10 @@ export function factory({ animate, ctx }) {
     width(vals, ctx);
     height(vals, ctx);
     zero(vals);
-    monotonic(vals);
     one(vals);
+    two(vals);
+    monotonic(vals);
+    now(vals);
     render({ vals, animate, add });
     s.eachControl((c) => add(c, true));
     return outputs;
