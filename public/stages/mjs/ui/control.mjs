@@ -25,8 +25,4 @@ export function render(args) {
         args.add({ type, args: { name } });
         nameInput.value = "";
     });
-    const runButton = document.createElement("button");
-    runButton.textContent = "Run";
-    container.appendChild(runButton);
-    runButton.addEventListener("click", args.animate);
 }
