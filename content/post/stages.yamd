@@ -1,9 +1,8 @@
 ---
 title: "Stages"
-date: 2025-03-17T18:00:00+01:00
+date: 2025-03-21T22:00:00+01:00
 image: https://res.cloudinary.com/barhamon/image/upload/v1742155451/header/stages.png
 preview: "A tool for trippy animations"
-is_draft: true
 tags:
 - software
 - js
@@ -21,41 +20,47 @@ few months developing a tool to make trippy animations. Like this one:
 ! lightbulb
 The spacebar hides/shows controls. Click on animation makes it fullscreen.
 
-The controls look like a backend engineer designed them, and the code is messy. But I had a tight deadline :)
-
-While animation does work on mobile, controls were not tested on a mobile.
+While animation does work on mobile, controls are too big to be comfortable on mobile.
 
 Open [the link](/stages/?s=001Y003.x_t6.0.00017.0.545411.1011.x4.zero5.width3.x_t3.x_t007.lfo_min6.0.74947.0.749686.0.7499007.lfo_max6.0.74994.0.754.0.75005.lfo_t1.211.40558.984546.100000013.lfo7.lfo_min7.lfo_max5.lfo_t4.zero011.y4.zero6.height3.lfo3.lfo025.first1.x1.y3.one1.v051.v1.05.width6.height6.height5.width)
 and drag some sliders around.
 !!
 
-## Documentation
+## Documentation.
+
+Top left corner has 0,0 coordinates. X axis goes from left to right, Y axis goes from top to bottom.
 
 There is two types of controls and factory to spawn them.
 
-+ Value producers. Some of them are just values like `Zero` or `One`. Some of them need other vales to produce values.
-For example, `Math` needs two values to perform an operation.
-+ Outputs, are the ones that draw something on the screen. A `Line` is an example of an output.
++ Value producers. Some of them are just values like [zero](#Built in value producers.) or
+[one](#Built in value producers.). Some of them need other vales to produce values. For example, [math](#Math) needs
+two values to perform an operation.
++ Outputs, are the ones that draw something on the screen. A [line](#Line) is an example of an output.
 
 All changes are synced to the URL. That has two side effects:
 
-+ browser back/forth works like undo/redo
-+ if you come up with a nice animation, you can embed it into anywhere just by URL.
++ Browser back/forth works like undo/redo
++ If you come up with a nice animation, you can embed it into anywhere just by URL.
 
-It does crush on division by zero or if connections form a circle. After fixing the issue, you need to refresh the
-page.
+!!
+! meh
+It does crush on division by zero or if connections form a circle. Browser back (undo) does fix the issue most of the
+time.
+!!
 
 ### Built in value producers.
 
-- `Zero`: 0
-- `One`: 1
-- `Width`: width of the browser window
-- `Height`: height of the browser window
+- `zero`: 0
+- `one`: 1
+- `two`: 2
+- `width`: width of the browser window
+- `height`: height of the browser window
 - `i` - In each frame, some amount of shapes will be drawn, this will be the serial number of the shape drawn.
+- `now` - Time since animation start in milliseconds.
 
 ### Factory
 
-The factory spawns any available control and restarts the animation.
+The factory spawns any available control.
 
 ### Slider
 
@@ -72,14 +77,15 @@ Produces a value that is a result of math operations.
 - `div` - divides two values
 - `avg` - averages two values
 
-In order to use screen real estate efficiently, `Math` has two blocks `a` (top) and `b` (bottom). Each block has `lhs`
-and `rhs` values and `mode` that specifies operation. Those two blocks produce two values with `_a` and `_b` postfixes.
+In order to use screen real estate efficiently, [math](#Math) has two blocks `a` (top) and `b` (bottom). Each block has
+`lhs` and `rhs` values and `mode` that specifies operation. Those two blocks produce two values with `_a` and `_b`
+postfixes.
 
 ### Oscillator
 
 Produces a value that oscillates between `min` and `max` in time specified by `raise` and `fall`.
 
-All oscillators are synced to the same zero time. 
+All oscillators are synced to the same zero time.
 
 `raise` and `fall` are in milliseconds.
 
@@ -107,12 +113,19 @@ Produces a value that is a result of logic operation.
 
 If logic operation evaluates to true, value from `is_true` connector will be returned, otherwise value from `is_false`.
 
-## Walkthrough
+!! That's it.
+! envelope
+Writing documentation is hard, if you know how to make it better, please let me know.
+!!
+
+## Walkthrough A
+
+In this part we will learn how to draw lines and position them on the screen.
 
 ### Simple line
 
-Lets open [empty stage](/stages/), add a `Slider` with name `y` and `Line` with name `line` to the stage. Nothing
-happens, but that because we do not have any connections yet. Lets connect:
+Lets open [empty stage](/stages/), add a [slider](#Slider) with name `y` and [line](#Line) with name `line` to the stage.
+Nothing happens, that because we do not have any connections yet. Lets connect:
 
 - `line.x` to `width`
 - `line.y` to `y`
@@ -126,39 +139,186 @@ Now we have a line that goes from the left side of the screen to the right side 
 
 [simple line](/stages/?s=001Y001.y1.03.1003.500024.line1.i1.y3.one5.width)
 
-### A line that always in the center of the screen
+### Vertical line that always in the center of the screen
 
 In a previous example we were able to draw a line at position that can be adjusted manually. If we want to draw a line
-at specific position lets, say at center of the screen, we need `Math`. With `Math` we will divide `height` value by
-two. We can get two from `Slider` control, but since we already have `Math` on stage, we can use first half to sum
-`one` with `one` and second half to divide `height` by the value from first half.
+at specific position lets, say at center of the screen, we need [math](#Math). With [math](#Math) we will divide
+`height` value by `two`.
 
-Lets open [empty stage](/stages/), add a `Math` with name `center` and `Line` with name `line` to the stage. And add
-connections:
+Lets open [empty stage](/stages/), add a [math](#Math) with name `center` and [line](#Line) with name `vl` to the
+stage. Then add connections:
 
-- `center.mode_a` to `sum`
-- `center.lhs` to `one`
-- `center.rhs` to `one`
+- `center.mode_a` to `div`
+- `center.lhs_a` to `height`
+- `center.rhs_a` to `two`
+- `vl.x` to `width`
+- `vl.y` to `center_a`
+- `vl.vertices` to `width`
+- `vl.sr` to `one`
+
+{{iframe|/stages/?s=001N036.center3.div5.width3.two3.div6.height3.two022.lh1.i8.center_b3.one5.width}}
+
+[vertical line in center](/stages/?s=001Y036.center3.div5.width3.two3.div6.height3.two022.lh1.i8.center_b3.one5.width)
+
+### Horizontal line that always in the center of the screen
+
+Let's add another line that will be drawn at the center of the screen. Use previous stage, add one more [line](#Line)
+control with name `hl` and connect it like this:
+
 - `center.mode_b` to `div`
-- `center.lhs` to `height`
-- `center.rhs` to `center_a`
-- `line.x` to `width`
-- `line.y` to `center_b`
-- `line.vertices` to `width`
-- `line.sr` to `one`
+- `center.lhs_b` to `width`
+- `center.rhs_b` to `two`
+- `hl.x` to `center_b`
+- `hl.y` to `i`
+- `hl.vertices` to `height`
+- `hl.sr` to `one`
 
-{{iframe|/stages/?s=001N036.center1.03.one3.one3.div6.height8.center_a024.line1.i8.center_b3.one5.width}}
+{{iframe|/stages/?s=001N036.center3.div5.width3.two3.div6.height3.two022.lh1.i8.center_b3.one5.width022.lv8.center_a1.i3.one6.height}}
 
-[line in center](/stages/?s=001Y036.center1.03.one3.one3.div6.height8.center_a024.line1.i8.center_b3.one5.width)
+[horizontal line in center](/stages/?s=001Y036.center3.div5.width3.two3.div6.height3.two022.lh1.i8.center_b3.one5.width022.lv8.center_a1.i3.one6.height)
 
-### Triangle wave
+### Triangle wave in the top right corner
 
-With `Oscillator` control we can create a triangle wave.
+With [oscillator](#Oscillator) control we can create a triangle wave. And to make it more interesting lets draw it in
+the top left corner. To achieve that we need to add three controls:
 
-Lets open [empty stage](/stages/), add a `Slider` with name `y_t`, `Oscillator` with name `y` and `Line` with name
-`line` to the stage. Add connections:
+- [slider](#Slider) with name `y_t`
+- [oscillator](#Oscillator) with name `y`
+- [line](#Line) with name `tr`
+
+And connect them like this:
 
 - `y.min` to `zero`
+- `y.max` to `center_a`
+- `y.raise` to `y_t`
+- `y.fall` to `y_t`
+- `tr.x` to `i`
+- `tr.y` to `y`
+- `tr.vertices` to `center_a`
+- `tr.sr` to `one`
+
+{{iframe|/stages/?s=001N036.center3.div5.width3.two3.div6.height3.two022.lh1.i8.center_b3.one5.width022.lv8.center_a1.i3.one6.height003.y_t1.03.5003.500011.y4.zero8.center_b3.y_t3.y_t022.tl1.i1.y3.one8.center_a}}
+
+[top left corner](/stages/?s=001Y036.center3.div5.width3.two3.div6.height3.two022.lh1.i8.center_b3.one5.width022.lv8.center_a1.i3.one6.height003.y_t1.03.5003.500011.y4.zero8.center_b3.y_t3.y_t022.tl1.i1.y3.one8.center_a)
+
+### Triangle wave in the bottom right corner
+
+Let's add another triangle wave, but this time in the bottom right corner. To make it more interesting, we will make it
+run in a different direction. To achieve that we need a bit more [math](#Math), and of course, another [line](#Line)
+control.
+
+Add following controls:
+
+- [math](#Math) with name `br_pos`
+- [line](#Line) with name `br`
+
+Then connect them like this:
+
+- `br_pos.mode_a` to `sub`
+- `br_pos.lhs_a` to `width`
+- `br_pos.rhs_a` to `i`
+- `br.x` to `br_pos_a`
+- `br.y` to `br_pos_b`
+- `br.vertices` to `center_a`
+- `br.sr` to `one`
+
+{{iframe|/stages/?s=001N036.center3.div5.width3.two3.div6.height3.two022.lh1.i8.center_b3.one5.width022.lv8.center_a1.i3.one6.height003.y_t1.03.5003.500011.y4.zero8.center_b3.y_t3.y_t022.tl1.i1.y3.one8.center_a036.br_pos3.sub5.width1.i3.sum1.y8.center_b022.br8.br_pos_a8.br_pos_b3.one8.center_a}}
+
+[bottom right corner](/stages/?s=001Y036.center3.div5.width3.two3.div6.height3.two022.lh1.i8.center_b3.one5.width022.lv8.center_a1.i3.one6.height003.y_t1.03.5003.500011.y4.zero8.center_b3.y_t3.y_t022.tl1.i1.y3.one8.center_a036.br_pos3.sub5.width1.i3.sum1.y8.center_b022.br8.br_pos_a8.br_pos_b3.one8.center_a)
+
+### Movement in both directions
+
+We have two corners left. Let's fill top right corner with graph that moves in both directions. To achieve that we need
+to add following controls:
+
+- [slider](#Slider) with name `x_t`
+- [oscillator](#Oscillator) with name `x`
+- [line](#Line) with name `tr`
+
+And connect them like this:
+
+- `x.min` to `center_a`
+- `x.max` to `width`
+- `x.raise` to `x_t`
+- `x.fall` to `zero`
+- `tr.x` to `x`
+- `tr.y` to `y`
+- `tr.vertices` to `width`
+- `tr.sr` to `one`
+
+{{iframe|/stages/?s=001N036.center3.div5.width3.two3.div6.height3.two022.lh1.i8.center_b3.one5.width022.lv8.center_a1.i3.one6.height003.y_t1.03.5003.500011.y4.zero8.center_b3.y_t3.y_t022.tl1.i1.y3.one8.center_a036.br_pos3.sub5.width1.i3.sum1.y8.center_b022.br8.br_pos_a8.br_pos_b3.one8.center_a003.x_t1.09.490.423393.500011.x8.center_a5.width3.x_t4.zero022.tr1.x1.y3.one5.width}}
+
+[top right corner](/stages/?s=001Y036.center3.div5.width3.two3.div6.height3.two022.lh1.i8.center_b3.one5.width022.lv8.center_a1.i3.one6.height003.y_t1.03.5003.500011.y4.zero8.center_b3.y_t3.y_t022.tl1.i1.y3.one8.center_a036.br_pos3.sub5.width1.i3.sum1.y8.center_b022.br8.br_pos_a8.br_pos_b3.one8.center_a003.x_t1.09.490.423393.500011.x8.center_a5.width3.x_t4.zero022.tr1.x1.y3.one5.width)
+
+### Distortion
+
+Last corner to fill! You know what? We will get graph from previous step and distort it. To do that we will need a bit
+more stuff than usual. Lets add following controls:
+
+- [slider](#Slider) with name `n_amoint` to control amount of distortion
+- [math](#Math) with name `n_width` to control width of the noise
+- [random](#Random) with name `noise` to generate noise
+- [math](#Math) with name `bl_pos` to calculate position
+- [math](#Math) with name `bl_dis` to calculate distortion
+- [line](#Line) with name `bl` to draw distorted graph
+
+And connect them like this:
+
+- `n_width.mode_a` to sub
+- `n_width.lhs_a` to `zero`
+- `n_width.rhs_a` to `n_amount`
+- `noise.min` to `n_width_a`
+- `noise.max` to `n_amount`
+- `bl_pos.mode_a` to `sub`
+- `bl_pos.lhs_a` to `x`
+- `bl_pos.rhs_a` to `center_a`
+- `bl_pos.mode_b` to `sum`
+- `bl_pos.lhs_b` to `y`
+- `bl_pos.rhs_b` to `center_b`
+- `bl_dis.mode_a` to `sum`
+- `bl_dis.lhs_a` to `bl_pos_a`
+- `bl_dis.rhs_a` to `noise`
+- `bl_dis.mode_b` to `sum`
+- `bl_dis.lhs_b` to `bl_pos_b`
+- `bl_dis.rhs_b` to `noise`
+- `bl.x` to `bl_dis_a`
+- `bl.y` to `bl_dis_b`
+- `bl.vertices` to `width`
+- `bl.sr` to `one`
+
+{{iframe|/stages/?s=001N036.center3.div5.width3.two3.div6.height3.two022.lh1.i8.center_b3.one5.width022.lv8.center_a1.i3.one6.height003.y_t1.03.5003.500011.y4.zero8.center_b3.y_t3.y_t022.tl1.i1.y3.one8.center_a036.br_pos3.sub5.width1.i3.sum1.y8.center_b022.br8.br_pos_a8.br_pos_b3.one8.center_a003.x_t1.09.490.423393.500011.x8.center_a5.width3.x_t4.zero022.tr1.x1.y3.one8.center_a008.n_amount1.02.502.50037.n_width3.sub4.zero8.n_amount3.sum5.width5.width045.noise9.n_width_a8.n_amount036.bl_pos3.sub1.x8.center_a3.sum1.y8.center_b036.bl_dis3.sum8.bl_pos_a5.noise3.sum8.bl_pos_b5.noise022.bl8.bl_dis_a8.bl_dis_b3.one5.width}}
+
+[bottom right corner](/stages/?s=001Y036.center3.div5.width3.two3.div6.height3.two022.lh1.i8.center_b3.one5.width022.lv8.center_a1.i3.one6.height003.y_t1.03.5003.500011.y4.zero8.center_b3.y_t3.y_t022.tl1.i1.y3.one8.center_a036.br_pos3.sub5.width1.i3.sum1.y8.center_b022.br8.br_pos_a8.br_pos_b3.one8.center_a003.x_t1.09.490.423393.500011.x8.center_a5.width3.x_t4.zero022.tr1.x1.y3.one8.center_a008.n_amount1.02.502.50037.n_width3.sub4.zero8.n_amount3.sum5.width5.width045.noise9.n_width_a8.n_amount036.bl_pos3.sub1.x8.center_a3.sum1.y8.center_b036.bl_dis3.sum8.bl_pos_a5.noise3.sum8.bl_pos_b5.noise022.bl8.bl_dis_a8.bl_dis_b3.one5.width)
+
+!! Congrats!
+! birthday cake
+You just finished first ever Stages tutorial!
+
+How was it?
+!!
+
+## Walktrough B
+
+In this part we will recreate Stages logo.
+
+### U shape
+
+Lets start with a U shaped wave.
+
+Open an [empty stage](/stages/) and add following controls:
+
+- [slider](#Slider) with name `y_t` to control frequency of first oscilators
+- [oscillator](#Oscillator) with name `y_min_mod` to modulate min value
+- [oscillator](#Oscillator) with name `y` to get `y` coordinate
+- [line](#Line) with name `line` to draw a line
+
+Then connect them like this:
+
+- `y_min_mod.min` to `zero`
+- `y_min_mod.max` to `height`
+- `y_min_mod.raise` to `y_t`
+- `y_max_mod.fall` to `y_t`
+- `y.min` to `y_min_mod`
 - `y.max` to `height`
 - `y.raise` to `y_t`
 - `y.fall` to `y_t`
@@ -167,87 +327,53 @@ Lets open [empty stage](/stages/), add a `Slider` with name `y_t`, `Oscillator` 
 - `line.vertices` to `width`
 - `line.sr` to `one`
 
-{{iframe|/stages/?s=001N003.y_t1.03.5003.500011.y4.zero6.height3.y_t3.y_t024.line1.i1.y3.one5.width}}
+{{iframe|/stages/?s=001N003.y_t1.03.5003.500019.y_min_mod4.zero6.height3.y_t3.y_t011.y9.y_min_mod6.height3.y_t3.y_t024.line1.i1.y3.one5.width}}
 
-[triangle wave](/stages/?s=001Y003.y_t1.03.5003.500011.y4.zero6.height3.y_t3.y_t024.line1.i1.y3.one5.width)
+[U shape](/stages/?s=001Y003.y_t1.03.5003.500019.y_min_mod4.zero6.height3.y_t3.y_t011.y9.y_min_mod6.height3.y_t3.y_t024.line1.i1.y3.one5.width)
 
-Sawtooth wave can be easily achieved by connecting `y.raise` or `y.fall` to `zero`.
+### Logo
 
-### More interesting wave
+To achieve the same result as on the logo we need one more [oscillator](#Oscillator) control that runs with a higher
+frequency. Lets add to previous stage following controls:
 
-Let's modulate `y.min` with another `Oscillator` control.
+- [oscillator](#Oscillator) with name `y_min_mm` to modulate `y_min_mod.min`
+- [slider](#Slider) with name `mm_t` to control frequency of modulation
 
-We can reuse
-[triangle wave](/stages/?s=001Y003.y_t1.03.5003.500011.y4.zero6.height3.y_t3.y_t024.line1.i1.y3.one5.width) from
-previous example.
+And connect them like that:
 
-Lets add another `Oscillator` control with name `y_min_mod` and make following connections:
+- `y_min_mm.min` to `zero`
+- `y_min_mm.max` to `height`
+- `y_min_mm.raise` to `mm_t`
+- `y_min_mm.fall` to `mm_t`
+- `y_min_mod.min` to `y_min_mm`
 
-- `y_min_mod.min` to `zero`
-- `y_min_mod.max` to `height`
-- `y_min_mod.raise` to `y_t`
-- `y_min_mod.fall` to `y_t`
-- `y.min` to `y_min_mod`
+{{iframe|/stages/?s=001N003.y_t4.160010.1626.747314.2000019.y_min_mod8.y_min_mm6.height3.y_t3.y_t011.y9.y_min_mod6.height3.y_t3.y_t024.line1.i1.y3.one5.width018.y_min_mm4.zero6.height4.mm_t4.mm_t004.mm_t1.07.0.776551.1}}
 
-{{iframe|/stages/?s=001N003.y_t1.03.5003.500011.y9.y_min_mod6.height3.y_t3.y_t024.line1.i1.y3.one5.width019.y_min_mod4.zero6.height3.y_t3.y_t}}
+[Stages logo](/stages/?s=001Y003.y_t4.160010.1626.747314.2000019.y_min_mod8.y_min_mm6.height3.y_t3.y_t011.y9.y_min_mod6.height3.y_t3.y_t024.line1.i1.y3.one5.width018.y_min_mm4.zero6.height4.mm_t4.mm_t004.mm_t1.07.0.776551.1)
 
-[more interesting wave](/stages/?s=001Y003.y_t1.03.5003.500011.y9.y_min_mod6.height3.y_t3.y_t024.line1.i1.y3.one5.width019.y_min_mod4.zero6.height3.y_t3.y_t)
+!! Yay!
+! image
+The logo is complete, and no AI was harmed in the process.
 
-And why stop here? Lets modulate `y_min_mod` with another `Oscillator` control that runs with a different frequency.
+What do you think?
+!!
 
-{{iframe|/stages/?s=001N003.y_t1.010.1624.663984.5000011.y9.y_min_mod6.height3.y_t3.y_t024.line1.i1.y3.one5.width019.y_min_mod8.y_min_mm6.height3.y_t3.y_t018.y_min_mm4.zero6.height4.mm_t4.mm_t004.mm_t3.NaN7.1.192882.50}}
+## Walktrough C
 
-[even more interesting wave](/stages/?s=001Y003.y_t1.010.1624.663984.5000011.y9.y_min_mod6.height3.y_t3.y_t024.line1.i1.y3.one5.width019.y_min_mod8.y_min_mm6.height3.y_t3.y_t018.y_min_mm4.zero6.height4.mm_t4.mm_t004.mm_t3.NaN7.1.192882.50)
-
-### 2d wave
-
-Up until now we were drawing lines that were moving in one dimension. Lets fix that. Open [empty stage](/stages/) and
-add following controls:
-
-- `Slider` with name `x_t`
-- `Oscillator` with name `x`
-- `Slider` with name `y_t`
-- `Oscillator` with name `y`
-- `Line` with name `line`.
-
-And connect all of them like this:
-
-- `x.min` to `zero`
-- `x.max` to `width`
-- `x.raise` to `x_t`
-- `x.fall` to `x_t`
-- `y.min` to `zero`
-- `y.max` to `height`
-- `y.raise` to `y_t`
-- `y.fall` to `y_t`
-- `line.x` to `x`
-- `line.y` to `y`
-- `line.vertices` to `width`
-- `line.sr` to `one`
-
-{{iframe|/stages/?s=001N003.x_t1.02.503.500011.x4.zero5.width3.x_t3.x_t003.y_t1.02.503.500011.y4.zero6.height3.y_t3.y_t024.line1.x1.y3.one5.width}}
-
-[2d wave](/stages/?s=001Y003.x_t1.02.503.500011.x4.zero5.width3.x_t3.x_t003.y_t1.02.503.500011.y4.zero6.height3.y_t3.y_t024.line1.x1.y3.one5.width)
-
-Does not look like much, right? That's because `x` and `y` oscillators are synced. Which can be easily changed by
-tweaking `x_t` or `y_t` sliders.
-
-{{iframe|/stages/?s=001N003.x_t1.01.51.5011.x4.zero5.width3.x_t3.x_t003.y_t1.07.2.001011.5011.y4.zero6.height3.y_t3.y_t024.line1.x1.y3.one5.width}}
-
-[2d wave](/stages/?s=001Y003.x_t1.01.51.5011.x4.zero5.width3.x_t3.x_t003.y_t1.07.2.001011.5011.y4.zero6.height3.y_t3.y_t024.line1.x1.y3.one5.width)
+The idea was to introduce logic control, but I failed to find the time. Here is the final result:
 
 ### Pulsed distortion
-
-Lets add a bit of chaos to the previous stage. We get random value in `x` +/- 100 range, and use it 2 seconds out 6 as
-`x` value.
 
 {{iframe|/stages/?s=001N003.x_t1.01.51.5011.x4.zero5.width3.x_t3.x_t003.y_t1.07.2.001011.5011.y4.zero6.height3.y_t3.y_t024.line5.logic1.y3.one5.width007.r_width1.03.1003.100036.limits3.sub1.x7.r_width3.sum1.x7.r_width041.r8.limits_a8.limits_b055.logic3.lte7.r_width3.loo1.r1.x013.loo4.zero3.max4.time4.time004.time1.04.60004.6000003.max1.03.1503.150}}
 
 [pulsed distortion](/stages/?s=001Y003.x_t1.01.51.5011.x4.zero5.width3.x_t3.x_t003.y_t1.07.2.001011.5011.y4.zero6.height3.y_t3.y_t024.line5.logic1.y3.one5.width007.r_width1.03.1003.100036.limits3.sub1.x7.r_width3.sum1.x7.r_width041.r8.limits_a8.limits_b055.logic3.lte7.r_width3.loo1.r1.x013.loo4.zero3.max4.time4.time004.time1.04.60004.6000003.max1.03.1503.150)
 
-!!
-! smile
-I am very curious what you will come up with.
+!! This post is too long anyway.
+! github
+I will stop here.
+
+If you have any questions or suggestions, feel free to open an issue on the [Stages](https://github.com/Lurk/stages)
+repo.
 !!
 
 ## TODO
@@ -263,11 +389,10 @@ Plans for the future looks like that:
 - Actual audio support.
 - Gates and ADSR.
 - MIDI support would be awesome.
+- Better docs.
+- Better UI.
 
 !!
-! github
-Mandatory link to a repo: [stages](https://github.com/Lurk/stages)
-
-Feel free to open an issue if you have any questions or suggestions.
+! smile
+I am extremely curious what you will create with Stages. Send me links!
 !!
-
