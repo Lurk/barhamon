@@ -28,7 +28,7 @@ export function render(args) {
     const docs = document.createElement("div");
     docs.classList.add("docs");
     const link = document.createElement("a");
-    link.href = "/post/stages.html";
+    link.href = "/post/stages.html#Documentation.";
     link.textContent = "documentation";
     docs.appendChild(link);
     container.parentNode?.appendChild(docs);
