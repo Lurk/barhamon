@@ -1,6 +1,6 @@
 ---
 title: "Stages"
-date: 2025-03-21T22:00:00+01:00
+date: 2025-03-22T11:00:00+01:00
 image: https://res.cloudinary.com/barhamon/image/upload/v1742155451/header/stages.png
 preview: "A tool for trippy animations"
 tags:
@@ -34,7 +34,7 @@ There is two types of controls and factory to spawn them.
 
 + Value producers. Some of them are just values like [zero](#Built in value producers.) or
 [one](#Built in value producers.). Some of them need other vales to produce values. For example, [math](#Math) needs
-two values to perform an operation.
+two other values to produce a value.
 + Outputs, are the ones that draw something on the screen. A [line](#Line) is an example of an output.
 
 All changes are synced to the URL. That has two side effects:
@@ -44,7 +44,7 @@ All changes are synced to the URL. That has two side effects:
 
 !!
 ! meh
-It does crush on division by zero or if connections form a circle. Browser back (undo) does fix the issue most of the
+It does crush on division by zero or if connections form a loop. Browser back (undo) does fix the issue most of the
 time.
 !!
 
@@ -113,9 +113,9 @@ Produces a value that is a result of logic operation.
 
 If logic operation evaluates to true, value from `is_true` connector will be returned, otherwise value from `is_false`.
 
-!! That's it.
+!! Writing documentation is hard.
 ! envelope
-Writing documentation is hard, if you know how to make it better, please let me know.
+If you know how to make it better, please let me know.
 !!
 
 ## Walkthrough A
@@ -142,7 +142,7 @@ Now we have a line that goes from the left side of the screen to the right side 
 ### Vertical line that always in the center of the screen
 
 In a previous example we were able to draw a line at position that can be adjusted manually. If we want to draw a line
-at specific position lets, say at center of the screen, we need [math](#Math). With [math](#Math) we will divide
+at specific position let's, say at center of the screen, we need [math](#Math). With [math](#Math) we will divide
 `height` value by `two`.
 
 Lets open [empty stage](/stages/), add a [math](#Math) with name `center` and [line](#Line) with name `vl` to the
@@ -180,11 +180,13 @@ control with name `hl` and connect it like this:
 ### Triangle wave in the top right corner
 
 With [oscillator](#Oscillator) control we can create a triangle wave. And to make it more interesting lets draw it in
-the top left corner. To achieve that we need to add three controls:
+the top left corner.
 
-- [slider](#Slider) with name `y_t`
-- [oscillator](#Oscillator) with name `y`
-- [line](#Line) with name `tr`
+To achieve that we need to add three controls:
+
+- [slider](#Slider) with name `y_t` to control the frequency
+- [oscillator](#Oscillator) with name `y` to produce y value
+- [line](#Line) with name `tr` to draw in top left corner
 
 And connect them like this:
 
@@ -192,10 +194,10 @@ And connect them like this:
 - `y.max` to `center_a`
 - `y.raise` to `y_t`
 - `y.fall` to `y_t`
-- `tr.x` to `i`
-- `tr.y` to `y`
-- `tr.vertices` to `center_a`
-- `tr.sr` to `one`
+- `tl.x` to `i`
+- `tl.y` to `y`
+- `tl.vertices` to `center_a`
+- `tl.sr` to `one`
 
 {{iframe|/stages/?s=001N036.center3.div5.width3.two3.div6.height3.two022.lh1.i8.center_b3.one5.width022.lv8.center_a1.i3.one6.height003.y_t1.03.5003.500011.y4.zero8.center_b3.y_t3.y_t022.tl1.i1.y3.one8.center_a}}
 
@@ -209,8 +211,8 @@ control.
 
 Add following controls:
 
-- [math](#Math) with name `br_pos`
-- [line](#Line) with name `br`
+- [math](#Math) with name `br_pos` to calculate x value
+- [line](#Line) with name `br` to draw in bottom right corner
 
 Then connect them like this:
 
@@ -231,9 +233,9 @@ Then connect them like this:
 We have two corners left. Let's fill top right corner with graph that moves in both directions. To achieve that we need
 to add following controls:
 
-- [slider](#Slider) with name `x_t`
-- [oscillator](#Oscillator) with name `x`
-- [line](#Line) with name `tr`
+- [slider](#Slider) with name `x_t` to control frequency
+- [oscillator](#Oscillator) with name `x`to produce x value
+- [line](#Line) with name `tr` to draw in top right corner
 
 And connect them like this:
 
@@ -307,7 +309,7 @@ Lets start with a U shaped wave.
 
 Open an [empty stage](/stages/) and add following controls:
 
-- [slider](#Slider) with name `y_t` to control frequency of first oscilators
+- [slider](#Slider) with name `y_t` to control frequency of first oscillators
 - [oscillator](#Oscillator) with name `y_min_mod` to modulate min value
 - [oscillator](#Oscillator) with name `y` to get `y` coordinate
 - [line](#Line) with name `line` to draw a line
