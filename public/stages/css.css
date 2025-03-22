@@ -20,6 +20,7 @@ body {
 	padding: 0;
 	color: #cccccc;
 	overflow-y: hidden;
+	height: 100%;
 }
 
 select,
@@ -53,6 +54,9 @@ input[type=text] {
 	width: 125px;
 }
 
+a {
+	color: var(--light);
+}
 
 #canvas {
 	height: calc(100vh - 245px);
@@ -93,13 +97,16 @@ input[type=text] {
 }
 
 .control {
+	display: flex;
+	flex-direction: column;
+	height: 215px;
 	border: 2px solid var(--medium);
 	padding: 5px;
 	border-radius: 5px;
 }
 
 .control>h3 {
-	margin-bottom: 0;
+	margin: 0;
 }
 
 .control>span {
@@ -119,5 +126,13 @@ input[type=text] {
 }
 
 .remove {
-	float: right;
+	align-self: end;
+}
+
+.docs {
+	align-self: center;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
 }
