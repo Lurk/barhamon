@@ -30,3 +30,6 @@ template_config:
   index_article_id: '/me'
 yamd_processors:
   convert_cloudinary_embed: true
+  generate_alt_text:
+    prompt: 'Describe image in one sentences. Be precise.'
+    temperature: 0.1
