@@ -22,14 +22,14 @@ title: 'Serhiy Barhamon'
 description: 'blog'
 template_config:
   index_tags:
+    - adventures
     - life
     - software
-    - adventures
     - books
     - music
   index_article_id: '/me'
 yamd_processors:
   convert_cloudinary_embed: true
   generate_alt_text:
-    prompt: 'Describe image in one sentences. Be precise.'
+    prompt: 'Describe image in one sentence. Be precise.'
     temperature: 0.1
