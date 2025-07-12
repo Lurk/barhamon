@@ -1,0 +1,49 @@
+---
+title: Notes on running LLM locally
+date: 2025-07-12T12:03:35.285968Z
+image: https://res.cloudinary.com/barhamon/image/upload/v1752322430/ai/llm.png
+preview: 'Also Rust and Fusion reactors.'
+tags:
+- software
+- bar
+- rust
+- llm
+---
+
+I have been interested in image-to-text transformation for a long time, but haven't had any use cases. No more.
+
+Eventually, I want to add a search feature to [BAR](https://github.com/Lurk/bar) (a static website generator that
+generated this article). A significant portion of this blog consists of pictures, and the search would not be complete
+without indexing them. As a first step towards that goal, I want to add an image caption generator with only two
+requirements: It should work offline and be as rusty (by the way) as possible.
+
+In the end, I managed to cannibalize an
+[example](https://github.com/huggingface/candle/tree/main/candle-examples/examples/moondream) from the
+[Candle](https://github.com/huggingface/candle) repository and run a tiny, by modern standards,
+[Moondream1](https://huggingface.co/vikhyatk/moondream1) model on a CPU or [Metal](https://developer.apple.com/metal/).
+Theoretically, it can also work on [CUDA](https://developer.nvidia.com/cuda-zone), but I do not have any NVIDIA device
+to test.
+
+!! I am very surprised that there are only three options.
+! meh
+ One is extremely slow (CPU), and the other two (Metal/CUDA) are
+proprietary systems. I somehow expected that [WebGPU](https://www.w3.org/TR/webgpu/) already dominates in that area.
+!!
+
+It does not work completely offline because I don't want to add ~3.7 GB to the BAR. When the generator is enabled for
+the first time, it will download the model from [Huggingface](https://huggingface.co/). It will also download the
+remote images without alt text. Generating captions is hard if you can't see the picture.
+
+To process 1275 images, with the prompt `Describe image in one sentence. Be precise.` Moondream1 spends around half an
+hour on the Apple M2 Max. I want to try to parallelize it, but I do not have high hopes.
+
+![](https://res.cloudinary.com/barhamon/image/upload/v1752321927/ai/Zadar.jpg)
+
+For ^ that image, a `Describe image in one sentence. Be precise.` prompt with 0.1 temperature produces the following
+caption: `A white electronic device with several buttons is held in a hand.`. Which is is good enough for now. I guess
+that to achieve better quality, I need a significantly larger model. I have not tested that theory, mainly because I do
+not know how to benchmark the results of different LLMs or prompts.
+
+I find it incredible that I can deliver such a feature in less than 300 lines of code. However, judging by how quickly
+it consumes the battery, we will need significantly more energy to run all those LLMs. That makes me want to learn more
+about fusion reactors and what the current best thing is after lithium-ion batteries.
