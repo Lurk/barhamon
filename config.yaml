@@ -22,11 +22,11 @@ title: 'Serhiy Barhamon'
 description: 'blog'
 template_config:
   index_tags:
+    - music
     - software
     - adventures
     - life
     - books
-    - music
   index_article_id: '/me'
 yamd_processors:
   convert_cloudinary_embed: true
