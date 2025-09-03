@@ -28,6 +28,12 @@ template_config:
     - adventures
     - life
   index_article_id: '/me'
+  footer:
+    social:
+      github: 'https://github.com/Lurk'
+      mastodon: 'https://mas.to/@barhamon'
+      facebook: 'https://www.facebook.com/bargamon/'
+      instagram: 'https://www.instagram.com/fedorpupkin/'
 yamd_processors:
   convert_cloudinary_embed: true
   generate_alt_text:
