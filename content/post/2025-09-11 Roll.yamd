@@ -1,0 +1,68 @@
+---
+title: 2025-09-11 Roll
+date: 2025-09-11T07:46:31.636281Z
+image: 'https://res.cloudinary.com/barhamon/image/upload/v1757576746/rolls/2025-09-11/2025-09-11%20Roll.jpg'
+preview: 'Summer is over😭'
+tags:
+  - life
+  - photo roll
+---
+
+I was so focused on the [upcoming adventure](https://barhamon.com/post/EDT%20France%20preparations.html) that I just
+realized - summer is over. My last roll was in June, and since then, I have been very busy with:
+
+- [Bicycle trips](#Bicycle%20trips.)
+- [Music](#Music.)
+- [Work](#Work.)
+- [Mushroom hunting](#Mushroom%20hunting.)
+- [Pet Projects](#Pet%20projects.)
+
+## Bicycle trips.
+
+To prepare for this year's adventure, I rode my bicycle as often and as far as possible. Those riding days produced
+most of today's roll.
+
+## Mushroom hunting.
+
+Typically, mushroom hunting is an autumn activity. But this summer was so wet that we managed to hunt enough mushrooms
+in the middle of it.
+
+## Music.
+
+Apart from finalising one more single, which will be released in October, I worked hard on my next LP. I would say it
+is 80% ready. I hope to finish it this year, but I make no promises.
+
+## Pet projects.
+
+### BAR.
+
+Yeah, one of my friends decided to try [BAR](https://github.com/Lurk/bar) and found a few bugs and missing features.
+You can thank Stas for better error messages and the ability to control social links in the
+[Hamon theme](https://github.com/Lurk/Hamon) with a config file.
+
+I always struggled with alt texts for pictures, especially in galleries. Now, if enabled,
+[BAR](https://github.com/Lurk/bar) will download a tiny image to the text
+[MoonDream1 model](https://huggingface.co/vikhyatk/moondream1)
+and generate those alt texts. It will use Metal or CPU to run the model. Theoretically, it will also work on CUDA, but
+I do not have a device to test it.
+
+### Serve
+
+There are quite a few updates in [Serve](https://github.com/Lurk/serve).
+
+- http->https redirect. Turned out you can't update certificates with certbot without it. Actually, you can, but it
+will require [more work](https://www.rfc-editor.org/rfc/rfc8555.html).
+- Log to a file with log rotation.
+- The number of arguments [Serve](https://github.com/Lurk/serve) received grew over time, and editing them became
+annoying. To combat that, it now supports a toml config file.
+
+## Work.
+
+Starting from September, I am leading a new project in [Check24](https://check24.de/). This is quite a significant
+change from what I did before, and I am pretty excited about that since I haven’t started a new project in a while. As
+with all new projects, this one is full of challenges, which I hope to overcome without burning myself or anybody else
+out.
+
+-----
+
+{{cloudinary_gallery|barhamon&2025-09-11 Roll}}

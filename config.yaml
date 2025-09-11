@@ -22,11 +22,11 @@ title: 'Serhiy Barhamon'
 description: 'blog'
 template_config:
   index_tags:
-    - books
+    - life
     - music
+    - books
     - software
     - adventures
-    - life
   index_article_id: '/me'
   footer:
     social:
