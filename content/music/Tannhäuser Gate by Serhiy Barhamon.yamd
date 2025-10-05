@@ -1,0 +1,97 @@
+---
+title: Tannhäuser Gate by Serhiy Barhamon
+date: 2025-10-06T09:30:00.000000Z
+image: 'https://res.cloudinary.com/barhamon/image/upload/v1759657403/music/Tannh%C3%A4user%20Gate%20by%20Serhiy%20Barhamon.jpg'
+preview: 'A nostalgia for a time when you could return from the dead.'
+tags:
+- music
+- Serhiy Barhamon
+- electronic
+- industrial
+- drones
+---
+
+Welp, the label that asked me for a twelve-minute audio/video piece never responded. I hope they are ok.
+
+Anyway, I did a thing and liked it a lot, so I self-released it.
+
+{{youtube|https://www.youtube.com/embed/lAUvnNUKZHw}}
+
+!!
+! bandcamp
+[Tannhäuser Gate by Serhiy Barhamon on Bandcamp](https://serhiybarhamon.bandcamp.com/track/tannh-user-gate)
+!!
+
+!!
+! itunes
+[Tannhäuser Gate by Serhiy Barhamon on iTunes](https://music.apple.com/de/album/tannh%C3%A4user-gate-ep/1833047022)
+!!
+
+!!
+! spotify
+[Tannhäuser Gate by Serhiy Barhamon on Spotify](https://open.spotify.com/track/4xFwj3qqP2tfRMsRDQJv3D?si=78592e95b3884106)
+!!
+
+!!
+! youtube
+[Tannhäuser Gate by Serhiy Barhamon on Youtube](https://youtube.com/playlist?list=OLAK5uy_kQ-xUe2OzuZkbiLCL5VGIeuAYSydLInV0)
+!!
+
+I also prepared for the interview we planned. That’s the first time I've collected the things that inspired me into
+words, and it required a lot of effort. Words are very hard.
+
+## The Gate
+
+The first time I heard about the gate was in the Tears in the Rain monologue from the Blade Runner movie.
+
+!!
+! «
+I've seen things you people wouldn't believe. Attack ships on fire off shoulder of Orion. I watched C-beams glitter
+in the dark near the Tannhäuser Gate. All those moments will be lost in time, like tears in rain. Time to die.
+!!
+
+Sometime later, I learned that Tannhäuser is a hero from German folklore. The story goes like this: Tannhäuser went to
+the other world under the mountain where Venus/the underworld Queen, lived. After a few years, he decided to return and
+marry the woman he loved, and even though the queen had promised him everything a man could desire, he did not change
+his mind. Before marriage, he went to the Pope for forgiveness. However, the Pope was angry about him living in the
+underworld and said he would be forgiven when the Pope’s staff bloomed with roses (never). After Tannhäuser went home,
+the staff bloomed.
+
+Honestly, I did not understand the exact moral of the story. I suppose it's about God’s forgiveness.
+
+!!
+! ?
+Even though I read a few translated poems (my German is not good enough to read the originals) about a knight/bard
+named Tannhäuser, I found no mention of the gate. If you know where I can find it, I’ll be grateful for a reference.
+!!
+
+## Resurrection
+
+I find it fascinating that some time ago, traveling to a faraway destination was the same as dying. One will disappear
+from the lives of people who were near them their whole life. Others will disappear from one's life. Imagine you are a
+viking or a member of the Imperial Trans-Atlantic Expedition, boarding your ship. How long will people you know think
+that you are alive? A month? A year?
+
+Sometimes, people come back. Tannhäuser definitely did. A handful of Greeks returned from Hades. Jesus did not exactly
+travel to the other world but managed to return from there anyway. My personal hero, Shackleton, and his team returned
+from the realm of the dead.
+
+We no longer have that, at least not to that extent. We always have a choice. Even if you work really hard and go to
+the moon, you will be within a few taps from everyone you know and don’t. That makes resurrection impossible, unless
+you disconnect voluntarily. But, IDK, “Jesus killed himself for your sins” does not carry the same message.
+
+For some unknown reason I hope Goddard [was correct](https://en.wikipedia.org/wiki/Generation_ship), and in not too far
+away future we will have that again. We will travel beyond our ability to communicate, and new Greeks will come back
+from Hades.
+
+## Video
+
+To make the video I made Stages - a tool to make animations. The main idea was to replicate my music-making workflow.
+Here is a write up about [first version](/post/stages.html).
+
+I released second version that has more modules, color, resolution control and playback/record control but didn’t
+find the time to write about it yet.
+
+Here is how the source for the video looks like: [Stages](/stages/?s=002Y01S6.bg_modN1.0N3.360N5.60000N1.007S4.bg_cS6.bg_modN2.20S3.plsN1.108S2.bgS3.m_bS3.m_bS4.mw_bS4.mh_aN3.100N2.25S4.bg_c01S1.xS4.zeroN1.1S3.seqN1.001S1.yS4.zeroN1.1S5.seq_yS5.seq_y07S3.l_cS9.l_c_mod_aN2.45N2.40S3.lfl03S7.l_c_modS3.sumS6.bg_modN2.45S3.sumS9.l_c_mod_aN2.4503S1.mS3.mulS1.iN1.3S3.sumS4.zeroS3.m_a03S2.mwS3.mulS3.m_aN1.2S3.subS5.widthS4.mw_a03S2.mhS3.subS6.heightS4.mw_aS3.mulS7.clock_1N1.209S1.cS4.padxS4.padyN1.5S3.c_cS7.clock_1S3.one02S1.nS4.padxS4.padyS3.oneS4.mh_bS3.l_c07S3.c_cS9.l_c_mod_bN2.10N2.30S3.lfl0AS5.clockN3.500S3.now0BS3.seqS4.sd_2N7.0.92683N7.0.01284N6.0.2998N7.0.29921N7.0.90477N7.0.31276N7.0.73784N7.0.921230BS5.seq_yS5.sd_10N5.0.147N7.0.26207N7.0.34388N7.0.44706N7.0.59371N7.0.60126N7.0.74506N7.0.808680AS2.sdN1.1S8.clock_1606S2.lmS3.nowN1.0N5.10000N1.1N2.2005S3.plsS3.lteS3.nowN5.10000S2.lmS3.ple05S3.pleS2.gtS3.nowN6.600000S2.flN2.2003S7.fadeoutS3.subN6.680000S3.nowS3.maxN1.1S9.fadeout_a06S2.flS9.fadeout_bN1.1N5.80000N1.2N2.2005S3.lflS3.neqS9.fadeout_bN1.1N3.0.4S3.lam03S3.lafS3.subN6.720000S3.nowS3.maxN1.0S5.laf_a06S3.lamS5.laf_bN1.0N5.40000N5.0.001N3.0.403S4.stepS3.divS5.widthN2.20S3.divS6.heightN2.2003S3.padS3.subS5.widthS6.step_aS3.subS6.heightS6.step_b06S4.padxS1.xN1.0N1.1S6.step_aS5.pad_a06S4.padyS1.yN1.0N1.1S6.step_bS5.pad_b)
+
+{{iframe|/stages/?s=002N01S6.bg_modN1.0N3.360N5.60000N1.007S4.bg_cS6.bg_modN2.20S3.plsN1.108S2.bgS3.m_bS3.m_bS4.mw_bS4.mh_aN3.100N2.25S4.bg_c01S1.xS4.zeroN1.1S3.seqN1.001S1.yS4.zeroN1.1S5.seq_yS5.seq_y07S3.l_cS9.l_c_mod_aN2.45N2.40S3.lfl03S7.l_c_modS3.sumS6.bg_modN2.45S3.sumS9.l_c_mod_aN2.4503S1.mS3.mulS1.iN1.3S3.sumS4.zeroS3.m_a03S2.mwS3.mulS3.m_aN1.2S3.subS5.widthS4.mw_a03S2.mhS3.subS6.heightS4.mw_aS3.mulS7.clock_1N1.209S1.cS4.padxS4.padyN1.5S3.c_cS7.clock_1S3.one02S1.nS4.padxS4.padyS3.oneS4.mh_bS3.l_c07S3.c_cS9.l_c_mod_bN2.10N2.30S3.lfl0AS5.clockN3.500S3.now0BS3.seqS4.sd_2N7.0.92683N7.0.01284N6.0.2998N7.0.29921N7.0.90477N7.0.31276N7.0.73784N7.0.921230BS5.seq_yS5.sd_10N5.0.147N7.0.26207N7.0.34388N7.0.44706N7.0.59371N7.0.60126N7.0.74506N7.0.808680AS2.sdN1.1S8.clock_1606S2.lmS3.nowN1.0N5.10000N1.1N2.2005S3.plsS3.lteS3.nowN5.10000S2.lmS3.ple05S3.pleS2.gtS3.nowN6.600000S2.flN2.2003S7.fadeoutS3.subN6.680000S3.nowS3.maxN1.1S9.fadeout_a06S2.flS9.fadeout_bN1.1N5.80000N1.2N2.2005S3.lflS3.neqS9.fadeout_bN1.1N3.0.4S3.lam03S3.lafS3.subN6.720000S3.nowS3.maxN1.0S5.laf_a06S3.lamS5.laf_bN1.0N5.40000N5.0.001N3.0.403S4.stepS3.divS5.widthN2.20S3.divS6.heightN2.2003S3.padS3.subS5.widthS6.step_aS3.subS6.heightS6.step_b06S4.padxS1.xN1.0N1.1S6.step_aS5.pad_a06S4.padyS1.yN1.0N1.1S6.step_bS5.pad_b}}

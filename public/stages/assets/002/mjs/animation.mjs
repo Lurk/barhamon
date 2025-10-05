@@ -4,7 +4,7 @@ export function animation(args) {
     const onFrameCallbacks = [];
     const onStateChangeCallbacks = [];
     const frameLength = 1000 / 60;
-    const pos = 35387;
+    const pos = 0;
     const state = {
         state: "paused",
         now: pos * frameLength,
