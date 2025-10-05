@@ -1,0 +1,202 @@
+:root {
+	--extra-dark: #1d1c1c;
+	--darker: #2b2a2a;
+	--dark: #403f3f;
+	--medium: #a5a5a5;
+	--light: #cccccc;
+	--lighter: #f2f2f2;
+	--font-size: 22px;
+	--border-radius: 0.15rem;
+}
+
+@font-face {
+	font-family: "dsm";
+	src: url("/DejavuSansMono-5m7L.ttf");
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	color: var(--light);
+	background-color: var(--darker);
+}
+
+body:has(#canvas.fill) {
+	height: 100vh;
+	overflow-y: hidden;
+}
+
+select,
+input,
+button,
+option {
+	appearance: none;
+	padding: 0px 5px;
+	margin: 0;
+	cursor: inherit;
+	line-height: inherit;
+	background-color: var(--medium);
+	color: var(--extra-dark);
+	border-radius: var(--border-radius);
+	border: 1px solid var(--dark);
+}
+
+select {
+	width: 60px;
+}
+
+select:disabled,
+button:disabled {
+	color: var(--extra-dark);
+	background-color: var(--dark);
+}
+
+input {
+	width: 48px;
+}
+
+input[type=range] {
+	writing-mode: vertical-lr;
+	direction: rtl;
+	vertical-align: middle;
+	height: 110px;
+	padding: 0;
+	width: 2px;
+}
+
+
+a {
+	color: var(--light);
+}
+
+#canvas {
+	height: calc(100vh - 245px);
+	width: 100%;
+}
+
+#canvas.fill {
+	height: 100%;
+}
+
+@media (display-mode: fullscreen) {
+	#canvas {
+		height: 100vh;
+	}
+}
+
+#factory {
+	display: flex;
+	gap: 5px;
+	padding: 5px;
+	border-bottom: 1px solid var(--medium);
+	margin-bottom: 10px;
+}
+
+#factory>:first-child {
+	width: 80px;
+}
+
+#factory .input {
+	display: block;
+}
+
+#controls {
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+
+#controls.hidden {
+	display: none;
+}
+
+label {
+	width: 48px;
+	height: 18px;
+	overflow: hidden;
+}
+
+.hidden {
+	display: none !important;
+}
+
+.slider {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.inputs {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	gap: 5px;
+	justify-content: center;
+}
+
+.control {
+	height: 245px;
+	border: 1px solid var(--medium);
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.control>h3 {
+	margin: 0;
+}
+
+.control>span {
+	margin-bottom: 5px;
+	display: block;
+}
+
+.control.output {
+	filter: sepia(100%);
+}
+
+.control .header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.input {
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-auto-columns: min-content;
+	grid-column-gap: 5px;
+	grid-row-gap: 0px;
+}
+
+.input.withToggle {
+	grid-template-columns: auto auto auto;
+
+}
+
+.remove {
+	align-self: end;
+}
+
+.divider {
+	border-left: 1px solid var(--medium);
+}
+
+.toggle {
+	width: 18px;
+	height: 18px;
+	background-color: var(--dark);
+}
+
+.toggle.active {
+	background-color: var(--light);
+}
+
+.color-preview {
+	height: 20px;
+}
+
+.clockTable {
+	display: grid;
+	grid-template-columns: auto auto;
+}

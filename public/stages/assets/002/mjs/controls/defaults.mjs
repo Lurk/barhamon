@@ -12,6 +12,6 @@ export function defaults(values, ctx) {
     values.register("two", () => 2);
     values.register("i", (now, i) => i);
     values.register("now", (now) => now);
-    values.register("mouse_x", () => mouse_x);
-    values.register("mouse_y", () => mouse_y);
+    values.register("mouseX", () => mouse_x);
+    values.register("mouseY", () => mouse_y);
 }
