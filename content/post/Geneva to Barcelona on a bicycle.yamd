@@ -1,0 +1,177 @@
+---
+title: Geneva to Barcelona on a bicycle
+date: 2025-12-08T19:00:00.000000Z
+image: https://res.cloudinary.com/barhamon/image/upload/v1761308048/france-2025/Geneva%20to%20Barcelona%20on%20a%20bicycle.jpg
+preview: '1000 km through the south of France with a broken rib.'
+tags:
+- adventures
+- bikepacking
+- France
+- ViaRhôna
+- EuroVelo 8
+---
+
+That was the sportiest vacation I've had so far. In September 2025, we (Ko, Mauri, and I) cycled 1000 km in 15 days. We
+ate croissants (the best ones were in [Avignon](https://maps.app.goo.gl/SQ1xHVFFH5q5Z42K9)) and cheese on the way. We
+swam in the Mediterranean Sea and the Rhône. We crossed the French Alps and the Pyrenees. Every time I thought, “This
+is too difficult, and I don’t know if I’ll like it,” a voice in my head said, “Then, my friend, Mongolia is not for
+you.” And you know what? Even when it was hard, especially in the mornings, I never disliked it.
+
+(Mongolia, I am coming. Maybe.)
+
+The French Alps are my favorite part of the route, and also the hardest one. After a few days of cycling, I was sure I
+was not fit enough to go [through the Massif Central and reach Barcelona](/post/EDT France preparations.html)
+in two weeks as we had planned. In the end, we agreed that Sagrada Familia sounds cool as a finish point, and we
+changed our route to go along the coast, which was not only less elevation but also shorter. It included parts of
+[ViaRhôna](https://en.viarhona.com/) to get to the coast and
+[EuroVelo 8](https://en.eurovelo.com/ev8?_gl=1*hyj1iq*_gcl_au*MTY5OTQxMjkzMy4xNzYzNTM5ODU1) along it.
+
+We mainly stayed in campgrounds, which, I feel, were easier to find along ViaRhôna than along EuroVelo 8. All of them
+were quite nice, but the first one with Ayahuasca retreat vibes
+([Le Terroir]([https://leterroir.net/](https://leterroir.net//))) and the one with Disney Land pictures on Google
+([Le Coin Tranquille](https://www.coin-tranquille.com/en/)) were the best. We also stayed in an Airbnb twice, and in
+Girona, we pitched our tents on a kids' playground at a farm. That was the only place we found through
+[Park4Night](https://park4night.com/en/search).
+
+We literally rolled in on our bikes to Decathlon twice. I bought a pair of gloves, but they turned out to be too small
+to wear them every day. Mauri got a warmer sleeping bag and has looked much happier since then. Both times, we got
+energy bars and gels. I never tried high-performance food (my usual energy bar was always Snickers), and it felt like
+magic.
+
+We were a good team, and I am sure I would not have made it without the guys. They basically carried me over the
+Pyrenees after the accident.
+
+## The accident
+
+It was the 11th riding day. At this point I have become very confident on a bike, but also tired and less aware.
+
+That day, we planned to cross the French-Spanish border. We rode a slight uphill for the first half of the day. At some
+point, we decided to have lunch and chose a pizza restaurant. The way to the restaurant was slightly downhill and only
+ten minutes long. Pedaling was easy, and I was going too fast for that turn. A small patch of gravel was enough to
+kick the front wheel underneath me.
+
+As a result, I lost skin on my palms and elbow. And fractured my ribs. Since then, every pothole felt like someone
+kicking me in the chest, and no skin situation made bike handling challenging.
+
+Pizza was delicious tho.
+
+!! Lessons learned:
+! lightbulb
+- No-skin-on-palms is still the most common injury on two wheels. Gloves are an easy solution.
+
+- Add bandages to the first aid kit. Plasters are cool, but they fall off very fast.
+!!
+
+## Gear
+
+On a third day I sent my solar panel back home because we were able to charge our stuff most evenings. At the end of
+the trip, I threw away the aerobars. They were too low to add comfort, and I used them only as sock dryers. Other than
+that, I used every piece of 17.4-kilo gear I had.
+
+We talked a lot about carrying less stuff. And I would definitely survive without a chair, a harmonica, warm camping
+socks, a second power bank, and half of the clothing I had with me. That would make uphill more enjoyable, but the
+camping experience will be much worse.
+
+Will I take less stuff with me next time? I do not think so. I think I would rather plan shorter daily distance,
+especially for the mountain days. Train more. And maybe lighter bicycle.
+
+But also 17.4 kg is too much.
+
+¯\\_(ツ)_/¯
+
+## No fly
+
+One of the goals I had for this adventure was to avoid flying. On the way there, we were delayed for a few hours
+because our train refused to go past Zurich. And our way back, even though it took us 36 hours, three trains, and two
+buses, went surprisingly smoothly.
+
+Overall, I would say it was a success.
+
+## Stats
+
+In 15 days, I recorded 985 km (65.7 km on average) of trail with 5003 m (333.5 m on average) of gained elevation. It
+felt much harder than my [Lapland trip](/post/lapland-2024.html), but if you compare the average numbers, it should be
+the other way around.
+
+Anyway, from now on, I will say that I rode 1000 km through the south of France with a broken rib.
+
+## Dairy
+
+I was not taking any notes during the adventure, and it is time to admit that I feel too lazy to write a day-by-day
+diary afterwards. But while procrastinating on that task, I built a GPX file render.
+
+¯\\_(ツ)_/¯
+
+{% GPX files:
+
+### Full route
+
+{{gpx|/gpx/Geneva - Barcelona/full.gpx}}
+
+{% Daily files:
+
+### day 0
+
+{{gpx|/gpx/Geneva - Barcelona/day 0.gpx}}
+
+### day 1
+
+{{gpx|/gpx/Geneva - Barcelona/day 1.gpx}}
+
+### day 2
+
+{{gpx|/gpx/Geneva - Barcelona/day 2.gpx}}
+
+### day 3
+
+{{gpx|/gpx/Geneva - Barcelona/day 3.gpx}}
+
+### day 4
+
+{{gpx|/gpx/Geneva - Barcelona/day 4.gpx}}
+
+### day 5
+
+{{gpx|/gpx/Geneva - Barcelona/day 5.gpx}}
+
+### day 6
+
+{{gpx|/gpx/Geneva - Barcelona/day 6.gpx}}
+
+### day 7
+
+{{gpx|/gpx/Geneva - Barcelona/day 7.gpx}}
+
+### day 8
+
+{{gpx|/gpx/Geneva - Barcelona/day 8.gpx}}
+
+### day 9
+
+{{gpx|/gpx/Geneva - Barcelona/day 9.gpx}}
+
+### day 10
+
+{{gpx|/gpx/Geneva - Barcelona/day 10.gpx}}
+
+### day 11
+
+{{gpx|/gpx/Geneva - Barcelona/day 11.gpx}}
+
+### day 12
+
+{{gpx|/gpx/Geneva - Barcelona/day 12.gpx}}
+
+### day 13
+
+{{gpx|/gpx/Geneva - Barcelona/day 13.gpx}}
+
+### day 14
+
+{{gpx|/gpx/Geneva - Barcelona/day 14.gpx}}
+%}
+%}
+
+## Pictures:
+
+{{cloudinary_gallery|barhamon&france-2025}}

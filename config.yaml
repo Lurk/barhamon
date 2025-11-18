@@ -19,14 +19,20 @@ static_path: './public/'
 template: '../hamon/'
 domain: 'https://barhamon.com'
 title: 'Serhiy Barhamon'
-description: 'blog'
+description: 'Personal website of Serhiy Barhamon - adventures, music, life, books, software.'
+gpx_embedding:
+  base:
+    - https://a.tile.opentopomap.org
+    - https://b.tile.opentopomap.org
+    - https://c.tile.opentopomap.org
+  attribution_png: './img/opentopomap.png'
 template_config:
   index_tags:
-    - life
+    - adventures
     - music
+    - life
     - books
     - software
-    - adventures
   index_article_id: '/me'
   footer:
     social:
