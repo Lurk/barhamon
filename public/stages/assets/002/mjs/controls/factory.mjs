@@ -1,7 +1,7 @@
-import { line } from "./line.mjs";
+import { line } from "../outputs/line.mjs";
 import { values } from "../value.mjs";
 import { defaults } from "./defaults.mjs";
-import { render } from "../ui/control.mjs";
+import { render } from "../ui/factory/index.mjs";
 import { sliderWithNumericInputs } from "./slider.mjs";
 import { oscillatorWithConnectInput } from "./oscillator.mjs";
 import { math } from "./math.mjs";
@@ -9,7 +9,9 @@ import { random } from "./random.mjs";
 import { assert } from "../utils.mjs";
 import { state } from "../state.mjs";
 import { logic } from "./logic.mjs";
-import { recorder } from "../recorder.mjs";
+import { initFullScreenCanvas } from "../canvas.mjs";
+import { animate } from "../animation.mjs";
+import { outputs } from "../output.mjs";
 export const CONTROL_TYPES = [
     "slider",
     "oscillator",
@@ -21,7 +23,7 @@ export const CONTROL_TYPES = [
 export function controlTypeGuard(t) {
     return CONTROL_TYPES.includes(t);
 }
-function initEvents({ fullScreenTarget, toggleVisibility, stopRecording, }) {
+function initEvents({ fullScreenTarget, toggleVisibility }) {
     fullScreenTarget.addEventListener("click", (e) => {
         e.preventDefault();
         if (e.target instanceof HTMLElement) {
@@ -36,7 +38,6 @@ function initEvents({ fullScreenTarget, toggleVisibility, stopRecording, }) {
     document.onkeyup = function (e) {
         // space
         if (e.key == " " || e.code == "Space" || e.keyCode == 32) {
-            stopRecording();
             toggleVisibility();
         }
     };
@@ -96,35 +97,38 @@ function init(state, values, outputs) {
         }
     };
 }
-export function factory({ ctx }) {
+export function factory() {
     const vals = values();
-    const outputs = new Map();
+    const outputsState = outputs();
     const s = state();
-    const add = init(s, vals, outputs);
+    const add = init(s, vals, outputsState);
     const controls = document.getElementById("controls");
     assert(controls, "#controls element was not wound");
-    const toggleVisibility = () => {
-        controls.classList.toggle("hidden");
-        ctx.canvas.classList.toggle("fill");
-        s.toggleVisibility();
-    };
-    const record = recorder(ctx, toggleVisibility);
+    const canvas = initFullScreenCanvas({
+        id: "canvas",
+        backgroundCollor: "#2b2a2a",
+    });
     if (!s.areControlsVisible()) {
         controls.classList.add("hidden");
-        ctx.canvas.classList.add("fill");
+        canvas.ctx.canvas.classList.add("fill");
     }
     render({
         vals,
         add,
-        ctx,
-        recorder: record,
+        canvas,
     });
     initEvents({
-        fullScreenTarget: ctx.canvas,
-        toggleVisibility,
-        stopRecording: () => record.stop(),
+        fullScreenTarget: canvas.ctx.canvas,
+        toggleVisibility: () => {
+            controls.classList.toggle("hidden");
+            canvas.ctx.canvas.classList.toggle("fill");
+            s.toggleVisibility();
+        },
     });
-    defaults(vals, ctx);
+    defaults(vals, canvas.ctx);
     s.eachControl((c) => add(c, true));
-    return outputs;
+    animate({
+        canvas,
+        outputs: outputsState,
+    });
 }
