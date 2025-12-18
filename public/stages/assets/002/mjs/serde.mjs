@@ -115,16 +115,22 @@ export function serde() {
             pos += 1;
             const controls = new Map();
             while (pos < str.length) {
-                const type = stringToType(str.slice(pos, pos + 2));
-                pos += 2;
-                const { val, end } = sd[type].fromString(version, str, pos);
-                controls.set(val.name, 
-                // @ts-expect-error
-                {
-                    type,
-                    args: val,
-                });
-                pos = end;
+                try {
+                    const type = stringToType(str.slice(pos, pos + 2));
+                    pos += 2;
+                    const { val, end } = sd[type].fromString(version, str, pos);
+                    controls.set(val.name, 
+                    // @ts-expect-error
+                    {
+                        type,
+                        args: val,
+                    });
+                    pos = end;
+                }
+                catch (e) {
+                    console.error(`Error at position ${pos}: ${e.message}\n\n${JSON.stringify([...controls.entries()])}`);
+                    pos += 1;
+                }
             }
             return {
                 controls,

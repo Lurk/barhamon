@@ -10,9 +10,12 @@ const options = [
     "mul",
     "pow",
     "div",
+    "div floor",
+    "div ceil",
     "avg",
     "min",
     "max",
+    "modulo",
 ];
 function evaluate(o, lhs, rhs, now, i) {
     switch (o) {
@@ -26,12 +29,18 @@ function evaluate(o, lhs, rhs, now, i) {
             return Math.pow(getOneNumber(lhs(now, i)), getOneNumber(rhs(now, i)));
         case "div":
             return getOneNumber(lhs(now, i)) / getOneNumber(rhs(now, i));
+        case "div floor":
+            return Math.floor(getOneNumber(lhs(now, i)) / getOneNumber(rhs(now, i)));
+        case "div ceil":
+            return Math.ceil(getOneNumber(lhs(now, i)) / getOneNumber(rhs(now, i)));
         case "avg":
             return (getOneNumber(lhs(now, i)) + getOneNumber(rhs(now, i))) / 2;
         case "min":
             return Math.min(getOneNumber(lhs(now, i)), getOneNumber(rhs(now, i)));
         case "max":
             return Math.max(getOneNumber(lhs(now, i)), getOneNumber(rhs(now, i)));
+        case "modulo":
+            return getOneNumber(lhs(now, i)) % getOneNumber(rhs(now, i));
         default:
             throw new Error(`option: ${o} is not supported`);
     }
@@ -47,11 +56,15 @@ export function math({ state, args, onRemove, onChange, }) {
         state.values.unregister(`${args.name}_b`);
         onRemove();
     });
-    let componentState = { ...args };
+    let componentState = {
+        ...args,
+        mode_a: args.mode_a && args.mode_a.length > 0 ? args.mode_a : options[0],
+        mode_b: args.mode_b && args.mode_b.length > 0 ? args.mode_b : options[0],
+    };
     const { select: { el: mode_a }, } = renderSelectInputTo({
         id: `${args.name}_mode_a`,
         label: "mode",
-        selected: args.mode_a ?? options[0],
+        selected: args.mode_a,
         options,
         container: container.el,
     });
@@ -87,7 +100,7 @@ export function math({ state, args, onRemove, onChange, }) {
     const { select: { el: mode_b }, } = renderSelectInputTo({
         id: `${args.name}_mode_b`,
         label: "mode",
-        selected: args.mode_b || options[0],
+        selected: args.mode_b,
         options,
         container: container.el,
     });

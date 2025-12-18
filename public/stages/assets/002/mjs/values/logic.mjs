@@ -43,7 +43,10 @@ export function logic({ state, args, onRemove, onChange, }) {
         state.values.unregister(args.name);
         onRemove();
     });
-    let componentState = { ...args };
+    let componentState = {
+        ...args,
+        mode: args.mode && args.mode.length > 0 ? args.mode : options[0],
+    };
     const { select: { el: mode }, } = renderSelectInputTo({
         id: `${args.name}_mode`,
         label: "mode",
