@@ -1,0 +1,44 @@
+---
+title: Learning Domain-Driven Design by Vlad Khononov
+date: 2025-12-16T21:37:37.214619Z
+image: 'https://res.cloudinary.com/barhamon/image/upload/v1765913870/header/Learning%20Domain-Driven%20Design%20by%20Vlad%20Khononov.jpg'
+preview: 'A ton of common sense.'
+tags:
+ - books
+ - non-fiction
+ - software
+ - engineering
+---
+
+I am always very skeptical when someone says they know the correct way to build software. Because I do not think there
+is one.
+
+The lifecycle of a software product is full of unexpected turns, tight deadlines, and resource constraints. Even if two
+products solve the same problem or implement the same API, they will be drastically different. To give you a few
+examples: Linux and FreeBSD, MySQL and PostgreSQL, WhatsApp and Signal, etc. Numerous factors contribute to these
+differences, and the lack of use of DDD, TDD, or any other D is far from the top of the list.
+
+Also, I have never been part of a team that consciously used DDD. We always wanted to use `ubiquitous language` in our
+product. Who would not want to use it? But it was never like “We are following DDD, therefore we use ubiquitous
+language”. I chose a ubiquitous language example, because the value of it is extremely obvious for technical and
+non-technical people. But most of it is like that. You can replace it with bounded context's (separation of concerns),
+or don't build things that are already available, etc. It all feels like “go to a gym” advice for depressed people.
+
+I reread those two paragraphs, and it feels like I don't like the DDD in general, which is not the case. Most of it
+moved into the common-sense realm, which is why, I guess, I never consciously used DDD. And, to be honest, I find “We
+use ubiquitous language because it is good for our product” is much better than “We are following DDD, therefore we use
+ubiquitous language". On the other hand, my life would be so much easier if we had chosen the DDD. I would hand out the
+book during onboarding and spend the rest of my days moderating event storming.
+
+Anyway.
+
+The book is good. If you have never heard of DDD and want to know what it is, go for it. It reads fast and has a ton of
+common sense. The best part for me was when he explained how to identify the core domain in a new project for you. Look
+for part of the code that changes often, and looks like a ball of mud stitched together by duct tape and sticks.
+
+**Original Title:** Learning Domain-Driven Design: Aligning Software Architecture and Business Strategy by Vlad
+Khononov
+
+**ISBN13:** 9781098100131 (ISBN10: 1098100131)
+
+**GoodReads:** [4.44 / 5](https://www.goodreads.com/book/show/57573212-learning-domain-driven-design)
