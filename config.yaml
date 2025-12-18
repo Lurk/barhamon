@@ -29,9 +29,9 @@ gpx_embedding:
 template_config:
   index_tags:
     - adventures
+    - books
     - music
     - life
-    - books
     - software
   index_article_id: '/me'
   footer:
