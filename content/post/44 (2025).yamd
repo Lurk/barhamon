@@ -1,0 +1,155 @@
+---
+title: 44 (2025)
+date: 2026-01-26T19:19:45.982815Z
+image: 'https://res.cloudinary.com/barhamon/image/upload/v1769423244/rolls/44%20%282025%29/44_2025.jpg'
+preview: 'Year end brag list.'
+tags:
+  - life
+  - year
+  - photo roll
+---
+
+Russia is still trying to conquer Ukraine, and Ukraine still fights back. I don't see how it can end anytime soon. I
+would very much like Russians to stop and go home, but until then:
+
+!! Here is how you can help Ukrainians
+! handshake
+- There are many pets in the fighting area whose owners were killed or displaced. They need food and medical care.
+[uanimals.org](https://uanimals.org/en/) does a great job helping them.
+
+- I know [motohelp.ua](https://motohelp.ua/) from my motorcycle life in Ukraine. They were saving lives then and do
+the same now.
+
+- [hospitallers.life](https://www.hospitallers.life/) are risking lives saving others on the front line.
+
+- Most importantly, all of that does not make much sense if the army of Ukraine does not have enough rounds, warm
+clothes, vehicles, etc. [prytulafoundation.org](https://prytulafoundation.org/en) does an excellent job helping with
+that.
+!!
+
+## Intro
+
+The end of 2025 was quite busy for me, and I did not manage finish this article in December as usual. On the other
+hand, every year I wrote a year-end article, I thought it made more sense to tie it to my birthday rather than to a
+year-end.
+
+Here we go:
+
+## What I did while I was 44.
+
+### Iceland
+
+This year, one of my dreams came true, we [visited Iceland](/post/Iceland%202025.html). What a land! The last time I
+was so excited about a travel destination was when I visited Thailand, where I end up living for a few years. I do not
+see it coming, but it would be cool if we ended up living in Iceland for a few years.
+
+### France Crossing
+
+[1000 km on a bicycle](/post/Geneva%20to%20Barcelona%20on%20a%20bicycle.html). Through mountains, rivers, sea,
+croissants, cheese, and broken ribs. It was sporty and beautiful, especially the alpine section.
+
+### Music
+
+I released two singles, [Unusual Proximity](https://serhiybarhamon.bandcamp.com/track/unusual-proximity) and
+[Tannhäuser Gate](/music/Tannh%C3%A4user%20Gate%20by%20Serhiy%20Barhamon.html), this year. In the
+[2025-09-11 Roll](/post/2025-09-11%20Roll.html), I said that I hope to release a new album soon. But I still don't
+feel that it is ready. Maybe next year.
+
+### Software
+
+!!
+! computer
+One of the things I really like about software development is that it is a constant source of dopamine. I can get my
+dopamine by building a working prototype quite fast.  Then, receive more dopamine by improving that piece of software
+later.
+!!
+
+#### Yamd
+
+[YAMD](https://github.com/Lurk/yamd) is markdown-like markup language parser library.
+
+New features and improvements:
+
+- Support of emphasis node.
+- Serialization to string
+- Serde is an optional dependency now
+
+#### img2text
+
+A [library and CLI app](https://github.com/Lurk/bar/tree/main/libs/img2text) that gets prompt, temperature, and a list
+of images (URL or local path) and runs it through the moondream model. It will download the model from HuggingFace on
+the first run. On macOS, it uses Metal. Everywhere else, it uses the CPU. At this point, adding CUDA support should be
+trivial, but I do not have a device to test it. It has two output formats: JSON for machines and an ASCII table for
+humans. Here is a write-up: [Notes on running LLM locally](/post/Notes%20on%20running%20LLM%20locally.html), about the
+initial version.
+
+#### gpxtools
+
+A [library and CLI app](https://github.com/Lurk/bar/tree/main/libs/gpxtools) with the following features:
+
+- Join multiple gpx files into one.
+- Get statistics from the GPX file. For now, it's only distance and gained elevation.
+- Plot the route. It will use a user-defined map tile server to fetch map tiles, plot the route on them, and save the
+  result as a PNG image with the provided dimensions.
+
+#### BAR
+
+[BAR](https://github.com/Lurk/bar) is a static site generator, that I use to build this website.
+
+New features and improvements:
+
+- New “article” subcommand. It creates an empty yamd file with frontmatter. At some point, I want to add template
+  support.
+- Alt text generation by using [img2text](#img2text) library.
+- GPX rendering using the [gpxtools](#gpxtools) library.
+- Improved error messages. Further Improvements depend on a new version of YAMD parser, which I am working on.
+- Simplistic cache layer.
+
+#### Stages
+
+I needed a video for [Tannhäuser Gate](/music/Tannh%C3%A4user%20Gate%20by%20Serhiy%20Barhamon.html) and built an app
+for it. Here is a write-up about the [first version of Stages](/post/stages.html). Since then, a few new features have
+been added, but I did not have the time/inspiration to write about them.
+
+It was fun adventure. I have a few ideas where to go from here. But most probably, I will start with rewrite as a
+standalone app. Video rendering in browser is far from ideal.
+
+#### Serve
+
+[Serve](https://github.com/Lurk/serve) is a simple HTTP(S) server that I use to serve static files (this website).
+
+- This year, I found the time to read about how certbot works and added HTTP to HTTPS redirect. So yeah! Finally, there
+  is no need to restart the server on certificate update. Would be cool to find the time for
+  [ACME](https://datatracker.ietf.org/doc/html/rfc8555) implementation.
+- Log to file with filerotate. The log format will definitely change, maybe even become configurable at some point.
+- Config file. At some point, I got tired of typing all the options on the command line and added support for a TOML
+  file.
+
+## Books
+
++ [How to Build a Motorcycle: A Nut-and-Bolt Guide to Customizing Your Bike by Gary Inman and Gilbert Adi](/books/How%20to%20Build%20a%20Motorcycle:%20A%20Nut-and-Bolt%20Guide%20to%20Customizing%20Your%20Bike.html)
++ [Endurance: Shackleton's Incredible Voyage by Alfred Lansing](/books/Endurance:%20Shackleton's%20Incredible%20Voyage%20by%20Alfred%20Lansing.html)
++ [Unfinished Tales by J.R.R. Tolkien and Christopher Tolkien](/books/Unfinished%20Tales%20by%20J.R.R.%20Tolkien%20and%20Christopher%20Tolkien.html)
++ [The Nature of Code by Daniel Shiffman](/books/The%20Nature%20of%20Code%20by%20Daniel%20Shiffman.html)
++ [The non-objective world by Kasimir Malevich](/books/The%20non-objective%20world%20by%20Kasimir%20Malevich.html)
++ [All Systems Red by Martha Wells](/books/All%20Systems%20Red%20by%20Martha%20Wells.html)
++ [Learning Domain-Driven Design by Vlad Khononov](/books/Learning%20Domain-Driven%20Design%20by%20Vlad%20Khononov.html)
++ [Discworld 1-6 by Terry Pratchett](/books/Discworld%201-6%20by%20Terry%20Pratchett.html)
+
+That's seven (7!) books more than the previous year. I am on fire. All of them are interesting in their own way, but if
+someone ask me to choose only one book from that list, it would be
+[Endurance: Shackleton's Incredible Voyage by Alfred Lansing](/books/Endurance:%20Shackleton's%20Incredible%20Voyage%20by%20Alfred%20Lansing.html).
+
+## Work-related stuff.
+
+Starting from September, I am leading a new project in [Check24](https://check24.de/). We are making good progress, and
+I am optimistic about the future of that project.
+
+## Favorite pictures
+
+{{cloudinary_gallery|barhamon&44}}
+
+## Outro
+
+Those birthday (year end) articles look like a brag list because they are. This is my way of feeling productive. I
+like that feeling and hope that next year will be at least as productive as this one.

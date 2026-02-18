@@ -18,6 +18,7 @@ export function random({ state, args, onRemove, onChange, }) {
         container,
         id: `${args.name}_min`,
         label: "min",
+        value: args.min,
         onChange(min) {
             componentState = { ...componentState, min };
             onChange(componentState);
@@ -29,6 +30,7 @@ export function random({ state, args, onRemove, onChange, }) {
         container,
         id: `${args.name}_max`,
         label: "max",
+        value: args.max,
         onChange(max) {
             componentState = { ...componentState, max };
             onChange(componentState);
@@ -67,7 +69,7 @@ export const randomSerde = () => {
         toString(args) {
             return keys.map((key) => serialize(args[key])).join("");
         },
-        fromString(vevrison, val, start) {
+        fromString(version, val, start) {
             let local_start = start;
             const res = {
                 name: "",
@@ -76,7 +78,7 @@ export const randomSerde = () => {
                 rate: 25,
             };
             keys.forEach((key) => {
-                if (key === "rate" && vevrison < 2) {
+                if (key === "rate" && version < 2) {
                     return;
                 }
                 const { val: v, end } = deserialize(val, local_start);
