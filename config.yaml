@@ -28,10 +28,10 @@ gpx_embedding:
   attribution_png: './img/opentopomap.png'
 template_config:
   index_tags:
+    - music
     - books
     - life
     - adventures
-    - music
     - software
   index_article_id: '/me'
   footer:
