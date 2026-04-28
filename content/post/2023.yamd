@@ -37,7 +37,7 @@ stuff and even wanted to improve it.
 
 The list of software that I maintain is growing. 
 
-- [BAR](https://github.com/Lurk/bar) static site generator. Is in a super early stage, but this blog is a working demo. 
+- [Bar](https://github.com/Lurk/bar) static site generator. Is in a super early stage, but this blog is a working demo. 
 - [YAMD](https://github.com/Lurk/yamd) yet another markdown (flavor)
 - [Clink](https://github.com/Lurk/clink) cross-platform URL cleaner. 
 - [Cloudinary Rust API](https://github.com/Lurk/cloudinary_rs)

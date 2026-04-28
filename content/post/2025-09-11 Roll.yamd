@@ -34,14 +34,14 @@ is 80% ready. I hope to finish it this year, but I make no promises.
 
 ## Pet projects.
 
-### BAR.
+### Bar.
 
-Yeah, one of my friends decided to try [BAR](https://github.com/Lurk/bar) and found a few bugs and missing features.
+Yeah, one of my friends decided to try [Bar](https://github.com/Lurk/bar) and found a few bugs and missing features.
 You can thank Stas for better error messages and the ability to control social links in the
 [Hamon theme](https://github.com/Lurk/Hamon) with a config file.
 
 I always struggled with alt texts for pictures, especially in galleries. Now, if enabled,
-[BAR](https://github.com/Lurk/bar) will download a tiny image to the text
+[Bar](https://github.com/Lurk/bar) will download a tiny image to the text
 [MoonDream1 model](https://huggingface.co/vikhyatk/moondream1)
 and generate those alt texts. It will use Metal or CPU to run the model. Theoretically, it will also work on CUDA, but
 I do not have a device to test it.

@@ -92,9 +92,9 @@ A [library and CLI app](https://github.com/Lurk/bar/tree/main/libs/gpxtools) wit
 - Plot the route. It will use a user-defined map tile server to fetch map tiles, plot the route on them, and save the
   result as a PNG image with the provided dimensions.
 
-#### BAR
+#### Bar
 
-[BAR](https://github.com/Lurk/bar) is a static site generator, that I use to build this website.
+[Bar](https://github.com/Lurk/bar) is a static site generator, that I use to build this website.
 
 New features and improvements:
 

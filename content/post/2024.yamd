@@ -87,10 +87,10 @@ are a bunch of enums with
 [documentation](https://docs.rs/cloudinary/0.8.0/cloudinary/upload/enum.OptionalParameters.html) and tests. The work
 was labor intensive, but I find it much easier to work with now, and I hope it will be easier to support.
 
-#### BAR
+#### Bar
 
-I convinced at least one person to try [BAR](https://github.com/Lurk/bar), and he sent bug reports and pull requests.
-Be as cool as Augustin. Use BAR.
+I convinced at least one person to try [Bar](https://github.com/Lurk/bar), and he sent bug reports and pull requests.
+Be as cool as Augustin. Use Bar.
 
 #### Mixed Signals cover
 

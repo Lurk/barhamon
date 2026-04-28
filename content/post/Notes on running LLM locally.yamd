@@ -12,7 +12,7 @@ tags:
 
 I have been interested in image-to-text transformation for a long time, but haven't had any use cases. No more.
 
-Eventually, I want to add a search feature to [BAR](https://github.com/Lurk/bar) (a static website generator that
+Eventually, I want to add a search feature to [Bar](https://github.com/Lurk/bar) (a static website generator that
 generated this article). A significant portion of this blog consists of pictures, and the search would not be complete
 without indexing them. As a first step towards that goal, I want to add an image caption generator with only two
 requirements: It should work offline and be as rusty (by the way) as possible.
@@ -30,7 +30,7 @@ to test.
 proprietary systems. I somehow expected that [WebGPU](https://www.w3.org/TR/webgpu/) already dominates in that area.
 !!
 
-It does not work completely offline because I don't want to add ~3.7 GB to the BAR. When the generator is enabled for
+It does not work completely offline because I don't want to add ~3.7 GB to the Bar. When the generator is enabled for
 the first time, it will download the model from [Huggingface](https://huggingface.co/). It will also download the
 remote images without alt text. Generating captions is hard if you can't see the picture.
 

@@ -46,7 +46,7 @@ That’s not a new [crate](https://crates.io/crates/cloudinary), but I added som
 people did a few pull requests. There is still a long way to a release, but we are getting there. 
 
 Implementing it I got a few good insights on how image transformations API should look like. I will need to implement 
-some of those in BAR.
+some of those in Bar.
 
 !!
 ! handshake
@@ -57,7 +57,7 @@ registration is expanding my free tier, so I can post more cat photos.
 Thank you. 
 !!
 
-## BAR
+## Bar
 
 Static website generator. Every web developer should write one, right? 
 
@@ -76,27 +76,27 @@ I want a template engine that has the following:
 - It should be as close to the resulting HTML as possible. 
 - Tooling: tree-sitter, type checking, linter, prettier, etc.
 
-Ultimately, I chose [Tera](https://keats.github.io/tera/docs/) mainly because exposing BAR API to the template is 
+Ultimately, I chose [Tera](https://keats.github.io/tera/docs/) mainly because exposing Bar API to the template is 
 relatively easy. Developing a theme with it reminded me of the old days of doing PHP and Smarty. I would consider 
 moving to another template engine if I find something better. Also, version 2 of Tera is in progress, but I haven’t 
 read anything yet.
 
-Anyway, here is the first template for BAR - [Hamon](https://github.com/Lurk/Hamon). 
+Anyway, here is the first template for Bar - [Hamon](https://github.com/Lurk/Hamon). 
 
 Another adventure is code highlighting. I chose [Syntect](https://github.com/trishume/syntect/) to do the job. In the 
 middle of integration, it turned out that they do not support TypeScript. I spent some time getting around it, but 
 now, if you already use or are planning to use Syntect and need Typescript support, here is the way to do it 
 [Syntect SyntaxSet with Typescript support](https://github.com/Lurk/syntect_ts). 
 
-I have many ideas on how to improve the whole BAR situation: docs, git integration, webhooks for automatic site 
+I have many ideas on how to improve the whole Bar situation: docs, git integration, webhooks for automatic site 
 rendering, partial rerendering, comments, etc. 
 
-So yeah, come and build some websites with [BAR](https://github.com/Lurk/bar). 
+So yeah, come and build some websites with [Bar](https://github.com/Lurk/bar). 
 
 ## Serve
 
 [Simple HTTP(S) server for static files](https://github.com/Lurk/serve). At some point, I needed a tool to serve the 
-files that BAR produced. I reached out to the familiar Nginx but then wrote a simple Axum-based Rust program that did 
+files that Bar produced. I reached out to the familiar Nginx but then wrote a simple Axum-based Rust program that did 
 the job. The source code of the first version was smaller than the Nginx config would be. The current version supports 
 TLS and is still very simple. I haven’t done any benchmarks, so I do not know how good or bad it is. But it did serve 
 this particular page and did it well. 
