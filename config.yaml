@@ -28,11 +28,11 @@ gpx_embedding:
   attribution_png: './img/opentopomap.png'
 template_config:
   index_tags:
+    - software
     - music
     - books
     - life
     - adventures
-    - software
   index_article_id: '/me'
   footer:
     social:

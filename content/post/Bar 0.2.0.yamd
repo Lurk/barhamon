@@ -1,0 +1,250 @@
+---
+title: Bar 0.2.0 and YAMD 0.19.0
+date: 2026-05-03T19:00:00+01:00
+image: "https://res.cloudinary.com/barhamon/image/upload/v1777316366/header/Bar%200.2.0.png"
+preview: Useful errors, and the parser rewrite that made them possible.
+tags:
+  - software
+  - rust
+  - bar
+  - yamd
+---
+
+The most visible change in Bar 0.2.0 and YAMD 0.19.0 is that most errors finally tell you what's wrong.
+
+!!
+! ?
+[Bar](https://github.com/Lurk/bar) is the static site generator that builds this blog. [YAMD](https://docs.rs/yamd) is the markdown-ish format it consumes. They live in separate repos, but Bar is the only YAMD consumer I know of.
+!!
+
+You've embedded a GPX track in a post, and typo'd the path. In Bar 0.1, that surfaced like this:
+
+```text
+Failed to render 'post.html': error while rendering macro `yamd::Embed`
+
+Function call 'render_gpx' failed
+IO error: No such file or directory (os error 2)
+```
+
+True and unhelpful. *Which* post? *Which* GPX path? You'd open every YAMD file that embedded a GPX and check.
+
+In Bar 0.2.0:
+
+```text
+  × content rendering failed for "/post/EDT France preparations"
+  ├─▶ error rendering 'embed' fragment
+  ├─▶ failed to render fragment template for 'embed'
+  ├─▶ Failed to render '__bar_fragment__embed.html'
+  ├─▶ Function call 'render_gpx' failed
+  ╰─▶ IO error: No such file or directory (os error 2)
+    ╭─[content/post/EDT France preparations.yamd:30:1]
+ 29 │
+ 30 │ {{gpx|/gpx/edt/plant.gpx}}
+    · ────────────┬────────────
+    ·             ╰── while rendering this embed
+ 31 │
+    ╰────
+```
+
+Same underlying error: the file isn't there. But the diagnostic names the post, points at line 30, underlines the embed, and walks you down the chain of contexts that produced it. The path `/gpx/edt/plant.gpx` is right there — you can see your typo.
+
+Most of YAMD 0.19.0 and Bar 0.2.0 were plumbing for this. I rewrote YAMD's parser around a flat `Op` representation that tracks a source span on every node, added a fragment-based template system to Bar, and swapped the error type for miette diagnostics. The parser rewrite also let me throw out the recursive AST walking in Bar's processors.
+
+## The Op pipeline
+
+[YAMD](https://docs.rs/yamd/0.19.0/yamd/index.html) used to go straight from Lexer to AST. The new architecture adds an intermediate step:
+`Lexer → Op stream → AST`. Each `Op` has a kind — `Start(Node)`, `End(Node)`, or `Value` — and its text as `Content`.
+
+```text
+Input:  "**hello** world"
+Ops:    Start(Paragraph) → Start(Bold) → Value("hello") → End(Bold) → Value(" world") → End(Paragraph)
+```
+
+A flat sequence where `Start`/`End` pairs encode structure.
+
+### Every node knows where it came from
+
+The whole point of the Op rewrite was to give every node a source location. Each `Op` carries a `Content` enum that points back at the original source string:
+
+```rust
+pub enum Content {
+    Span(Range<usize>),
+    Materialized(String),
+}
+```
+
+`Span` is a byte range into the original source. The parser produces a `Span` whenever the text maps to a contiguous region of the input. `Materialized` is the fallback for when escape processing removes backslashes, and the resulting text is no longer contiguous in memory.
+
+That `Range<usize>` is what miette renders as `:30:1` in the error from the opener. When the renderer hits a problem, it has the exact byte range in the YAMD source that produced the offending op — no separate line/column tracking, no walking the source again at error time.
+
+In practice, escape sequences are rare. Most content stays as `Span`, which means tracking source locations is essentially free — no allocations on the hot path, no copies. The extra pipeline step pays for itself:
+
+{% Benches
+```sh
+Running benches/throughput.rs (target/release/deps/throughput-0e7df85a933aedb5)
+Gnuplot not found, using plotters backend
+throughput/~344kb of YAMD written by humman
+                        time:   [2.0890 ms 2.0912 ms 2.0934 ms]
+                        thrpt:  [160.52 MiB/s 160.69 MiB/s 160.85 MiB/s]
+                 change:
+                        time:   [−2.3673% −2.1713% −1.9888%] (p = 0.00 < 0.05)
+                        thrpt:  [+2.0292% +2.2195% +2.4247%]
+                        Performance has improved.
+Found 8 outliers among 100 measurements (8.00%)
+  2 (2.00%) low mild
+  6 (6.00%) high mild
+
+throughput/~344kb with high density of tokens
+                        time:   [7.3322 ms 7.3580 ms 7.3846 ms]
+                        thrpt:  [45.503 MiB/s 45.667 MiB/s 45.828 MiB/s]
+                 change:
+                        time:   [−6.3611% −5.9879% −5.5922%] (p = 0.00 < 0.05)
+                        thrpt:  [+5.9234% +6.3693% +6.7932%]
+                        Performance has improved.
+
+throughput/~346kb with low density of tokens
+                        time:   [515.60 µs 516.31 µs 517.03 µs]
+                        thrpt:  [653.90 MiB/s 654.81 MiB/s 655.71 MiB/s]
+                 change:
+                        time:   [−5.8424% −5.5116% −5.2159%] (p = 0.00 < 0.05)
+                        thrpt:  [+5.5029% +5.8331% +6.2049%]
+                        Performance has improved.
+Found 12 outliers among 100 measurements (12.00%)
+  2 (2.00%) low mild
+  3 (3.00%) high mild
+  7 (7.00%) high severe
+```
+%}
+
+Across human input, high token density, and low token density: 2–6% throughput improvement, no regressions.
+
+### Trading panic-freedom for ergonomics
+
+The Op stream is the new intermediate representation, but YAMD's public API still exposes the `Yamd` AST to enable a round-trip. It handles escape-aware round-tripping — a `Materialized` content from escape processing needs to end up in the right AST node as owned text.
+
+The new layer breaks one guarantee from the old parser: panic-freedom. The `Op→AST` converter contains `expect` calls that fire on malformed Op streams. The default path — `Lexer → Op → AST` — is covered by unit tests, property tests (via [proptest](https://github.com/proptest-rs/proptest)), and a [fuzzer](https://github.com/rust-fuzz/cargo-fuzz) on every PR. The lexer can't produce an Op stream that hits them.
+
+### Stop conditions and flip to literal
+
+The parser needs to handle context-sensitive end-of-input. A paragraph inside a collapsible block should stop at `%}` without consuming it. A list item should stop at the next list marker. Different contexts, different stop conditions.
+
+```rust
+pub enum StopCondition {
+    Terminator,
+    CollapsibleEnd,
+    HighlightEnd,
+    ListBoundary { level: usize, kind: ListKind },
+}
+```
+
+YAMD is not a general parsing library. It needs to parse a specific format as fast (blazingly) and ergonomically as possible. So instead of threading stop conditions through every parsing function, the parser maintains a stack. The stack is implicit state, but it keeps the individual parser functions clean.
+
+Pushing and popping are scoped:
+
+```rust
+pub fn with_eof<R>(&mut self, cond: StopCondition, f: impl FnOnce(&mut Self) -> R) -> R {
+    self.eof_stack.push(cond);
+    let result = f(self);
+    self.eof_stack.pop();
+    result
+}
+
+pub fn at_eof(&self) -> bool {
+    let Some((_, token)) = self.peek() else {
+        return true;
+    };
+    self.eof_stack.iter().any(|cond| cond.matches(token, self))
+}
+```
+
+`at_eof()` checks every condition on the stack. A paragraph parser does not need to know it is inside a collapsible block — it just calls `at_eof()` and stops when told to.
+
+That's the YAMD plumbing. The Bar side is where it pays off.
+
+## The payoff in Bar
+
+### Streaming processors
+
+With the old AST-based approach, a processor that needed to find images with missing alt text had to walk the tree recursively, match on deeply nested enum variants, and deal with async recursion. What's worse, if I add an image to a new node type in YAMD, I need to update the processor to handle it.
+
+With the flat Op stream, a processor is a state machine that buffers ops between `Start` and `End`. 
+
+Processors are composed by wrapping streams: the alt-text generator wraps the Cloudinary processor, which wraps the raw Op stream. Adding a new processor is now just writing a function that takes a stream and returns a stream — no tree traversal, no async recursion, no exhaustive pattern match against every node type that might contain an image.
+
+### Fragment-based templating
+
+The old rendering was a single Tera template that had to handle every node type. The new system splits rendering into fragments — 1 HTML template and 1 CSS file per node type.
+
+Bar ships with 19 default fragments compiled into the binary:
+
+```rust
+const FRAGMENT_DEFAULTS: &[(&str, &str, &str)] = &[
+    (
+        "anchor",
+        include_str!("../defaults/fragments/anchor.html"),
+        include_str!("../defaults/fragments/anchor.css"),
+    ),
+    (
+        "bold",
+        include_str!("../defaults/fragments/bold.html"),
+        include_str!("../defaults/fragments/bold.css"),
+    ),
+    // ... 17 more
+];
+```
+
+Themes can override any fragment in `theme.toml`:
+
+```toml
+[render.fragments.image]
+template = "fragments/image.html"
+css = "fragments/image.css"
+```
+
+If a theme does not override a fragment, the compiled-in default is used. This means themes work out of the box with sensible defaults, and customization is per-fragment — you do not have to fork the entire template to change how images render.
+
+CSS is collected only for fragments that are actually used in a given page. If a post has no code blocks, the CSS for code fragments is not included.
+
+[Hamon](https://github.com/Lurk/Hamon) — the theme this blog uses — was the first migration target, which forced the compatibility question: how does a theme declare which Bar version it expects? `theme.toml` carries a semver field:
+
+```toml
+[theme]
+name = "hamon"
+version = "1.0.0"
+compatible_bar_versions = ">=0.2.0"
+```
+
+### Better errors
+
+Three more things the new error pipeline buys you past the GPX example, without any extra code per error site:
+
+- **Every layer of context shows up.** As the error propagates from `render_gpx` up to *content rendering failed*, each frame wraps it with its own message — that's the chain of `├─▶` lines you saw in the opener. You see where the failure originated and every stop it made on the way out.
+- **Available-variables hints.** When a fragment template references a variable that isn't in scope, the diagnostic lists what *is* — `available variables: src, alt, lazy_images, has_services` — instead of just saying the lookup failed.
+- **Cross-file diagnostics.** When the bug is in a fragment template *and* the YAMD source is the right context for it, you get both spans:
+
+```text
+  × fragment rendering failed
+   ╭─[templates/fragments/image.html:3:12]
+ 3 │ <img src="{{ sorce }}" />
+   ·              ────── variable `sorce` not found
+   ╰────
+  help: available variables for image: src, alt, lazy_images, has_services
+
+  × error rendering 'image' fragment
+   ╭─[content/posts/my-trip.yamd:42:1]
+42 │ ![sunset over the lake](/images/sunset.jpg)
+   · ─── while rendering this image
+   ╰────
+```
+
+The renderer knows which template threw, *and* which image in your content was being rendered when it threw.
+
+## What's next
+
+A few directions I want to take Bar and YAMD:
+
+- **Better highlights.** I like GitHub's [alert syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts). The new parser makes it cheap to translate the existing `!! … !!` syntax into GitHub's form (or accept both).
+- **A link-checker processor** that verifies links in rendered articles are still alive.
+- **A formal grammar for YAMD.** Tables need clearer precedence rules than I have now, and depending on the grammar flavor, there are tools that can generate a [tree-sitter](https://tree-sitter.github.io/) grammar from it — which gets editor highlighting for free in any tree-sitter-aware editor.
+
+That's the plan. As always, if you have any opinions on the things above, I'd like to hear about them.
