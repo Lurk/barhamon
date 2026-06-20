@@ -28,9 +28,9 @@ gpx_embedding:
   attribution_png: './img/opentopomap.png'
 template_config:
   index_tags:
+    - adventures
     - music
     - life
-    - adventures
     - software
     - books
   index_article_id: '/me'
