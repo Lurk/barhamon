@@ -1,0 +1,65 @@
+---
+title: 2026-07-09 Roll
+date: 2026-07-09T22:58:53.815144Z
+image: "/img/2026/2026-07-09 Roll/1.png"
+preview: "Half a year log."
+tags:
+  - life
+  - photo roll
+---
+
+Somehow, it felt like not much time had passed since my last roll. But today I realized it's been almost half a year. Here is what I was busy with:
+
+- [FOSDEM in Brussels](#FOSDEM%202026)
+- [Soldering at home](#Soldering%20at%20home)
+- [Album release](/music/SELF_CARE%20by%20Serhiy%20Barhamon.html)
+- [Ocean](#Ocean)
+- [By Myself video release](#By%20Myself%20video%20release)
+- [Software](#Software)
+- [Hackathon in Budapest](#Hackathon%20in%20Budapest)
+
+## FOSDEM 2026
+
+I wanted to attend for a long, long time. Every year, something else was happening, and I never did. This year (thanks, [Thiago](https://perrotta.dev), for the reminder), I decided there was no better time, so I got us Flixbus tickets to Brussels. As often happens, after a 9-hour ride, I promised Marie and myself that it would be the last time we would travel with Flixbus. I set multiple reminders to book a flight and accommodation for next year 🤞
+
+FOSDEM itself was as awesome and as geeky as I imagined. Unfortunately, due to a ruined sleep schedule, I had only one day. Which I spent, with great pleasure, in the [Rust dev room](https://fosdem.org/2026/schedule/track/rust/).
+
+## Soldering at home
+
+I've wanted to do a hardware project for a long time, but I haven't had an idea simple enough to start with. Inspiration struck without warning, and I had an idea for a Eurorack module. I spent a ton of time figuring out how to use [KiCad](https://www.kicad.org), what soldering iron I need, how to order PCBs, how to order components, and how to solder.
+
+Current status: while soldering the prototype, I realized that there is a conceptual bug in the schematics. Which is pretty easy to fix by adding 21 resistors and a switch. I've finished the schematics. Now I procrastinate by building an inventory system based on [InvenTree](https://inventree.org).
+
+## Ocean
+
+IDK how that happened, but for the third year in a row, I visited France. This time we spent ten days in a surf village near the Spanish border. Somehow, we also managed to get there in between heat waves and haven't spent as much time in the ocean as we wanted to. But we met friends from Ukraine, visited San Sebastian in Spain, ate tons of seafood, and I spent a lot of time with Digitakt. I really enjoy those getaways with musical instruments and would like to have them more often.
+
+## By Myself video release
+
+I wanted to test how far I could get by fully embracing vibecoding and what guardrails I needed to make it work. My main takeaway: Rust, pedantic clippy, and small scope make it very hard for unintentional mistakes to sneak in. In general, I am even more convinced that there is no practical reason to choose a less strict language anymore.
+
+The result:
+
+{{youtube|https://www.youtube.com/embed/6sAYWWDWZbw}}
+
+As a side effect, I have a config-driven tool for messing with the video: [avfx](https://github.com/Lurk/avfx).
+
+## Software
+
+Apart from the video tool I worked on:
+
+- [YAMD and Bar](/post/Bar%200.2.0.html). New parser and better errors.
+- [A bidirectional file sync daemon](https://github.com/Lurk/bsync) Because I wanted to sync markdown/yamd files from various git repositories with my Obsidian vault.
+- [cargo-bump-deps](https://github.com/Lurk/cargo-bump-deps) Automated Rust dependency upgrades, for no CI cases.
+- [ClearURLs](https://docs.clearurls.xyz/) rules support into [clink](https://github.com/Lurk/clink) Because I realized that supporting my own list of rules is an uphill battle that I am losing.
+- Request stats web view for [serve](https://github.com/Lurk/serve)
+
+In the end, I settled on Claude code + Superpowers + [Caveman](https://github.com/JuliusBrussee/caveman) to make it work. [nvim](https://neovim.io) to make it correct and sometimes efficient.
+
+## Hackathon in Budapest
+
+A group of people from Check24 went to Budapest to code for a few days. We had a rough idea of what we wanted to achieve, and coded almost non-stop. It reminded me of my startup days, and I realized that I miss them.
+
+## Roll
+
+{{gallery|/img/2026/2026-07-09 Roll/gal/}}

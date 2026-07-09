@@ -28,9 +28,9 @@ gpx_embedding:
   attribution_png: './img/opentopomap.png'
 template_config:
   index_tags:
-    - adventures
-    - music
     - life
+    - music
+    - adventures
     - software
     - books
   index_article_id: '/me'
@@ -42,6 +42,7 @@ template_config:
       instagram: 'https://www.instagram.com/fedorpupkin/'
 yamd_processors:
   convert_cloudinary_embed: true
+  convert_local_gallery_embed: true
   generate_alt_text:
     prompt: 'Describe image in one sentence. Be precise.'
     temperature: 0.1
