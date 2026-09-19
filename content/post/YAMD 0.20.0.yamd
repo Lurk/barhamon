@@ -1,0 +1,96 @@
+---
+title: YAMD 0.20.0
+date: 2026-09-19T13:35:24.384299Z
+image: /img/2026/yamd 0.20.0/1.png
+preview: Look ma, I can read assembly.
+tags:
+  - software
+  - yamd
+  - rust
+---
+While working on an [Op-based parser](/post/Bar%200.2.0.html#The%20Op%20pipeline) for YAMD 0.19.0, I realized that [parse](https://docs.rs/yamd/0.19.0/yamd/op/fn.parse.html) does not care about what is inside a token, only its type and content length. This means I can defer escaping work to stages after lexing and parsing. By deferring it, instead of doing the escaping work for each token, I can do it only when I actually need it. Less work, faster result. [Lexer](https://docs.rs/yamd/0.20.0/yamd/lexer/struct.Lexer.html) stops omitting escape characters: it keeps them in the [Token](https://docs.rs/yamd/0.20.0/yamd/lexer/struct.Token.html) range and flags the token as `escaped`. The parser carries the flag over to [Content](https://docs.rs/yamd/0.20.0/yamd/op/enum.Content.html). Escape removal scans the source and removes escape characters if needed. The whole thing was mostly mechanical ([PR #104](https://github.com/Lurk/yamd/pull/104)).
+
+!! About benchmarks
+! microchip
+Four datasets are used to benchmark performance and throughput: [human](https://github.com/Lurk/yamd/blob/2d27d5231d124336c40c2c6ed4792ebf1c13eabf/benches/human_input.yamd), a \~344KB concatenation of YAMD documents written by a human; [low-density](https://github.com/Lurk/yamd/blob/21528b71f2a19d8ec04b0dfe88edeb14e726517b/benches/random_token_low_density.yamd) and [high-density](https://github.com/Lurk/yamd/blob/21528b71f2a19d8ec04b0dfe88edeb14e726517b/benches/random_token_high_density.yamd), synthetic \~344KB inputs sitting at opposite ends of how often a byte in the input is a special character, and [small](https://github.com/Lurk/yamd/blob/6c3ca56a9c69e81bce6e93efa2cf65659fab6241/benches/small.yamd), a 192-byte hand-written document to test initialization overhead. Where a change's effect depends on which dataset you feed it to, I'll name the specific one and explain why.
+!!
+
+On the lexer benchmark, the merged result landed within noise of the original code. It still felt like a good idea because, while doing it, I realized escape is never at the end of a literal. If escape removal knew how many escapes are in this particular literal, it could stop scanning/removing escapes when it finds the last one and consume the rest of the slice in one go. I replaced the boolean with a `usize` counter and modified the escape-removal loop. Turned out that the `usize` counter grew `Token` from 48 to 56 bytes. That caused a performance regression: 2.9% on `low-density` and 8.6% on `high-density` datasets. Shrinking the counter to a `u32` put `Token` back at 48 bytes and fixed the regression. This is the first time in my experience where changing a 64-bit int to a 32-bit int produced a measurable performance impact. At least the first one I actually measured. Somehow I saw it as a sign that I am on the right path.
+
+I merged the changes, but while looking at the code “one last time” I realized that I don't need the [Position](https://docs.rs/yamd/0.19.0/yamd/lexer/struct.Position.html) struct. Byte offsets are in the slice. The only other check I do in the parser is if the column equals zero. Replacing Position with a boolean field dropped it to 24 bytes and raised `human` throughput by about 5%.
+
+Then I realized that neither `Lexer` nor the parser needs UTF-8 decoding. All special characters in YAMD are one-byte ASCII. I can have a static 256-byte lookup table (`[bool; 256]`), and the expensive literal boundary check should collapse into a simple table lookup. It did work out and opened the possibility of removing [the queue](https://github.com/Lurk/yamd/blob/0d3af7df85ae6636855ad307ea96800657b58843/src/lexer/mod.rs#L24) with eager literal building. Together, they gave me an additional ~378% increase in throughput on the `human` dataset.
+
+378! I was shocked by how badly the previous version performed in comparison. I was so sure that the whole thing was already pretty fast, that I considered every 2% a huge win. But I am definitely on the right path.
+
+{% Sidequest 1
+!!
+! microchip
+Originally I measured both changes together. Because I thought of eager literal building only as a path for queue removal. But while writing this article, I wanted to know how much of that throughput each change contributed.
+
+Eager literal building yielded a ~266% increase in throughput on the `human` dataset. Queue removal is responsible for the remaining 112% increase (or 31% when measured on top of the “eager literal”).
+!!
+%}
+
+I got curious to know how much of that performance boost was due to my ideas and how much to compiler optimizations. So I looked at the assembly of the [literal boundary check](https://github.com/Lurk/yamd/blob/e7d23f0fae657dab6394cce783151fa4e9705db5/src/lexer/mod.rs#L89-L94):
+
+```ARM Assembly
+LBB84_44:                    ; = loop.check_byte
+    ldrb   w16, [x14, x11]   ; w16 = input[pos]   (x14=input ptr, x11=pos)
+    ldrb   w16, [x15, x16]   ; w16 = RESERVED[w16]  (table lookup, byte→byte)
+    tbnz   w16, #0, LBB84_46 ; test bit0; if set (reserved) → exit
+    add    x11, x11, #1      ; = loop.advance: pos += 1
+    str    x11, [x0, #16]    ; store pos back to self.pos (field offset 16)
+    cmp    x12, x11          ; len vs new pos
+    b.ne   LBB84_44          ; not equal → loop straight back to check_byte
+    b      LBB84_97          ; equal (hit end exactly) → separate exit path
+```
+
+{% Sidequest 2
+!!
+! curly-brace
+Do you see this gorgeous assembly syntax highlighting?
+
+Bar uses [Syntect](https://github.com/trishume/syntect/) for code highlighting, and it doesn't support Assembly language out of the box. In the [initial version of Bar](/post/look-ma-nojs.html) I already figured out how to add TypeScript support, and adding a new language was straightforward.
+
+But, turned out there are a few assembly dialects, and the one you see in the article is ARM assembly. All other dialects will be supported later, because the number of sidequests is getting out of hand.
+!!
+%}
+
+To my surprise, the compiler translated the Rust table lookup almost 1:1. I somehow expected to see SIMD instructions in there, but I found none. I want to know why, but a few docs in, it's clear the topic needs more time. It also means that in theory there's room for at least a 2x improvement in Lexer throughput.
+
+Further reading:
+
+- [Auto-Vectorization in LLVM](https://llvm.org/docs/Vectorizers.html) - the official docs for the Loop Vectorizer and SLP Vectorizer.
+- [RFC: Check-First Early-Exit Loop Vectorization](https://discourse.llvm.org/t/rfc-loopvectorizer-check-first-early-exit-loop-vectorization/91337) - Looks like the answer to why there is no SIMD emitted.
+- [SIMDized check which bytes are in a set](http://0x80.pl/articles/simd-byte-lookup.html) - article that explains how SIMD optimization for my problem could work.
+- [Rust simdjson implementation](https://github.com/emmatyping/simdjson-rs) - they must have solved the same problem.
+- [memchr](https://github.com/BurntSushi/memchr) - crate that solves my exact problem.
+
+Just before merging, I realized that I can store `pos` back to `self.pos` after the loop instead of on every iteration. This removed one CPU instruction from the hot loop.
+
+```ARM Assembly
+LBB84_50:
+      ldrb    w16, [x14, x11]
+      ldrb    w16, [x15, x16]
+      tbnz    w16, #0, LBB84_52
+      add     x11, x11, #1
+      cmp     x12, x11
+      b.ne    LBB84_50
+      b       LBB84_56
+```
+
+It did not show up in benches. Which was surprising to me, but after reading [Apple M1 Load and Store Queue Measurements](https://dougallj.wordpress.com/2021/04/08/apple-m1-load-and-store-queue-measurements/) I got that Apple M-series CPUs have separate load/store queues, which means that for it to be visible in a benchmark, I first need to create a condition where the store buffer is full. Which I am not ready to do.
+
+{% Sidequest 3
+!!
+! microchip
+I was so excited about the main quest that I thought about adding an escape-specific benchmark only at the end of that adventure. Please welcome a new, fifth dataset: [backslashes](https://github.com/Lurk/yamd/blob/2ad60bf1dd4349c51a26f48b640adf8d336d9b18/benches/backslashes.yamd), which will help future me benchmark the performance of escaping machinery.
+!!
+%}
+
+Before merging [PR #105](https://github.com/Lurk/yamd/pull/105), I tried to use the new version of the parser in [Bar](https://github.com/Lurk/bar) and quickly realized that the new version lacks the ability to represent content detached from the source. Which was one of the reasons to have an Op-based parser in the first place. I have not come up with anything better than bringing back an enum with a Detached variant that holds `Cow<'static, str>` and a constructor that accepts anything that implements `Into<Cow<'static, str>>`.
+
+I am very happy with the result and the lessons I am learning from this project. At the end, YAMD version 0.20.0 increased `Lexer` throughput on the `human` dataset by roughly 380%, from 239 MiB/s to about 1.1 GiB/s, and shrank `Token` from 48 to 24 bytes. That carries over to the parser: throughput on the same dataset is up 192%, from 197 MiB/s to about 576 MiB/s. Peak memory during deserialization of the `human` dataset dropped by about 8%, from ~5.0MB to ~4.6MB. All that with 106 lines of code less than before.
+
+As always, if you have any opinions on the things above, I'd like to hear about them.
